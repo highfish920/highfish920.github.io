@@ -6,14 +6,14 @@
   <meta name="renderer" content="webkit">
   <meta http-equiv="X-UA-Compatible" content="IE=edge" >
   <link rel="dns-prefetch" href="http://yoursite.com">
-  <title>highfish920</title>
+  <title>maven锁定jar包 | highfish920</title>
   <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
-  <meta name="description" content="1.防止放置jar包坐标">
+  <meta name="description" content="maven锁定jar包">
 <meta property="og:type" content="article">
-<meta property="og:title" content="highfish920">
+<meta property="og:title" content="maven锁定jar包">
 <meta property="og:url" content="http://yoursite.com/2020/08/12/maven%E4%B8%ADpom.xml%E6%96%87%E4%BB%B6%E8%A7%A3%E6%9E%90/index.html">
 <meta property="og:site_name" content="highfish920">
-<meta property="og:description" content="1.防止放置jar包坐标">
+<meta property="og:description" content="maven锁定jar包">
 <meta property="og:locale" content="en_US">
 <meta property="og:image" content="https://img-blog.csdnimg.cn/20200730211314240.png">
 <meta property="og:image" content="https://img-blog.csdnimg.cn/20200730211453493.png">
@@ -21,7 +21,7 @@
 <meta property="og:image" content="https://img-blog.csdnimg.cn/20200730212309675.png?x-oss-process=image/watermark,type_ZmFuZ3poZW5naGVpdGk,shadow_10,text_aHR0cHM6Ly9ibG9nLmNzZG4ubmV0L3dlaXhpbl80MjY5MzcxMg==,size_16,color_FFFFFF,t_70">
 <meta property="og:image" content="https://img-blog.csdnimg.cn/20200730212418527.png?x-oss-process=image/watermark,type_ZmFuZ3poZW5naGVpdGk,shadow_10,text_aHR0cHM6Ly9ibG9nLmNzZG4ubmV0L3dlaXhpbl80MjY5MzcxMg==,size_16,color_FFFFFF,t_70">
 <meta property="article:published_time" content="2020-08-12T11:44:41.915Z">
-<meta property="article:modified_time" content="2020-08-12T11:50:00.266Z">
+<meta property="article:modified_time" content="2020-08-12T12:06:56.358Z">
 <meta property="article:author" content="highfish">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:image" content="https://img-blog.csdnimg.cn/20200730211314240.png">
@@ -163,10 +163,25 @@
             <article id="post-maven中pom.xml文件解析" class="article article-type-post " itemscope itemprop="blogPost">
   <div class="article-inner">
     
+      <header class="article-header">
+        
+  
+    <h1 class="article-title" itemprop="name">
+      maven锁定jar包
+    </h1>
+  
+
+        
+        <a href="/2020/08/12/maven%E4%B8%ADpom.xml%E6%96%87%E4%BB%B6%E8%A7%A3%E6%9E%90/" class="archive-article-date">
+  	<time datetime="2020-08-12T11:44:41.915Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2020-08-12</time>
+</a>
+        
+      </header>
+    
     <div class="article-entry" itemprop="articleBody">
       
-        <p>1.防止放置jar包坐标<img src="https://img-blog.csdnimg.cn/20200730211314240.png" alt="在这里插入图片描述"></p>
-<a id="more"></a>
+        <h2 id="maven锁定jar包"><a href="#maven锁定jar包" class="headerlink" title="maven锁定jar包"></a>maven锁定jar包</h2><a id="more"></a>
+<p>1.防止放置jar包坐标<img src="https://img-blog.csdnimg.cn/20200730211314240.png" alt="在这里插入图片描述"></p>
 <p><strong>2.锁定jar包</strong><br>maven是有父子关系的，凡是依赖别的项目以后，拿到的别的依赖包，都属于传递依赖，如a项目被b项目依赖，那么a项目中所有的jar包都会传递到b项目中 b项目开发者如果再倒入一套ssm框架的jar包，对于b项目是直接依赖，那么直接依赖的jar包就会把我们的a项目传递过去的jar包覆盖掉。为了防止以上情况出现，我们可以吧a项目中主要jar包坐标锁住，其他依赖该项目的项目里面即便有同名jar包直接依赖也无法覆盖。<br><img src="https://img-blog.csdnimg.cn/20200730211453493.png" alt="在这里插入图片描述"><br>假如下面这个jar包想要锁定，那么是直接复制到上边锁定版本还是剪切过去呢，答案是复制上去，不能剪切<img src="https://img-blog.csdnimg.cn/20200730212330213.png?x-oss-process=image/watermark,type_ZmFuZ3poZW5naGVpdGk,shadow_10,text_aHR0cHM6Ly9ibG9nLmNzZG4ubmV0L3dlaXhpbl80MjY5MzcxMg==,size_16,color_FFFFFF,t_70" alt="在这里插入图片描述"><br><img src="https://img-blog.csdnimg.cn/20200730212309675.png?x-oss-process=image/watermark,type_ZmFuZ3poZW5naGVpdGk,shadow_10,text_aHR0cHM6Ly9ibG9nLmNzZG4ubmV0L3dlaXhpbl80MjY5MzcxMg==,size_16,color_FFFFFF,t_70" alt="在这里插入图片描述"><br><img src="https://img-blog.csdnimg.cn/20200730212418527.png?x-oss-process=image/watermark,type_ZmFuZ3poZW5naGVpdGk,shadow_10,text_aHR0cHM6Ly9ibG9nLmNzZG4ubmV0L3dlaXhpbl80MjY5MzcxMg==,size_16,color_FFFFFF,t_70" alt="在这里插入图片描述"></p>
 
       
@@ -275,14 +290,14 @@
       <i class="icon-circle-left"></i>
       <div class="article-nav-title">
         
-          (no title)
+          maven流程
         
       </div>
     </a>
   
   
     <a href="/2020/08/12/%E8%A7%A3%E5%86%B3oracle%E6%95%B0%E6%8D%AE%E5%BA%93%E4%B8%AD%E6%96%87%E4%B9%B1%E7%A0%81%E9%97%AE%E9%A2%98/" id="article-nav-older" class="article-nav-link-wrap">
-      <div class="article-nav-title"></div>
+      <div class="article-nav-title">对于maven中pom.xml依赖报红问题</div>
       <i class="icon-circle-right"></i>
     </a>
   
