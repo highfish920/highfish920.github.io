@@ -14,14 +14,14 @@
 <meta property="og:url" content="http://yoursite.com/2020/08/12/maven%E4%B8%ADpom.xml%E6%96%87%E4%BB%B6%E8%A7%A3%E6%9E%90/index.html">
 <meta property="og:site_name" content="highfish920的博客">
 <meta property="og:description" content="maven锁定jar包">
-<meta property="og:locale" content="en_US">
+<meta property="og:locale" content="zh_CN">
 <meta property="og:image" content="https://img-blog.csdnimg.cn/20200730211314240.png">
 <meta property="og:image" content="https://img-blog.csdnimg.cn/20200730211453493.png">
 <meta property="og:image" content="https://img-blog.csdnimg.cn/20200730212330213.png?x-oss-process=image/watermark,type_ZmFuZ3poZW5naGVpdGk,shadow_10,text_aHR0cHM6Ly9ibG9nLmNzZG4ubmV0L3dlaXhpbl80MjY5MzcxMg==,size_16,color_FFFFFF,t_70">
 <meta property="og:image" content="https://img-blog.csdnimg.cn/20200730212309675.png?x-oss-process=image/watermark,type_ZmFuZ3poZW5naGVpdGk,shadow_10,text_aHR0cHM6Ly9ibG9nLmNzZG4ubmV0L3dlaXhpbl80MjY5MzcxMg==,size_16,color_FFFFFF,t_70">
 <meta property="og:image" content="https://img-blog.csdnimg.cn/20200730212418527.png?x-oss-process=image/watermark,type_ZmFuZ3poZW5naGVpdGk,shadow_10,text_aHR0cHM6Ly9ibG9nLmNzZG4ubmV0L3dlaXhpbl80MjY5MzcxMg==,size_16,color_FFFFFF,t_70">
 <meta property="article:published_time" content="2020-08-12T11:44:41.915Z">
-<meta property="article:modified_time" content="2020-08-12T12:06:56.358Z">
+<meta property="article:modified_time" content="2020-08-14T09:53:18.728Z">
 <meta property="article:author" content="highfish">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:image" content="https://img-blog.csdnimg.cn/20200730211314240.png">
@@ -29,7 +29,7 @@
     <link rel="alternative" href="/atom.xml" title="highfish920的博客" type="application/atom+xml">
   
   
-    <link rel="icon" href="/favicon.png">
+    <link rel="icon" href="/img/favicon.ico">
   
   <link rel="stylesheet" type="text/css" href="/./main.0cf68a.css">
   <style type="text/css">
@@ -69,7 +69,7 @@ var _hmt = _hmt || [];
     <canvas id="anm-canvas" class="anm-canvas"></canvas>
     <div class="left-col" q-class="show:isShow">
       
-<div class="overlay" style="background: #4d4d4d"></div>
+<div class="overlay" style="background: #00000"></div>
 <div class="intrude-less">
 	<header id="header" class="inner">
 		<a href="/" class="profilepic">
@@ -88,6 +88,8 @@ var _hmt = _hmt || [];
 				<li><a href="/tags/%E9%9A%8F%E7%AC%94/">随笔</a></li>
 	        
 				<li><a href="/archives/index.html">归档</a></li>
+	        
+				<li><a href="/categories">分类</a></li>
 	        
 			</ul>
 		</nav>
@@ -133,7 +135,7 @@ var _hmt = _hmt || [];
     <div class="mid-col" q-class="show:isShow,hide:isShow|isFalse">
       
 <nav id="mobile-nav">
-  	<div class="overlay js-overlay" style="background: #4d4d4d"></div>
+  	<div class="overlay js-overlay" style="background: #00000"></div>
 	<div class="btnctn js-mobile-btnctn">
   		<div class="slider-trigger list" q-on="click: openSlider(e)"><i class="icon icon-sort"></i></div>
 	</div>
@@ -147,6 +149,8 @@ var _hmt = _hmt || [];
 			</hgroup>
 			
 			
+			
+				
 			
 				
 			
@@ -174,11 +178,13 @@ var _hmt = _hmt || [];
 				<ul style="width: 70%">
 				
 				
-					<li style="width: 33.333333333333336%"><a href="/">主页</a></li>
+					<li style="width: 25%"><a href="/">主页</a></li>
 		        
-					<li style="width: 33.333333333333336%"><a href="/tags/%E9%9A%8F%E7%AC%94/">随笔</a></li>
+					<li style="width: 25%"><a href="/tags/%E9%9A%8F%E7%AC%94/">随笔</a></li>
 		        
-					<li style="width: 33.333333333333336%"><a href="/archives/index.html">归档</a></li>
+					<li style="width: 25%"><a href="/archives/index.html">归档</a></li>
+		        
+					<li style="width: 25%"><a href="/categories">分类</a></li>
 		        
 				</ul>
 			</nav>
@@ -216,6 +222,9 @@ var _hmt = _hmt || [];
   </a>
 
 <!--显示阅读次数完毕-->
+
+
+
         
         
 	<!-- 不蒜子统计 -->
@@ -236,9 +245,12 @@ var _hmt = _hmt || [];
 <p><strong>2.锁定jar包</strong><br>maven是有父子关系的，凡是依赖别的项目以后，拿到的别的依赖包，都属于传递依赖，如a项目被b项目依赖，那么a项目中所有的jar包都会传递到b项目中 b项目开发者如果再倒入一套ssm框架的jar包，对于b项目是直接依赖，那么直接依赖的jar包就会把我们的a项目传递过去的jar包覆盖掉。为了防止以上情况出现，我们可以吧a项目中主要jar包坐标锁住，其他依赖该项目的项目里面即便有同名jar包直接依赖也无法覆盖。<br><img src="https://img-blog.csdnimg.cn/20200730211453493.png" alt="在这里插入图片描述"><br>假如下面这个jar包想要锁定，那么是直接复制到上边锁定版本还是剪切过去呢，答案是复制上去，不能剪切<img src="https://img-blog.csdnimg.cn/20200730212330213.png?x-oss-process=image/watermark,type_ZmFuZ3poZW5naGVpdGk,shadow_10,text_aHR0cHM6Ly9ibG9nLmNzZG4ubmV0L3dlaXhpbl80MjY5MzcxMg==,size_16,color_FFFFFF,t_70" alt="在这里插入图片描述"><br><img src="https://img-blog.csdnimg.cn/20200730212309675.png?x-oss-process=image/watermark,type_ZmFuZ3poZW5naGVpdGk,shadow_10,text_aHR0cHM6Ly9ibG9nLmNzZG4ubmV0L3dlaXhpbl80MjY5MzcxMg==,size_16,color_FFFFFF,t_70" alt="在这里插入图片描述"><br><img src="https://img-blog.csdnimg.cn/20200730212418527.png?x-oss-process=image/watermark,type_ZmFuZ3poZW5naGVpdGk,shadow_10,text_aHR0cHM6Ly9ibG9nLmNzZG4ubmV0L3dlaXhpbl80MjY5MzcxMg==,size_16,color_FFFFFF,t_70" alt="在这里插入图片描述"></p>
 
       
-<!-- 增加版权声明 -->
+<!-- 添加版权声明 -->
+<!-- 
+ -->
+<!-- 添加版权声明结束 -->
 <!-- 百度自动推送方式提交 -->
-
+<!-- 
   <script>
   (function(){
       var bp = document.createElement('script');
@@ -253,14 +265,9 @@ var _hmt = _hmt || [];
       s.parentNode.insertBefore(bp, s);
   })();
   </script>
-
+ -->
 <!-- 百度自动推送方式提交结束 -->
 
-
-  <div class="declare" hidden="hidden"></div>
-
-
-<!-- 增加版权声明结束 -->
       
         <div class="page-reward">
           <a href="javascript:;" class="page-reward-btn tooltip-top">
@@ -298,6 +305,17 @@ var _hmt = _hmt || [];
       
       
       
+	<div class="article-category tagcloud">
+		<i class="icon-book icon"></i>
+		<ul class="article-tag-list">
+			 
+        		<li class="article-tag-list-item">
+        			<a href="/categories/maven//" class="article-tag-list-link color1">maven</a>
+        		</li>
+      		
+		</ul>
+	</div>
+
 
       
 
@@ -610,7 +628,7 @@ return o(i(t),arguments.length<2?void 0:u(arguments[1]))}})},function(t,n,r){var
     
     	<section class="tools-section tools-section-me" q-show="aboutme">
   	  	
-  	  		<div class="aboutme-wrap" id="js-aboutme">很高兴和大家一起学习进步，励志于做一个优秀的前端开发工程师</div>
+  	  		<div class="aboutme-wrap" id="js-aboutme">人要想成事，总有点不切实际的梦想</div>
   	  	
     	</section>
     
