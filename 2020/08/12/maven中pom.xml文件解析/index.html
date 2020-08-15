@@ -1,10 +1,11 @@
 <!DOCTYPE html>
 <html>
+
 <head>
   <meta charset="utf-8">
   
   <meta name="renderer" content="webkit">
-  <meta http-equiv="X-UA-Compatible" content="IE=edge" >
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
   <link rel="dns-prefetch" href="http://yoursite.com">
   <title>maven锁定jar包 | highfish920的博客</title>
   <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
@@ -26,17 +27,17 @@
 <meta name="twitter:card" content="summary">
 <meta name="twitter:image" content="https://img-blog.csdnimg.cn/20200730211314240.png">
   
-    <link rel="alternative" href="/atom.xml" title="highfish920的博客" type="application/atom+xml">
+  <link rel="alternative" href="/atom.xml" title="highfish920的博客" type="application/atom+xml">
   
   
-    <link rel="icon" href="/img/favicon.ico">
+  <link rel="icon" href="/img/favicon.ico">
   
   <link rel="stylesheet" type="text/css" href="/./main.0cf68a.css">
   <style type="text/css">
-  
     #container.show {
       background: linear-gradient(200deg,#a0cfe4,#e8c37e);
     }
+
   </style>
   
 <!-- Google Analytics -->
@@ -231,6 +232,7 @@ var _hmt = _hmt || [];
   <span class="icon-sort"></span>
   <span id="busuanzi_container_page_pv" style="color:#ef7522;font-size:14px;">
             阅读数: <span id="busuanzi_value_page_pv"></span>次 &nbsp;&nbsp;
+            字数：228字 | 预计阅读时长：1分钟
   </span>
   </a>
 
@@ -250,6 +252,7 @@ var _hmt = _hmt || [];
 </a>
         
       </header>
+      
     
     <div class="article-entry" itemprop="articleBody">
       
@@ -258,6 +261,24 @@ var _hmt = _hmt || [];
 <p><strong>2.锁定jar包</strong><br>maven是有父子关系的，凡是依赖别的项目以后，拿到的别的依赖包，都属于传递依赖，如a项目被b项目依赖，那么a项目中所有的jar包都会传递到b项目中 b项目开发者如果再倒入一套ssm框架的jar包，对于b项目是直接依赖，那么直接依赖的jar包就会把我们的a项目传递过去的jar包覆盖掉。为了防止以上情况出现，我们可以吧a项目中主要jar包坐标锁住，其他依赖该项目的项目里面即便有同名jar包直接依赖也无法覆盖。<br><img src="https://img-blog.csdnimg.cn/20200730211453493.png" alt="在这里插入图片描述"><br>假如下面这个jar包想要锁定，那么是直接复制到上边锁定版本还是剪切过去呢，答案是复制上去，不能剪切<img src="https://img-blog.csdnimg.cn/20200730212330213.png?x-oss-process=image/watermark,type_ZmFuZ3poZW5naGVpdGk,shadow_10,text_aHR0cHM6Ly9ibG9nLmNzZG4ubmV0L3dlaXhpbl80MjY5MzcxMg==,size_16,color_FFFFFF,t_70" alt="在这里插入图片描述"><br><img src="https://img-blog.csdnimg.cn/20200730212309675.png?x-oss-process=image/watermark,type_ZmFuZ3poZW5naGVpdGk,shadow_10,text_aHR0cHM6Ly9ibG9nLmNzZG4ubmV0L3dlaXhpbl80MjY5MzcxMg==,size_16,color_FFFFFF,t_70" alt="在这里插入图片描述"><br><img src="https://img-blog.csdnimg.cn/20200730212418527.png?x-oss-process=image/watermark,type_ZmFuZ3poZW5naGVpdGk,shadow_10,text_aHR0cHM6Ly9ibG9nLmNzZG4ubmV0L3dlaXhpbl80MjY5MzcxMg==,size_16,color_FFFFFF,t_70" alt="在这里插入图片描述"></p>
 
       
+      
+        
+          <div class="essayending">
+            <div>
+             <div style="text-align:center;color: #ccc;font-size:22px;">
+             <br/>
+             <br/>
+  -------------本文结束<i class="fa fa-paw"></i>感谢您的阅读-------------
+             <br/>
+             <br/>
+              <br/>
+              <br/>
+             </div>
+            </div>
+          </div>
+          
+ 
+   
 <!-- 添加版权声明 -->
 <!-- 
  -->
@@ -492,6 +513,7 @@ gitment.render('gitment-ctn')
 <!-- 不蒜子访问量统计 -->
 
 	<!-- 不蒜子统计 -->
+	<div style="text-align: center;color: black;font-family:'黑体'">
 	<span id="busuanzi_container_site_pv">
 			本站总访问量<span id="busuanzi_value_site_pv"></span>次
 	</span>
@@ -499,6 +521,7 @@ gitment.render('gitment-ctn')
 	<span id="busuanzi_container_site_uv" style='display:none'>
 			本站访客数<span id="busuanzi_value_site_uv"></span>人
 	</span>
+</div>
 	<script async src="//busuanzi.ibruce.info/busuanzi/2.3/busuanzi.pure.mini.js"></script>
 
     </div>
