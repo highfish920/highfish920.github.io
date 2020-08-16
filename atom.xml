@@ -6,7 +6,7 @@
   <link href="http://yoursite.com/atom.xml" rel="self"/>
   
   <link href="http://yoursite.com/"/>
-  <updated>2020-08-13T11:37:56.184Z</updated>
+  <updated>2020-08-16T10:17:29.635Z</updated>
   <id>http://yoursite.com/</id>
   
   <author>
@@ -15,6 +15,111 @@
   </author>
   
   <generator uri="https://hexo.io/">Hexo</generator>
+  
+  <entry>
+    <title>为什么要在标签上使用data-, 它有什么好处</title>
+    <link href="http://yoursite.com/2020/08/16/%E4%B8%BA%E4%BB%80%E4%B9%88%E8%A6%81%E5%9C%A8%E6%A0%87%E7%AD%BE%E4%B8%8A%E4%BD%BF%E7%94%A8data-,%20%E5%AE%83%E6%9C%89%E4%BB%80%E4%B9%88%E5%A5%BD%E5%A4%84/"/>
+    <id>http://yoursite.com/2020/08/16/%E4%B8%BA%E4%BB%80%E4%B9%88%E8%A6%81%E5%9C%A8%E6%A0%87%E7%AD%BE%E4%B8%8A%E4%BD%BF%E7%94%A8data-,%20%E5%AE%83%E6%9C%89%E4%BB%80%E4%B9%88%E5%A5%BD%E5%A4%84/</id>
+    <published>2020-08-16T10:30:19.143Z</published>
+    <updated>2020-08-16T10:17:29.635Z</updated>
+    
+    <content type="html"><![CDATA[<h2 id="为什么要在标签上使用data-它有什么好处"><a href="#为什么要在标签上使用data-它有什么好处" class="headerlink" title="为什么要在标签上使用data-, 它有什么好处"></a>为什么要在标签上使用data-, 它有什么好处</h2><a id="more"></a><table><thead><tr><th>1</th><th>html5规范中规定自定义属性需要添加前缀data-,目的是提供与渲染无关的信息</th></tr></thead><tbody><tr><td>2</td><td>使用getAttribute（）方法以及setAttribute()方法操作自定义属性</td></tr><tr><td>3</td><td>使用dataset操作自定义属性。</td></tr><tr><td>4</td><td>dataset属性的兼容性问题，Chrome 8+   Firefox(Gecko) 6.0+   Internet Explorer 11+   Opera11.10+  Safari 6+ 以上浏览器均能很好支持</td></tr><tr><td>5</td><td>使用data-属性选择器好处：绑定DOM强相关数据，js传递数据</td></tr></tbody></table>]]></content>
+    
+    
+    <summary type="html">&lt;h2 id=&quot;为什么要在标签上使用data-它有什么好处&quot;&gt;&lt;a href=&quot;#为什么要在标签上使用data-它有什么好处&quot; class=&quot;headerlink&quot; title=&quot;为什么要在标签上使用data-, 它有什么好处&quot;&gt;&lt;/a&gt;为什么要在标签上使用data-, 它有什么好处&lt;/h2&gt;</summary>
+    
+    
+    
+    <category term="Html面试题" scheme="http://yoursite.com/categories/Html%E9%9D%A2%E8%AF%95%E9%A2%98/"/>
+    
+    
+    <category term="html面试" scheme="http://yoursite.com/tags/html%E9%9D%A2%E8%AF%95/"/>
+    
+  </entry>
+  
+  <entry>
+    <title>Meta标签，都有一些什么特性，有什么作用</title>
+    <link href="http://yoursite.com/2020/08/16/%E4%B8%BA%E4%BB%80%E4%B9%88%E8%A6%81%E5%9C%A8%E6%A0%87%E7%AD%BE%E4%B8%8A%E4%BD%BF%E7%94%A8data-,%20%E5%AE%83%E6%9C%89%E4%BB%80%E4%B9%88%E5%A5%BD%E5%A4%84%20copy/"/>
+    <id>http://yoursite.com/2020/08/16/%E4%B8%BA%E4%BB%80%E4%B9%88%E8%A6%81%E5%9C%A8%E6%A0%87%E7%AD%BE%E4%B8%8A%E4%BD%BF%E7%94%A8data-,%20%E5%AE%83%E6%9C%89%E4%BB%80%E4%B9%88%E5%A5%BD%E5%A4%84%20copy/</id>
+    <published>2020-08-16T10:30:19.111Z</published>
+    <updated>2020-08-16T10:20:38.233Z</updated>
+    
+    <content type="html"><![CDATA[<h2 id="Meta标签，都有一些什么特性，有什么作用"><a href="#Meta标签，都有一些什么特性，有什么作用" class="headerlink" title="Meta标签，都有一些什么特性，有什么作用"></a>Meta标签，都有一些什么特性，有什么作用</h2><a id="more"></a><table><thead><tr><th>1</th><th>什么是meta标签:<meta>标签提供关于HTML文档的元数据，它不会显示在页面上，但是对于机器是可读的，可用于浏览器（如何显示内容或重新加载页面），搜索引擎（关键词），或其他web服务。</th></tr></thead><tbody><tr><td>2</td><td>meta的作用:meta里的数据是供机器解读的，告诉机器该如何解析这个页面，还有一个用途是可以添加服务器发送到浏览器的HTTP头部内容。</td></tr><tr><td>3</td><td>常用meta标签总结:Charset：它是声明文档使用的字符编码，以防乱码，而且一定要写在第一行Viewport：主要是影响移动端页面布局的。</td></tr></tbody></table>]]></content>
+    
+    
+    <summary type="html">&lt;h2 id=&quot;Meta标签，都有一些什么特性，有什么作用&quot;&gt;&lt;a href=&quot;#Meta标签，都有一些什么特性，有什么作用&quot; class=&quot;headerlink&quot; title=&quot;Meta标签，都有一些什么特性，有什么作用&quot;&gt;&lt;/a&gt;Meta标签，都有一些什么特性，有什么作用&lt;/h2&gt;</summary>
+    
+    
+    
+    <category term="Html面试题" scheme="http://yoursite.com/categories/Html%E9%9D%A2%E8%AF%95%E9%A2%98/"/>
+    
+    
+    <category term="html面试" scheme="http://yoursite.com/tags/html%E9%9D%A2%E8%AF%95/"/>
+    
+  </entry>
+  
+  <entry>
+    <title>浏览器标准模式和怪异模式</title>
+    <link href="http://yoursite.com/2020/08/16/%E6%B5%8F%E8%A7%88%E5%99%A8%E6%A0%87%E5%87%86%E6%A8%A1%E5%BC%8F%E5%92%8C%E6%80%AA%E5%BC%82%E6%A8%A1%E5%BC%8F/"/>
+    <id>http://yoursite.com/2020/08/16/%E6%B5%8F%E8%A7%88%E5%99%A8%E6%A0%87%E5%87%86%E6%A8%A1%E5%BC%8F%E5%92%8C%E6%80%AA%E5%BC%82%E6%A8%A1%E5%BC%8F/</id>
+    <published>2020-08-16T10:30:19.095Z</published>
+    <updated>2020-08-16T10:08:33.295Z</updated>
+    
+    <content type="html"><![CDATA[<h2 id="浏览器标准模式和怪异模式"><a href="#浏览器标准模式和怪异模式" class="headerlink" title="浏览器标准模式和怪异模式"></a>浏览器标准模式和怪异模式</h2><a id="more"></a><h2 id="产生原因："><a href="#产生原因：" class="headerlink" title="产生原因："></a><strong>产生原因：</strong></h2><p>现代的浏览器一般都有两种渲染模式：标准模式和怪异模式，在标准模式下，浏览器按照HTML和CSS标准对文档进行解析和渲染；而在怪异模式下，浏览器则按照旧有的非标准的实现方式对文档进行解析和渲染，这样的话，对于旧有的网页，浏览器就会启动怪异模式，就能够使得旧网页正常显示；对于新的网页，则可以启动标准模式，使得新网页能够使用HTML和CSS的标准特性。<br>|  标准模式|怪异模式  |<br>|–|–|<br>|  给span等行内元素设置width和height无效。|  有效|<br>|margin:0 auto水平居中，在标准模式下没有问题。|用margin:0 auto设置水平居中在怪异模式下会失效，解决办法，用text-align属性来解决|<br>| 右边的这些问题，在标准模式下均不会出现问题！ | 怪异模式下设置图片的padding会失效，怪异模式下Table中的字体属性不能继承上层的设置怪异模式下white-space:pre会失效 |</p>]]></content>
+    
+    
+    <summary type="html">&lt;h2 id=&quot;浏览器标准模式和怪异模式&quot;&gt;&lt;a href=&quot;#浏览器标准模式和怪异模式&quot; class=&quot;headerlink&quot; title=&quot;浏览器标准模式和怪异模式&quot;&gt;&lt;/a&gt;浏览器标准模式和怪异模式&lt;/h2&gt;</summary>
+    
+    
+    
+    <category term="Html面试题" scheme="http://yoursite.com/categories/Html%E9%9D%A2%E8%AF%95%E9%A2%98/"/>
+    
+    
+    <category term="html面试" scheme="http://yoursite.com/tags/html%E9%9D%A2%E8%AF%95/"/>
+    
+  </entry>
+  
+  <entry>
+    <title>XHTML与HTML有什么区别</title>
+    <link href="http://yoursite.com/2020/08/16/XHTML%E4%B8%8EHTML%E6%9C%89%E4%BB%80%E4%B9%88%E5%8C%BA%E5%88%AB/"/>
+    <id>http://yoursite.com/2020/08/16/XHTML%E4%B8%8EHTML%E6%9C%89%E4%BB%80%E4%B9%88%E5%8C%BA%E5%88%AB/</id>
+    <published>2020-08-16T10:30:19.093Z</published>
+    <updated>2020-08-16T10:12:00.036Z</updated>
+    
+    <content type="html"><![CDATA[<h2 id="XHTML与HTML有什么区别"><a href="#XHTML与HTML有什么区别" class="headerlink" title="XHTML与HTML有什么区别"></a>XHTML与HTML有什么区别</h2><a id="more"></a><p>1：XHTML元素必须被正确的嵌套。<br>2：XHTML元素必须被关闭。<br>3：标签名必须用小写字母。<br>4：XHTML文档必须拥有根元素。</p>]]></content>
+    
+    
+    <summary type="html">&lt;h2 id=&quot;XHTML与HTML有什么区别&quot;&gt;&lt;a href=&quot;#XHTML与HTML有什么区别&quot; class=&quot;headerlink&quot; title=&quot;XHTML与HTML有什么区别&quot;&gt;&lt;/a&gt;XHTML与HTML有什么区别&lt;/h2&gt;</summary>
+    
+    
+    
+    <category term="Html面试题" scheme="http://yoursite.com/categories/Html%E9%9D%A2%E8%AF%95%E9%A2%98/"/>
+    
+    
+    <category term="html面试" scheme="http://yoursite.com/tags/html%E9%9D%A2%E8%AF%95/"/>
+    
+  </entry>
+  
+  <entry>
+    <title>HTML5特性有哪些？语义化的做法有哪些，具体指的什么</title>
+    <link href="http://yoursite.com/2020/08/16/HTML5%E7%89%B9%E6%80%A7%E6%9C%89%E5%93%AA%E4%BA%9B%EF%BC%9F%E8%AF%AD%E4%B9%89%E5%8C%96%E7%9A%84%E5%81%9A%E6%B3%95%E6%9C%89%E5%93%AA%E4%BA%9B%EF%BC%8C%E5%85%B7%E4%BD%93%E6%8C%87%E7%9A%84%E4%BB%80%E4%B9%88/"/>
+    <id>http://yoursite.com/2020/08/16/HTML5%E7%89%B9%E6%80%A7%E6%9C%89%E5%93%AA%E4%BA%9B%EF%BC%9F%E8%AF%AD%E4%B9%89%E5%8C%96%E7%9A%84%E5%81%9A%E6%B3%95%E6%9C%89%E5%93%AA%E4%BA%9B%EF%BC%8C%E5%85%B7%E4%BD%93%E6%8C%87%E7%9A%84%E4%BB%80%E4%B9%88/</id>
+    <published>2020-08-16T10:30:19.078Z</published>
+    <updated>2020-08-16T09:55:29.057Z</updated>
+    
+    <content type="html"><![CDATA[<h2 id="1-HTML5特性有哪些？语义化的做法有哪些，具体指的什么"><a href="#1-HTML5特性有哪些？语义化的做法有哪些，具体指的什么" class="headerlink" title="1.    HTML5特性有哪些？语义化的做法有哪些，具体指的什么"></a>1.    HTML5特性有哪些？语义化的做法有哪些，具体指的什么</h2><a id="more"></a><h2 id="新特性常用解释如下"><a href="#新特性常用解释如下" class="headerlink" title="**新特性常用解释如下**"></a><strong><center>**新特性常用解释如下</strong></center>**</h2><table><thead><tr><th>1</th><th>多媒体，用于媒介回放的video和audio元素。</th></tr></thead><tbody><tr><td>2</td><td>图像效果，用于绘画的canvas元素，svg元素等</td></tr><tr><td>3</td><td>离线&amp;存储，对本地离线存储能够更好地支持，比如localstorage,Cookies等。</td></tr><tr><td>4</td><td>设备兼容特性，HTML5提供了前所未有的数据与应用接入开放接口，使外部应用可以直接与浏览器内部的数据直接相连。</td></tr><tr><td>5</td><td>连接特性，更有效的连接工作效率，使得基于页面的实时聊天，更快速的网页游戏体验，更优化的在线交流得到了实现，同时拥有更有效的服务器推送技术，Server-Sent Event和WebSockets就是其中的两个特性，这两个特性能够帮助我们实现服务器将数据“推送”到客户端的功能。</td></tr><tr><td>6</td><td>性能与集成特性，HTML5会通过XML HttpRequest2等技术，帮助您的Web应用和网站在多样化的环境中更快速地工作。</td></tr></tbody></table><h2 id="新增标签"><a href="#新增标签" class="headerlink" title="**新增标签**"></a><strong><center>**新增标签</strong></center>**</h2><table><thead><tr><th>1</th><th>多媒体：audio video source embed track</th></tr></thead><tbody><tr><td>2</td><td>新表单元素：datalist output keygen</td></tr><tr><td>3</td><td>新文档节段和纲要：header页面头部  section章节 aside边栏article文档内容  footer页面底部</td></tr></tbody></table><h2 id="语义化具体指以下内容："><a href="#语义化具体指以下内容：" class="headerlink" title="**语义化具体指以下内容：**"></a><strong><center>**语义化具体指以下内容：</strong></center>**</h2><table><thead><tr><th>1</th><th>语义特性，添加header nav等标签</th></tr></thead><tbody><tr><td>2</td><td>为了在没有css代码时，也能呈现很好的内容结构，代码结构，以至于达到没有编程基础的非技术人员，也能看懂其代码</td></tr><tr><td>3</td><td>为了提高用户体验，比如：title,alt用于解释名词和图片信息</td></tr><tr><td>4</td><td>利于SEO，语义化能和搜索引擎建立良好的关系，有利于爬虫抓取更多的有效信息，爬虫依赖于标签来确定上下文和各个关键字的权重</td></tr><tr><td>5</td><td>便于团队开发和维护，语义化更具可读性，如果遵循W3C标准的团队都遵循这个标准，可以减少差异化，有利于规范化</td></tr><tr><td>6</td><td>方便其他设备解析（如屏幕阅读器，盲人阅读器，移动设备）以语义的方式来渲染网页</td></tr></tbody></table>]]></content>
+    
+    
+    <summary type="html">&lt;h2 id=&quot;1-HTML5特性有哪些？语义化的做法有哪些，具体指的什么&quot;&gt;&lt;a href=&quot;#1-HTML5特性有哪些？语义化的做法有哪些，具体指的什么&quot; class=&quot;headerlink&quot; title=&quot;1.    HTML5特性有哪些？语义化的做法有哪些，具体指的什么&quot;&gt;&lt;/a&gt;1.    HTML5特性有哪些？语义化的做法有哪些，具体指的什么&lt;/h2&gt;</summary>
+    
+    
+    
+    <category term="Html面试题" scheme="http://yoursite.com/categories/Html%E9%9D%A2%E8%AF%95%E9%A2%98/"/>
+    
+    
+    <category term="html面试" scheme="http://yoursite.com/tags/html%E9%9D%A2%E8%AF%95/"/>
+    
+  </entry>
   
   <entry>
     <title></title>
@@ -292,7 +397,7 @@
     <published>2020-08-12T11:39:43.560Z</published>
     <updated>2020-08-14T09:52:55.652Z</updated>
     
-    <content type="html"><![CDATA[<h2 id="github上传代码操作，简单记录"><a href="#github上传代码操作，简单记录" class="headerlink" title="github上传代码操作，简单记录"></a>github上传代码操作，简单记录</h2><a id="more"></a><p>码云上传代码见：<a href="https://blog.csdn.net/weixin_42693712/article/details/107571303">https://blog.csdn.net/weixin_42693712/article/details/107571303</a><br>github上传代码：<br>1.复制github网址，右击项目git BashHere<br>2.git clone <a href="https://github.com/111/111.git%EF%BC%88https://github.com/111/111.git%E6%9B%BF%E6%8D%A2%E6%88%90%E4%BD%A0%E4%B9%8B%E5%89%8D%E5%A4%8D%E5%88%B6%E7%9A%84%E5%9C%B0%E5%9D%80%EF%BC%89">https://github.com/111/111.git（https://github.com/111/111.git替换成你之前复制的地址）</a><br>3..这个步骤以后你的本地项目文件夹下面就会多出个文件夹，该文件夹名即为你github上面的项目名，如果我多出了个Comment文件夹，我们把本地项目文件夹下的所有文件（除了新多出的那个文件夹不用），其余都复制到那个新多出的文件夹下<br>4.cd 文件夹的名字<br> 5.      5.1  git add .        （注：别忘记后面的.，此操作是把Comment文件夹下面的文件都添加进来）</p><pre><code>     5.2  git commit  -m  &quot;提交信息&quot;  （注：“提交信息”里面换成你需要，如“first commit”）</code></pre><p>这步如果不成功（错误提示如下：*** Please tell me who you are.<br>     Run git config –global user.email “<a href="mailto:&#121;&#111;&#x75;&#x40;&#101;&#x78;&#97;&#109;&#x70;&#x6c;&#x65;&#46;&#99;&#x6f;&#x6d;">&#121;&#111;&#x75;&#x40;&#101;&#x78;&#97;&#109;&#x70;&#x6c;&#x65;&#46;&#99;&#x6f;&#x6d;</a>“ git config –global user.name “Your Name”<br>遇到这种情况依次执行以下命令<br>git config –global user.email “你的邮箱”<br>git config –global user.name “用户名”）</p><pre><code>   5.3  git push -u origin master   （注：此操作目的是把本地仓库push到github上面，此步骤需要你输入帐号和密码）   如果遇到这个错误：fatal: Not a git repository (or any of the parent directories): .git，证明你没有git目录，在项目目录下执行 git init即可</code></pre>]]></content>
+    <content type="html"><![CDATA[<h2 id="github上传代码操作，简单记录"><a href="#github上传代码操作，简单记录" class="headerlink" title="github上传代码操作，简单记录"></a>github上传代码操作，简单记录</h2><a id="more"></a><p>码云上传代码见：<a href="https://blog.csdn.net/weixin_42693712/article/details/107571303">https://blog.csdn.net/weixin_42693712/article/details/107571303</a><br>github上传代码：<br>1.复制github网址，右击项目git BashHere<br>2.git clone <a href="https://github.com/111/111.git%EF%BC%88https://github.com/111/111.git%E6%9B%BF%E6%8D%A2%E6%88%90%E4%BD%A0%E4%B9%8B%E5%89%8D%E5%A4%8D%E5%88%B6%E7%9A%84%E5%9C%B0%E5%9D%80%EF%BC%89">https://github.com/111/111.git（https://github.com/111/111.git替换成你之前复制的地址）</a><br>3..这个步骤以后你的本地项目文件夹下面就会多出个文件夹，该文件夹名即为你github上面的项目名，如果我多出了个Comment文件夹，我们把本地项目文件夹下的所有文件（除了新多出的那个文件夹不用），其余都复制到那个新多出的文件夹下<br>4.cd 文件夹的名字<br> 5.      5.1  git add .        （注：别忘记后面的.，此操作是把Comment文件夹下面的文件都添加进来）</p><pre><code>     5.2  git commit  -m  &quot;提交信息&quot;  （注：“提交信息”里面换成你需要，如“first commit”）</code></pre><p>这步如果不成功（错误提示如下：*** Please tell me who you are.<br>     Run git config –global user.email “<a href="mailto:&#x79;&#111;&#117;&#x40;&#x65;&#120;&#97;&#x6d;&#112;&#x6c;&#101;&#x2e;&#x63;&#111;&#x6d;">&#x79;&#111;&#117;&#x40;&#x65;&#120;&#97;&#x6d;&#112;&#x6c;&#101;&#x2e;&#x63;&#111;&#x6d;</a>“ git config –global user.name “Your Name”<br>遇到这种情况依次执行以下命令<br>git config –global user.email “你的邮箱”<br>git config –global user.name “用户名”）</p><pre><code>   5.3  git push -u origin master   （注：此操作目的是把本地仓库push到github上面，此步骤需要你输入帐号和密码）   如果遇到这个错误：fatal: Not a git repository (or any of the parent directories): .git，证明你没有git目录，在项目目录下执行 git init即可</code></pre>]]></content>
     
     
     <summary type="html">&lt;h2 id=&quot;github上传代码操作，简单记录&quot;&gt;&lt;a href=&quot;#github上传代码操作，简单记录&quot; class=&quot;headerlink&quot; title=&quot;github上传代码操作，简单记录&quot;&gt;&lt;/a&gt;github上传代码操作，简单记录&lt;/h2&gt;</summary>
@@ -300,101 +405,6 @@
     
     
     <category term="github" scheme="http://yoursite.com/categories/github/"/>
-    
-    
-  </entry>
-  
-  <entry>
-    <title>在利用脚手架创建vue项目时，如果创建到了c盘，但又不想占用c盘空间，所以想要把项目移动到D盘，进行如下操作</title>
-    <link href="http://yoursite.com/2020/08/12/%E5%9C%A8%E5%88%A9%E7%94%A8%E8%84%9A%E6%89%8B%E6%9E%B6%E5%88%9B%E5%BB%BAvue%E9%A1%B9%E7%9B%AE%E6%97%B6%EF%BC%8C%E5%A6%82%E6%9E%9C%E5%88%9B%E5%BB%BA%E5%88%B0%E4%BA%86c%E7%9B%98%EF%BC%8C%E4%BD%86%E5%8F%88%E4%B8%8D%E6%83%B3%E5%8D%A0%E7%94%A8c%E7%9B%98%E7%A9%BA%E9%97%B4%EF%BC%8C%E6%89%80%E4%BB%A5%E6%83%B3%E8%A6%81%E6%8A%8A%E9%A1%B9%E7%9B%AE%E7%A7%BB%E5%8A%A8%E5%88%B0D%E7%9B%98%EF%BC%8C%E8%BF%9B%E8%A1%8C%E5%A6%82%E4%B8%8B%E6%93%8D%E4%BD%9C/"/>
-    <id>http://yoursite.com/2020/08/12/%E5%9C%A8%E5%88%A9%E7%94%A8%E8%84%9A%E6%89%8B%E6%9E%B6%E5%88%9B%E5%BB%BAvue%E9%A1%B9%E7%9B%AE%E6%97%B6%EF%BC%8C%E5%A6%82%E6%9E%9C%E5%88%9B%E5%BB%BA%E5%88%B0%E4%BA%86c%E7%9B%98%EF%BC%8C%E4%BD%86%E5%8F%88%E4%B8%8D%E6%83%B3%E5%8D%A0%E7%94%A8c%E7%9B%98%E7%A9%BA%E9%97%B4%EF%BC%8C%E6%89%80%E4%BB%A5%E6%83%B3%E8%A6%81%E6%8A%8A%E9%A1%B9%E7%9B%AE%E7%A7%BB%E5%8A%A8%E5%88%B0D%E7%9B%98%EF%BC%8C%E8%BF%9B%E8%A1%8C%E5%A6%82%E4%B8%8B%E6%93%8D%E4%BD%9C/</id>
-    <published>2020-08-12T11:39:00.446Z</published>
-    <updated>2020-08-14T09:52:31.421Z</updated>
-    
-    <content type="html"><![CDATA[<h2 id="在利用脚手架创建vue项目时，如果创建到了c盘，但又不想占用c盘空间，所以想要把项目移动到D盘，进行如下操作"><a href="#在利用脚手架创建vue项目时，如果创建到了c盘，但又不想占用c盘空间，所以想要把项目移动到D盘，进行如下操作" class="headerlink" title="在利用脚手架创建vue项目时，如果创建到了c盘，但又不想占用c盘空间，所以想要把项目移动到D盘，进行如下操作"></a>在利用脚手架创建vue项目时，如果创建到了c盘，但又不想占用c盘空间，所以想要把项目移动到D盘，进行如下操作</h2><a id="more"></a><ol><li>打开要移动的项目，复制除了node_modules以外的所有文件<img src="https://img-blog.csdnimg.cn/20200723164316332.png?x-oss-process=image/watermark,type_ZmFuZ3poZW5naGVpdGk,shadow_10,text_aHR0cHM6Ly9ibG9nLmNzZG4ubmV0L3dlaXhpbl80MjY5MzcxMg==,size_16,color_FFFFFF,t_70" alt="在这里插入图片描述"></li><li>在新的文件夹下粘贴这些文件，然后打开终端，输入<code>npm i</code>会自动读取package.json里面的配置，自动创建node_modules文件<br><img src="https://img-blog.csdnimg.cn/20200723164649524.png" alt="在这里插入图片描述"></li></ol><p><img src="https://img-blog.csdnimg.cn/202007231646176.png?x-oss-process=image/watermark,type_ZmFuZ3poZW5naGVpdGk,shadow_10,text_aHR0cHM6Ly9ibG9nLmNzZG4ubmV0L3dlaXhpbl80MjY5MzcxMg==,size_16,color_FFFFFF,t_70" alt="在这里插入图片描述"><br>3.接着输入 <code>npm run serve</code> 就可以运行了</p>]]></content>
-    
-    
-    <summary type="html">&lt;h2 id=&quot;在利用脚手架创建vue项目时，如果创建到了c盘，但又不想占用c盘空间，所以想要把项目移动到D盘，进行如下操作&quot;&gt;&lt;a href=&quot;#在利用脚手架创建vue项目时，如果创建到了c盘，但又不想占用c盘空间，所以想要把项目移动到D盘，进行如下操作&quot; class=&quot;headerlink&quot; title=&quot;在利用脚手架创建vue项目时，如果创建到了c盘，但又不想占用c盘空间，所以想要把项目移动到D盘，进行如下操作&quot;&gt;&lt;/a&gt;在利用脚手架创建vue项目时，如果创建到了c盘，但又不想占用c盘空间，所以想要把项目移动到D盘，进行如下操作&lt;/h2&gt;</summary>
-    
-    
-    
-    <category term="Vue" scheme="http://yoursite.com/categories/Vue/"/>
-    
-    
-  </entry>
-  
-  <entry>
-    <title>详细创建一个vue项目步骤</title>
-    <link href="http://yoursite.com/2020/08/12/%E8%AF%A6%E7%BB%86%E5%88%9B%E5%BB%BA%E4%B8%80%E4%B8%AAvue%EF%BC%88vue%E5%8F%AF%E4%BB%A5%E5%9F%BA%E4%BA%8E%E5%9B%BE%E5%BD%A2%E5%8C%96%E5%92%8C%E5%91%BD%E4%BB%A4%E8%A1%8C%EF%BC%89%E9%A1%B9%E7%9B%AE%E6%AD%A5%E9%AA%A4%EF%BC%8C%E7%94%A8%E5%88%B0Element-UI%EF%BC%88%E5%8F%AF%E4%BB%A5%E5%9F%BA%E4%BA%8E%E5%9B%BE%E5%BD%A2%E5%8C%96%E5%92%8C%E5%91%BD%E4%BB%A4%EF%BC%89/"/>
-    <id>http://yoursite.com/2020/08/12/%E8%AF%A6%E7%BB%86%E5%88%9B%E5%BB%BA%E4%B8%80%E4%B8%AAvue%EF%BC%88vue%E5%8F%AF%E4%BB%A5%E5%9F%BA%E4%BA%8E%E5%9B%BE%E5%BD%A2%E5%8C%96%E5%92%8C%E5%91%BD%E4%BB%A4%E8%A1%8C%EF%BC%89%E9%A1%B9%E7%9B%AE%E6%AD%A5%E9%AA%A4%EF%BC%8C%E7%94%A8%E5%88%B0Element-UI%EF%BC%88%E5%8F%AF%E4%BB%A5%E5%9F%BA%E4%BA%8E%E5%9B%BE%E5%BD%A2%E5%8C%96%E5%92%8C%E5%91%BD%E4%BB%A4%EF%BC%89/</id>
-    <published>2020-08-12T11:38:13.908Z</published>
-    <updated>2020-08-14T09:52:26.614Z</updated>
-    
-    <content type="html"><![CDATA[<h2 id="详细创建一个vue项目步骤"><a href="#详细创建一个vue项目步骤" class="headerlink" title="详细创建一个vue项目步骤"></a>详细创建一个vue项目步骤</h2><a id="more"></a><p>详细创建一个vue项目步骤<br>为了避免一些坑，特意将创建vue步骤记录下来</p><ol><li><strong>安装node</strong> 安装地址：</li></ol><blockquote><p><a href="https://nodejs.org/en/">https://nodejs.org/en/</a></p></blockquote><p> 安装成功后进行查看<br> <img src="https://img-blog.csdnimg.cn/20200722162629708.png" alt="在这里插入图片描述"><br> 2. 为了提高效率，可以使用淘宝的镜像：</p><blockquote><p><a href="http://npm.taobao.org/">http://npm.taobao.org/</a></p></blockquote><p> 输入：<br> <code>npm install -g cnpm –registry=https://registry.npm.taobao.org</code>，<br> 即可安装npm镜像，以后再用到npm的地方直接用cnpm来代替就好了<br> 安装成功后查看<br><img src="https://img-blog.csdnimg.cn/2020072216274574.png" alt="在这里插入图片描述"><br><img src="https://img-blog.csdnimg.cn/20200722162802864.png" alt="在这里插入图片描述"><br>或者使用npm淘宝镜像 </p><figure class="highlight javascript"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">npm config set registry https:<span class="comment">//registry.npm.taobao.org</span></span><br></pre></td></tr></table></figure><ol start="3"><li><strong>基于图形化界面或者命令行界面创建项目</strong> 见</li></ol><blockquote><p><a href="https://blog.csdn.net/weixin_42693712/article/details/107495176">https://blog.csdn.net/weixin_42693712/article/details/107495176</a></p></blockquote><ol start="4"><li><strong>安装Element-UI</strong><br>官网：</li></ol><blockquote><p><a href="https://element.eleme.cn/#/zh-CN">https://element.eleme.cn/#/zh-CN</a></p></blockquote><p>  4.1在项目下输入命令：<code>npm i element-ui -S</code> 安装element-ui<br>  4.2 在main.js里面导入element-ui组件和样式<br>  输入<code>import ElementUI from &#39;element-ui&#39;</code>和<br>         <code>import &#39;element-ui/lib/theme-chalk/index&#39;</code>和<code>Vue.use(ElementUI)</code><br>  <img src="https://img-blog.csdnimg.cn/20200722163841386.png?x-oss-process=image/watermark,type_ZmFuZ3poZW5naGVpdGk,shadow_10,text_aHR0cHM6Ly9ibG9nLmNzZG4ubmV0L3dlaXhpbl80MjY5MzcxMg==,size_16,color_FFFFFF,t_70" alt="在这里插入图片描述"><br> 4.3 测试 在App.vue 下输入相应代码</p><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br></pre></td><td class="code"><pre><span class="line">   &lt;el-row&gt;</span><br><span class="line">  &lt;el-button&gt;默认按钮&lt;&#x2F;el-button&gt;</span><br><span class="line">  &lt;el-button type&#x3D;&quot;primary&quot;&gt;主要按钮&lt;&#x2F;el-button&gt;</span><br><span class="line">  &lt;el-button type&#x3D;&quot;success&quot;&gt;成功按钮&lt;&#x2F;el-button&gt;</span><br><span class="line">  &lt;el-button type&#x3D;&quot;info&quot;&gt;信息按钮&lt;&#x2F;el-button&gt;</span><br><span class="line">  &lt;el-button type&#x3D;&quot;warning&quot;&gt;警告按钮&lt;&#x2F;el-button&gt;</span><br><span class="line">  &lt;el-button type&#x3D;&quot;danger&quot;&gt;危险按钮&lt;&#x2F;el-button&gt;</span><br><span class="line">&lt;&#x2F;el-row&gt;</span><br></pre></td></tr></table></figure><p><img src="https://img-blog.csdnimg.cn/20200722164131104.png?x-oss-process=image/watermark,type_ZmFuZ3poZW5naGVpdGk,shadow_10,text_aHR0cHM6Ly9ibG9nLmNzZG4ubmV0L3dlaXhpbl80MjY5MzcxMg==,size_16,color_FFFFFF,t_70" alt="在这里插入图片描述"><br>4.4 运行 输入 <code>npm run serve</code> 复制网址打开<br><img src="https://img-blog.csdnimg.cn/20200722165217621.png" alt="在这里插入图片描述"><br>可以看到按钮，安装成功<img src="https://img-blog.csdnimg.cn/20200722165250592.png?x-oss-process=image/watermark,type_ZmFuZ3poZW5naGVpdGk,shadow_10,text_aHR0cHM6Ly9ibG9nLmNzZG4ubmV0L3dlaXhpbl80MjY5MzcxMg==,size_16,color_FFFFFF,t_70" alt="在这里插入图片描述"><br>4.5（不推荐） 为了方便不用每次创建完成都去自己复制网址打开，进行如下设置<br>在package.json下面增加代码  “port”:8888表示打开的端口号  “open”:true表示服务运行后自动打开网页</p><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br></pre></td><td class="code"><pre><span class="line">&quot;vue&quot;:&#123;</span><br><span class="line">    &quot;devServer&quot;:&#123;</span><br><span class="line">      &quot;port&quot;:8888,</span><br><span class="line">      &quot;open&quot;:true</span><br><span class="line">    &#125;</span><br><span class="line">  &#125;</span><br></pre></td></tr></table></figure><p><img src="https://img-blog.csdnimg.cn/20200722165659246.png?x-oss-process=image/watermark,type_ZmFuZ3poZW5naGVpdGk,shadow_10,text_aHR0cHM6Ly9ibG9nLmNzZG4ubmV0L3dlaXhpbl80MjY5MzcxMg==,size_16,color_FFFFFF,t_70" alt="在这里插入图片描述"><br> 4.6（推荐）为了结合vue项目更好的使用，上面那种方法不推荐<br> 推荐做法：在项目根目录创建vue.config.js文件<br> 输入以下代码<br> <figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br></pre></td><td class="code"><pre><span class="line"> module.exports&#x3D;&#123;</span><br><span class="line">    devServer:&#123;</span><br><span class="line">        open:true,</span><br><span class="line">        port:8888</span><br><span class="line">    &#125;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure><br>查看结果：还是生效的<br><img src="https://img-blog.csdnimg.cn/20200722170410231.png?x-oss-process=image/watermark,type_ZmFuZ3poZW5naGVpdGk,shadow_10,text_aHR0cHM6Ly9ibG9nLmNzZG4ubmV0L3dlaXhpbl80MjY5MzcxMg==,size_16,color_FFFFFF,t_70" alt="在这里插入图片描述"><br>5.<strong>Element-UI基于图形化界面安装</strong><br>5.1 打开cmd 输入<code>vue ui</code> 打开图形化界面<br>如果有项目，打开项目管理器创建新的项目<br><img src="https://img-blog.csdnimg.cn/20200722171042503.png?x-oss-process=image/watermark,type_ZmFuZ3poZW5naGVpdGk,shadow_10,text_aHR0cHM6Ly9ibG9nLmNzZG4ubmV0L3dlaXhpbl80MjY5MzcxMg==,size_16,color_FFFFFF,t_70" alt="在这里插入图片描述"><br>**<em>没有项目就创建新的项目见第3步**</em><br>5.2 有项目后 找到插件》添加插件<br><img src="https://img-blog.csdnimg.cn/20200722171400195.png?x-oss-process=image/watermark,type_ZmFuZ3poZW5naGVpdGk,shadow_10,text_aHR0cHM6Ly9ibG9nLmNzZG4ubmV0L3dlaXhpbl80MjY5MzcxMg==,size_16,color_FFFFFF,t_70" alt="在这里插入图片描述"><br>输入<code>elemen</code>t查询<code>vue-cli-plugin-element</code>这个包 单击并且安装<br><img src="https://img-blog.csdnimg.cn/20200722171553546.png?x-oss-process=image/watermark,type_ZmFuZ3poZW5naGVpdGk,shadow_10,text_aHR0cHM6Ly9ibG9nLmNzZG4ubmV0L3dlaXhpbl80MjY5MzcxMg==,size_16,color_FFFFFF,t_70" alt="在这里插入图片描述"></p><p>接着进行配置完成安装<br><img src="https://img-blog.csdnimg.cn/20200722171709602.png" alt="在这里插入图片描述"><br><img src="https://img-blog.csdnimg.cn/20200722171814553.png" alt="在这里插入图片描述"><br>最后在任务中重启项目<br>5.3 打开main.js 看到已经导入了插件<br><img src="https://img-blog.csdnimg.cn/20200722172004106.png" alt="在这里插入图片描述"><br>5.4 测试 在App.vue 下输入相应代码</p><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br></pre></td><td class="code"><pre><span class="line">   &lt;el-row&gt;</span><br><span class="line">  &lt;el-button&gt;默认按钮&lt;&#x2F;el-button&gt;</span><br><span class="line">  &lt;el-button type&#x3D;&quot;primary&quot;&gt;主要按钮&lt;&#x2F;el-button&gt;</span><br><span class="line">  &lt;el-button type&#x3D;&quot;success&quot;&gt;成功按钮&lt;&#x2F;el-button&gt;</span><br><span class="line">  &lt;el-button type&#x3D;&quot;info&quot;&gt;信息按钮&lt;&#x2F;el-button&gt;</span><br><span class="line">  &lt;el-button type&#x3D;&quot;warning&quot;&gt;警告按钮&lt;&#x2F;el-button&gt;</span><br><span class="line">  &lt;el-button type&#x3D;&quot;danger&quot;&gt;危险按钮&lt;&#x2F;el-button&gt;</span><br><span class="line">&lt;&#x2F;el-row&gt;</span><br></pre></td></tr></table></figure><p><img src="https://img-blog.csdnimg.cn/20200722164131104.png?x-oss-process=image/watermark,type_ZmFuZ3poZW5naGVpdGk,shadow_10,text_aHR0cHM6Ly9ibG9nLmNzZG4ubmV0L3dlaXhpbl80MjY5MzcxMg==,size_16,color_FFFFFF,t_70" alt="在这里插入图片描述"><br>到这里，两种方法创建vue项目成功</p>]]></content>
-    
-    
-    <summary type="html">&lt;h2 id=&quot;详细创建一个vue项目步骤&quot;&gt;&lt;a href=&quot;#详细创建一个vue项目步骤&quot; class=&quot;headerlink&quot; title=&quot;详细创建一个vue项目步骤&quot;&gt;&lt;/a&gt;详细创建一个vue项目步骤&lt;/h2&gt;</summary>
-    
-    
-    
-    <category term="Vue" scheme="http://yoursite.com/categories/Vue/"/>
-    
-    
-  </entry>
-  
-  <entry>
-    <title>vue脚手架交互式命令行和图形化界面安装步骤</title>
-    <link href="http://yoursite.com/2020/08/12/vue%E8%84%9A%E6%89%8B%E6%9E%B6%E4%BA%A4%E4%BA%92%E5%BC%8F%E5%91%BD%E4%BB%A4%E8%A1%8C%E5%92%8C%E5%9B%BE%E5%BD%A2%E5%8C%96%E7%95%8C%E9%9D%A2%E5%AE%89%E8%A3%85%E6%AD%A5%E9%AA%A4/"/>
-    <id>http://yoursite.com/2020/08/12/vue%E8%84%9A%E6%89%8B%E6%9E%B6%E4%BA%A4%E4%BA%92%E5%BC%8F%E5%91%BD%E4%BB%A4%E8%A1%8C%E5%92%8C%E5%9B%BE%E5%BD%A2%E5%8C%96%E7%95%8C%E9%9D%A2%E5%AE%89%E8%A3%85%E6%AD%A5%E9%AA%A4/</id>
-    <published>2020-08-12T11:37:05.803Z</published>
-    <updated>2020-08-14T09:53:56.883Z</updated>
-    
-    <content type="html"><![CDATA[<h2 id="vue脚手架交互式命令行和图形化界面安装步骤"><a href="#vue脚手架交互式命令行和图形化界面安装步骤" class="headerlink" title="vue脚手架交互式命令行和图形化界面安装步骤"></a>vue脚手架交互式命令行和图形化界面安装步骤</h2><a id="more"></a><p><strong>1.交互式命令行</strong></p><ol><li><p>保证安装node</p></li><li><p>安装vue脚手架  命令：npm install -g @vue/cli<img src="https://img-blog.csdnimg.cn/20200721181718314.png" alt="在这里插入图片描述"><br><img src="https://img-blog.csdnimg.cn/20200721181741410.png" alt="在这里插入图片描述"><br>安装成功使用vue -V查看安装版本<br><img src="https://img-blog.csdnimg.cn/20200721181841465.png" alt="在这里插入图片描述"><br>如果之前安装过使用npm uinstall vue-cli -g命令卸载</p></li><li><p>创建项目</p></li><li><p>1输入vue create vue_proj 然后回车（选择第二项手动创建然后回车）<br><img src="https://img-blog.csdnimg.cn/20200721182302291.png" alt="在这里插入图片描述"><br>3.2选住图中三个配置，按空格是选择，选好后回车确定<br><img src="https://img-blog.csdnimg.cn/20200721182508264.png?x-oss-process=image/watermark,type_ZmFuZ3poZW5naGVpdGk,shadow_10,text_aHR0cHM6Ly9ibG9nLmNzZG4ubmV0L3dlaXhpbl80MjY5MzcxMg==,size_16,color_FFFFFF,t_70" alt="在这里插入图片描述"><br>3.3询问是否安装历史模式路由，选择安装哈希模式，选择n之后回车<br><img src="https://img-blog.csdnimg.cn/20200721182615770.png" alt="在这里插入图片描述"><br>3.4询问版本，选择Standard config 回车<br><img src="https://img-blog.csdnimg.cn/2020072118272027.png?x-oss-process=image/watermark,type_ZmFuZ3poZW5naGVpdGk,shadow_10,text_aHR0cHM6Ly9ibG9nLmNzZG4ubmV0L3dlaXhpbl80MjY5MzcxMg==,size_16,color_FFFFFF,t_70" alt="在这里插入图片描述"><br>3.5询问什么时候进行历史校验，选择默认后回车<br><img src="https://img-blog.csdnimg.cn/20200721182849306.png" alt="在这里插入图片描述"><br>3.6创建单独配置文件，选择第一项后回车<br><img src="https://img-blog.csdnimg.cn/20200721182941812.png" alt="在这里插入图片描述"><br>3.7是否将当前选择保存为一个模板，可以选择是或者否，这里选择是后回车<br>模板名称：vue_model_01<br><img src="https://img-blog.csdnimg.cn/2020072118313420.png?x-oss-process=image/watermark,type_ZmFuZ3poZW5naGVpdGk,shadow_10,text_aHR0cHM6Ly9ibG9nLmNzZG4ubmV0L3dlaXhpbl80MjY5MzcxMg==,size_16,color_FFFFFF,t_70" alt="在这里插入图片描述"><br>3.8等待创建 创建完成后cd进入项目根目录，然后运行npm run serve启动项目<br><img src="https://img-blog.csdnimg.cn/20200721183404972.png?x-oss-process=image/watermark,type_ZmFuZ3poZW5naGVpdGk,shadow_10,text_aHR0cHM6Ly9ibG9nLmNzZG4ubmV0L3dlaXhpbl80MjY5MzcxMg==,size_16,color_FFFFFF,t_70" alt="在这里插入图片描述"><br><img src="https://img-blog.csdnimg.cn/20200721183438341.png" alt="在这里插入图片描述"><br>最后复制地址在浏览器打开即可<br><img src="https://img-blog.csdnimg.cn/2020072118351666.png?x-oss-process=image/watermark,type_ZmFuZ3poZW5naGVpdGk,shadow_10,text_aHR0cHM6Ly9ibG9nLmNzZG4ubmV0L3dlaXhpbl80MjY5MzcxMg==,size_16,color_FFFFFF,t_70" alt="在这里插入图片描述"><br><img src="https://img-blog.csdnimg.cn/20200721183537248.png?x-oss-process=image/watermark,type_ZmFuZ3poZW5naGVpdGk,shadow_10,text_aHR0cHM6Ly9ibG9nLmNzZG4ubmV0L3dlaXhpbl80MjY5MzcxMg==,size_16,color_FFFFFF,t_70" alt="在这里插入图片描述"><br><strong>2.图形化界面创建</strong></p></li><li><p>第一步，输入vue ui<img src="https://img-blog.csdnimg.cn/2020072119484944.png" alt="在这里插入图片描述"></p></li><li><p>点击创建，在此创建新项目<img src="https://img-blog.csdnimg.cn/20200721195206714.png?x-oss-process=image/watermark,type_ZmFuZ3poZW5naGVpdGk,shadow_10,text_aHR0cHM6Ly9ibG9nLmNzZG4ubmV0L3dlaXhpbl80MjY5MzcxMg==,size_16,color_FFFFFF,t_70" alt="在这里插入图片描述"><br>6.填写文件名字和初始化git仓库<img src="https://img-blog.csdnimg.cn/20200721195344552.png?x-oss-process=image/watermark,type_ZmFuZ3poZW5naGVpdGk,shadow_10,text_aHR0cHM6Ly9ibG9nLmNzZG4ubmV0L3dlaXhpbl80MjY5MzcxMg==,size_16,color_FFFFFF,t_70" alt="在这里插入图片描述"><br>7.选择手动，或者自动，或者以前创建过得模板，这里选择手动（第一次）<img src="https://img-blog.csdnimg.cn/20200721195526321.png?x-oss-process=image/watermark,type_ZmFuZ3poZW5naGVpdGk,shadow_10,text_aHR0cHM6Ly9ibG9nLmNzZG4ubmV0L3dlaXhpbl80MjY5MzcxMg==,size_16,color_FFFFFF,t_70" alt="在这里插入图片描述"><br>8.选择以下四个<br><img src="https://img-blog.csdnimg.cn/20200721195618558.png?x-oss-process=image/watermark,type_ZmFuZ3poZW5naGVpdGk,shadow_10,text_aHR0cHM6Ly9ibG9nLmNzZG4ubmV0L3dlaXhpbl80MjY5MzcxMg==,size_16,color_FFFFFF,t_70" alt="在这里插入图片描述"><br><img src="https://img-blog.csdnimg.cn/20200721195635692.png?x-oss-process=image/watermark,type_ZmFuZ3poZW5naGVpdGk,shadow_10,text_aHR0cHM6Ly9ibG9nLmNzZG4ubmV0L3dlaXhpbl80MjY5MzcxMg==,size_16,color_FFFFFF,t_70" alt="在这里插入图片描述"><br>9.select下选择第三个，之后点击创建项目<img src="https://img-blog.csdnimg.cn/20200721195802507.png?x-oss-process=image/watermark,type_ZmFuZ3poZW5naGVpdGk,shadow_10,text_aHR0cHM6Ly9ibG9nLmNzZG4ubmV0L3dlaXhpbl80MjY5MzcxMg==,size_16,color_FFFFFF,t_70" alt="在这里插入图片描述"><br>10 然后输入名称（）创建项目，保存预设或者不保存都可以<img src="https://img-blog.csdnimg.cn/20200721200001659.png?x-oss-process=image/watermark,type_ZmFuZ3poZW5naGVpdGk,shadow_10,text_aHR0cHM6Ly9ibG9nLmNzZG4ubmV0L3dlaXhpbl80MjY5MzcxMg==,size_16,color_FFFFFF,t_70" alt="在这里插入图片描述"><br>11 然后运行即可<img src="https://img-blog.csdnimg.cn/20200721200146546.png?x-oss-process=image/watermark,type_ZmFuZ3poZW5naGVpdGk,shadow_10,text_aHR0cHM6Ly9ibG9nLmNzZG4ubmV0L3dlaXhpbl80MjY5MzcxMg==,size_16,color_FFFFFF,t_70" alt="在这里插入图片描述"></p></li></ol>]]></content>
-    
-    
-    <summary type="html">&lt;h2 id=&quot;vue脚手架交互式命令行和图形化界面安装步骤&quot;&gt;&lt;a href=&quot;#vue脚手架交互式命令行和图形化界面安装步骤&quot; class=&quot;headerlink&quot; title=&quot;vue脚手架交互式命令行和图形化界面安装步骤&quot;&gt;&lt;/a&gt;vue脚手架交互式命令行和图形化界面安装步骤&lt;/h2&gt;</summary>
-    
-    
-    
-    <category term="Vue" scheme="http://yoursite.com/categories/Vue/"/>
-    
-    
-  </entry>
-  
-  <entry>
-    <title>对于maven中pom.xml依赖报红问题</title>
-    <link href="http://yoursite.com/2020/08/12/%E5%AF%B9%E4%BA%8Emaven%E4%B8%ADpom.xml%E4%BE%9D%E8%B5%96%E6%8A%A5%E7%BA%A2%E9%97%AE%E9%A2%98/"/>
-    <id>http://yoursite.com/2020/08/12/%E5%AF%B9%E4%BA%8Emaven%E4%B8%ADpom.xml%E4%BE%9D%E8%B5%96%E6%8A%A5%E7%BA%A2%E9%97%AE%E9%A2%98/</id>
-    <published>2020-08-12T11:32:46.347Z</published>
-    <updated>2020-08-14T09:51:35.904Z</updated>
-    
-    <content type="html"><![CDATA[<h2 id="对于maven中pom-xml依赖报红问题"><a href="#对于maven中pom-xml依赖报红问题" class="headerlink" title="对于maven中pom.xml依赖报红问题"></a>对于maven中pom.xml依赖报红问题</h2><a id="more"></a><p>在写maven项目的时候，导入的依赖报红问题解决办法，像下图标注位置是红色，依赖包也无法正常导入解决</p><p><img src="https://img-blog.csdnimg.cn/20200718212821319.png?x-oss-process=image/watermark,type_ZmFuZ3poZW5naGVpdGk,shadow_10,text_aHR0cHM6Ly9ibG9nLmNzZG4ubmV0L3dlaXhpbl80MjY5MzcxMg==,size_16,color_FFFFFF,t_70" alt="在这里插入图片描述"></p><p>1.按下图操作</p><p><img src="https://img-blog.csdnimg.cn/20200718213254585.png?x-oss-process=image/watermark,type_ZmFuZ3poZW5naGVpdGk,shadow_10,text_aHR0cHM6Ly9ibG9nLmNzZG4ubmV0L3dlaXhpbl80MjY5MzcxMg==,size_16,color_FFFFFF,t_70" alt="在这里插入图片描述"><br><img src="https://img-blog.csdnimg.cn/20200718213339727.png?x-oss-process=image/watermark,type_ZmFuZ3poZW5naGVpdGk,shadow_10,text_aHR0cHM6Ly9ibG9nLmNzZG4ubmV0L3dlaXhpbl80MjY5MzcxMg==,size_16,color_FFFFFF,t_70" alt="在这里插入图片描述"></p><p><img src="https://img-blog.csdnimg.cn/20200718213425194.png?x-oss-process=image/watermark,type_ZmFuZ3poZW5naGVpdGk,shadow_10,text_aHR0cHM6Ly9ibG9nLmNzZG4ubmV0L3dlaXhpbl80MjY5MzcxMg==,size_16,color_FFFFFF,t_70" alt="在这里插入图片描述"><br>刷新之后等一下就可以了</p>]]></content>
-    
-    
-    <summary type="html">&lt;h2 id=&quot;对于maven中pom-xml依赖报红问题&quot;&gt;&lt;a href=&quot;#对于maven中pom-xml依赖报红问题&quot; class=&quot;headerlink&quot; title=&quot;对于maven中pom.xml依赖报红问题&quot;&gt;&lt;/a&gt;对于maven中pom.xml依赖报红问题&lt;/h2&gt;</summary>
-    
-    
-    
-    <category term="maven" scheme="http://yoursite.com/categories/maven/"/>
-    
-    
-  </entry>
-  
-  <entry>
-    <title>vscode设置在模板字符串中自动补全代码</title>
-    <link href="http://yoursite.com/2020/08/12/vscode%E8%AE%BE%E7%BD%AE%E5%9C%A8%E6%A8%A1%E6%9D%BF%E5%AD%97%E7%AC%A6%E4%B8%B2%E4%B8%AD%E8%87%AA%E5%8A%A8%E8%A1%A5%E5%85%A8%E4%BB%A3%E7%A0%81/"/>
-    <id>http://yoursite.com/2020/08/12/vscode%E8%AE%BE%E7%BD%AE%E5%9C%A8%E6%A8%A1%E6%9D%BF%E5%AD%97%E7%AC%A6%E4%B8%B2%E4%B8%AD%E8%87%AA%E5%8A%A8%E8%A1%A5%E5%85%A8%E4%BB%A3%E7%A0%81/</id>
-    <published>2020-08-12T11:13:27.000Z</published>
-    <updated>2020-08-14T09:53:42.005Z</updated>
-    
-    <content type="html"><![CDATA[<h2 id="在学习vue中的template时，html代码具有自动闭合标签的功能，经过查阅各种资料，如下设置。"><a href="#在学习vue中的template时，html代码具有自动闭合标签的功能，经过查阅各种资料，如下设置。" class="headerlink" title="在学习vue中的template时，html代码具有自动闭合标签的功能，经过查阅各种资料，如下设置。"></a>在学习vue中的template时，html代码具有自动闭合标签的功能，经过查阅各种资料，如下设置。</h2><a id="more"></a><!-- more --><p>1.打开vscode编辑器&gt;文件&gt;首选项&gt;设置<br>2.搜索栏搜索settings.json，选择在settings.json中编辑<br><img src="https://img-blog.csdnimg.cn/20200712172251198.png?x-oss-process=image/watermark,type_ZmFuZ3poZW5naGVpdGk,shadow_10,text_aHR0cHM6Ly9ibG9nLmNzZG4ubmV0L3dlaXhpbl80MjY5MzcxMg==,size_16,color_FFFFFF,t_70" alt="在这里插入图片描述"><br>3.在文件配置处加入以下代码</p><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br></pre></td><td class="code"><pre><span class="line">&quot;emmet.triggerExpansionOnTab&quot;: true,</span><br><span class="line">    &quot;emmet.showAbbreviationSuggestions&quot;: true,</span><br><span class="line">    &quot;emmet.showExpandedAbbreviation&quot;: &quot;always&quot;,</span><br><span class="line">    &quot;emmet.includeLanguages&quot;: &#123;</span><br><span class="line">        &quot;javascript&quot;: &quot;html&quot;</span><br><span class="line">    &#125;</span><br></pre></td></tr></table></figure><p>示例：<br><img src="https://img-blog.csdnimg.cn/20200712172519270.png?x-oss-process=image/watermark,type_ZmFuZ3poZW5naGVpdGk,shadow_10,text_aHR0cHM6Ly9ibG9nLmNzZG4ubmV0L3dlaXhpbl80MjY5MzcxMg==,size_16,color_FFFFFF,t_70" alt="在这里插入图片描述"><br>设置完保存退出即可</p>]]></content>
-    
-    
-    <summary type="html">&lt;h2 id=&quot;在学习vue中的template时，html代码具有自动闭合标签的功能，经过查阅各种资料，如下设置。&quot;&gt;&lt;a href=&quot;#在学习vue中的template时，html代码具有自动闭合标签的功能，经过查阅各种资料，如下设置。&quot; class=&quot;headerlink&quot; title=&quot;在学习vue中的template时，html代码具有自动闭合标签的功能，经过查阅各种资料，如下设置。&quot;&gt;&lt;/a&gt;在学习vue中的template时，html代码具有自动闭合标签的功能，经过查阅各种资料，如下设置。&lt;/h2&gt;</summary>
-    
-    
-    
-    <category term="vscode" scheme="http://yoursite.com/categories/vscode/"/>
     
     
   </entry>
