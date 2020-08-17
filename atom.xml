@@ -6,7 +6,7 @@
   <link href="http://yoursite.com/atom.xml" rel="self"/>
   
   <link href="http://yoursite.com/"/>
-  <updated>2020-08-16T10:17:29.635Z</updated>
+  <updated>2020-08-17T14:39:53.605Z</updated>
   <id>http://yoursite.com/</id>
   
   <author>
@@ -15,6 +15,153 @@
   </author>
   
   <generator uri="https://hexo.io/">Hexo</generator>
+  
+  <entry>
+    <title>什么是渐进式渲染</title>
+    <link href="http://yoursite.com/2020/08/17/%E4%BB%80%E4%B9%88%E6%98%AF%E6%B8%90%E8%BF%9B%E5%BC%8F%E6%B8%B2%E6%9F%93/"/>
+    <id>http://yoursite.com/2020/08/17/%E4%BB%80%E4%B9%88%E6%98%AF%E6%B8%90%E8%BF%9B%E5%BC%8F%E6%B8%B2%E6%9F%93/</id>
+    <published>2020-08-17T14:45:29.287Z</published>
+    <updated>2020-08-17T14:39:53.605Z</updated>
+    
+    <content type="html"><![CDATA[<h2 id="什么是渐进式渲染"><a href="#什么是渐进式渲染" class="headerlink" title="什么是渐进式渲染"></a>什么是渐进式渲染</h2><a id="more"></a><p>指打开页面先加载首屏显示的内容，之后再随着时间或者滚动页面才进行后面的加载</p>]]></content>
+    
+    
+    <summary type="html">&lt;h2 id=&quot;什么是渐进式渲染&quot;&gt;&lt;a href=&quot;#什么是渐进式渲染&quot; class=&quot;headerlink&quot; title=&quot;什么是渐进式渲染&quot;&gt;&lt;/a&gt;什么是渐进式渲染&lt;/h2&gt;</summary>
+    
+    
+    
+    <category term="Html面试题" scheme="http://yoursite.com/categories/Html%E9%9D%A2%E8%AF%95%E9%A2%98/"/>
+    
+    
+    <category term="html面试" scheme="http://yoursite.com/tags/html%E9%9D%A2%E8%AF%95/"/>
+    
+  </entry>
+  
+  <entry>
+    <title>什么是Canvas，你使用它做个什么需求</title>
+    <link href="http://yoursite.com/2020/08/17/%E4%BB%80%E4%B9%88%E6%98%AFCanvas%EF%BC%8C%E4%BD%A0%E4%BD%BF%E7%94%A8%E5%AE%83%E5%81%9A%E4%B8%AA%E4%BB%80%E4%B9%88%E9%9C%80%E6%B1%82/"/>
+    <id>http://yoursite.com/2020/08/17/%E4%BB%80%E4%B9%88%E6%98%AFCanvas%EF%BC%8C%E4%BD%A0%E4%BD%BF%E7%94%A8%E5%AE%83%E5%81%9A%E4%B8%AA%E4%BB%80%E4%B9%88%E9%9C%80%E6%B1%82/</id>
+    <published>2020-08-17T14:45:29.285Z</published>
+    <updated>2020-08-17T14:19:34.229Z</updated>
+    
+    <content type="html"><![CDATA[<h2 id="什么是Canvas，你使用它做个什么需求"><a href="#什么是Canvas，你使用它做个什么需求" class="headerlink" title="什么是Canvas，你使用它做个什么需求"></a>什么是Canvas，你使用它做个什么需求</h2><a id="more"></a><h2 id="什么是Canvas"><a href="#什么是Canvas" class="headerlink" title="什么是Canvas"></a><strong>什么是Canvas</strong></h2><p>: Canvas元素是HTML5的一部分，允许脚本语言动态渲染位图像。Canvas由一个可绘制地区HTML代码中的属性定义决定高度和宽度。JavaScript代码可以访问该地区，通过一套完整的绘图功能类似于其他通用二维的API，从而生成动态的图形。<br>Canvas能应对以下需求：</p><h2 id="1-游戏："><a href="#1-游戏：" class="headerlink" title="1. 游戏："></a><strong>1. 游戏：</strong></h2><p>毫无疑问，游戏在HTML5领域具有举足轻重的地位。HTML5在基于Web的图像显示方面比Flash更加立体、更加精巧，Ohad认为运用Canvas制作的图像能够令HTML5游戏在流畅度和跨平台方面发挥更大的潜力。</p><h2 id="2-图表制作："><a href="#2-图表制作：" class="headerlink" title="2. 图表制作："></a><strong>2. 图表制作</strong>：</h2><p>图表制作时常被人们忽略，但无论企业内部还是企业间交流合作都离不开图表。现在一些开发者使用HTML/CSS完成图标制作，但完全可以用Canvas来实现。当然，使用SVG（可缩放矢量图形）来完成图表制作也是非常好的方法。(例如：echarts.js heightchart.js都是基于canvas来绘图!)</p><h2 id="3-banner广告："><a href="#3-banner广告：" class="headerlink" title="3. banner广告："></a><strong>3. banner广告：</strong></h2><p>Flash曾经辉煌的时代，智能手机还未曾出现。现在以及未来的智能机时代，HTML5技术能够在banner广告上发挥巨大作用，用Canvas实现动态的广告效果再合适不过。<br>提示：其实还有很多领域（例如：模拟器 / 远程计算机控制 / 字体设计 / 图像编辑器 / 其它），但是就当前来说，基于canvas图表制作是我们必须要掌握的能力。</p>]]></content>
+    
+    
+    <summary type="html">&lt;h2 id=&quot;什么是Canvas，你使用它做个什么需求&quot;&gt;&lt;a href=&quot;#什么是Canvas，你使用它做个什么需求&quot; class=&quot;headerlink&quot; title=&quot;什么是Canvas，你使用它做个什么需求&quot;&gt;&lt;/a&gt;什么是Canvas，你使用它做个什么需求&lt;/h2&gt;</summary>
+    
+    
+    
+    <category term="Html面试题" scheme="http://yoursite.com/categories/Html%E9%9D%A2%E8%AF%95%E9%A2%98/"/>
+    
+    
+    <category term="html面试" scheme="http://yoursite.com/tags/html%E9%9D%A2%E8%AF%95/"/>
+    
+  </entry>
+  
+  <entry>
+    <title>工作中你都兼容哪些浏览器 ， 实际开发中你都遇到过哪些兼容问题 。</title>
+    <link href="http://yoursite.com/2020/08/17/%E5%B7%A5%E4%BD%9C%E4%B8%AD%E4%BD%A0%E9%83%BD%E5%85%BC%E5%AE%B9%E5%93%AA%E4%BA%9B%E6%B5%8F%E8%A7%88%E5%99%A8%20%EF%BC%8C%20%E5%AE%9E%E9%99%85%E5%BC%80%E5%8F%91%E4%B8%AD%E4%BD%A0%E9%83%BD%E9%81%87%E5%88%B0%E8%BF%87%E5%93%AA%E4%BA%9B%E5%85%BC%E5%AE%B9%E9%97%AE%E9%A2%98%20%E3%80%82/"/>
+    <id>http://yoursite.com/2020/08/17/%E5%B7%A5%E4%BD%9C%E4%B8%AD%E4%BD%A0%E9%83%BD%E5%85%BC%E5%AE%B9%E5%93%AA%E4%BA%9B%E6%B5%8F%E8%A7%88%E5%99%A8%20%EF%BC%8C%20%E5%AE%9E%E9%99%85%E5%BC%80%E5%8F%91%E4%B8%AD%E4%BD%A0%E9%83%BD%E9%81%87%E5%88%B0%E8%BF%87%E5%93%AA%E4%BA%9B%E5%85%BC%E5%AE%B9%E9%97%AE%E9%A2%98%20%E3%80%82/</id>
+    <published>2020-08-17T14:45:29.276Z</published>
+    <updated>2020-08-17T14:31:12.951Z</updated>
+    
+    <content type="html"><![CDATA[<h2 id="工作中你都兼容哪些浏览器-，-实际开发中你都遇到过哪些兼容问题-。"><a href="#工作中你都兼容哪些浏览器-，-实际开发中你都遇到过哪些兼容问题-。" class="headerlink" title="工作中你都兼容哪些浏览器 ， 实际开发中你都遇到过哪些兼容问题 。"></a>工作中你都兼容哪些浏览器 ， 实际开发中你都遇到过哪些兼容问题 。</h2><a id="more"></a><p>Input的按钮在ios和Android中的样式兼容问题<br>ios有默认的渲染 方式 渐变和圆角而且他的行高并不会随着内容的增加。<br>解决方法：<br>在标签上增加<br>-webkie-appearance：none；<br>Height：4rem；<br>滚动穿透的问题:<br>    滚动穿透是指在移动端当有flxed 遮罩和弹出层的时候，屏幕上的滑动能够滑动背景下的内容。<br>最后的解决方法<br><img src="https://img-blog.csdnimg.cn/20200817222716337.png#pic_center" alt="在这里插入图片描述"></p>]]></content>
+    
+    
+    <summary type="html">&lt;h2 id=&quot;工作中你都兼容哪些浏览器-，-实际开发中你都遇到过哪些兼容问题-。&quot;&gt;&lt;a href=&quot;#工作中你都兼容哪些浏览器-，-实际开发中你都遇到过哪些兼容问题-。&quot; class=&quot;headerlink&quot; title=&quot;工作中你都兼容哪些浏览器 ， 实际开发中你都遇到过哪些兼容问题 。&quot;&gt;&lt;/a&gt;工作中你都兼容哪些浏览器 ， 实际开发中你都遇到过哪些兼容问题 。&lt;/h2&gt;</summary>
+    
+    
+    
+    <category term="Html面试题" scheme="http://yoursite.com/categories/Html%E9%9D%A2%E8%AF%95%E9%A2%98/"/>
+    
+    
+    <category term="html面试" scheme="http://yoursite.com/tags/html%E9%9D%A2%E8%AF%95/"/>
+    
+  </entry>
+  
+  <entry>
+    <title>HTML 废弃的标签有哪些 ？举几个例子</title>
+    <link href="http://yoursite.com/2020/08/17/%E5%BA%9F%E5%BC%83%E7%9A%84%E6%A0%87%E7%AD%BE%E6%9C%89%E5%93%AA%E4%BA%9B%20%EF%BC%9F%E4%B8%BE%E5%87%A0%E4%B8%AA%E4%BE%8B%E5%AD%90/"/>
+    <id>http://yoursite.com/2020/08/17/%E5%BA%9F%E5%BC%83%E7%9A%84%E6%A0%87%E7%AD%BE%E6%9C%89%E5%93%AA%E4%BA%9B%20%EF%BC%9F%E4%B8%BE%E5%87%A0%E4%B8%AA%E4%BE%8B%E5%AD%90/</id>
+    <published>2020-08-17T14:45:29.260Z</published>
+    <updated>2020-08-17T14:24:56.375Z</updated>
+    
+    <content type="html"><![CDATA[<h2 id="HTML-废弃的标签有哪些-？举几个例子"><a href="#HTML-废弃的标签有哪些-？举几个例子" class="headerlink" title="HTML 废弃的标签有哪些 ？举几个例子"></a>HTML 废弃的标签有哪些 ？举几个例子</h2><a id="more"></a><table><thead><tr><th>em=i</th><th>定义强调的文字。</th></tr></thead><tbody><tr><td>ins=u</td><td>定义插入的文字。</td></tr><tr><td>strong=b</td><td>定义重要性强调的文字。</td></tr><tr><td>del=s</td><td>定义删除的文字。</td></tr></tbody></table><p>因为strong,em,ins,del这些标签有语意，所以是b,i,u,s的替代品。</p>]]></content>
+    
+    
+    <summary type="html">&lt;h2 id=&quot;HTML-废弃的标签有哪些-？举几个例子&quot;&gt;&lt;a href=&quot;#HTML-废弃的标签有哪些-？举几个例子&quot; class=&quot;headerlink&quot; title=&quot;HTML 废弃的标签有哪些 ？举几个例子&quot;&gt;&lt;/a&gt;HTML 废弃的标签有哪些 ？举几个例子&lt;/h2&gt;</summary>
+    
+    
+    
+    <category term="Html面试题" scheme="http://yoursite.com/categories/Html%E9%9D%A2%E8%AF%95%E9%A2%98/"/>
+    
+    
+    <category term="html面试" scheme="http://yoursite.com/tags/html%E9%9D%A2%E8%AF%95/"/>
+    
+  </entry>
+  
+  <entry>
+    <title>Meta viewport 的原理是什么</title>
+    <link href="http://yoursite.com/2020/08/17/Meta%20viewport%20%E7%9A%84%E5%8E%9F%E7%90%86%E6%98%AF%E4%BB%80%E4%B9%88/"/>
+    <id>http://yoursite.com/2020/08/17/Meta%20viewport%20%E7%9A%84%E5%8E%9F%E7%90%86%E6%98%AF%E4%BB%80%E4%B9%88/</id>
+    <published>2020-08-17T14:45:29.239Z</published>
+    <updated>2020-08-17T14:43:19.948Z</updated>
+    
+    <content type="html"><![CDATA[<h2 id="Meta-viewport-的原理是什么"><a href="#Meta-viewport-的原理是什么" class="headerlink" title="Meta viewport 的原理是什么"></a>Meta viewport 的原理是什么</h2><a id="more"></a><p>手机浏览器是把页面放在一个虚拟的“窗口”（viewport）中，通常这个虚拟的“窗口”（viewport）比屏幕宽，这样就不用把每个网页挤到很小的窗口中（这样会破坏没有针对手机浏览器优化的网页的布局），用户可以通过平移和缩放来看网页的不同部分。移动设备默认的viewport是layout viewport，也就是那个比屏幕要宽的viewport，但在进行移动设备网站的开发时，我们需要的是ideal viewport。</p>]]></content>
+    
+    
+    <summary type="html">&lt;h2 id=&quot;Meta-viewport-的原理是什么&quot;&gt;&lt;a href=&quot;#Meta-viewport-的原理是什么&quot; class=&quot;headerlink&quot; title=&quot;Meta viewport 的原理是什么&quot;&gt;&lt;/a&gt;Meta viewport 的原理是什么&lt;/h2&gt;</summary>
+    
+    
+    
+    <category term="Html面试题" scheme="http://yoursite.com/categories/Html%E9%9D%A2%E8%AF%95%E9%A2%98/"/>
+    
+    
+    <category term="html面试" scheme="http://yoursite.com/tags/html%E9%9D%A2%E8%AF%95/"/>
+    
+  </entry>
+  
+  <entry>
+    <title>HTML模板语言有哪些</title>
+    <link href="http://yoursite.com/2020/08/17/HTML%E6%A8%A1%E6%9D%BF%E8%AF%AD%E8%A8%80%E6%9C%89%E5%93%AA%E4%BA%9B%20/"/>
+    <id>http://yoursite.com/2020/08/17/HTML%E6%A8%A1%E6%9D%BF%E8%AF%AD%E8%A8%80%E6%9C%89%E5%93%AA%E4%BA%9B%20/</id>
+    <published>2020-08-17T14:45:29.217Z</published>
+    <updated>2020-08-17T14:42:04.889Z</updated>
+    
+    <content type="html"><![CDATA[<h2 id="HTML模板语言有哪些"><a href="#HTML模板语言有哪些" class="headerlink" title="HTML模板语言有哪些"></a>HTML模板语言有哪些</h2><a id="more"></a><p>Django 模板基于Python的一个模板。<br>Python下有许多款不同的 Web 框架。Django是重量级选手中最有代表性的一位。许多成功的网站和APP都基于Django。<br>Django是一个开放源代码的Web应用框架，由Python写成。<br>Django遵守BSD版权，初次发布于2005年7月, 并于2008年9月发布了第一个正式版本1.0 。<br>Django采用了MVC的软件设计模式，即模型M，视图V和控制器C。</p>]]></content>
+    
+    
+    <summary type="html">&lt;h2 id=&quot;HTML模板语言有哪些&quot;&gt;&lt;a href=&quot;#HTML模板语言有哪些&quot; class=&quot;headerlink&quot; title=&quot;HTML模板语言有哪些&quot;&gt;&lt;/a&gt;HTML模板语言有哪些&lt;/h2&gt;</summary>
+    
+    
+    
+    <category term="Html面试题" scheme="http://yoursite.com/categories/Html%E9%9D%A2%E8%AF%95%E9%A2%98/"/>
+    
+    
+    <category term="html面试" scheme="http://yoursite.com/tags/html%E9%9D%A2%E8%AF%95/"/>
+    
+  </entry>
+  
+  <entry>
+    <title>CSS / JS 引入的位置一般在哪里？为什么</title>
+    <link href="http://yoursite.com/2020/08/17/CSS%EF%BC%8CJS%20%E5%BC%95%E5%85%A5%E7%9A%84%E4%BD%8D%E7%BD%AE%E4%B8%80%E8%88%AC%E5%9C%A8%E5%93%AA%E9%87%8C%EF%BC%8C%E4%B8%BA%E4%BB%80%E4%B9%88/"/>
+    <id>http://yoursite.com/2020/08/17/CSS%EF%BC%8CJS%20%E5%BC%95%E5%85%A5%E7%9A%84%E4%BD%8D%E7%BD%AE%E4%B8%80%E8%88%AC%E5%9C%A8%E5%93%AA%E9%87%8C%EF%BC%8C%E4%B8%BA%E4%BB%80%E4%B9%88/</id>
+    <published>2020-08-17T14:45:29.180Z</published>
+    <updated>2020-08-17T14:37:45.649Z</updated>
+    
+    <content type="html"><![CDATA[<h2 id="CSS-JS-引入的位置一般在哪里？为什么"><a href="#CSS-JS-引入的位置一般在哪里？为什么" class="headerlink" title="CSS / JS 引入的位置一般在哪里？为什么"></a>CSS / JS 引入的位置一般在哪里？为什么</h2><a id="more"></a><p>Script标签最好放在</body>标签的前面，因为放在所有body中的标签后面就不会出现网页加载时出现空白的情况，可以持续的给用户提供视觉反馈，同时在有些情况下，会降低错误的发生；而css标签应该放在<head></head>标签之间，因为如果放在</body>标签的前面，那么当DOM树构建完成了，渲染树才构建，那么当渲染树构建完成，浏览器不得不再重新渲染整个页面，这样造成了资源的浪费，效率也不高，如果放在<head></head>之间，浏览器边构建边渲染，效率要高得多  ！</p>]]></content>
+    
+    
+    <summary type="html">&lt;h2 id=&quot;CSS-JS-引入的位置一般在哪里？为什么&quot;&gt;&lt;a href=&quot;#CSS-JS-引入的位置一般在哪里？为什么&quot; class=&quot;headerlink&quot; title=&quot;CSS / JS 引入的位置一般在哪里？为什么&quot;&gt;&lt;/a&gt;CSS / JS 引入的位置一般在哪里？为什么&lt;/h2&gt;</summary>
+    
+    
+    
+    <category term="Html面试题" scheme="http://yoursite.com/categories/Html%E9%9D%A2%E8%AF%95%E9%A2%98/"/>
+    
+    
+    <category term="html面试" scheme="http://yoursite.com/tags/html%E9%9D%A2%E8%AF%95/"/>
+    
+  </entry>
   
   <entry>
     <title>为什么要在标签上使用data-, 它有什么好处</title>
@@ -272,139 +419,6 @@
     
     
     <category term="oracle" scheme="http://yoursite.com/categories/oracle/"/>
-    
-    
-  </entry>
-  
-  <entry>
-    <title>maven基础</title>
-    <link href="http://yoursite.com/2020/08/12/maven%E9%AB%98%E7%BA%A7%E4%BB%A5%E5%8F%8Amaven%E9%A1%B9%E7%9B%AE%E6%95%B4%E5%90%88ssm%E6%A1%86%E6%9E%B6pom.xml%E9%9C%80%E8%A6%81%E5%AF%BC%E5%85%A5%E7%9A%84jar%E5%8C%85/"/>
-    <id>http://yoursite.com/2020/08/12/maven%E9%AB%98%E7%BA%A7%E4%BB%A5%E5%8F%8Amaven%E9%A1%B9%E7%9B%AE%E6%95%B4%E5%90%88ssm%E6%A1%86%E6%9E%B6pom.xml%E9%9C%80%E8%A6%81%E5%AF%BC%E5%85%A5%E7%9A%84jar%E5%8C%85/</id>
-    <published>2020-08-12T11:43:07.450Z</published>
-    <updated>2020-08-14T09:53:04.012Z</updated>
-    
-    <content type="html"><![CDATA[<h2 id="maven基础"><a href="#maven基础" class="headerlink" title="maven基础"></a>maven基础</h2><a id="more"></a><p>介绍了maven基础以及maven项目整合ssm框架pom.xml需要导入的jar包（已解决jar包冲突问题）</p><p><strong>maven是一个项目管理工具</strong>  <strong>依赖管理</strong>  ：<br>    1.maven对项目中jar包的管理过程。传统工程里面我们直接把jar包放置在项目里面<br>  2.maven工程真正的jar包放置在仓库中，项目中只用防止jar包的坐标<br> <strong>仓库的种类</strong>：本地仓库 远程仓库  中央仓库（联网即可）<br> <strong>仓库之间的关系</strong>：当我们启动一个maven工程的时候，maven会通过pom文见中去本地仓库找jar包，如果本地没有，去中央仓库下载，如果本地还没有，从私服下载，如果没有私服，可以从中央仓库下载，也可以从本地上传。<br><strong>一键构建</strong>：maven自身集成了tomcat插件，可以对项目进行编译，测试，安装，发布等操作<br><strong>maven常用命令</strong>：clean,compile,test,package,install,deploy.<br><strong>maven三套生命周期</strong>：清理生命周期，默认生命周期，站点生命周期。<br><strong>maven解决jar包冲突问题1</strong>：第一申明优先原则，那个靠上就是哪个申明的，先申明jar包下面的依赖包，可以优先进入项目中。<br><strong>maven解决jar包冲突问题2</strong>：直接依赖：项目里面直接导入的jar包就是直接依赖包。传递依赖：就是项目中没有直接导入的包通过直接以来jar包传递到项目中。路劲近者优先原则：直接依赖比传递依赖近。<br><strong>maven解决jar包冲突问题3（推荐）</strong>：当我们要排除jar包下面的依赖包的时候，在配置exclusion标签的时候，可以不写版本号，因为此时使用的和默认版本一样<br><strong>ssm三大框架结合pom.xml需要导入的包，已经解决冲突问题，可以直接使用</strong></p><figure class="highlight"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br><span class="line">32</span><br><span class="line">33</span><br><span class="line">34</span><br><span class="line">35</span><br><span class="line">36</span><br><span class="line">37</span><br><span class="line">38</span><br><span class="line">39</span><br><span class="line">40</span><br><span class="line">41</span><br><span class="line">42</span><br><span class="line">43</span><br><span class="line">44</span><br><span class="line">45</span><br><span class="line">46</span><br><span class="line">47</span><br><span class="line">48</span><br><span class="line">49</span><br><span class="line">50</span><br><span class="line">51</span><br><span class="line">52</span><br><span class="line">53</span><br><span class="line">54</span><br><span class="line">55</span><br><span class="line">56</span><br><span class="line">57</span><br><span class="line">58</span><br><span class="line">59</span><br><span class="line">60</span><br><span class="line">61</span><br><span class="line">62</span><br><span class="line">63</span><br><span class="line">64</span><br><span class="line">65</span><br><span class="line">66</span><br><span class="line">67</span><br><span class="line">68</span><br><span class="line">69</span><br><span class="line">70</span><br><span class="line">71</span><br><span class="line">72</span><br><span class="line">73</span><br><span class="line">74</span><br><span class="line">75</span><br><span class="line">76</span><br><span class="line">77</span><br><span class="line">78</span><br><span class="line">79</span><br><span class="line">80</span><br><span class="line">81</span><br><span class="line">82</span><br><span class="line">83</span><br><span class="line">84</span><br><span class="line">85</span><br><span class="line">86</span><br><span class="line">87</span><br><span class="line">88</span><br><span class="line">89</span><br><span class="line">90</span><br><span class="line">91</span><br><span class="line">92</span><br><span class="line">93</span><br><span class="line">94</span><br><span class="line">95</span><br><span class="line">96</span><br><span class="line">97</span><br><span class="line">98</span><br><span class="line">99</span><br><span class="line">100</span><br><span class="line">101</span><br><span class="line">102</span><br><span class="line">103</span><br><span class="line">104</span><br><span class="line">105</span><br><span class="line">106</span><br><span class="line">107</span><br><span class="line">108</span><br><span class="line">109</span><br><span class="line">110</span><br><span class="line">111</span><br><span class="line">112</span><br><span class="line">113</span><br><span class="line">114</span><br><span class="line">115</span><br><span class="line">116</span><br><span class="line">117</span><br><span class="line">118</span><br><span class="line">119</span><br><span class="line">120</span><br><span class="line">121</span><br><span class="line">122</span><br><span class="line">123</span><br><span class="line">124</span><br><span class="line">125</span><br><span class="line">126</span><br><span class="line">127</span><br><span class="line">128</span><br><span class="line">129</span><br><span class="line">130</span><br><span class="line">131</span><br><span class="line">132</span><br><span class="line">133</span><br><span class="line">134</span><br><span class="line">135</span><br><span class="line">136</span><br><span class="line">137</span><br><span class="line">138</span><br><span class="line">139</span><br><span class="line">140</span><br><span class="line">141</span><br><span class="line">142</span><br><span class="line">143</span><br><span class="line">144</span><br><span class="line">145</span><br><span class="line">146</span><br><span class="line">147</span><br><span class="line">148</span><br><span class="line">149</span><br><span class="line">150</span><br><span class="line">151</span><br><span class="line">152</span><br><span class="line">153</span><br><span class="line">154</span><br><span class="line">155</span><br><span class="line">156</span><br><span class="line">157</span><br><span class="line">158</span><br><span class="line">159</span><br><span class="line">160</span><br><span class="line">161</span><br><span class="line">162</span><br><span class="line">163</span><br><span class="line">164</span><br><span class="line">165</span><br><span class="line">166</span><br><span class="line">167</span><br><span class="line">168</span><br><span class="line">169</span><br><span class="line">170</span><br><span class="line">171</span><br><span class="line">172</span><br><span class="line">173</span><br><span class="line">174</span><br><span class="line">175</span><br><span class="line">176</span><br><span class="line">177</span><br><span class="line">178</span><br><span class="line">179</span><br><span class="line">180</span><br><span class="line">181</span><br><span class="line">182</span><br><span class="line">183</span><br><span class="line">184</span><br><span class="line">185</span><br><span class="line">186</span><br><span class="line">187</span><br><span class="line">188</span><br><span class="line">189</span><br><span class="line">190</span><br><span class="line">191</span><br><span class="line">192</span><br><span class="line">193</span><br><span class="line">194</span><br><span class="line">195</span><br><span class="line">196</span><br><span class="line">197</span><br><span class="line">198</span><br><span class="line">199</span><br><span class="line">200</span><br><span class="line">201</span><br><span class="line">202</span><br><span class="line">203</span><br><span class="line">204</span><br><span class="line">205</span><br><span class="line">206</span><br><span class="line">207</span><br><span class="line">208</span><br></pre></td><td class="code"><pre><span class="line">&lt;!-- 统一管理jar包版本 --&gt;</span><br><span class="line">&lt;properties&gt;</span><br><span class="line">    &lt;spring.version&gt;5.0.2.RELEASE&lt;/spring.version&gt;</span><br><span class="line">    &lt;slf4j.version&gt;1.6.6&lt;/slf4j.version&gt;</span><br><span class="line">    &lt;log4j.version&gt;1.2.12&lt;/log4j.version&gt;</span><br><span class="line">    &lt;shiro.version&gt;1.2.3&lt;/shiro.version&gt;</span><br><span class="line">    &lt;mysql.version&gt;5.1.6&lt;/mysql.version&gt;</span><br><span class="line">    &lt;mybatis.version&gt;3.4.5&lt;/mybatis.version&gt;</span><br><span class="line">    &lt;spring.security.version&gt;5.0.1.RELEASE&lt;/spring.security.version&gt;</span><br><span class="line">&lt;/properties&gt;</span><br><span class="line"></span><br><span class="line">&lt;!-- 锁定jar包版本 --&gt;</span><br><span class="line">&lt;dependencyManagement&gt;</span><br><span class="line">    &lt;dependencies&gt;</span><br><span class="line">        &lt;dependency&gt;</span><br><span class="line">            &lt;groupId&gt;org.springframework&lt;/groupId&gt;</span><br><span class="line">            &lt;artifactId&gt;spring-context&lt;/artifactId&gt;</span><br><span class="line">            &lt;version&gt;$&#123;spring.version&#125;&lt;/version&gt;</span><br><span class="line">        &lt;/dependency&gt;</span><br><span class="line">        &lt;dependency&gt;</span><br><span class="line">            &lt;groupId&gt;org.springframework&lt;/groupId&gt;</span><br><span class="line">            &lt;artifactId&gt;spring-web&lt;/artifactId&gt;</span><br><span class="line">            &lt;version&gt;$&#123;spring.version&#125;&lt;/version&gt;</span><br><span class="line">        &lt;/dependency&gt;</span><br><span class="line">        &lt;dependency&gt;</span><br><span class="line">            &lt;groupId&gt;org.springframework&lt;/groupId&gt;</span><br><span class="line">            &lt;artifactId&gt;spring-webmvc&lt;/artifactId&gt;</span><br><span class="line">            &lt;version&gt;$&#123;spring.version&#125;&lt;/version&gt;</span><br><span class="line">        &lt;/dependency&gt;</span><br><span class="line">        &lt;dependency&gt;</span><br><span class="line">            &lt;groupId&gt;org.springframework&lt;/groupId&gt;</span><br><span class="line">            &lt;artifactId&gt;spring-tx&lt;/artifactId&gt;</span><br><span class="line">            &lt;version&gt;$&#123;spring.version&#125;&lt;/version&gt;</span><br><span class="line">        &lt;/dependency&gt;</span><br><span class="line">        &lt;dependency&gt;</span><br><span class="line">            &lt;groupId&gt;org.springframework&lt;/groupId&gt;</span><br><span class="line">            &lt;artifactId&gt;spring-test&lt;/artifactId&gt;</span><br><span class="line">            &lt;version&gt;$&#123;spring.version&#125;&lt;/version&gt;</span><br><span class="line">        &lt;/dependency&gt;</span><br><span class="line">        &lt;dependency&gt;</span><br><span class="line">            &lt;groupId&gt;org.mybatis&lt;/groupId&gt;</span><br><span class="line">            &lt;artifactId&gt;mybatis&lt;/artifactId&gt;</span><br><span class="line">            &lt;version&gt;$&#123;mybatis.version&#125;&lt;/version&gt;</span><br><span class="line">        &lt;/dependency&gt;</span><br><span class="line">    &lt;/dependencies&gt;</span><br><span class="line">&lt;/dependencyManagement&gt;</span><br><span class="line"></span><br><span class="line">&lt;!-- 项目依赖jar包 --&gt;</span><br><span class="line">&lt;dependencies&gt;</span><br><span class="line">    &lt;!-- spring --&gt;</span><br><span class="line">    &lt;dependency&gt;</span><br><span class="line">        &lt;groupId&gt;org.aspectj&lt;/groupId&gt;</span><br><span class="line">        &lt;artifactId&gt;aspectjweaver&lt;/artifactId&gt;</span><br><span class="line">        &lt;version&gt;1.6.8&lt;/version&gt;</span><br><span class="line">    &lt;/dependency&gt;</span><br><span class="line">    &lt;dependency&gt;</span><br><span class="line">        &lt;groupId&gt;org.springframework&lt;/groupId&gt;</span><br><span class="line">        &lt;artifactId&gt;spring-aop&lt;/artifactId&gt;</span><br><span class="line">        &lt;version&gt;$&#123;spring.version&#125;&lt;/version&gt;</span><br><span class="line">    &lt;/dependency&gt;</span><br><span class="line">    &lt;dependency&gt;</span><br><span class="line">        &lt;groupId&gt;org.springframework&lt;/groupId&gt;</span><br><span class="line">        &lt;artifactId&gt;spring-context&lt;/artifactId&gt;</span><br><span class="line">        &lt;version&gt;$&#123;spring.version&#125;&lt;/version&gt;</span><br><span class="line">    &lt;/dependency&gt;</span><br><span class="line">    &lt;dependency&gt;</span><br><span class="line">        &lt;groupId&gt;org.springframework&lt;/groupId&gt;</span><br><span class="line">        &lt;artifactId&gt;spring-context-support&lt;/artifactId&gt;</span><br><span class="line">        &lt;version&gt;$&#123;spring.version&#125;&lt;/version&gt;</span><br><span class="line">    &lt;/dependency&gt;</span><br><span class="line">    &lt;dependency&gt;</span><br><span class="line">        &lt;groupId&gt;org.springframework&lt;/groupId&gt;</span><br><span class="line">        &lt;artifactId&gt;spring-web&lt;/artifactId&gt;</span><br><span class="line">        &lt;version&gt;$&#123;spring.version&#125;&lt;/version&gt;</span><br><span class="line">    &lt;/dependency&gt;</span><br><span class="line">    &lt;dependency&gt;</span><br><span class="line">        &lt;groupId&gt;org.springframework&lt;/groupId&gt;</span><br><span class="line">        &lt;artifactId&gt;spring-orm&lt;/artifactId&gt;</span><br><span class="line">        &lt;version&gt;$&#123;spring.version&#125;&lt;/version&gt;</span><br><span class="line">    &lt;/dependency&gt;</span><br><span class="line">    &lt;dependency&gt;</span><br><span class="line">        &lt;groupId&gt;org.springframework&lt;/groupId&gt;</span><br><span class="line">        &lt;artifactId&gt;spring-beans&lt;/artifactId&gt;</span><br><span class="line">        &lt;version&gt;$&#123;spring.version&#125;&lt;/version&gt;</span><br><span class="line">    &lt;/dependency&gt;</span><br><span class="line">    &lt;dependency&gt;</span><br><span class="line">        &lt;groupId&gt;org.springframework&lt;/groupId&gt;</span><br><span class="line">        &lt;artifactId&gt;spring-core&lt;/artifactId&gt;</span><br><span class="line">        &lt;version&gt;$&#123;spring.version&#125;&lt;/version&gt;</span><br><span class="line">    &lt;/dependency&gt;</span><br><span class="line">    &lt;dependency&gt;</span><br><span class="line">        &lt;groupId&gt;org.springframework&lt;/groupId&gt;</span><br><span class="line">        &lt;artifactId&gt;spring-test&lt;/artifactId&gt;</span><br><span class="line">        &lt;version&gt;$&#123;spring.version&#125;&lt;/version&gt;</span><br><span class="line">    &lt;/dependency&gt;</span><br><span class="line">    &lt;dependency&gt;</span><br><span class="line">        &lt;groupId&gt;org.springframework&lt;/groupId&gt;</span><br><span class="line">        &lt;artifactId&gt;spring-webmvc&lt;/artifactId&gt;</span><br><span class="line">        &lt;version&gt;$&#123;spring.version&#125;&lt;/version&gt;</span><br><span class="line">    &lt;/dependency&gt;</span><br><span class="line">    &lt;dependency&gt;</span><br><span class="line">        &lt;groupId&gt;org.springframework&lt;/groupId&gt;</span><br><span class="line">        &lt;artifactId&gt;spring-tx&lt;/artifactId&gt;</span><br><span class="line">        &lt;version&gt;$&#123;spring.version&#125;&lt;/version&gt;</span><br><span class="line">    &lt;/dependency&gt;</span><br><span class="line">    &lt;dependency&gt;</span><br><span class="line">        &lt;groupId&gt;junit&lt;/groupId&gt;</span><br><span class="line">        &lt;artifactId&gt;junit&lt;/artifactId&gt;</span><br><span class="line">        &lt;version&gt;4.12&lt;/version&gt;</span><br><span class="line">        &lt;scope&gt;test&lt;/scope&gt;</span><br><span class="line">    &lt;/dependency&gt;</span><br><span class="line">    &lt;dependency&gt;</span><br><span class="line">        &lt;groupId&gt;mysql&lt;/groupId&gt;</span><br><span class="line">        &lt;artifactId&gt;mysql-connector-java&lt;/artifactId&gt;</span><br><span class="line">        &lt;version&gt;$&#123;mysql.version&#125;&lt;/version&gt;</span><br><span class="line">    &lt;/dependency&gt;</span><br><span class="line">    &lt;dependency&gt;</span><br><span class="line">        &lt;groupId&gt;javax.servlet&lt;/groupId&gt;</span><br><span class="line">        &lt;artifactId&gt;javax.servlet-api&lt;/artifactId&gt;</span><br><span class="line">        &lt;version&gt;3.1.0&lt;/version&gt;</span><br><span class="line">        &lt;scope&gt;provided&lt;/scope&gt;</span><br><span class="line">    &lt;/dependency&gt;</span><br><span class="line">    &lt;dependency&gt;</span><br><span class="line">        &lt;groupId&gt;javax.servlet.jsp&lt;/groupId&gt;</span><br><span class="line">        &lt;artifactId&gt;jsp-api&lt;/artifactId&gt;</span><br><span class="line">        &lt;version&gt;2.0&lt;/version&gt;</span><br><span class="line">        &lt;scope&gt;provided&lt;/scope&gt;</span><br><span class="line">    &lt;/dependency&gt;</span><br><span class="line">    &lt;dependency&gt;</span><br><span class="line">        &lt;groupId&gt;jstl&lt;/groupId&gt;</span><br><span class="line">        &lt;artifactId&gt;jstl&lt;/artifactId&gt;</span><br><span class="line">        &lt;version&gt;1.2&lt;/version&gt;</span><br><span class="line">    &lt;/dependency&gt;</span><br><span class="line">    &lt;!-- log start --&gt;</span><br><span class="line">    &lt;dependency&gt;</span><br><span class="line">        &lt;groupId&gt;log4j&lt;/groupId&gt;</span><br><span class="line">        &lt;artifactId&gt;log4j&lt;/artifactId&gt;</span><br><span class="line">        &lt;version&gt;$&#123;log4j.version&#125;&lt;/version&gt;</span><br><span class="line">    &lt;/dependency&gt;</span><br><span class="line">    &lt;dependency&gt;</span><br><span class="line">        &lt;groupId&gt;org.slf4j&lt;/groupId&gt;</span><br><span class="line">        &lt;artifactId&gt;slf4j-api&lt;/artifactId&gt;</span><br><span class="line">        &lt;version&gt;$&#123;slf4j.version&#125;&lt;/version&gt;</span><br><span class="line">    &lt;/dependency&gt;</span><br><span class="line">    &lt;dependency&gt;</span><br><span class="line">        &lt;groupId&gt;org.slf4j&lt;/groupId&gt;</span><br><span class="line">        &lt;artifactId&gt;slf4j-log4j12&lt;/artifactId&gt;</span><br><span class="line">        &lt;version&gt;$&#123;slf4j.version&#125;&lt;/version&gt;</span><br><span class="line">    &lt;/dependency&gt;</span><br><span class="line">    &lt;!-- log end --&gt;</span><br><span class="line">    &lt;dependency&gt;</span><br><span class="line">        &lt;groupId&gt;org.mybatis&lt;/groupId&gt;</span><br><span class="line">        &lt;artifactId&gt;mybatis&lt;/artifactId&gt;</span><br><span class="line">        &lt;version&gt;$&#123;mybatis.version&#125;&lt;/version&gt;</span><br><span class="line">    &lt;/dependency&gt;</span><br><span class="line">    &lt;dependency&gt;</span><br><span class="line">        &lt;groupId&gt;org.mybatis&lt;/groupId&gt;</span><br><span class="line">        &lt;artifactId&gt;mybatis-spring&lt;/artifactId&gt;</span><br><span class="line">        &lt;version&gt;1.3.0&lt;/version&gt;</span><br><span class="line">    &lt;/dependency&gt;</span><br><span class="line">    &lt;dependency&gt;</span><br><span class="line">        &lt;groupId&gt;c3p0&lt;/groupId&gt;</span><br><span class="line">        &lt;artifactId&gt;c3p0&lt;/artifactId&gt;</span><br><span class="line">        &lt;version&gt;0.9.1.2&lt;/version&gt;</span><br><span class="line">        &lt;type&gt;jar&lt;/type&gt;</span><br><span class="line">        &lt;scope&gt;compile&lt;/scope&gt;</span><br><span class="line">    &lt;/dependency&gt;</span><br><span class="line">    &lt;dependency&gt;</span><br><span class="line">        &lt;groupId&gt;com.github.pagehelper&lt;/groupId&gt;</span><br><span class="line">        &lt;artifactId&gt;pagehelper&lt;/artifactId&gt;</span><br><span class="line">        &lt;version&gt;5.1.2&lt;/version&gt;</span><br><span class="line">    &lt;/dependency&gt;</span><br><span class="line">    &lt;dependency&gt;</span><br><span class="line">        &lt;groupId&gt;org.springframework.security&lt;/groupId&gt;</span><br><span class="line">        &lt;artifactId&gt;spring-security-web&lt;/artifactId&gt;</span><br><span class="line">        &lt;version&gt;$&#123;spring.security.version&#125;&lt;/version&gt;</span><br><span class="line">    &lt;/dependency&gt;</span><br><span class="line">    &lt;dependency&gt;</span><br><span class="line">        &lt;groupId&gt;org.springframework.security&lt;/groupId&gt;</span><br><span class="line">        &lt;artifactId&gt;spring-security-config&lt;/artifactId&gt;</span><br><span class="line">        &lt;version&gt;$&#123;spring.security.version&#125;&lt;/version&gt;</span><br><span class="line">    &lt;/dependency&gt;</span><br><span class="line">    &lt;dependency&gt;</span><br><span class="line">        &lt;groupId&gt;org.springframework.security&lt;/groupId&gt;</span><br><span class="line">        &lt;artifactId&gt;spring-security-core&lt;/artifactId&gt;</span><br><span class="line">        &lt;version&gt;$&#123;spring.security.version&#125;&lt;/version&gt;</span><br><span class="line">    &lt;/dependency&gt;</span><br><span class="line">    &lt;dependency&gt;</span><br><span class="line">        &lt;groupId&gt;org.springframework.security&lt;/groupId&gt;</span><br><span class="line">        &lt;artifactId&gt;spring-security-taglibs&lt;/artifactId&gt;</span><br><span class="line">        &lt;version&gt;$&#123;spring.security.version&#125;&lt;/version&gt;</span><br><span class="line">    &lt;/dependency&gt;</span><br><span class="line">    &lt;dependency&gt;</span><br><span class="line">        &lt;groupId&gt;com.alibaba&lt;/groupId&gt;</span><br><span class="line">        &lt;artifactId&gt;druid&lt;/artifactId&gt;</span><br><span class="line">        &lt;version&gt;1.0.9&lt;/version&gt;</span><br><span class="line">    &lt;/dependency&gt;</span><br><span class="line">&lt;/dependencies&gt;</span><br><span class="line">&lt;!-- 添加tomcat7插件 --&gt;</span><br><span class="line">&lt;build&gt;</span><br><span class="line">    &lt;plugins&gt;</span><br><span class="line">        &lt;plugin&gt;</span><br><span class="line">            &lt;groupId&gt;org.apache.tomcat.maven&lt;/groupId&gt;</span><br><span class="line">            &lt;artifactId&gt;tomcat7-maven-plugin&lt;/artifactId&gt;</span><br><span class="line">            &lt;version&gt;2.2&lt;/version&gt;</span><br><span class="line">        &lt;/plugin&gt;</span><br><span class="line">    &lt;/plugins&gt;</span><br><span class="line">&lt;/build&gt;</span><br></pre></td></tr></table></figure>]]></content>
-    
-    
-    <summary type="html">&lt;h2 id=&quot;maven基础&quot;&gt;&lt;a href=&quot;#maven基础&quot; class=&quot;headerlink&quot; title=&quot;maven基础&quot;&gt;&lt;/a&gt;maven基础&lt;/h2&gt;</summary>
-    
-    
-    
-    <category term="maven" scheme="http://yoursite.com/categories/maven/"/>
-    
-    
-  </entry>
-  
-  <entry>
-    <title>在写vue项目的时候，由于有eslint严格模式...</title>
-    <link href="http://yoursite.com/2020/08/12/%E5%9C%A8%E6%96%B0%E7%89%88%E6%9C%AC%E7%9A%84vue-cli%E9%A1%B9%E7%9B%AE%E4%B8%AD%E5%9C%A8vue.config.js%E4%B8%AD%E7%A6%81%E7%94%A8eslint/"/>
-    <id>http://yoursite.com/2020/08/12/%E5%9C%A8%E6%96%B0%E7%89%88%E6%9C%AC%E7%9A%84vue-cli%E9%A1%B9%E7%9B%AE%E4%B8%AD%E5%9C%A8vue.config.js%E4%B8%AD%E7%A6%81%E7%94%A8eslint/</id>
-    <published>2020-08-12T11:42:35.010Z</published>
-    <updated>2020-08-14T09:52:37.317Z</updated>
-    
-    <content type="html"><![CDATA[<h2 id="在写vue项目的时候，由于有eslint严格模式"><a href="#在写vue项目的时候，由于有eslint严格模式" class="headerlink" title="在写vue项目的时候，由于有eslint严格模式.."></a>在写vue项目的时候，由于有eslint严格模式..</h2><a id="more"></a><p>在写vue项目的时候，由于有eslint严格模式，连一个空格对不起都非常麻烦，种种报错，所以直接禁用掉<br>在vue.config.js里面加上 <code>lintOnSave: false</code> 这句话，即可解决<img src="https://img-blog.csdnimg.cn/20200727164634807.png" alt="在这里插入图片描述"></p>]]></content>
-    
-    
-    <summary type="html">&lt;h2 id=&quot;在写vue项目的时候，由于有eslint严格模式&quot;&gt;&lt;a href=&quot;#在写vue项目的时候，由于有eslint严格模式&quot; class=&quot;headerlink&quot; title=&quot;在写vue项目的时候，由于有eslint严格模式..&quot;&gt;&lt;/a&gt;在写vue项目的时候，由于有eslint严格模式..&lt;/h2&gt;</summary>
-    
-    
-    
-    <category term="Vue" scheme="http://yoursite.com/categories/Vue/"/>
-    
-    
-  </entry>
-  
-  <entry>
-    <title>在vscode上运行vue中vue ui的时候，出现这样的信息</title>
-    <link href="http://yoursite.com/2020/08/12/%E6%97%A0%E6%B3%95%E5%8A%A0%E8%BD%BD%E6%96%87%E4%BB%B6%20xxx%EF%BC%8C%E5%9B%A0%E4%B8%BA%E5%9C%A8%E6%AD%A4%E7%B3%BB%E7%BB%9F%E4%B8%8A%E7%A6%81%E6%AD%A2%E8%BF%90%E8%A1%8C%E8%84%9A%E6%9C%AC%E3%80%82%E6%9C%89%E5%85%B3%E8%AF%A6%E7%BB%86%E4%BF%A1%E6%81%AF%EF%BC%8C%E8%AF%B7%E5%8F%82%E9%98%85%20httpsgo.microsoft.comf/"/>
-    <id>http://yoursite.com/2020/08/12/%E6%97%A0%E6%B3%95%E5%8A%A0%E8%BD%BD%E6%96%87%E4%BB%B6%20xxx%EF%BC%8C%E5%9B%A0%E4%B8%BA%E5%9C%A8%E6%AD%A4%E7%B3%BB%E7%BB%9F%E4%B8%8A%E7%A6%81%E6%AD%A2%E8%BF%90%E8%A1%8C%E8%84%9A%E6%9C%AC%E3%80%82%E6%9C%89%E5%85%B3%E8%AF%A6%E7%BB%86%E4%BF%A1%E6%81%AF%EF%BC%8C%E8%AF%B7%E5%8F%82%E9%98%85%20httpsgo.microsoft.comf/</id>
-    <published>2020-08-12T11:42:04.856Z</published>
-    <updated>2020-08-14T09:52:15.898Z</updated>
-    
-    <content type="html"><![CDATA[<h2 id="在vscode上运行vue中vue-ui的时候，出现这样的信息"><a href="#在vscode上运行vue中vue-ui的时候，出现这样的信息" class="headerlink" title="在vscode上运行vue中vue ui的时候，出现这样的信息"></a>在vscode上运行vue中vue ui的时候，出现这样的信息</h2><a id="more"></a><p>在vscode上运行vue中vue ui的时候，出现这样的信息<br><img src="https://img-blog.csdnimg.cn/20200727160255588.png?x-oss-process=image/watermark,type_ZmFuZ3poZW5naGVpdGk,shadow_10,text_aHR0cHM6Ly9ibG9nLmNzZG4ubmV0L3dlaXhpbl80MjY5MzcxMg==,size_16,color_FFFFFF,t_70" alt="在这里插入图片描述"><br>这是执行策略的设置问题，默认情况下，执行策略为不允许任何脚本运行，所以会报错<br>解决方法：管理员打开PowerShell（windows电脑在开始那个按钮右边的搜索栏里面直接搜，然后右键管理员运行），输入set-executionpolicy remotesigned，之后选择Y即可<br>再次执行成功<br><img src="https://img-blog.csdnimg.cn/20200727160418843.png" alt="在这里插入图片描述"></p>]]></content>
-    
-    
-    <summary type="html">&lt;h2 id=&quot;在vscode上运行vue中vue-ui的时候，出现这样的信息&quot;&gt;&lt;a href=&quot;#在vscode上运行vue中vue-ui的时候，出现这样的信息&quot; class=&quot;headerlink&quot; title=&quot;在vscode上运行vue中vue ui的时候，出现这样的信息&quot;&gt;&lt;/a&gt;在vscode上运行vue中vue ui的时候，出现这样的信息&lt;/h2&gt;</summary>
-    
-    
-    
-    <category term="vscode" scheme="http://yoursite.com/categories/vscode/"/>
-    
-    
-  </entry>
-  
-  <entry>
-    <title>初学vue遇到 imported multiple times import/no-duplicates问题</title>
-    <link href="http://yoursite.com/2020/08/12/%E5%88%9D%E5%AD%A6vue%E9%81%87%E5%88%B0%20imported%20multiple%20times%20%20importno-duplicates%E9%97%AE%E9%A2%98/"/>
-    <id>http://yoursite.com/2020/08/12/%E5%88%9D%E5%AD%A6vue%E9%81%87%E5%88%B0%20imported%20multiple%20times%20%20importno-duplicates%E9%97%AE%E9%A2%98/</id>
-    <published>2020-08-12T11:41:31.252Z</published>
-    <updated>2020-08-14T09:49:32.296Z</updated>
-    
-    <content type="html"><![CDATA[<h2 id="初学vue遇到-imported-multiple-times-import-no-duplicates问题"><a href="#初学vue遇到-imported-multiple-times-import-no-duplicates问题" class="headerlink" title="初学vue遇到 imported multiple times import/no-duplicates问题"></a>初学vue遇到 imported multiple times import/no-duplicates问题</h2><a id="more"></a><p>出现这个问题一般是导入import次数过多<br>只需要把导入的文件放在一行即可，并且都好后边加空格<br><img src="https://img-blog.csdnimg.cn/20200726205432644.png" alt="在这里插入图片描述"></p><iframe frameborder="no" border="0" marginwidth="0" marginheight="0" width=330 height=86 src="//music.163.com/outchain/player?type=2&id=504646547&auto=0&height=66"></iframe>]]></content>
-    
-    
-    <summary type="html">&lt;h2 id=&quot;初学vue遇到-imported-multiple-times-import-no-duplicates问题&quot;&gt;&lt;a href=&quot;#初学vue遇到-imported-multiple-times-import-no-duplicates问题&quot; class=&quot;headerlink&quot; title=&quot;初学vue遇到 imported multiple times import/no-duplicates问题&quot;&gt;&lt;/a&gt;初学vue遇到 imported multiple times import/no-duplicates问题&lt;/h2&gt;</summary>
-    
-    
-    
-    <category term="Vue" scheme="http://yoursite.com/categories/Vue/"/>
-    
-    
-  </entry>
-  
-  <entry>
-    <title>状态码含义</title>
-    <link href="http://yoursite.com/2020/08/12/%E7%8A%B6%E6%80%81%E7%A0%81%E5%AF%B9%E5%BA%94%E5%90%AB%E4%B9%89/"/>
-    <id>http://yoursite.com/2020/08/12/%E7%8A%B6%E6%80%81%E7%A0%81%E5%AF%B9%E5%BA%94%E5%90%AB%E4%B9%89/</id>
-    <published>2020-08-12T11:41:00.090Z</published>
-    <updated>2020-08-14T09:52:45.921Z</updated>
-    
-    <content type="html"><![CDATA[<h2 id="状态码"><a href="#状态码" class="headerlink" title="状态码"></a>状态码</h2><a id="more"></a><p>状态码         含义                      说明</p><ul><li>200 OK 请求成功</li><li>201 CREATED 创建成功</li><li>204 DELETED 删除成功</li><li>400 BAD REQUEST 请求的地址不存在或者包含不支持的参数401 - UNAUTHORIZED 未授权</li><li>403 FORBIDDEN 被禁止访问</li><li>404 NOT FOUND 请求的资源不存在</li><li>422 Unprocesable entity[POST/PUT/PATCH]  当创建一个对象时，发生一个验证错误</li><li>500 INTERNAL SERVER ERROR   内部错误</li></ul><p>支持请求方法</p><ul><li>GET（SELECT）：从服务器取出资源（一项或多项）。</li><li>POST（CREATE）：在服务器新建一个资源。</li><li>PUT（UPDATE）：在服务器更新资源（客户端提供改变后的完整资源）。</li><li>PATCH（UPDATE）：在服务器更新资源（客户端提供改变的属性）。</li><li>DELETE（DELETE）：从服务器删除资源。</li><li>HEAD：获取资源的元数据。</li><li>OPTIONS：获取信息，关于资源的哪些属性是客户端可以改变的。</li></ul>]]></content>
-    
-    
-    <summary type="html">&lt;h2 id=&quot;状态码&quot;&gt;&lt;a href=&quot;#状态码&quot; class=&quot;headerlink&quot; title=&quot;状态码&quot;&gt;&lt;/a&gt;状态码&lt;/h2&gt;</summary>
-    
-    
-    
-    <category term="http" scheme="http://yoursite.com/categories/http/"/>
-    
-    
-  </entry>
-  
-  <entry>
-    <title>码云上传代码简单记录</title>
-    <link href="http://yoursite.com/2020/08/12/%E7%A0%81%E4%BA%91%E4%B8%8A%E4%BC%A0%E4%BB%A3%E7%A0%81%E7%AE%80%E5%8D%95%E8%AE%B0%E5%BD%95/"/>
-    <id>http://yoursite.com/2020/08/12/%E7%A0%81%E4%BA%91%E4%B8%8A%E4%BC%A0%E4%BB%A3%E7%A0%81%E7%AE%80%E5%8D%95%E8%AE%B0%E5%BD%95/</id>
-    <published>2020-08-12T11:40:19.892Z</published>
-    <updated>2020-08-14T09:52:03.932Z</updated>
-    
-    <content type="html"><![CDATA[<h2 id="码云上传代码简单记录"><a href="#码云上传代码简单记录" class="headerlink" title="码云上传代码简单记录"></a>码云上传代码简单记录</h2><a id="more"></a><p>如果遇到这个错误：fatal: Not a git repository (or any of the parent directories): .git，证明你没有git目录，在项目目录下执行 git init即可<br>github上传代码见：<a href="https://blog.csdn.net/weixin_42693712/article/details/107571233">https://blog.csdn.net/weixin_42693712/article/details/107571233</a><br>1.新建仓库<br><img src="https://img-blog.csdnimg.cn/202007242259537.png?x-oss-process=image/watermark,type_ZmFuZ3poZW5naGVpdGk,shadow_10,text_aHR0cHM6Ly9ibG9nLmNzZG4ubmV0L3dlaXhpbl80MjY5MzcxMg==,size_16,color_FFFFFF,t_70" alt="在这里插入图片描述"><br>2.输入仓库名称并且下面不做勾选，然后点击创建<br><img src="https://img-blog.csdnimg.cn/20200724230151952.png?x-oss-process=image/watermark,type_ZmFuZ3poZW5naGVpdGk,shadow_10,text_aHR0cHM6Ly9ibG9nLmNzZG4ubmV0L3dlaXhpbl80MjY5MzcxMg==,size_16,color_FFFFFF,t_70" alt="在这里插入图片描述"><br>3.复制这两行打开cmd在全局运行<img src="https://img-blog.csdnimg.cn/2020072423032681.png?x-oss-process=image/watermark,type_ZmFuZ3poZW5naGVpdGk,shadow_10,text_aHR0cHM6Ly9ibG9nLmNzZG4ubmV0L3dlaXhpbl80MjY5MzcxMg==,size_16,color_FFFFFF,t_70" alt="在这里插入图片描述"><br>忽略中间的，因为已经创建了仓库<img src="https://img-blog.csdnimg.cn/20200724230419210.png?x-oss-process=image/watermark,type_ZmFuZ3poZW5naGVpdGk,shadow_10,text_aHR0cHM6Ly9ibG9nLmNzZG4ubmV0L3dlaXhpbl80MjY5MzcxMg==,size_16,color_FFFFFF,t_70" alt="在这里插入图片描述"><br>4.打开本地项目所在目录，按住shift+鼠标右键打开powershell面板<br>5.在本地操作仓库，依次输入<code>git status</code><br><code>git add .</code><br><code>git commit -m &quot;add files&quot;</code><br><code>git status</code><br>出现这个即为成功<img src="https://img-blog.csdnimg.cn/20200724230749677.png" alt="在这里插入图片描述"><br>6.上传<br>复制以下两行命令在powershell面板执行<br><img src="https://img-blog.csdnimg.cn/20200724231000147.png" alt="在这里插入图片描述"><br><img src="https://img-blog.csdnimg.cn/20200724231018442.png" alt="在这里插入图片描述"><br>在弹出的窗口输入码云的邮箱和密码即可</p>]]></content>
-    
-    
-    <summary type="html">&lt;h2 id=&quot;码云上传代码简单记录&quot;&gt;&lt;a href=&quot;#码云上传代码简单记录&quot; class=&quot;headerlink&quot; title=&quot;码云上传代码简单记录&quot;&gt;&lt;/a&gt;码云上传代码简单记录&lt;/h2&gt;</summary>
-    
-    
-    
-    <category term="码云" scheme="http://yoursite.com/categories/%E7%A0%81%E4%BA%91/"/>
-    
-    
-  </entry>
-  
-  <entry>
-    <title>github上传代码操作，简单记录</title>
-    <link href="http://yoursite.com/2020/08/12/github%E4%B8%8A%E4%BC%A0%E4%BB%A3%E7%A0%81%E6%93%8D%E4%BD%9C%EF%BC%8C%E7%AE%80%E5%8D%95%E8%AE%B0%E5%BD%95/"/>
-    <id>http://yoursite.com/2020/08/12/github%E4%B8%8A%E4%BC%A0%E4%BB%A3%E7%A0%81%E6%93%8D%E4%BD%9C%EF%BC%8C%E7%AE%80%E5%8D%95%E8%AE%B0%E5%BD%95/</id>
-    <published>2020-08-12T11:39:43.560Z</published>
-    <updated>2020-08-14T09:52:55.652Z</updated>
-    
-    <content type="html"><![CDATA[<h2 id="github上传代码操作，简单记录"><a href="#github上传代码操作，简单记录" class="headerlink" title="github上传代码操作，简单记录"></a>github上传代码操作，简单记录</h2><a id="more"></a><p>码云上传代码见：<a href="https://blog.csdn.net/weixin_42693712/article/details/107571303">https://blog.csdn.net/weixin_42693712/article/details/107571303</a><br>github上传代码：<br>1.复制github网址，右击项目git BashHere<br>2.git clone <a href="https://github.com/111/111.git%EF%BC%88https://github.com/111/111.git%E6%9B%BF%E6%8D%A2%E6%88%90%E4%BD%A0%E4%B9%8B%E5%89%8D%E5%A4%8D%E5%88%B6%E7%9A%84%E5%9C%B0%E5%9D%80%EF%BC%89">https://github.com/111/111.git（https://github.com/111/111.git替换成你之前复制的地址）</a><br>3..这个步骤以后你的本地项目文件夹下面就会多出个文件夹，该文件夹名即为你github上面的项目名，如果我多出了个Comment文件夹，我们把本地项目文件夹下的所有文件（除了新多出的那个文件夹不用），其余都复制到那个新多出的文件夹下<br>4.cd 文件夹的名字<br> 5.      5.1  git add .        （注：别忘记后面的.，此操作是把Comment文件夹下面的文件都添加进来）</p><pre><code>     5.2  git commit  -m  &quot;提交信息&quot;  （注：“提交信息”里面换成你需要，如“first commit”）</code></pre><p>这步如果不成功（错误提示如下：*** Please tell me who you are.<br>     Run git config –global user.email “<a href="mailto:&#x79;&#111;&#117;&#x40;&#x65;&#120;&#97;&#x6d;&#112;&#x6c;&#101;&#x2e;&#x63;&#111;&#x6d;">&#x79;&#111;&#117;&#x40;&#x65;&#120;&#97;&#x6d;&#112;&#x6c;&#101;&#x2e;&#x63;&#111;&#x6d;</a>“ git config –global user.name “Your Name”<br>遇到这种情况依次执行以下命令<br>git config –global user.email “你的邮箱”<br>git config –global user.name “用户名”）</p><pre><code>   5.3  git push -u origin master   （注：此操作目的是把本地仓库push到github上面，此步骤需要你输入帐号和密码）   如果遇到这个错误：fatal: Not a git repository (or any of the parent directories): .git，证明你没有git目录，在项目目录下执行 git init即可</code></pre>]]></content>
-    
-    
-    <summary type="html">&lt;h2 id=&quot;github上传代码操作，简单记录&quot;&gt;&lt;a href=&quot;#github上传代码操作，简单记录&quot; class=&quot;headerlink&quot; title=&quot;github上传代码操作，简单记录&quot;&gt;&lt;/a&gt;github上传代码操作，简单记录&lt;/h2&gt;</summary>
-    
-    
-    
-    <category term="github" scheme="http://yoursite.com/categories/github/"/>
     
     
   </entry>
