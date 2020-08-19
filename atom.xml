@@ -6,7 +6,7 @@
   <link href="http://yoursite.com/atom.xml" rel="self"/>
   
   <link href="http://yoursite.com/"/>
-  <updated>2020-08-17T14:39:53.605Z</updated>
+  <updated>2020-08-19T09:27:10.332Z</updated>
   <id>http://yoursite.com/</id>
   
   <author>
@@ -17,11 +17,53 @@
   <generator uri="https://hexo.io/">Hexo</generator>
   
   <entry>
+    <title>两栏布局,DPI,Attribute / property,流式布局和响应式布局，BFC,雪碧图 （ 精灵图 ），SVG，浏览器兼容问题，“::before”和“:after”中的双冒号和单冒号的区别</title>
+    <link href="http://yoursite.com/2020/08/19/%E4%B8%A4%E6%A0%8F%E5%B8%83%E5%B1%80,DPI,Attribute%20%EF%BC%8Cproperty,%E6%B5%81%E5%BC%8F%E5%B8%83%E5%B1%80%E5%92%8C%E5%93%8D%E5%BA%94%E5%BC%8F%E5%B8%83%E5%B1%80%EF%BC%8CBFC,%E9%9B%AA%E7%A2%A7%E5%9B%BE%20%EF%BC%88%20%E7%B2%BE%E7%81%B5%E5%9B%BE%20%EF%BC%89%EF%BC%8CSVG%EF%BC%8C%E6%B5%8F%E8%A7%88%E5%99%A8%E5%85%BC%E5%AE%B9%E9%97%AE%E9%A2%98before%E5%92%8Cafter%E4%B8%AD%E7%9A%84%E5%8F%8C%E5%86%92%E5%8F%B7%E5%92%8C%E5%8D%95%E5%86%92%E5%8F%B7%E7%9A%84%E5%8C%BA%E5%88%AB/"/>
+    <id>http://yoursite.com/2020/08/19/%E4%B8%A4%E6%A0%8F%E5%B8%83%E5%B1%80,DPI,Attribute%20%EF%BC%8Cproperty,%E6%B5%81%E5%BC%8F%E5%B8%83%E5%B1%80%E5%92%8C%E5%93%8D%E5%BA%94%E5%BC%8F%E5%B8%83%E5%B1%80%EF%BC%8CBFC,%E9%9B%AA%E7%A2%A7%E5%9B%BE%20%EF%BC%88%20%E7%B2%BE%E7%81%B5%E5%9B%BE%20%EF%BC%89%EF%BC%8CSVG%EF%BC%8C%E6%B5%8F%E8%A7%88%E5%99%A8%E5%85%BC%E5%AE%B9%E9%97%AE%E9%A2%98before%E5%92%8Cafter%E4%B8%AD%E7%9A%84%E5%8F%8C%E5%86%92%E5%8F%B7%E5%92%8C%E5%8D%95%E5%86%92%E5%8F%B7%E7%9A%84%E5%8C%BA%E5%88%AB/</id>
+    <published>2020-08-19T09:31:47.712Z</published>
+    <updated>2020-08-19T09:27:10.332Z</updated>
+    
+    <content type="html"><![CDATA[<h2 id="两栏布局-DPI-Attribute-property-流式布局和响应式布局，BFC-雪碧图-（-精灵图-），SVG，浏览器兼容问题，“-before”和“-after”中的双冒号和单冒号的区别"><a href="#两栏布局-DPI-Attribute-property-流式布局和响应式布局，BFC-雪碧图-（-精灵图-），SVG，浏览器兼容问题，“-before”和“-after”中的双冒号和单冒号的区别" class="headerlink" title="两栏布局,DPI,Attribute / property,流式布局和响应式布局，BFC,雪碧图 （ 精灵图 ），SVG，浏览器兼容问题，“::before”和“:after”中的双冒号和单冒号的区别"></a>两栏布局,DPI,Attribute / property,流式布局和响应式布局，BFC,雪碧图 （ 精灵图 ），SVG，浏览器兼容问题，“::before”和“:after”中的双冒号和单冒号的区别</h2><a id="more"></a><h2 id="两栏布局"><a href="#两栏布局" class="headerlink" title="两栏布局"></a>两栏布局</h2><p>1    margin-bottom和padding-bottom<br>2    table-row和table-cell<br>3    flex布局</p><h2 id="DPI（移动端）"><a href="#DPI（移动端）" class="headerlink" title="DPI（移动端）"></a>DPI（移动端）</h2><p>Dpi:每英寸包含点的数量(dots per inch)<br>普通屏幕通常包含96dpi,一般将2倍于此的屏幕称之为高分屏，即大于等于192dpi的屏幕，比如Mac视网膜屏就达到了192dpi(即2dppx),打印时一般会需要更大的dpi;<br>1dppx=96dpi    1dpi约等于0.39dpcm    1dpcm约等于2.54dpi<br>1in =2.54cm=25.4mm=101.6q=72pt=6pc=96px;<br>支持IE9+  firefox3.5+  chrome29.0+</p><h2 id="Attribute-property"><a href="#Attribute-property" class="headerlink" title="Attribute / property"></a>Attribute / property</h2><p>Property    它是DOM中的属性，是javascript里边的对象<br>Attribute    它是HTML标签上的特性，它的值只能够是字符串</p><h2 id="流式布局和响应式布局"><a href="#流式布局和响应式布局" class="headerlink" title="流式布局和响应式布局"></a>流式布局和响应式布局</h2><table><thead><tr><th>流式布局</th><th>响应式布局</th></tr></thead><tbody><tr><td>也叫fluid,当上面一行的空间不够容纳新的TextView时候才开辟下一行的空间，场景：主要用于关键词搜索或者热门标签等场景；他主要是按照页面元素的宽度按照屏幕分辨率进行适配调整，但整体布局不变,使用%百分比定义宽度，高度大都是用px来固定，可以根据可视区域和父元素的实时尺寸来调整，尽可能适应各种分辨率</td><td>主要是实现不同屏幕分辨率的终端上浏览网页的不同展示方式，通过响应式设计能使网站在手机和平板电脑上有更好的浏览阅读体验；首先设置meta标签，通过媒体查询来设置样式Media Queries,然后再设置多种试图宽度</td></tr></tbody></table><h2 id="BFC"><a href="#BFC" class="headerlink" title="BFC"></a>BFC</h2><p>BFC：简单说，它是一种属性，这种属性会影响着元素的定位以及与其兄弟元素之间的相互作用<br>如何创建BFC：当一个HTML元素满足下面条件的任何一点，都可以产生BFC,常见的，float的值不为‘none’，overflow的值不为‘visible’,display的值为‘table-cell’,‘table-caption’,or‘inline-block’中的任何一个，position的值不为‘static’或‘relative’中的任何一个创建一个BFC的元素就是一个独立的盒子，里面的子元素不会在布局上影响外面的元素，反之亦然，同时BFC仍然属于文档中的普通流</p><h2 id="雪碧图-（-精灵图-）"><a href="#雪碧图-（-精灵图-）" class="headerlink" title="雪碧图 （ 精灵图 ）"></a>雪碧图 （ 精灵图 ）</h2><p>是把网站上用到的一些图片整合到一张单独的图片中，从而减少你的网站的HTTP请求数量，该图片使用css background和background-position属性渲染，这也就意味着你的标签变得更复杂了，图片是在css中定义，并非在<img>标签中，优点：减少加载网页图片时对服务器的请求次数，可以合并多数背景图片和小图标，方便在任何位置使用，这样不同位置的请求只需要调用一个图片，从而减少对服务器的请求次数，降低服务器压力，同时提高了页面的加载速度，节约服务器的流量。</p><h2 id="SVG"><a href="#SVG" class="headerlink" title="SVG"></a>SVG</h2><p>SVG它是可伸缩矢量图形，用来定义用于网络的基于矢量的图形，图形在放大或者改变尺寸的情况，其图形质量不会有所损失。<br>33.    工作中遇到的浏览器兼容问题有哪些？你都知道哪些常用的HACK技巧？</p><h2 id="浏览器兼容问题"><a href="#浏览器兼容问题" class="headerlink" title="浏览器兼容问题"></a>浏览器兼容问题</h2><p>1：不同浏览器的默认初始值不同。<br>解决方法：引入全局控制样式，或者使用第三方<br>2：块属性标签float后，又有横行的margin的情况下，在IE6显示margin比设置的大。<br>解决方法：在float的标签样式控制中加入display:inline,将其转化为行内属性。<br>3：设置小于10px高度标签，在IE6,7,无法正常显示设置高度。<br>解决方法：给超出高度的标签设置overflow:hidden;或者设置行高line-height 小于你设置的高度<br>4：行内属性标签，设置display:block后采用float布局，又有横行的margin的情况，IE6间距bug<br>解决方法：在display:block;后面加入display:inline;display:table;<br>5：图片默认有间距。<br>解决方法：使用float属性为img布局。<br>6：标签最低高度设置min-height不兼容。<br>解决方法：如果我们要设置一个标签的最小高度200px，需要进行的设置为：{min-height:200px; height:auto !important; height:200px; overflow:visible;}<br><strong>常用的HACK技巧</strong><br>Ie浏览器hack如下<br>_nowamagic:1px;———–ie6 *nowamagic:1px;———–ie7 nowamagic:1px\0;———-ie89 nowamagic:1px\9\0;——–ie9  :root nowamagic:1px;    —-ie9<br>Firefox 与 Chrome 的 Hack<br>Firefox:@-moz-document url-prefix()  /<em>写在选择器外层时（只可写在此处）：Firefox only</em>/<br>Chrome:@media screen and (-webkit-min-device-pixel-ratio:0)  /<em>写在选择器外层时（只可写在此处）：Chrome only</em>/</p><h2 id="“-before”和“-after”中的双冒号和单冒号的区别"><a href="#“-before”和“-after”中的双冒号和单冒号的区别" class="headerlink" title="“::before”和“:after”中的双冒号和单冒号的区别"></a>“::before”和“:after”中的双冒号和单冒号的区别</h2><p>如果你的网站只需要兼容webkit、firefox、opera等浏览器，建议对于伪元素采用双冒号的写法，如果不得不兼容IE浏览器，还是用CSS2的单冒号写法比较安全</p>]]></content>
+    
+    
+    <summary type="html">&lt;h2 id=&quot;两栏布局-DPI-Attribute-property-流式布局和响应式布局，BFC-雪碧图-（-精灵图-），SVG，浏览器兼容问题，“-before”和“-after”中的双冒号和单冒号的区别&quot;&gt;&lt;a href=&quot;#两栏布局-DPI-Attribute-property-流式布局和响应式布局，BFC-雪碧图-（-精灵图-），SVG，浏览器兼容问题，“-before”和“-after”中的双冒号和单冒号的区别&quot; class=&quot;headerlink&quot; title=&quot;两栏布局,DPI,Attribute / property,流式布局和响应式布局，BFC,雪碧图 （ 精灵图 ），SVG，浏览器兼容问题，“::before”和“:after”中的双冒号和单冒号的区别&quot;&gt;&lt;/a&gt;两栏布局,DPI,Attribute / property,流式布局和响应式布局，BFC,雪碧图 （ 精灵图 ），SVG，浏览器兼容问题，“::before”和“:after”中的双冒号和单冒号的区别&lt;/h2&gt;</summary>
+    
+    
+    
+    <category term="css" scheme="http://yoursite.com/categories/css/"/>
+    
+    
+    <category term="css基础" scheme="http://yoursite.com/tags/css%E5%9F%BA%E7%A1%80/"/>
+    
+  </entry>
+  
+  <entry>
+    <title>盒模型，box-sizing，CSS3新特性，伪类，伪元素，锚伪类，使用CSS实现隐藏元素的方式,盒子在页面水平和垂直居中, inline和inline-block,块级元素,行级元素有哪些以及特点 ,网格布局,传统表格布局</title>
+    <link href="http://yoursite.com/2020/08/19/%E7%9B%92%E6%A8%A1%E5%9E%8B%EF%BC%8Cbox-sizing%EF%BC%8CCSS3%E6%96%B0%E7%89%B9%E6%80%A7%EF%BC%8C%E4%BC%AA%E7%B1%BB%EF%BC%8C%E4%BC%AA%E5%85%83%E7%B4%A0%EF%BC%8C%E9%94%9A%E4%BC%AA%E7%B1%BB%EF%BC%8C%E4%BD%BF%E7%94%A8CSS%E5%AE%9E%E7%8E%B0%E9%9A%90%E8%97%8F%E5%85%83%E7%B4%A0%E7%9A%84%E6%96%B9%E5%BC%8F,%E7%9B%92%E5%AD%90%E5%9C%A8%E9%A1%B5%E9%9D%A2%E6%B0%B4%E5%B9%B3%E5%92%8C%E5%9E%82%E7%9B%B4%E5%B1%85%E4%B8%AD,%20inline%E5%92%8Cinline-block,%E5%9D%97%E7%BA%A7%E5%85%83%E7%B4%A0,%E8%A1%8C%E7%BA%A7%E5%85%83%E7%B4%A0%E6%9C%89%E5%93%AA%E4%BA%9B%E4%BB%A5%E5%8F%8A%E7%89%B9%E7%82%B9%20,%E7%BD%91%E6%A0%BC%E5%B8%83%E5%B1%80,%E4%BC%A0%E7%BB%9F%E8%A1%A8%E6%A0%BC%E5%B8%83%E5%B1%80/"/>
+    <id>http://yoursite.com/2020/08/19/%E7%9B%92%E6%A8%A1%E5%9E%8B%EF%BC%8Cbox-sizing%EF%BC%8CCSS3%E6%96%B0%E7%89%B9%E6%80%A7%EF%BC%8C%E4%BC%AA%E7%B1%BB%EF%BC%8C%E4%BC%AA%E5%85%83%E7%B4%A0%EF%BC%8C%E9%94%9A%E4%BC%AA%E7%B1%BB%EF%BC%8C%E4%BD%BF%E7%94%A8CSS%E5%AE%9E%E7%8E%B0%E9%9A%90%E8%97%8F%E5%85%83%E7%B4%A0%E7%9A%84%E6%96%B9%E5%BC%8F,%E7%9B%92%E5%AD%90%E5%9C%A8%E9%A1%B5%E9%9D%A2%E6%B0%B4%E5%B9%B3%E5%92%8C%E5%9E%82%E7%9B%B4%E5%B1%85%E4%B8%AD,%20inline%E5%92%8Cinline-block,%E5%9D%97%E7%BA%A7%E5%85%83%E7%B4%A0,%E8%A1%8C%E7%BA%A7%E5%85%83%E7%B4%A0%E6%9C%89%E5%93%AA%E4%BA%9B%E4%BB%A5%E5%8F%8A%E7%89%B9%E7%82%B9%20,%E7%BD%91%E6%A0%BC%E5%B8%83%E5%B1%80,%E4%BC%A0%E7%BB%9F%E8%A1%A8%E6%A0%BC%E5%B8%83%E5%B1%80/</id>
+    <published>2020-08-19T09:31:47.684Z</published>
+    <updated>2020-08-19T09:08:11.970Z</updated>
+    
+    <content type="html"><![CDATA[<h2 id="盒模型，box-sizing，CSS3新特性，伪类，伪元素，锚伪类，使用CSS实现隐藏元素的方式-盒子在页面水平和垂直居中-inline和inline-block-块级元素-行级元素有哪些以及特点-网格布局-传统表格布局"><a href="#盒模型，box-sizing，CSS3新特性，伪类，伪元素，锚伪类，使用CSS实现隐藏元素的方式-盒子在页面水平和垂直居中-inline和inline-block-块级元素-行级元素有哪些以及特点-网格布局-传统表格布局" class="headerlink" title="盒模型，box-sizing，CSS3新特性，伪类，伪元素，锚伪类，使用CSS实现隐藏元素的方式,盒子在页面水平和垂直居中, inline和inline-block,块级元素,行级元素有哪些以及特点 ,网格布局,传统表格布局"></a>盒模型，box-sizing，CSS3新特性，伪类，伪元素，锚伪类，使用CSS实现隐藏元素的方式,盒子在页面水平和垂直居中, inline和inline-block,块级元素,行级元素有哪些以及特点 ,网格布局,传统表格布局</h2><a id="more"></a><h3 id="盒模型："><a href="#盒模型：" class="headerlink" title="盒模型："></a>盒模型：</h3><p>margin(外边距)   padding(内边距)   border(边框)  content(内容)</p><h2 id="box-sizing"><a href="#box-sizing" class="headerlink" title="box-sizing:"></a>box-sizing:</h2><p>content-box  / border-box  /  inherit有以下三个属性<br><br>1：content-box:指定元素的宽度和高度（最小/最大属性）适用于box的宽度和高度，元素的填充和边框布局和绘制指定宽度和高度除外.<br><br>2 ：border-box:指定宽度和高度（最小/最大属性）确定元素边框box，对元素指定宽度和高度包括padding和border的指定，内容的宽度和高度减去各自双方该边框和填充的宽度从指定的“宽度”和“高度”属性计算<br><br>3 ：inherit:指定box-sizing属性的值，应该从父元素继承</p><h2 id="C3新特性："><a href="#C3新特性：" class="headerlink" title="C3新特性："></a>C3新特性：</h2><p>1    CSS实现圆角（border-radius）,阴影（box-shadow）,边框图片border-image<br><br>2    对文字加特效（text-shadow）,强制文本换行（word-wrap）,线性渐变（linear-gradient）<br><br>3    旋转，缩放，定位，倾斜： transform:rotate(90deg)  scale(0.85,0.90)  translate(0px,-30px)  skew(-9deg,0deg)<br><br>4    增加了更多的CSS选择器，多背景，rgba();<br><br>5    在CSS3中唯一引入的伪元素是::selection;<br><br>6    媒体查询（@media）,多栏布局（flex）<br></p><h2 id="伪类：用于向某些选择器添加特殊的效果"><a href="#伪类：用于向某些选择器添加特殊的效果" class="headerlink" title="伪类：用于向某些选择器添加特殊的效果"></a>伪类：用于向某些选择器添加特殊的效果</h2><p>1    ：hover 将样式添加到鼠标悬浮的元素<br><br>2    ：active 将样式添加到被激活的元素<br><br>3    ：focus 将样式添加到获得焦点的元素<br><br>4    ：link 将样式添加到未被访问过的链接<br><br>5    ：visited 将样式添加到被访问过的链接<br><br>6    ：first-child 将样式添加到元素的第一个子元素<br><br>7    ：lang 定义指定的元素中使用的语言<br></p><h2 id="伪元素：用于将特殊的效果添加到某些选择器，伪元素代表了某个元素的子元素，这个子元素虽然在逻辑上存在，但却并不实际存在于文档树中"><a href="#伪元素：用于将特殊的效果添加到某些选择器，伪元素代表了某个元素的子元素，这个子元素虽然在逻辑上存在，但却并不实际存在于文档树中" class="headerlink" title="伪元素：用于将特殊的效果添加到某些选择器，伪元素代表了某个元素的子元素，这个子元素虽然在逻辑上存在，但却并不实际存在于文档树中"></a>伪元素：用于将特殊的效果添加到某些选择器，伪元素代表了某个元素的子元素，这个子元素虽然在逻辑上存在，但却并不实际存在于文档树中</h2><p>1    ::first-letter 将样式添加到文本的首字母<br><br>2    ::first-line 将样式添加到文本的首行<br><br>3    ::before 在某元素之前插入某些内容<br><br>4    ::after 在某元素之后插入某些内容<br></p><h2 id="新增伪类："><a href="#新增伪类：" class="headerlink" title="新增伪类："></a>新增伪类：</h2><table><thead><tr><th>P:first-of-type</th><th>选择属于其父元素的首个p元素的每个p元素</th></tr></thead><tbody><tr><td>P:last-of-type</td><td>选择属于其父元素的最后p元素的每个p元素</td></tr><tr><td>P:only-of-type</td><td>选择属于其父元素唯一的p元素的每个p元素</td></tr><tr><td>P:only-child</td><td>选择属于其父元素唯一的子元素的每个p元素</td></tr><tr><td>P:nth-child(n)</td><td>选择属于其父元素的第n个子元素的每个p元素</td></tr><tr><td>P:nth-last-child(n)</td><td>选择属于其父元素的倒数第n个子元素的每个p元素</td></tr><tr><td>P:nth-of-type(n)</td><td>选择属于其父元素第n个p元素的每个p元素</td></tr><tr><td>P:nth-last-of-type(n)</td><td>选择属于其父元素倒数第n个p元素的每个p元素</td></tr><tr><td>P:last-child</td><td>选择属于其父元素最后一个子元素的每个p元素</td></tr><tr><td>P:empty</td><td>选择没有子元素的每个p元素(包括文本节点)</td></tr><tr><td>P:target</td><td>选择当前活动的p元素</td></tr><tr><td>:not(p)</td><td>选择非p元素的每个元素</td></tr><tr><td>:enabled</td><td>控制表单控件的可用状态</td></tr><tr><td>:disabled</td><td>控制表单控件的禁用状态</td></tr></tbody></table><h2 id="使用CSS实现隐藏元素的方式"><a href="#使用CSS实现隐藏元素的方式" class="headerlink" title="使用CSS实现隐藏元素的方式"></a>使用CSS实现隐藏元素的方式</h2><p>1    Opacity:设置一个元素的透明度   .hide{opacity:0;}<br><br>2    Visibility  .hide{visibility:hidden}<br><br>3    Display:确保元素不可见并且连盒模型也不生成 .hide{display:none}<br><br>4    Position .hide{position:absolute; top:-9999px; left:-9999px;}<br><br>5    Clip-path  .hide{clip-path:polygon(0px 0px, 0px 0px, 0px 0px, 0px 0px};<br></p><h2 id="盒子在页面水平和垂直居中"><a href="#盒子在页面水平和垂直居中" class="headerlink" title="盒子在页面水平和垂直居中"></a>盒子在页面水平和垂直居中</h2><p>水平居中设置：<br>1    行内元素：设置text-align:center;<br>2    定宽块状元素：设置 左右 margin值为auto;<br>3    不定宽块状元素<br>4    在元素外加入 table标签(完整的，包括table,tbody,tr,td),该元素写在td内，然后设置margin的值为auto;<br>5    给该元素设置display:inline方法；<br>6    父元素设置position:relative和left:50%,子元素设置position:relative和left:50%<br><br>垂直居中设置:<br>1    父元素高度确定的单行文本，设置height=line-height;<br>2    父元素高度确定的多行文本<br>A:插入table（插入方法和水平居中一样）,然后设置vertical-align:middle;<br> B:先设置display:table-cell 再设置 vertical-align:middle;</p><h2 id="position-display"><a href="#position-display" class="headerlink" title="position,display"></a>position,display</h2><p><strong>position</strong><br>position：absolute;    绝对定位的元素，相对于static定位以外的第一个父元素进行定位<br>position:fixed;    生成绝对定位的元素，相对于浏览器窗口进行定位.<br>position:relative;    生成相对定位的元素，相对于其正常位置进行定位<br>position:static;    默认值，没有定位，元素在正常的文档流(忽略top,bottom,left,right或者z-index声明)<br>position:inherit;    规定应该从父元素继承position属性的值<br><strong>display: ( 经常使用的 )</strong><br>display:none    此元素不会被显示<br>display:block;    此元素将显示为块级元素，此元素前后会带有换行符<br>display:inline;    行内块元素<br>display:inline-block;    此元素会作为列表显示<br>提示：基础知识，必须要了解！</p><h2 id="inline和inline-block"><a href="#inline和inline-block" class="headerlink" title="inline和inline-block"></a>inline和inline-block</h2><p><strong>inline</strong><br>1    inline元素不会独占一行，多个相邻的行内元素会排列在同一行里，直到一行排列不下，才会新换一行，其宽度随元素的内容而变化<br>2    Inline元素设置width,height属性无效<br>3    inline元素的margin和padding属性，水平方向的padding-left,padding-right,margin-left,margin-right都产生边距效果；但竖直方向的padding-top,padding-bottom,magin-top,margin-bottom不会产生边距效果。</p><h2 id="块级元素-行级元素有哪些以及特点"><a href="#块级元素-行级元素有哪些以及特点" class="headerlink" title="块级元素,行级元素有哪些以及特点"></a>块级元素,行级元素有哪些以及特点</h2><table><thead><tr><th>行内元素</th><th>块级元素</th></tr></thead><tbody><tr><td>a b em font i  img input br label span small select textarea</td><td>address dl div form h1-h6 hr menu ol p</td></tr><tr><td>行内元素不会独占一行，相邻的行内元素会排列在同一行里，一行排不下会自动换行，其宽度随元素的内容而变化。</td><td>块级元素会独占一行，其宽度自动填满其父元素宽度</td></tr><tr><td>块级元素可以设置margin,padding,行内元素的水平方向的padding-left，padding-right，margin-left，margin-right都产生边距效果，但是竖直方向padding-top,padding-bottom,margin-top,margin-bottom都不会产生边距效果</td><td>块级元素可以设置width,height属性，行内元素设置宽高无效</td></tr></tbody></table><h2 id="网格布局"><a href="#网格布局" class="headerlink" title="网格布局"></a>网格布局</h2><p>Grid布局又称“网格”，是一个基于二维网格布局的系统，主要目的是改变我们基于网格设计的用户接口方式，Grid布局是第一个专门为解决布局问题而创建的CSS模块</p><h2 id="传统表格布局"><a href="#传统表格布局" class="headerlink" title="传统表格布局"></a>传统表格布局</h2><p>Table用于布局，主要用来显示批量的数据；但是table有一个缺点，就是加载页面的时候，需要将全部的数据都请求到，才显示页面，否则就是一片的空白，所以现在一般都不用table进行布局.但因其稳定性非常优秀，一般在管理系统类项目中应用较多。</p>]]></content>
+    
+    
+    <summary type="html">&lt;h2 id=&quot;盒模型，box-sizing，CSS3新特性，伪类，伪元素，锚伪类，使用CSS实现隐藏元素的方式-盒子在页面水平和垂直居中-inline和inline-block-块级元素-行级元素有哪些以及特点-网格布局-传统表格布局&quot;&gt;&lt;a href=&quot;#盒模型，box-sizing，CSS3新特性，伪类，伪元素，锚伪类，使用CSS实现隐藏元素的方式-盒子在页面水平和垂直居中-inline和inline-block-块级元素-行级元素有哪些以及特点-网格布局-传统表格布局&quot; class=&quot;headerlink&quot; title=&quot;盒模型，box-sizing，CSS3新特性，伪类，伪元素，锚伪类，使用CSS实现隐藏元素的方式,盒子在页面水平和垂直居中, inline和inline-block,块级元素,行级元素有哪些以及特点 ,网格布局,传统表格布局&quot;&gt;&lt;/a&gt;盒模型，box-sizing，CSS3新特性，伪类，伪元素，锚伪类，使用CSS实现隐藏元素的方式,盒子在页面水平和垂直居中, inline和inline-block,块级元素,行级元素有哪些以及特点 ,网格布局,传统表格布局&lt;/h2&gt;</summary>
+    
+    
+    
+    <category term="css" scheme="http://yoursite.com/categories/css/"/>
+    
+    
+    <category term="css基础" scheme="http://yoursite.com/tags/css%E5%9F%BA%E7%A1%80/"/>
+    
+  </entry>
+  
+  <entry>
     <title>什么是渐进式渲染</title>
     <link href="http://yoursite.com/2020/08/17/%E4%BB%80%E4%B9%88%E6%98%AF%E6%B8%90%E8%BF%9B%E5%BC%8F%E6%B8%B2%E6%9F%93/"/>
     <id>http://yoursite.com/2020/08/17/%E4%BB%80%E4%B9%88%E6%98%AF%E6%B8%90%E8%BF%9B%E5%BC%8F%E6%B8%B2%E6%9F%93/</id>
     <published>2020-08-17T14:45:29.287Z</published>
-    <updated>2020-08-17T14:39:53.605Z</updated>
+    <updated>2020-08-19T09:09:27.420Z</updated>
     
     <content type="html"><![CDATA[<h2 id="什么是渐进式渲染"><a href="#什么是渐进式渲染" class="headerlink" title="什么是渐进式渲染"></a>什么是渐进式渲染</h2><a id="more"></a><p>指打开页面先加载首屏显示的内容，之后再随着时间或者滚动页面才进行后面的加载</p>]]></content>
     
@@ -30,10 +72,10 @@
     
     
     
-    <category term="Html面试题" scheme="http://yoursite.com/categories/Html%E9%9D%A2%E8%AF%95%E9%A2%98/"/>
+    <category term="Html" scheme="http://yoursite.com/categories/Html/"/>
     
     
-    <category term="html面试" scheme="http://yoursite.com/tags/html%E9%9D%A2%E8%AF%95/"/>
+    <category term="html基础" scheme="http://yoursite.com/tags/html%E5%9F%BA%E7%A1%80/"/>
     
   </entry>
   
@@ -42,7 +84,7 @@
     <link href="http://yoursite.com/2020/08/17/%E4%BB%80%E4%B9%88%E6%98%AFCanvas%EF%BC%8C%E4%BD%A0%E4%BD%BF%E7%94%A8%E5%AE%83%E5%81%9A%E4%B8%AA%E4%BB%80%E4%B9%88%E9%9C%80%E6%B1%82/"/>
     <id>http://yoursite.com/2020/08/17/%E4%BB%80%E4%B9%88%E6%98%AFCanvas%EF%BC%8C%E4%BD%A0%E4%BD%BF%E7%94%A8%E5%AE%83%E5%81%9A%E4%B8%AA%E4%BB%80%E4%B9%88%E9%9C%80%E6%B1%82/</id>
     <published>2020-08-17T14:45:29.285Z</published>
-    <updated>2020-08-17T14:19:34.229Z</updated>
+    <updated>2020-08-19T09:09:30.973Z</updated>
     
     <content type="html"><![CDATA[<h2 id="什么是Canvas，你使用它做个什么需求"><a href="#什么是Canvas，你使用它做个什么需求" class="headerlink" title="什么是Canvas，你使用它做个什么需求"></a>什么是Canvas，你使用它做个什么需求</h2><a id="more"></a><h2 id="什么是Canvas"><a href="#什么是Canvas" class="headerlink" title="什么是Canvas"></a><strong>什么是Canvas</strong></h2><p>: Canvas元素是HTML5的一部分，允许脚本语言动态渲染位图像。Canvas由一个可绘制地区HTML代码中的属性定义决定高度和宽度。JavaScript代码可以访问该地区，通过一套完整的绘图功能类似于其他通用二维的API，从而生成动态的图形。<br>Canvas能应对以下需求：</p><h2 id="1-游戏："><a href="#1-游戏：" class="headerlink" title="1. 游戏："></a><strong>1. 游戏：</strong></h2><p>毫无疑问，游戏在HTML5领域具有举足轻重的地位。HTML5在基于Web的图像显示方面比Flash更加立体、更加精巧，Ohad认为运用Canvas制作的图像能够令HTML5游戏在流畅度和跨平台方面发挥更大的潜力。</p><h2 id="2-图表制作："><a href="#2-图表制作：" class="headerlink" title="2. 图表制作："></a><strong>2. 图表制作</strong>：</h2><p>图表制作时常被人们忽略，但无论企业内部还是企业间交流合作都离不开图表。现在一些开发者使用HTML/CSS完成图标制作，但完全可以用Canvas来实现。当然，使用SVG（可缩放矢量图形）来完成图表制作也是非常好的方法。(例如：echarts.js heightchart.js都是基于canvas来绘图!)</p><h2 id="3-banner广告："><a href="#3-banner广告：" class="headerlink" title="3. banner广告："></a><strong>3. banner广告：</strong></h2><p>Flash曾经辉煌的时代，智能手机还未曾出现。现在以及未来的智能机时代，HTML5技术能够在banner广告上发挥巨大作用，用Canvas实现动态的广告效果再合适不过。<br>提示：其实还有很多领域（例如：模拟器 / 远程计算机控制 / 字体设计 / 图像编辑器 / 其它），但是就当前来说，基于canvas图表制作是我们必须要掌握的能力。</p>]]></content>
     
@@ -51,10 +93,10 @@
     
     
     
-    <category term="Html面试题" scheme="http://yoursite.com/categories/Html%E9%9D%A2%E8%AF%95%E9%A2%98/"/>
+    <category term="Html" scheme="http://yoursite.com/categories/Html/"/>
     
     
-    <category term="html面试" scheme="http://yoursite.com/tags/html%E9%9D%A2%E8%AF%95/"/>
+    <category term="html基础" scheme="http://yoursite.com/tags/html%E5%9F%BA%E7%A1%80/"/>
     
   </entry>
   
@@ -63,7 +105,7 @@
     <link href="http://yoursite.com/2020/08/17/%E5%B7%A5%E4%BD%9C%E4%B8%AD%E4%BD%A0%E9%83%BD%E5%85%BC%E5%AE%B9%E5%93%AA%E4%BA%9B%E6%B5%8F%E8%A7%88%E5%99%A8%20%EF%BC%8C%20%E5%AE%9E%E9%99%85%E5%BC%80%E5%8F%91%E4%B8%AD%E4%BD%A0%E9%83%BD%E9%81%87%E5%88%B0%E8%BF%87%E5%93%AA%E4%BA%9B%E5%85%BC%E5%AE%B9%E9%97%AE%E9%A2%98%20%E3%80%82/"/>
     <id>http://yoursite.com/2020/08/17/%E5%B7%A5%E4%BD%9C%E4%B8%AD%E4%BD%A0%E9%83%BD%E5%85%BC%E5%AE%B9%E5%93%AA%E4%BA%9B%E6%B5%8F%E8%A7%88%E5%99%A8%20%EF%BC%8C%20%E5%AE%9E%E9%99%85%E5%BC%80%E5%8F%91%E4%B8%AD%E4%BD%A0%E9%83%BD%E9%81%87%E5%88%B0%E8%BF%87%E5%93%AA%E4%BA%9B%E5%85%BC%E5%AE%B9%E9%97%AE%E9%A2%98%20%E3%80%82/</id>
     <published>2020-08-17T14:45:29.276Z</published>
-    <updated>2020-08-17T14:31:12.951Z</updated>
+    <updated>2020-08-19T09:09:19.400Z</updated>
     
     <content type="html"><![CDATA[<h2 id="工作中你都兼容哪些浏览器-，-实际开发中你都遇到过哪些兼容问题-。"><a href="#工作中你都兼容哪些浏览器-，-实际开发中你都遇到过哪些兼容问题-。" class="headerlink" title="工作中你都兼容哪些浏览器 ， 实际开发中你都遇到过哪些兼容问题 。"></a>工作中你都兼容哪些浏览器 ， 实际开发中你都遇到过哪些兼容问题 。</h2><a id="more"></a><p>Input的按钮在ios和Android中的样式兼容问题<br>ios有默认的渲染 方式 渐变和圆角而且他的行高并不会随着内容的增加。<br>解决方法：<br>在标签上增加<br>-webkie-appearance：none；<br>Height：4rem；<br>滚动穿透的问题:<br>    滚动穿透是指在移动端当有flxed 遮罩和弹出层的时候，屏幕上的滑动能够滑动背景下的内容。<br>最后的解决方法<br><img src="https://img-blog.csdnimg.cn/20200817222716337.png#pic_center" alt="在这里插入图片描述"></p>]]></content>
     
@@ -72,10 +114,10 @@
     
     
     
-    <category term="Html面试题" scheme="http://yoursite.com/categories/Html%E9%9D%A2%E8%AF%95%E9%A2%98/"/>
+    <category term="Html" scheme="http://yoursite.com/categories/Html/"/>
     
     
-    <category term="html面试" scheme="http://yoursite.com/tags/html%E9%9D%A2%E8%AF%95/"/>
+    <category term="html基础" scheme="http://yoursite.com/tags/html%E5%9F%BA%E7%A1%80/"/>
     
   </entry>
   
@@ -84,7 +126,7 @@
     <link href="http://yoursite.com/2020/08/17/%E5%BA%9F%E5%BC%83%E7%9A%84%E6%A0%87%E7%AD%BE%E6%9C%89%E5%93%AA%E4%BA%9B%20%EF%BC%9F%E4%B8%BE%E5%87%A0%E4%B8%AA%E4%BE%8B%E5%AD%90/"/>
     <id>http://yoursite.com/2020/08/17/%E5%BA%9F%E5%BC%83%E7%9A%84%E6%A0%87%E7%AD%BE%E6%9C%89%E5%93%AA%E4%BA%9B%20%EF%BC%9F%E4%B8%BE%E5%87%A0%E4%B8%AA%E4%BE%8B%E5%AD%90/</id>
     <published>2020-08-17T14:45:29.260Z</published>
-    <updated>2020-08-17T14:24:56.375Z</updated>
+    <updated>2020-08-19T09:09:12.144Z</updated>
     
     <content type="html"><![CDATA[<h2 id="HTML-废弃的标签有哪些-？举几个例子"><a href="#HTML-废弃的标签有哪些-？举几个例子" class="headerlink" title="HTML 废弃的标签有哪些 ？举几个例子"></a>HTML 废弃的标签有哪些 ？举几个例子</h2><a id="more"></a><table><thead><tr><th>em=i</th><th>定义强调的文字。</th></tr></thead><tbody><tr><td>ins=u</td><td>定义插入的文字。</td></tr><tr><td>strong=b</td><td>定义重要性强调的文字。</td></tr><tr><td>del=s</td><td>定义删除的文字。</td></tr></tbody></table><p>因为strong,em,ins,del这些标签有语意，所以是b,i,u,s的替代品。</p>]]></content>
     
@@ -93,10 +135,10 @@
     
     
     
-    <category term="Html面试题" scheme="http://yoursite.com/categories/Html%E9%9D%A2%E8%AF%95%E9%A2%98/"/>
+    <category term="Html" scheme="http://yoursite.com/categories/Html/"/>
     
     
-    <category term="html面试" scheme="http://yoursite.com/tags/html%E9%9D%A2%E8%AF%95/"/>
+    <category term="html基础" scheme="http://yoursite.com/tags/html%E5%9F%BA%E7%A1%80/"/>
     
   </entry>
   
@@ -105,7 +147,7 @@
     <link href="http://yoursite.com/2020/08/17/Meta%20viewport%20%E7%9A%84%E5%8E%9F%E7%90%86%E6%98%AF%E4%BB%80%E4%B9%88/"/>
     <id>http://yoursite.com/2020/08/17/Meta%20viewport%20%E7%9A%84%E5%8E%9F%E7%90%86%E6%98%AF%E4%BB%80%E4%B9%88/</id>
     <published>2020-08-17T14:45:29.239Z</published>
-    <updated>2020-08-17T14:43:19.948Z</updated>
+    <updated>2020-08-19T09:10:02.026Z</updated>
     
     <content type="html"><![CDATA[<h2 id="Meta-viewport-的原理是什么"><a href="#Meta-viewport-的原理是什么" class="headerlink" title="Meta viewport 的原理是什么"></a>Meta viewport 的原理是什么</h2><a id="more"></a><p>手机浏览器是把页面放在一个虚拟的“窗口”（viewport）中，通常这个虚拟的“窗口”（viewport）比屏幕宽，这样就不用把每个网页挤到很小的窗口中（这样会破坏没有针对手机浏览器优化的网页的布局），用户可以通过平移和缩放来看网页的不同部分。移动设备默认的viewport是layout viewport，也就是那个比屏幕要宽的viewport，但在进行移动设备网站的开发时，我们需要的是ideal viewport。</p>]]></content>
     
@@ -114,10 +156,10 @@
     
     
     
-    <category term="Html面试题" scheme="http://yoursite.com/categories/Html%E9%9D%A2%E8%AF%95%E9%A2%98/"/>
+    <category term="Html" scheme="http://yoursite.com/categories/Html/"/>
     
     
-    <category term="html面试" scheme="http://yoursite.com/tags/html%E9%9D%A2%E8%AF%95/"/>
+    <category term="html基础" scheme="http://yoursite.com/tags/html%E5%9F%BA%E7%A1%80/"/>
     
   </entry>
   
@@ -126,7 +168,7 @@
     <link href="http://yoursite.com/2020/08/17/HTML%E6%A8%A1%E6%9D%BF%E8%AF%AD%E8%A8%80%E6%9C%89%E5%93%AA%E4%BA%9B%20/"/>
     <id>http://yoursite.com/2020/08/17/HTML%E6%A8%A1%E6%9D%BF%E8%AF%AD%E8%A8%80%E6%9C%89%E5%93%AA%E4%BA%9B%20/</id>
     <published>2020-08-17T14:45:29.217Z</published>
-    <updated>2020-08-17T14:42:04.889Z</updated>
+    <updated>2020-08-19T09:09:56.756Z</updated>
     
     <content type="html"><![CDATA[<h2 id="HTML模板语言有哪些"><a href="#HTML模板语言有哪些" class="headerlink" title="HTML模板语言有哪些"></a>HTML模板语言有哪些</h2><a id="more"></a><p>Django 模板基于Python的一个模板。<br>Python下有许多款不同的 Web 框架。Django是重量级选手中最有代表性的一位。许多成功的网站和APP都基于Django。<br>Django是一个开放源代码的Web应用框架，由Python写成。<br>Django遵守BSD版权，初次发布于2005年7月, 并于2008年9月发布了第一个正式版本1.0 。<br>Django采用了MVC的软件设计模式，即模型M，视图V和控制器C。</p>]]></content>
     
@@ -135,10 +177,10 @@
     
     
     
-    <category term="Html面试题" scheme="http://yoursite.com/categories/Html%E9%9D%A2%E8%AF%95%E9%A2%98/"/>
+    <category term="Html" scheme="http://yoursite.com/categories/Html/"/>
     
     
-    <category term="html面试" scheme="http://yoursite.com/tags/html%E9%9D%A2%E8%AF%95/"/>
+    <category term="html基础" scheme="http://yoursite.com/tags/html%E5%9F%BA%E7%A1%80/"/>
     
   </entry>
   
@@ -147,7 +189,7 @@
     <link href="http://yoursite.com/2020/08/17/CSS%EF%BC%8CJS%20%E5%BC%95%E5%85%A5%E7%9A%84%E4%BD%8D%E7%BD%AE%E4%B8%80%E8%88%AC%E5%9C%A8%E5%93%AA%E9%87%8C%EF%BC%8C%E4%B8%BA%E4%BB%80%E4%B9%88/"/>
     <id>http://yoursite.com/2020/08/17/CSS%EF%BC%8CJS%20%E5%BC%95%E5%85%A5%E7%9A%84%E4%BD%8D%E7%BD%AE%E4%B8%80%E8%88%AC%E5%9C%A8%E5%93%AA%E9%87%8C%EF%BC%8C%E4%B8%BA%E4%BB%80%E4%B9%88/</id>
     <published>2020-08-17T14:45:29.180Z</published>
-    <updated>2020-08-17T14:37:45.649Z</updated>
+    <updated>2020-08-19T09:09:47.220Z</updated>
     
     <content type="html"><![CDATA[<h2 id="CSS-JS-引入的位置一般在哪里？为什么"><a href="#CSS-JS-引入的位置一般在哪里？为什么" class="headerlink" title="CSS / JS 引入的位置一般在哪里？为什么"></a>CSS / JS 引入的位置一般在哪里？为什么</h2><a id="more"></a><p>Script标签最好放在</body>标签的前面，因为放在所有body中的标签后面就不会出现网页加载时出现空白的情况，可以持续的给用户提供视觉反馈，同时在有些情况下，会降低错误的发生；而css标签应该放在<head></head>标签之间，因为如果放在</body>标签的前面，那么当DOM树构建完成了，渲染树才构建，那么当渲染树构建完成，浏览器不得不再重新渲染整个页面，这样造成了资源的浪费，效率也不高，如果放在<head></head>之间，浏览器边构建边渲染，效率要高得多  ！</p>]]></content>
     
@@ -156,10 +198,10 @@
     
     
     
-    <category term="Html面试题" scheme="http://yoursite.com/categories/Html%E9%9D%A2%E8%AF%95%E9%A2%98/"/>
+    <category term="Html" scheme="http://yoursite.com/categories/Html/"/>
     
     
-    <category term="html面试" scheme="http://yoursite.com/tags/html%E9%9D%A2%E8%AF%95/"/>
+    <category term="html基础" scheme="http://yoursite.com/tags/html%E5%9F%BA%E7%A1%80/"/>
     
   </entry>
   
@@ -168,7 +210,7 @@
     <link href="http://yoursite.com/2020/08/16/%E4%B8%BA%E4%BB%80%E4%B9%88%E8%A6%81%E5%9C%A8%E6%A0%87%E7%AD%BE%E4%B8%8A%E4%BD%BF%E7%94%A8data-,%20%E5%AE%83%E6%9C%89%E4%BB%80%E4%B9%88%E5%A5%BD%E5%A4%84/"/>
     <id>http://yoursite.com/2020/08/16/%E4%B8%BA%E4%BB%80%E4%B9%88%E8%A6%81%E5%9C%A8%E6%A0%87%E7%AD%BE%E4%B8%8A%E4%BD%BF%E7%94%A8data-,%20%E5%AE%83%E6%9C%89%E4%BB%80%E4%B9%88%E5%A5%BD%E5%A4%84/</id>
     <published>2020-08-16T10:30:19.143Z</published>
-    <updated>2020-08-16T10:17:29.635Z</updated>
+    <updated>2020-08-19T09:09:37.868Z</updated>
     
     <content type="html"><![CDATA[<h2 id="为什么要在标签上使用data-它有什么好处"><a href="#为什么要在标签上使用data-它有什么好处" class="headerlink" title="为什么要在标签上使用data-, 它有什么好处"></a>为什么要在标签上使用data-, 它有什么好处</h2><a id="more"></a><table><thead><tr><th>1</th><th>html5规范中规定自定义属性需要添加前缀data-,目的是提供与渲染无关的信息</th></tr></thead><tbody><tr><td>2</td><td>使用getAttribute（）方法以及setAttribute()方法操作自定义属性</td></tr><tr><td>3</td><td>使用dataset操作自定义属性。</td></tr><tr><td>4</td><td>dataset属性的兼容性问题，Chrome 8+   Firefox(Gecko) 6.0+   Internet Explorer 11+   Opera11.10+  Safari 6+ 以上浏览器均能很好支持</td></tr><tr><td>5</td><td>使用data-属性选择器好处：绑定DOM强相关数据，js传递数据</td></tr></tbody></table>]]></content>
     
@@ -177,10 +219,10 @@
     
     
     
-    <category term="Html面试题" scheme="http://yoursite.com/categories/Html%E9%9D%A2%E8%AF%95%E9%A2%98/"/>
+    <category term="Html" scheme="http://yoursite.com/categories/Html/"/>
     
     
-    <category term="html面试" scheme="http://yoursite.com/tags/html%E9%9D%A2%E8%AF%95/"/>
+    <category term="html基础" scheme="http://yoursite.com/tags/html%E5%9F%BA%E7%A1%80/"/>
     
   </entry>
   
@@ -189,7 +231,7 @@
     <link href="http://yoursite.com/2020/08/16/%E4%B8%BA%E4%BB%80%E4%B9%88%E8%A6%81%E5%9C%A8%E6%A0%87%E7%AD%BE%E4%B8%8A%E4%BD%BF%E7%94%A8data-,%20%E5%AE%83%E6%9C%89%E4%BB%80%E4%B9%88%E5%A5%BD%E5%A4%84%20copy/"/>
     <id>http://yoursite.com/2020/08/16/%E4%B8%BA%E4%BB%80%E4%B9%88%E8%A6%81%E5%9C%A8%E6%A0%87%E7%AD%BE%E4%B8%8A%E4%BD%BF%E7%94%A8data-,%20%E5%AE%83%E6%9C%89%E4%BB%80%E4%B9%88%E5%A5%BD%E5%A4%84%20copy/</id>
     <published>2020-08-16T10:30:19.111Z</published>
-    <updated>2020-08-16T10:20:38.233Z</updated>
+    <updated>2020-08-19T09:09:41.494Z</updated>
     
     <content type="html"><![CDATA[<h2 id="Meta标签，都有一些什么特性，有什么作用"><a href="#Meta标签，都有一些什么特性，有什么作用" class="headerlink" title="Meta标签，都有一些什么特性，有什么作用"></a>Meta标签，都有一些什么特性，有什么作用</h2><a id="more"></a><table><thead><tr><th>1</th><th>什么是meta标签:<meta>标签提供关于HTML文档的元数据，它不会显示在页面上，但是对于机器是可读的，可用于浏览器（如何显示内容或重新加载页面），搜索引擎（关键词），或其他web服务。</th></tr></thead><tbody><tr><td>2</td><td>meta的作用:meta里的数据是供机器解读的，告诉机器该如何解析这个页面，还有一个用途是可以添加服务器发送到浏览器的HTTP头部内容。</td></tr><tr><td>3</td><td>常用meta标签总结:Charset：它是声明文档使用的字符编码，以防乱码，而且一定要写在第一行Viewport：主要是影响移动端页面布局的。</td></tr></tbody></table>]]></content>
     
@@ -198,10 +240,10 @@
     
     
     
-    <category term="Html面试题" scheme="http://yoursite.com/categories/Html%E9%9D%A2%E8%AF%95%E9%A2%98/"/>
+    <category term="Html" scheme="http://yoursite.com/categories/Html/"/>
     
     
-    <category term="html面试" scheme="http://yoursite.com/tags/html%E9%9D%A2%E8%AF%95/"/>
+    <category term="html基础" scheme="http://yoursite.com/tags/html%E5%9F%BA%E7%A1%80/"/>
     
   </entry>
   
@@ -210,7 +252,7 @@
     <link href="http://yoursite.com/2020/08/16/%E6%B5%8F%E8%A7%88%E5%99%A8%E6%A0%87%E5%87%86%E6%A8%A1%E5%BC%8F%E5%92%8C%E6%80%AA%E5%BC%82%E6%A8%A1%E5%BC%8F/"/>
     <id>http://yoursite.com/2020/08/16/%E6%B5%8F%E8%A7%88%E5%99%A8%E6%A0%87%E5%87%86%E6%A8%A1%E5%BC%8F%E5%92%8C%E6%80%AA%E5%BC%82%E6%A8%A1%E5%BC%8F/</id>
     <published>2020-08-16T10:30:19.095Z</published>
-    <updated>2020-08-16T10:08:33.295Z</updated>
+    <updated>2020-08-19T09:09:23.654Z</updated>
     
     <content type="html"><![CDATA[<h2 id="浏览器标准模式和怪异模式"><a href="#浏览器标准模式和怪异模式" class="headerlink" title="浏览器标准模式和怪异模式"></a>浏览器标准模式和怪异模式</h2><a id="more"></a><h2 id="产生原因："><a href="#产生原因：" class="headerlink" title="产生原因："></a><strong>产生原因：</strong></h2><p>现代的浏览器一般都有两种渲染模式：标准模式和怪异模式，在标准模式下，浏览器按照HTML和CSS标准对文档进行解析和渲染；而在怪异模式下，浏览器则按照旧有的非标准的实现方式对文档进行解析和渲染，这样的话，对于旧有的网页，浏览器就会启动怪异模式，就能够使得旧网页正常显示；对于新的网页，则可以启动标准模式，使得新网页能够使用HTML和CSS的标准特性。<br>|  标准模式|怪异模式  |<br>|–|–|<br>|  给span等行内元素设置width和height无效。|  有效|<br>|margin:0 auto水平居中，在标准模式下没有问题。|用margin:0 auto设置水平居中在怪异模式下会失效，解决办法，用text-align属性来解决|<br>| 右边的这些问题，在标准模式下均不会出现问题！ | 怪异模式下设置图片的padding会失效，怪异模式下Table中的字体属性不能继承上层的设置怪异模式下white-space:pre会失效 |</p>]]></content>
     
@@ -219,10 +261,10 @@
     
     
     
-    <category term="Html面试题" scheme="http://yoursite.com/categories/Html%E9%9D%A2%E8%AF%95%E9%A2%98/"/>
+    <category term="Html" scheme="http://yoursite.com/categories/Html/"/>
     
     
-    <category term="html面试" scheme="http://yoursite.com/tags/html%E9%9D%A2%E8%AF%95/"/>
+    <category term="html基础" scheme="http://yoursite.com/tags/html%E5%9F%BA%E7%A1%80/"/>
     
   </entry>
   
@@ -231,7 +273,7 @@
     <link href="http://yoursite.com/2020/08/16/XHTML%E4%B8%8EHTML%E6%9C%89%E4%BB%80%E4%B9%88%E5%8C%BA%E5%88%AB/"/>
     <id>http://yoursite.com/2020/08/16/XHTML%E4%B8%8EHTML%E6%9C%89%E4%BB%80%E4%B9%88%E5%8C%BA%E5%88%AB/</id>
     <published>2020-08-16T10:30:19.093Z</published>
-    <updated>2020-08-16T10:12:00.036Z</updated>
+    <updated>2020-08-19T09:10:05.864Z</updated>
     
     <content type="html"><![CDATA[<h2 id="XHTML与HTML有什么区别"><a href="#XHTML与HTML有什么区别" class="headerlink" title="XHTML与HTML有什么区别"></a>XHTML与HTML有什么区别</h2><a id="more"></a><p>1：XHTML元素必须被正确的嵌套。<br>2：XHTML元素必须被关闭。<br>3：标签名必须用小写字母。<br>4：XHTML文档必须拥有根元素。</p>]]></content>
     
@@ -240,10 +282,10 @@
     
     
     
-    <category term="Html面试题" scheme="http://yoursite.com/categories/Html%E9%9D%A2%E8%AF%95%E9%A2%98/"/>
+    <category term="Html" scheme="http://yoursite.com/categories/Html/"/>
     
     
-    <category term="html面试" scheme="http://yoursite.com/tags/html%E9%9D%A2%E8%AF%95/"/>
+    <category term="html基础" scheme="http://yoursite.com/tags/html%E5%9F%BA%E7%A1%80/"/>
     
   </entry>
   
@@ -252,7 +294,7 @@
     <link href="http://yoursite.com/2020/08/16/HTML5%E7%89%B9%E6%80%A7%E6%9C%89%E5%93%AA%E4%BA%9B%EF%BC%9F%E8%AF%AD%E4%B9%89%E5%8C%96%E7%9A%84%E5%81%9A%E6%B3%95%E6%9C%89%E5%93%AA%E4%BA%9B%EF%BC%8C%E5%85%B7%E4%BD%93%E6%8C%87%E7%9A%84%E4%BB%80%E4%B9%88/"/>
     <id>http://yoursite.com/2020/08/16/HTML5%E7%89%B9%E6%80%A7%E6%9C%89%E5%93%AA%E4%BA%9B%EF%BC%9F%E8%AF%AD%E4%B9%89%E5%8C%96%E7%9A%84%E5%81%9A%E6%B3%95%E6%9C%89%E5%93%AA%E4%BA%9B%EF%BC%8C%E5%85%B7%E4%BD%93%E6%8C%87%E7%9A%84%E4%BB%80%E4%B9%88/</id>
     <published>2020-08-16T10:30:19.078Z</published>
-    <updated>2020-08-16T09:55:29.057Z</updated>
+    <updated>2020-08-19T09:09:52.677Z</updated>
     
     <content type="html"><![CDATA[<h2 id="1-HTML5特性有哪些？语义化的做法有哪些，具体指的什么"><a href="#1-HTML5特性有哪些？语义化的做法有哪些，具体指的什么" class="headerlink" title="1.    HTML5特性有哪些？语义化的做法有哪些，具体指的什么"></a>1.    HTML5特性有哪些？语义化的做法有哪些，具体指的什么</h2><a id="more"></a><h2 id="新特性常用解释如下"><a href="#新特性常用解释如下" class="headerlink" title="**新特性常用解释如下**"></a><strong><center>**新特性常用解释如下</strong></center>**</h2><table><thead><tr><th>1</th><th>多媒体，用于媒介回放的video和audio元素。</th></tr></thead><tbody><tr><td>2</td><td>图像效果，用于绘画的canvas元素，svg元素等</td></tr><tr><td>3</td><td>离线&amp;存储，对本地离线存储能够更好地支持，比如localstorage,Cookies等。</td></tr><tr><td>4</td><td>设备兼容特性，HTML5提供了前所未有的数据与应用接入开放接口，使外部应用可以直接与浏览器内部的数据直接相连。</td></tr><tr><td>5</td><td>连接特性，更有效的连接工作效率，使得基于页面的实时聊天，更快速的网页游戏体验，更优化的在线交流得到了实现，同时拥有更有效的服务器推送技术，Server-Sent Event和WebSockets就是其中的两个特性，这两个特性能够帮助我们实现服务器将数据“推送”到客户端的功能。</td></tr><tr><td>6</td><td>性能与集成特性，HTML5会通过XML HttpRequest2等技术，帮助您的Web应用和网站在多样化的环境中更快速地工作。</td></tr></tbody></table><h2 id="新增标签"><a href="#新增标签" class="headerlink" title="**新增标签**"></a><strong><center>**新增标签</strong></center>**</h2><table><thead><tr><th>1</th><th>多媒体：audio video source embed track</th></tr></thead><tbody><tr><td>2</td><td>新表单元素：datalist output keygen</td></tr><tr><td>3</td><td>新文档节段和纲要：header页面头部  section章节 aside边栏article文档内容  footer页面底部</td></tr></tbody></table><h2 id="语义化具体指以下内容："><a href="#语义化具体指以下内容：" class="headerlink" title="**语义化具体指以下内容：**"></a><strong><center>**语义化具体指以下内容：</strong></center>**</h2><table><thead><tr><th>1</th><th>语义特性，添加header nav等标签</th></tr></thead><tbody><tr><td>2</td><td>为了在没有css代码时，也能呈现很好的内容结构，代码结构，以至于达到没有编程基础的非技术人员，也能看懂其代码</td></tr><tr><td>3</td><td>为了提高用户体验，比如：title,alt用于解释名词和图片信息</td></tr><tr><td>4</td><td>利于SEO，语义化能和搜索引擎建立良好的关系，有利于爬虫抓取更多的有效信息，爬虫依赖于标签来确定上下文和各个关键字的权重</td></tr><tr><td>5</td><td>便于团队开发和维护，语义化更具可读性，如果遵循W3C标准的团队都遵循这个标准，可以减少差异化，有利于规范化</td></tr><tr><td>6</td><td>方便其他设备解析（如屏幕阅读器，盲人阅读器，移动设备）以语义的方式来渲染网页</td></tr></tbody></table>]]></content>
     
@@ -261,10 +303,10 @@
     
     
     
-    <category term="Html面试题" scheme="http://yoursite.com/categories/Html%E9%9D%A2%E8%AF%95%E9%A2%98/"/>
+    <category term="Html" scheme="http://yoursite.com/categories/Html/"/>
     
     
-    <category term="html面试" scheme="http://yoursite.com/tags/html%E9%9D%A2%E8%AF%95/"/>
+    <category term="html基础" scheme="http://yoursite.com/tags/html%E5%9F%BA%E7%A1%80/"/>
     
   </entry>
   
@@ -381,44 +423,6 @@
     
     
     <category term="maven" scheme="http://yoursite.com/categories/maven/"/>
-    
-    
-  </entry>
-  
-  <entry>
-    <title>maven锁定jar包</title>
-    <link href="http://yoursite.com/2020/08/12/maven%E4%B8%ADpom.xml%E6%96%87%E4%BB%B6%E8%A7%A3%E6%9E%90/"/>
-    <id>http://yoursite.com/2020/08/12/maven%E4%B8%ADpom.xml%E6%96%87%E4%BB%B6%E8%A7%A3%E6%9E%90/</id>
-    <published>2020-08-12T11:44:41.915Z</published>
-    <updated>2020-08-14T09:53:18.728Z</updated>
-    
-    <content type="html"><![CDATA[<h2 id="maven锁定jar包"><a href="#maven锁定jar包" class="headerlink" title="maven锁定jar包"></a>maven锁定jar包</h2><a id="more"></a><p>1.防止放置jar包坐标<img src="https://img-blog.csdnimg.cn/20200730211314240.png" alt="在这里插入图片描述"></p><p><strong>2.锁定jar包</strong><br>maven是有父子关系的，凡是依赖别的项目以后，拿到的别的依赖包，都属于传递依赖，如a项目被b项目依赖，那么a项目中所有的jar包都会传递到b项目中 b项目开发者如果再倒入一套ssm框架的jar包，对于b项目是直接依赖，那么直接依赖的jar包就会把我们的a项目传递过去的jar包覆盖掉。为了防止以上情况出现，我们可以吧a项目中主要jar包坐标锁住，其他依赖该项目的项目里面即便有同名jar包直接依赖也无法覆盖。<br><img src="https://img-blog.csdnimg.cn/20200730211453493.png" alt="在这里插入图片描述"><br>假如下面这个jar包想要锁定，那么是直接复制到上边锁定版本还是剪切过去呢，答案是复制上去，不能剪切<img src="https://img-blog.csdnimg.cn/20200730212330213.png?x-oss-process=image/watermark,type_ZmFuZ3poZW5naGVpdGk,shadow_10,text_aHR0cHM6Ly9ibG9nLmNzZG4ubmV0L3dlaXhpbl80MjY5MzcxMg==,size_16,color_FFFFFF,t_70" alt="在这里插入图片描述"><br><img src="https://img-blog.csdnimg.cn/20200730212309675.png?x-oss-process=image/watermark,type_ZmFuZ3poZW5naGVpdGk,shadow_10,text_aHR0cHM6Ly9ibG9nLmNzZG4ubmV0L3dlaXhpbl80MjY5MzcxMg==,size_16,color_FFFFFF,t_70" alt="在这里插入图片描述"><br><img src="https://img-blog.csdnimg.cn/20200730212418527.png?x-oss-process=image/watermark,type_ZmFuZ3poZW5naGVpdGk,shadow_10,text_aHR0cHM6Ly9ibG9nLmNzZG4ubmV0L3dlaXhpbl80MjY5MzcxMg==,size_16,color_FFFFFF,t_70" alt="在这里插入图片描述"></p>]]></content>
-    
-    
-    <summary type="html">&lt;h2 id=&quot;maven锁定jar包&quot;&gt;&lt;a href=&quot;#maven锁定jar包&quot; class=&quot;headerlink&quot; title=&quot;maven锁定jar包&quot;&gt;&lt;/a&gt;maven锁定jar包&lt;/h2&gt;</summary>
-    
-    
-    
-    <category term="maven" scheme="http://yoursite.com/categories/maven/"/>
-    
-    
-  </entry>
-  
-  <entry>
-    <title>对于maven中pom.xml依赖报红问题</title>
-    <link href="http://yoursite.com/2020/08/12/%E8%A7%A3%E5%86%B3oracle%E6%95%B0%E6%8D%AE%E5%BA%93%E4%B8%AD%E6%96%87%E4%B9%B1%E7%A0%81%E9%97%AE%E9%A2%98/"/>
-    <id>http://yoursite.com/2020/08/12/%E8%A7%A3%E5%86%B3oracle%E6%95%B0%E6%8D%AE%E5%BA%93%E4%B8%AD%E6%96%87%E4%B9%B1%E7%A0%81%E9%97%AE%E9%A2%98/</id>
-    <published>2020-08-12T11:44:14.354Z</published>
-    <updated>2020-08-14T09:51:47.030Z</updated>
-    
-    <content type="html"><![CDATA[<h2 id="解决oracel数据库乱码问题"><a href="#解决oracel数据库乱码问题" class="headerlink" title="解决oracel数据库乱码问题"></a>解决oracel数据库乱码问题</h2><a id="more"></a><p> 中文乱码问题解决<br>1.查看服务器端编码<br>select userenv(‘language’) from dual;<br>我实际查到的结果为:AMERICAN_AMERICA.ZHS16GBK<br>2.执行语句 select * from V$NLS_PARAMETERS<br>查看第一行中PARAMETER项中为NLS_LANGUAGE 对应的VALUE项中是否和第一步得到的值一样。<br>如果不是，需要设置环境变量.<br>否则PLSQL客户端使用的编码和服务器端编码不一致,插入中文时就会出现乱码.<br>3.设置环境变量<br>计算机-&gt;属性-&gt;高级系统设置-&gt;环境变量-&gt;新建<br>设置变量名:NLS_LANG,变量值:第1步查到的值， 我的是    AMERICAN_AMERICA.ZHS16GBK<br>4.重新启动PLSQL,插入数据正常</p>]]></content>
-    
-    
-    <summary type="html">&lt;h2 id=&quot;解决oracel数据库乱码问题&quot;&gt;&lt;a href=&quot;#解决oracel数据库乱码问题&quot; class=&quot;headerlink&quot; title=&quot;解决oracel数据库乱码问题&quot;&gt;&lt;/a&gt;解决oracel数据库乱码问题&lt;/h2&gt;</summary>
-    
-    
-    
-    <category term="oracle" scheme="http://yoursite.com/categories/oracle/"/>
     
     
   </entry>
