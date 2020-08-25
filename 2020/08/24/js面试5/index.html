@@ -9,15 +9,15 @@
   <link rel="dns-prefetch" href="http://yoursite.com">
   <title>cookie如何设置或获取，setTimeout和promise的执行顺序，javaScript的事件流模型，navigator对象，location和history，js的垃圾回收机制，内存泄漏的原因和场景，Dom事件中的target和currentTarget有什么区别，Typeof和instanceof | highfish920的博客</title>
   <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
-  <meta name="description" content="cookie如何设置或获取12345678910111213141516171819&lt;script&gt;    &#x2F;&#x2F;1.设置cookie    function setCookie(cname, cvalue, exdays) &amp;#123;        var d &#x3D; new Date()        d.setTime(d.getTime() + (e">
+  <meta name="description" content="cookie如何设置或获取">
 <meta property="og:type" content="article">
 <meta property="og:title" content="cookie如何设置或获取，setTimeout和promise的执行顺序，javaScript的事件流模型，navigator对象，location和history，js的垃圾回收机制，内存泄漏的原因和场景，Dom事件中的target和currentTarget有什么区别，Typeof和instanceof">
 <meta property="og:url" content="http://yoursite.com/2020/08/24/js%E9%9D%A2%E8%AF%955/index.html">
 <meta property="og:site_name" content="highfish920的博客">
-<meta property="og:description" content="cookie如何设置或获取12345678910111213141516171819&lt;script&gt;    &#x2F;&#x2F;1.设置cookie    function setCookie(cname, cvalue, exdays) &amp;#123;        var d &#x3D; new Date()        d.setTime(d.getTime() + (e">
+<meta property="og:description" content="cookie如何设置或获取">
 <meta property="og:locale" content="zh_CN">
 <meta property="article:published_time" content="2020-08-24T10:05:33.284Z">
-<meta property="article:modified_time" content="2020-08-24T12:13:07.585Z">
+<meta property="article:modified_time" content="2020-08-24T13:06:40.603Z">
 <meta property="article:author" content="highfish">
 <meta property="article:tag" content="js基础">
 <meta name="twitter:card" content="summary">
@@ -30,7 +30,7 @@
   <link rel="stylesheet" type="text/css" href="/./main.0cf68a.css">
   <style type="text/css">
     #container.show {
-      background: linear-gradient(200deg,#a0cfe4,#e8c37e);
+      background: linear-gradient(200deg,#d4a0a9,#000);
     }
 
   </style>
@@ -141,7 +141,8 @@ var _hmt = _hmt || [];
 </div>
 
     </div>
-    <div class="mid-col" q-class="show:isShow,hide:isShow|isFalse">
+    <!-- <div class="mid-col" q-class="show:isShow,hide:isShow|isFalse"> -->
+      <div class="mid-col" q-class="show:isShow,hide:isShow|isFalse" style="background: url(img/cool-background.png) no-repeat 100%;background-size:cover;opacity:0.7;filter:alpha(opacity=70);">
       
 <nav id="mobile-nav">
   	<div class="overlay js-overlay" style="background: #00000"></div>
@@ -251,8 +252,8 @@ var _hmt = _hmt || [];
     
     <div class="article-entry" itemprop="articleBody">
       
-        <a id="more"></a>
-<h2 id="cookie如何设置或获取"><a href="#cookie如何设置或获取" class="headerlink" title="cookie如何设置或获取"></a>cookie如何设置或获取</h2><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br></pre></td><td class="code"><pre><span class="line">&lt;script&gt;</span><br><span class="line">    &#x2F;&#x2F;1.设置cookie</span><br><span class="line">    function setCookie(cname, cvalue, exdays) &#123;</span><br><span class="line">        var d &#x3D; new Date()</span><br><span class="line">        d.setTime(d.getTime() + (exdays * 24 * 60 * 60 * 1000))</span><br><span class="line">        var expires &#x3D; &quot;expires&#x3D;&quot; + d.toGMTString();</span><br><span class="line">        document.cookie &#x3D; cname + &quot;&#x3D;&quot; + cvalue + &quot;;&quot; + expires</span><br><span class="line">    &#125;</span><br><span class="line">    &#x2F;&#x2F;2.获取cookie</span><br><span class="line">    function getCookie(cname) &#123;</span><br><span class="line">        var name &#x3D; cname + &quot;&#x3D;&quot;</span><br><span class="line">        var ca &#x3D; document.cookie.split(&#39;;&#39;)</span><br><span class="line">        for (var i &#x3D; 0; i &lt; ca.length; i++) &#123;</span><br><span class="line">            var c &#x3D; ca[i].trim();</span><br><span class="line">            if (c.indexOf(name) &#x3D;&#x3D; 0) return c.substring(name.length, c.length);</span><br><span class="line">        &#125;</span><br><span class="line">        return &quot;&quot;;</span><br><span class="line">    &#125;</span><br><span class="line">&lt;&#x2F;script&gt;</span><br></pre></td></tr></table></figure>
+        <h2 id="cookie如何设置或获取"><a href="#cookie如何设置或获取" class="headerlink" title="cookie如何设置或获取"></a>cookie如何设置或获取</h2><a id="more"></a>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br></pre></td><td class="code"><pre><span class="line">&lt;script&gt;</span><br><span class="line">    &#x2F;&#x2F;1.设置cookie</span><br><span class="line">    function setCookie(cname, cvalue, exdays) &#123;</span><br><span class="line">        var d &#x3D; new Date()</span><br><span class="line">        d.setTime(d.getTime() + (exdays * 24 * 60 * 60 * 1000))</span><br><span class="line">        var expires &#x3D; &quot;expires&#x3D;&quot; + d.toGMTString();</span><br><span class="line">        document.cookie &#x3D; cname + &quot;&#x3D;&quot; + cvalue + &quot;;&quot; + expires</span><br><span class="line">    &#125;</span><br><span class="line">    &#x2F;&#x2F;2.获取cookie</span><br><span class="line">    function getCookie(cname) &#123;</span><br><span class="line">        var name &#x3D; cname + &quot;&#x3D;&quot;</span><br><span class="line">        var ca &#x3D; document.cookie.split(&#39;;&#39;)</span><br><span class="line">        for (var i &#x3D; 0; i &lt; ca.length; i++) &#123;</span><br><span class="line">            var c &#x3D; ca[i].trim();</span><br><span class="line">            if (c.indexOf(name) &#x3D;&#x3D; 0) return c.substring(name.length, c.length);</span><br><span class="line">        &#125;</span><br><span class="line">        return &quot;&quot;;</span><br><span class="line">    &#125;</span><br><span class="line">&lt;&#x2F;script&gt;</span><br></pre></td></tr></table></figure>
 <h2 id="setTimeout和promise的执行顺序"><a href="#setTimeout和promise的执行顺序" class="headerlink" title="setTimeout和promise的执行顺序"></a>setTimeout和promise的执行顺序</h2><p>setTimeout有一个4ms的最短时间，也就是说不管你设定多少，反正最少都要间隔4ms才运行里面的回调，<br>从具体实现上来说，这俩的异步队列不一样，Promise所在的那个异步队列优先级要高一些</p>
 <h2 id="javaScript的事件流模型"><a href="#javaScript的事件流模型" class="headerlink" title="javaScript的事件流模型"></a>javaScript的事件流模型</h2><p>捕获流：    在捕获模式的定义中，当事件发生时，该事件由高层次向低层次传递<br>冒泡流：    在冒泡流的定义中，当事件发生时，该事件由低层次向高层次传播（像是水泡向上冒出）<br>DOM中的事件流：    当事件发生时，事件由捕获过程-&gt;冒泡过程，即由捕获阶段-&gt;处于目标对象阶段-&gt;冒泡阶段组成</p>
 <h2 id="navigator对象，location和history"><a href="#navigator对象，location和history" class="headerlink" title="navigator对象，location和history"></a>navigator对象，location和history</h2><p>Navigator对象<br>1    History 对象包含用户（在浏览器窗口中）访问过的 URL。<br>2    History 对象是 window 对象的一部分，可通过 window.history 属性对其进行访问。<br>Navigator对象方法<br>1    Back():加载history列表中的前一个URL<br>2    Forward():加载history列表中的下一个URL<br>3    Go():加载 history 列表中的某个具体页面。<br>Location对象<br>1    Location 对象包含有关当前 URL 的信息。<br>2    Location 对象是 Window 对象的一个部分，可通过 window.location 属性来访问。<br>Location对象方法<br>hash<br>设置或返回从井号 (#) 开始的 URL（锚）。<br>host<br>设置或返回主机名和当前 URL 的端口号。<br>hostname<br>设置或返回当前 URL 的主机名。<br>href<br>设置或返回完整的 URL。<br>pathname<br>设置或返回当前 URL 的路径部分。<br>port<br>设置或返回当前 URL 的端口号。<br>protocol<br>设置或返回当前 URL 的协议。<br>search<br>设置或返回从问号 (?) 开始的 URL（查询部分）。<br>assign()<br>加载新的文档。<br>reload()<br>重新加载当前文档。<br>replace()<br>用新的文档替换当前文档。</p>
@@ -757,5 +758,32 @@ return o(i(t),arguments.length<2?void 0:u(arguments[1]))}})},function(t,n,r){var
 
 </div>
   </div>
+
+  <!-- 代码块复制功能开始 -->
+<script type="text/javascript" src="https://cdn.jsdelivr.net/npm/clipboard@2.0.4/dist/clipboard.js"></script>
+<script type="text/javascript" src="https://apps.bdimg.com/libs/jquery/2.1.4/jquery.min.js"></script>
+<script type="text/javascript" src="/js/clipboard_use.js"></script>
+<!-- 代码块复制功能结束 -->
+
 </body>
 </html>
+
+  <script type="text/javascript"
+  color="0,0,255" opacity='0.9' zIndex="-1" count="300" src="//cdn.bootcss.com/canvas-nest.js/1.0.0/canvas-nest.min.js"></script>
+  
+
+
+  
+    <script type="text/javascript" src="/lib/snow.js"></script>
+    <script type="text/javascript" src="/lib/jquery-2.1.4.min.js"></script>
+    <script>
+      snow.down();
+      $(window).resize(function() {
+        $("canvas").css("z-index","500").remove();
+        snow.down();
+      });
+    </script>
+    
+  
+  
+  

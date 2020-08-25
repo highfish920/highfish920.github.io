@@ -9,15 +9,15 @@
   <link rel="dns-prefetch" href="http://yoursite.com">
   <title>JS动画和CSS3动画有什么区别,倒计时,JS处理异常的语句有哪些举例说明,JS的设计模式,轮播图组件开发，我有10000万张图片要轮播，websocket,手指点击触控屏幕是什么事件，函数柯里化是什么,JS代码调试 | highfish920的博客</title>
   <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
-  <meta name="description" content="JS动画和CSS3动画有什么区别功能涵盖面，JS比CSS3大定义动画过程的@keyframes不支持递归定义，如果有多种类似的动画过程，需要调节多个参数来生成的话，将会有很大的冗余（比如jQuery Mobile的动画方案），而JS则天然可以以一套函数实现多个不同的动画过程时间尺度上，@keyframes的动画粒度粗，而JS的动画粒度控制可以很细CSS3动画里被支持的时间函数非常少，不够灵活以现">
+  <meta name="description" content="JS动画和CSS3动画有什么区别">
 <meta property="og:type" content="article">
 <meta property="og:title" content="JS动画和CSS3动画有什么区别,倒计时,JS处理异常的语句有哪些举例说明,JS的设计模式,轮播图组件开发，我有10000万张图片要轮播，websocket,手指点击触控屏幕是什么事件，函数柯里化是什么,JS代码调试">
 <meta property="og:url" content="http://yoursite.com/2020/08/24/js%E9%9D%A2%E8%AF%956/index.html">
 <meta property="og:site_name" content="highfish920的博客">
-<meta property="og:description" content="JS动画和CSS3动画有什么区别功能涵盖面，JS比CSS3大定义动画过程的@keyframes不支持递归定义，如果有多种类似的动画过程，需要调节多个参数来生成的话，将会有很大的冗余（比如jQuery Mobile的动画方案），而JS则天然可以以一套函数实现多个不同的动画过程时间尺度上，@keyframes的动画粒度粗，而JS的动画粒度控制可以很细CSS3动画里被支持的时间函数非常少，不够灵活以现">
+<meta property="og:description" content="JS动画和CSS3动画有什么区别">
 <meta property="og:locale" content="zh_CN">
 <meta property="article:published_time" content="2020-08-24T10:05:33.270Z">
-<meta property="article:modified_time" content="2020-08-24T12:16:03.577Z">
+<meta property="article:modified_time" content="2020-08-24T13:06:35.451Z">
 <meta property="article:author" content="highfish">
 <meta property="article:tag" content="js基础">
 <meta name="twitter:card" content="summary">
@@ -30,7 +30,7 @@
   <link rel="stylesheet" type="text/css" href="/./main.0cf68a.css">
   <style type="text/css">
     #container.show {
-      background: linear-gradient(200deg,#a0cfe4,#e8c37e);
+      background: linear-gradient(200deg,#d4a0a9,#000);
     }
 
   </style>
@@ -141,7 +141,8 @@ var _hmt = _hmt || [];
 </div>
 
     </div>
-    <div class="mid-col" q-class="show:isShow,hide:isShow|isFalse">
+    <!-- <div class="mid-col" q-class="show:isShow,hide:isShow|isFalse"> -->
+      <div class="mid-col" q-class="show:isShow,hide:isShow|isFalse" style="background: url(img/cool-background.png) no-repeat 100%;background-size:cover;opacity:0.7;filter:alpha(opacity=70);">
       
 <nav id="mobile-nav">
   	<div class="overlay js-overlay" style="background: #00000"></div>
@@ -251,8 +252,8 @@ var _hmt = _hmt || [];
     
     <div class="article-entry" itemprop="articleBody">
       
-        <a id="more"></a>
-<h2 id="JS动画和CSS3动画有什么区别"><a href="#JS动画和CSS3动画有什么区别" class="headerlink" title="JS动画和CSS3动画有什么区别"></a>JS动画和CSS3动画有什么区别</h2><p>功能涵盖面，JS比CSS3大定义动画过程的@keyframes不支持递归定义，如果有多种类似的动画过程，需要调节多个参数来生成的话，将会有很大的冗余（比如jQuery Mobile的动画方案），而JS则天然可以以一套函数实现多个不同的动画过程时间尺度上，@keyframes的动画粒度粗，而JS的动画粒度控制可以很细<br>CSS3动画里被支持的时间函数非常少，不够灵活以现有的接口，CSS3动画无法做到支持两个以上的状态转化<br>实现/重构难度不一，CSS3比JS更简单，性能调优方向固定对于帧速表现不好的低版本浏览器，CSS3可以做到自然降级，而JS则需要撰写额外代码CSS动画有天然事件支持（TransitionEnd、AnimationEnd，但是它们都需要针对浏览器加前缀），JS则需要自己写事件CSS3有兼容性问题，而JS大多时候没有兼容性问题</p>
+        <h2 id="JS动画和CSS3动画有什么区别"><a href="#JS动画和CSS3动画有什么区别" class="headerlink" title="JS动画和CSS3动画有什么区别"></a>JS动画和CSS3动画有什么区别</h2><a id="more"></a>
+<p>功能涵盖面，JS比CSS3大定义动画过程的@keyframes不支持递归定义，如果有多种类似的动画过程，需要调节多个参数来生成的话，将会有很大的冗余（比如jQuery Mobile的动画方案），而JS则天然可以以一套函数实现多个不同的动画过程时间尺度上，@keyframes的动画粒度粗，而JS的动画粒度控制可以很细<br>CSS3动画里被支持的时间函数非常少，不够灵活以现有的接口，CSS3动画无法做到支持两个以上的状态转化<br>实现/重构难度不一，CSS3比JS更简单，性能调优方向固定对于帧速表现不好的低版本浏览器，CSS3可以做到自然降级，而JS则需要撰写额外代码CSS动画有天然事件支持（TransitionEnd、AnimationEnd，但是它们都需要针对浏览器加前缀），JS则需要自己写事件CSS3有兼容性问题，而JS大多时候没有兼容性问题</p>
 <h1 id="倒计时"><a href="#倒计时" class="headerlink" title="倒计时"></a>倒计时</h1><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br></pre></td><td class="code"><pre><span class="line">&lt;!DOCTYPE html&gt;</span><br><span class="line">&lt;html lang&#x3D;&quot;en&quot;&gt;</span><br><span class="line">&lt;head&gt;</span><br><span class="line">    &lt;meta charset&#x3D;&quot;UTF-8&quot;&gt;</span><br><span class="line">    &lt;meta name&#x3D;&quot;viewport&quot; content&#x3D;&quot;width&#x3D;device-width, initial-scale&#x3D;1.0&quot;&gt;</span><br><span class="line">    &lt;title&gt;Document&lt;&#x2F;title&gt;</span><br><span class="line">&lt;&#x2F;head&gt;</span><br><span class="line">&lt;body&gt;</span><br><span class="line">    &lt;div id&#x3D;&quot;time&quot;&gt;&lt;&#x2F;div&gt;</span><br><span class="line">    &lt;script&gt;</span><br><span class="line">      var time &#x3D;   document.querySelector(&quot;#time&quot;)</span><br><span class="line">      var d &#x3D; 6;</span><br><span class="line">      function setTime()&#123;</span><br><span class="line">          d--;</span><br><span class="line">          time.innerHTML&#x3D;&quot;时间：&quot;+d</span><br><span class="line">          if(d&#x3D;&#x3D;0)&#123;</span><br><span class="line">              return  time.innerHTML&#x3D;&#39;结束&#39;</span><br><span class="line">          &#125;</span><br><span class="line">          setTimeout(&#39;setTime()&#39;,1000)</span><br><span class="line">      &#125;</span><br><span class="line">      setTime()</span><br><span class="line">    &lt;&#x2F;script&gt;</span><br><span class="line">&lt;&#x2F;body&gt;</span><br><span class="line">&lt;&#x2F;html&gt;</span><br></pre></td></tr></table></figure>
 <h2 id="JS处理异常的语句有哪些举例说明"><a href="#JS处理异常的语句有哪些举例说明" class="headerlink" title="JS处理异常的语句有哪些举例说明"></a>JS处理异常的语句有哪些举例说明</h2><p>Javascript的异常捕获机制<br>1    try…catch语句<br>try{ console.log(b); console.log(“我不会输出的，不要找了”) }catch(error){ console.log(“发生错误了”) } console.log(“我try catch后面的代码”)<br>2    finally语句<br>try{ console.log(b); console.log(“我不会输出的，不要找了”) }catch(error){ console.log(“发生错误了”) }finally { console.log(“不管发生不发生错误，我都会执行”) } console.log(“我try catch后面的代码”)</p>
 <h2 id="JS的设计模式"><a href="#JS的设计模式" class="headerlink" title="JS的设计模式"></a>JS的设计模式</h2><p>1    工厂模式<br>优点    能解决多个相似的问题<br>缺点    不能知道对象识别的问题(对象的类型不知道)<br>2    单体模式<br>单体模式是一个用来划分命名空间并将一批属性和方法组织在一起的对象，如果它可以被实例化，那么它只能被实例化一次<br>单体模式的优点是：<br>1    可以用来划分命名空间，减少全局变量的数量<br>2    使用单体模式可以使代码组织的更为一致，使代码容易阅读和维护<br>3    可以被实例化，且实例化一次<br>3    模块模式<br> 模块模式使用了一个返回对象的匿名函数。在这个匿名函数内部，先定义了私有变量和函数，供内部函数使用，然后将一个对象字面量作为函数的值返回，返回的对象字面量中只包含可以公开的属性和方法。这样的话，可以提供外部使用该方法；由于该返回对象中的公有方法是在匿名函数内部定义的，因此它可以访问内部的私有变量和函数<br>我们什么时候使用模块模式？<br>如果我们必须创建一个对象并以某些数据进行初始化，同时还要公开一些能够访问这些私有数据的方法，那么我们这个时候就可以使用模块模式了<br>4    代理模式<br>代理的优点：<br>1    代理对象可以代替本体被实例化，并使其可以被远程访问；<br>2    它还可以把本体实例化推迟到真正需要的时候；对于实例化比较费时的本体对象，或者因为尺寸比较大以至于不用时不适于保存在内存中的本体，我们可以推迟实例化该对象</p>
@@ -766,5 +767,32 @@ return o(i(t),arguments.length<2?void 0:u(arguments[1]))}})},function(t,n,r){var
 
 </div>
   </div>
+
+  <!-- 代码块复制功能开始 -->
+<script type="text/javascript" src="https://cdn.jsdelivr.net/npm/clipboard@2.0.4/dist/clipboard.js"></script>
+<script type="text/javascript" src="https://apps.bdimg.com/libs/jquery/2.1.4/jquery.min.js"></script>
+<script type="text/javascript" src="/js/clipboard_use.js"></script>
+<!-- 代码块复制功能结束 -->
+
 </body>
 </html>
+
+  <script type="text/javascript"
+  color="0,0,255" opacity='0.9' zIndex="-1" count="300" src="//cdn.bootcss.com/canvas-nest.js/1.0.0/canvas-nest.min.js"></script>
+  
+
+
+  
+    <script type="text/javascript" src="/lib/snow.js"></script>
+    <script type="text/javascript" src="/lib/jquery-2.1.4.min.js"></script>
+    <script>
+      snow.down();
+      $(window).resize(function() {
+        $("canvas").css("z-index","500").remove();
+        snow.down();
+      });
+    </script>
+    
+  
+  
+  
