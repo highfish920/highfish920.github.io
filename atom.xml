@@ -6,7 +6,7 @@
   <link href="http://yoursite.com/atom.xml" rel="self"/>
   
   <link href="http://yoursite.com/"/>
-  <updated>2020-08-24T13:06:40.603Z</updated>
+  <updated>2020-08-26T08:42:58.572Z</updated>
   <id>http://yoursite.com/</id>
   
   <author>
@@ -15,6 +15,119 @@
   </author>
   
   <generator uri="https://hexo.io/">Hexo</generator>
+  
+  <entry>
+    <title>为什么TCP连接需要三次握手，为什么TCP连接需要三次握手四次挥手，TCP的三次握手和四次挥手绘图（画写ACK和SEQ的值），TCP与UDP的区别，Get和Post的区别？什么情况下用到，HTTP2 / HTTP1  之间的区别，websocket，HTTP Response的Header里面都有什么</title>
+    <link href="http://yoursite.com/2020/08/26/%E8%AE%A1%E7%AE%97%E6%9C%BA%E7%BD%91%E7%BB%9C2/"/>
+    <id>http://yoursite.com/2020/08/26/%E8%AE%A1%E7%AE%97%E6%9C%BA%E7%BD%91%E7%BB%9C2/</id>
+    <published>2020-08-26T08:30:14.722Z</published>
+    <updated>2020-08-26T08:42:58.572Z</updated>
+    
+    <content type="html"><![CDATA[<a id="more"></a><h2 id="为什么TCP连接需要三次握手"><a href="#为什么TCP连接需要三次握手" class="headerlink" title="为什么TCP连接需要三次握手"></a>为什么TCP连接需要三次握手</h2><p>三次握手为了确认客户端跟服务器都能接受到对方的信息,两次的话服务器不能确认客户端能否接收自己发的包<hr>第一次握手，客户端给服务器发包。 此时服务器确认自己可以接收客户端的包，客户端不确认服务器是否接收到了自己发的包<hr>第二次握手，服务器端回复客户端。 此时客户端确认自己发的包被服务器收到，也确认自己可以正常接收服务器包，客户端对此次通信没有疑问了。服务器可以确认自己能接收到客户端的包，但不能确认客户端能否接收自己发的包<hr>第三次握手，客户端回复服务器。 客户端已经没有疑问了，服务器也确认刚刚客户端收到了自己的包。两边都没有问题，开始通信<hr>简单概括：第一次：服务端和客户端建立联系；第二次：服务器端回复客户端；第三次：客户端回复服务器</p><h2 id="为什么TCP连接需要三次握手四次挥手"><a href="#为什么TCP连接需要三次握手四次挥手" class="headerlink" title="为什么TCP连接需要三次握手四次挥手"></a>为什么TCP连接需要三次握手四次挥手</h2><p><strong>为什么是三次握手？</strong><br>为了防止已失效的连接请求报文段突然有送到了服务器，因而产生错误,假设两次握手时，客户发出的第一个请求连接报文段在某一网络节点长时间滞留，以致延误到连接释放后才到达服务器。服务器收到失效的连接请求报文段后，认为是客户又发出一次新的连接请求。于是向客户发送确认报文段，同意建立连接，此时在假定两次握手的前提下，连接建立成功。这样会导致服务器的资源白白浪费<hr><br><strong>为什么是四次挥手？</strong><br>TCP协议是全双工通信，这意味着客户端和服务器端都可以向彼此发送数据，所以关闭连接是双方都需要确认的共同行为，假设是三次挥手时，首先释放了客户到服务器方向的连接，此时TCP连接处于半关闭状态，这时客户不能向服务器发送数据，而服务器还是可以向客户发送数据。如果此时客户收到了服务器的确认报文段后，就立即发送一个确认报文段，这会导致服务器向客户还在发送数据时连接就被关闭。这样会导致客户没有完整收到服务器所发的报文段</p><h2 id="TCP的三次握手和四次挥手绘图（画写ACK和SEQ的值）"><a href="#TCP的三次握手和四次挥手绘图（画写ACK和SEQ的值）" class="headerlink" title="TCP的三次握手和四次挥手绘图（画写ACK和SEQ的值）"></a>TCP的三次握手和四次挥手绘图（画写ACK和SEQ的值）</h2><p>所谓三次握手（Three-Way Handshake）即建立TCP连接，就是指建立一个TCP连接时，需要客户端和服务端总共发送3个包以确认连接的建立。由客户端执行connect()触发<br> <img src="https://img-blog.csdnimg.cn/20200826163516943.png?x-oss-process=image/watermark,type_ZmFuZ3poZW5naGVpdGk,shadow_10,text_aHR0cHM6Ly9ibG9nLmNzZG4ubmV0L3dlaXhpbl80MjY5MzcxMg==,size_16,color_FFFFFF,t_70#pic_center" alt="在这里插入图片描述"></p><p>所谓四次挥手（Four-Way Wavehand）即终止TCP连接，就是指断开一个TCP连接时，需要客户端和服务端总共发送4个包以确认连接的断开。由客户端或服务端任一方执行close来触发<br> <img src="https://img-blog.csdnimg.cn/20200826163525911.png?x-oss-process=image/watermark,type_ZmFuZ3poZW5naGVpdGk,shadow_10,text_aHR0cHM6Ly9ibG9nLmNzZG4ubmV0L3dlaXhpbl80MjY5MzcxMg==,size_16,color_FFFFFF,t_70#pic_center" alt="在这里插入图片描述"></p><h2 id="TCP与UDP的区别"><a href="#TCP与UDP的区别" class="headerlink" title="TCP与UDP的区别"></a>TCP与UDP的区别</h2><p>TCP（Transmission Control Protocol 传输控制协议）是一种面向连接的、可靠的、基于字节流的传输层通信协议<br>UDP(User Datagram Protocol用户数据报协议）是OSI（Open System Interconnection，开放式系统互联） 参考模型中一种无连接的传输层协议，提供面向事务的简单不可靠信息传送服务<br>TCP 是面向连接的传输控制协议，而UDP提供了无链接的数据报服务//类似电话与短信<br>TCP 面向连接，提供可靠的数据服务<br>TCP首部开销20字节,UDP首部开销8字节<br>TCP逻辑通信信道是全双工的可靠信道，UDP则是不可靠信道<br>UDP没有拥塞机制，因此网络出现拥堵不会使源主机的发送效率降低（有利于实时会议视频等）<br>TCP的连接只能是点到点的,UDP支持一对一，多对一，多对多的交互通信</p><h2 id="Get和Post的区别？什么情况下用到"><a href="#Get和Post的区别？什么情况下用到" class="headerlink" title="Get和Post的区别？什么情况下用到"></a>Get和Post的区别？什么情况下用到</h2><p>1    GET使用URL或Cookie传参。而POST将数据放在BODY中<br>2    GET的URL会有长度上的限制，则POST的数据则可以非常大<br>3    POST比GET安全，因为数据在地址栏上不可见<br><strong>最本质的区别</strong><br>Get是用来从服务器上获得数据，而post是用来向服务器上传递数据<br><strong>若符合下列任一情况，则用post方法：</strong><br>a    请求的结果有持续性的作用，例如：数据库内添加新的数据行<br>b    若使用get方法，则表单上收集的数据可能让URL过长<br>c    要传送的数据不是采用ASCII编码<br><strong>若符合下列任一情况，则用get方法：</strong><br>a    请求是为了查找资源，html表单数据仅用来搜索<br>b    请求结果无持续性的副作用<br>c    收集的数据及html表单内的输入字段名称的总长不超过1024个字符</p><h2 id="HTTP2-HTTP1-之间的区别"><a href="#HTTP2-HTTP1-之间的区别" class="headerlink" title="HTTP2 / HTTP1  之间的区别"></a>HTTP2 / HTTP1  之间的区别</h2><p>1    http2采用二进制格式而非文本格式，比起文本格式，二进制格式解析起来更加高效，并且错误少<br>2    http2是完全的多路复用，非有序并阻塞的—-只需要一个连接即可实现并行，多路复用的意思是它能同时处理多个消息的请求和响应，http1是一个连接一次只能提交一个请求的效率比较高，多了就会变慢<br>3    使用报头压缩，http2降低了开销，http1的消息头很大冗余,http2是将消息头中的不同的部分分别用不用的索引进行表示，且会用哈夫曼编码压缩字符串，最后封装成frame<br>4    http2让服务器可以将响应主动”推送”到客户端缓存中，HTTP2中服务器会主动将资源推送给客户端，例如把js和css文件主动推送给客户端而不用客户端解析HTML后请求再响应</p><h2 id="websocket"><a href="#websocket" class="headerlink" title="websocket"></a>websocket</h2><p>websocket是一种网络通信协议，是HTML5开始提供的一种在单个TCP连接上进行全双工通信的协议，这个对比着http协议来说，http协议是一种无状态的、无连接的、单向的应用层协议，通信请求只能由客户端发起，服务端对请求做出应答处理。http协议无法实现服务器主动向客户端发起消息，Websocket 连接允许客户端和服务器之间进行全双工通信，以便任一方都可以通过建立的连接将数据推送到另一端。WebSocket 只需要建立一次连接，就可以一直保持连接状态<br> <img src="https://img-blog.csdnimg.cn/20200826164032643.png?x-oss-process=image/watermark,type_ZmFuZ3poZW5naGVpdGk,shadow_10,text_aHR0cHM6Ly9ibG9nLmNzZG4ubmV0L3dlaXhpbl80MjY5MzcxMg==,size_16,color_FFFFFF,t_70#pic_center" alt="在这里插入图片描述"></p><h2 id="HTTP-Response的Header-里面都有什么"><a href="#HTTP-Response的Header-里面都有什么" class="headerlink" title="HTTP Response的Header 里面都有什么"></a>HTTP Response的Header 里面都有什么</h2><p>1    Cache-Control：告诉所有的缓存机制是否可以缓存及哪种类型<br>2    Content-Length：响应体的长度<br>3    Content-Type：返回内容的MIME类型，所谓的MIME就是解析的是什么，比方说：jpg就是图片<br>4    Expires：响应过期的日期和时间<br>5    Set-Cookie：设置Http Cookie</p>]]></content>
+    
+    
+      
+      
+    <summary type="html">&lt;a id=&quot;more&quot;&gt;&lt;/a&gt;
+&lt;h2 id=&quot;为什么TCP连接需要三次握手&quot;&gt;&lt;a href=&quot;#为什么TCP连接需要三次握手&quot; class=&quot;headerlink&quot; title=&quot;为什么TCP连接需要三次握手&quot;&gt;&lt;/a&gt;为什么TCP连接需要三次握手&lt;/h2&gt;&lt;p&gt;三次握手</summary>
+      
+    
+    
+    
+    <category term="计算机网络" scheme="http://yoursite.com/categories/%E8%AE%A1%E7%AE%97%E6%9C%BA%E7%BD%91%E7%BB%9C/"/>
+    
+    
+    <category term="计算机网络" scheme="http://yoursite.com/tags/%E8%AE%A1%E7%AE%97%E6%9C%BA%E7%BD%91%E7%BB%9C/"/>
+    
+  </entry>
+  
+  <entry>
+    <title>HTTP协议头包含哪些重要部分，HTTP状态码。网络url输入到输出都做了什么，为什么说性能优化就要减少HTTP的访问次数，HTTP的请求过程与原理，HTTP的请求过程与原理，TLS的中文名？TLS在那一网络层，TCP连接的特点，TCP连接如何保证安全可靠</title>
+    <link href="http://yoursite.com/2020/08/26/%E8%AE%A1%E7%AE%97%E6%9C%BA%E7%BD%91%E7%BB%9C1/"/>
+    <id>http://yoursite.com/2020/08/26/%E8%AE%A1%E7%AE%97%E6%9C%BA%E7%BD%91%E7%BB%9C1/</id>
+    <published>2020-08-26T08:28:14.957Z</published>
+    <updated>2020-08-26T08:29:54.038Z</updated>
+    
+    <content type="html"><![CDATA[<a id="more"></a><h2 id="HTTP协议头包含哪些重要部分，HTTP状态码。"><a href="#HTTP协议头包含哪些重要部分，HTTP状态码。" class="headerlink" title="HTTP协议头包含哪些重要部分，HTTP状态码。"></a>HTTP协议头包含哪些重要部分，HTTP状态码。</h2><p>HTTP协议头包括通用头，请求头，响应头和实体头四个部分<br>200    请求已成功，请求所希望的响应头或数据体将随此响应返回<br>302    Moved Permanently（重定向）请求的URL已移走。Response中应该包含一个Location URL, 说明资源现在所处的位置<br>304    Not Modified（未修改）客户的缓存资源是最新的， 要客户端使用缓存<br>404    Not Found 未找到资源，可能是路径方面的错误<br>503    服务器目前无法为请求提供服务，但过一段时间就可以恢复服务</p><h2 id="网络url输入到输出都做了什么"><a href="#网络url输入到输出都做了什么" class="headerlink" title="网络url输入到输出都做了什么"></a>网络url输入到输出都做了什么</h2><p>1    当我们输入一个域名像：<a href="http://www.baidu.com/">www.baidu.com</a> </p><p>2    浏览器查找浏览器缓存，如果有域名的IP地址则返回，如果没有继续查找<br>3    系统查找系统缓存，如果有域名的IP地址则返回，如果没有继续查找<br>4    路由器查找路由器缓存，如果有域名的IP地址则返回，如果没有继续查找<br>5    本地域名服务器采用迭代查询，它先向一个根域名服务器查询<br>6    根域名服务器告诉本地域名服务器，下一次应查询的顶级域名服务器dns.com的IP地址<br>7    本地域名服务器向顶级域名服务器dns.com进行查询<br>8    顶级域名服务器dns.com告诉本地域名服务器，下一次应查询的权限域名服务器dns.baidu.com的IP地址<br>9    本地域名服务器向权限域名服务器dns.baidu.com进行查询<br>10    权限域名服务器dns.baidu.com告诉本地域名服务器，所查询的主机<a href="http://www.baidu.com的ip地址/">www.baidu.com的IP地址</a><br>11    本地域名服务器最后把查询结果告诉主机<br>12    主机浏览器获取到Web服务器的IP地址后，与服务器建立TCP连接<br>13    浏览器所在的客户机向服务器发出连接请求报文<br>14    服务器接收报文后，同意建立连接，向客户机发出确认报文<br>15    客户机接收到确认报文后，再次向服务器发出报文，确认已接收到确认报文<br>16    此处客户机与服务器之间的TCP连接建立完成，开始通信<br>17    浏览器发出取文件命令：GET<br>18    服务器给出响应，将指定文件发送给浏览器<br>19    浏览器释放TCP连接<br>20    浏览器所在主机向服务器发出连接释放报文，然后停止发送数据<br>21    服务器接收到释放报文后发出确认报文，然后将服务器上未传送完的数据发送完<br>22    服务器数据传输完毕后，向客户机发送连接释放报文<br>23    客户机接收到报文后，发出确认，然后等待一段时间后，释放TCP连接<br>24    浏览器显示页面中所有文本</p><h2 id="为什么说性能优化就要减少HTTP的访问次数"><a href="#为什么说性能优化就要减少HTTP的访问次数" class="headerlink" title="为什么说性能优化就要减少HTTP的访问次数"></a>为什么说性能优化就要减少HTTP的访问次数</h2><p>1    http请求头的数据量：每次请求都会带上一些额外的信息进行传输,所以请求越多的时候，在网络上传输的数据就会变多了，速度就变慢了<br>2    http连接的开销：从用户输入URL到看到页面，经过一系列的解析和连接，以及等待</p><h2 id="HTTP的请求过程与原理"><a href="#HTTP的请求过程与原理" class="headerlink" title="HTTP的请求过程与原理"></a>HTTP的请求过程与原理</h2><p><strong>http请求的过程：</strong> 域名解析 –&gt; 发起TCP的3次握手 –&gt; 建立TCP连接后发起http请求 –&gt;服务器响应http请求，浏览器得到html代码 –&gt;浏览器解析html代码，并请求html代码中的资源（如js、css、图片等） –&gt; 浏览器对页面进行渲染呈现给用户<br><strong>请求原理：</strong> HTTP协议是应用层的一种协议，是一种C/S架构服务，基于TCP/IP协议来通信，监听在TCP的80端口上，HTTP协议实现的是客户端可以向服务端获得web资源</p><h2 id="https有几次握手和挥手，https的原理"><a href="#https有几次握手和挥手，https的原理" class="headerlink" title="https有几次握手和挥手，https的原理"></a>https有几次握手和挥手，https的原理</h2><p>https是3次握手和4次挥手，和http是一样的。<br>原理：https在传输数据前需要客户端(浏览器)与服务器(网站)之间进行一次握手,在握手过程中将确立双方加密传输数据的密码信息.TLS/SSL协议是一套加密传输协议,使用了非对称加密,对称加密,以及HASH算法</p><h2 id="TLS的中文名？TLS在那一网络层"><a href="#TLS的中文名？TLS在那一网络层" class="headerlink" title="TLS的中文名？TLS在那一网络层"></a>TLS的中文名？TLS在那一网络层</h2><p>TLS的中文名是：安全传输层协议，在传输层。</p><h2 id="TCP连接的特点，TCP连接如何保证安全可靠"><a href="#TCP连接的特点，TCP连接如何保证安全可靠" class="headerlink" title="TCP连接的特点，TCP连接如何保证安全可靠"></a>TCP连接的特点，TCP连接如何保证安全可靠</h2><p>TCP的可靠性是通过顺序编号和确认（ACK）来实现的，TCP的接收端必须丢弃重复的数据，并且TCP提供流量控制，连接的每一个地方都有固定大小的缓冲空间。</p>]]></content>
+    
+    
+      
+      
+    <summary type="html">&lt;a id=&quot;more&quot;&gt;&lt;/a&gt;
+&lt;h2 id=&quot;HTTP协议头包含哪些重要部分，HTTP状态码。&quot;&gt;&lt;a href=&quot;#HTTP协议头包含哪些重要部分，HTTP状态码。&quot; class=&quot;headerlink&quot; title=&quot;HTTP协议头包含哪些重要部分，HTTP状态码。&quot;&gt;</summary>
+      
+    
+    
+    
+    <category term="计算机网络" scheme="http://yoursite.com/categories/%E8%AE%A1%E7%AE%97%E6%9C%BA%E7%BD%91%E7%BB%9C/"/>
+    
+    
+    <category term="计算机网络" scheme="http://yoursite.com/tags/%E8%AE%A1%E7%AE%97%E6%9C%BA%E7%BD%91%E7%BB%9C/"/>
+    
+  </entry>
+  
+  <entry>
+    <title>es6--Promise如何封装一个AJAX</title>
+    <link href="http://yoursite.com/2020/08/25/Promise%E5%A6%82%E4%BD%95%E5%B0%81%E8%A3%85%E4%B8%80%E4%B8%AAAJAX/"/>
+    <id>http://yoursite.com/2020/08/25/Promise%E5%A6%82%E4%BD%95%E5%B0%81%E8%A3%85%E4%B8%80%E4%B8%AAAJAX/</id>
+    <published>2020-08-25T12:54:51.531Z</published>
+    <updated>2020-08-25T13:17:17.923Z</updated>
+    
+    <content type="html"><![CDATA[<h2 id="es6–promise"><a href="#es6–promise" class="headerlink" title="es6–promise"></a>es6–promise</h2><a id="more"></a><p>　Promise的出现主要是解决地狱回调的问题，比如你需要结果需要请求很多个接口，这些接口的参数需要另外那个的接口返回的数据作为依赖，这样就需要我们一层嵌套一层，但是有了Promise 我们就无需嵌套<br>　参考：<a href="https://www.cnblogs.com/elexmiumiu/p/12196122.html">https://www.cnblogs.com/elexmiumiu/p/12196122.html</a></p><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br><span class="line">32</span><br><span class="line">33</span><br><span class="line">34</span><br><span class="line">35</span><br><span class="line">36</span><br><span class="line">37</span><br><span class="line">38</span><br><span class="line">39</span><br><span class="line">40</span><br><span class="line">41</span><br><span class="line">42</span><br><span class="line">43</span><br><span class="line">44</span><br><span class="line">45</span><br><span class="line">46</span><br><span class="line">47</span><br><span class="line">48</span><br><span class="line">49</span><br><span class="line">50</span><br><span class="line">51</span><br><span class="line">52</span><br><span class="line">53</span><br><span class="line">54</span><br><span class="line">55</span><br><span class="line">56</span><br><span class="line">57</span><br><span class="line">58</span><br><span class="line">59</span><br><span class="line">60</span><br><span class="line">61</span><br><span class="line">62</span><br><span class="line">63</span><br><span class="line">64</span><br><span class="line">65</span><br></pre></td><td class="code"><pre><span class="line">function ajax(optionsOverride)&#123;</span><br><span class="line">    &#x2F;&#x2F;将传入的参数与默认的合并</span><br><span class="line">    var options &#x3D; &#123;&#125;</span><br><span class="line">    for(var k in ajaxOptions)&#123;</span><br><span class="line">        options[k] &#x3D; optionsOverride[k] || ajaxOptions[k]</span><br><span class="line">    &#125;</span><br><span class="line">    options.async &#x3D; options.async &#x3D;&#x3D;&#x3D; false ? false : true</span><br><span class="line">    var xhr &#x3D; options.xhr &#x3D; options.xhr || new XMLHttpRequest()</span><br><span class="line"></span><br><span class="line">    return new Promise(function(resolve,reject)&#123;</span><br><span class="line">        xhr.open(options.method,options.url,options.async)</span><br><span class="line">        xhr.timeout &#x3D; options.timeout</span><br><span class="line"></span><br><span class="line">        &#x2F;&#x2F;设置请求头</span><br><span class="line">        for(var k in options.headers)&#123;</span><br><span class="line">            xhr.setRuquestHeader(k,options,headers[k])</span><br><span class="line">        &#125;</span><br><span class="line">        &#x2F;&#x2F;注册xhr对象事件</span><br><span class="line">        xhr.onprogress &#x3D; options.onprogress</span><br><span class="line">        xhr.onload.onprogress &#x3D; options.onploadprogress</span><br><span class="line">        xhr.responseType &#x3D; options.dataType</span><br><span class="line"></span><br><span class="line">        xhr.onabort &#x3D; function()&#123;</span><br><span class="line">            reject(new Error(&#123;</span><br><span class="line">                errorType: &#39;abort_error&#39;,</span><br><span class="line">                xhr:xhr</span><br><span class="line">            &#125;))</span><br><span class="line">        &#125;</span><br><span class="line"></span><br><span class="line">        xhr.ontimeout &#x3D; function()&#123;</span><br><span class="line">            reject(&#123;</span><br><span class="line">                errorType: &#39;timeout_error&#39;,</span><br><span class="line">                xhr:xhr</span><br><span class="line">            &#125;)</span><br><span class="line">        &#125;</span><br><span class="line"></span><br><span class="line"></span><br><span class="line">        xhr.onerror &#x3D; function()&#123;</span><br><span class="line">            reject(&#123;</span><br><span class="line">                errorType: &#39;onerror&#39;,</span><br><span class="line">                xhr:xhr</span><br><span class="line">            &#125;)</span><br><span class="line">        &#125;</span><br><span class="line"></span><br><span class="line">        xhr.onloadend &#x3D; function()&#123;</span><br><span class="line">            if ((xhr.status &gt;&#x3D; 200 &amp;&amp; xhr.status&lt; 300) || xhr.status &#x3D;&#x3D; 304) &#123;</span><br><span class="line">                resolve(xhr)</span><br><span class="line">            &#125;else&#123;</span><br><span class="line">                reject(&#123;</span><br><span class="line">                    errorType: &#39;status_error&#39;,</span><br><span class="line">                    xhr:xhr</span><br><span class="line">                &#125;)</span><br><span class="line">            &#125;</span><br><span class="line">            try &#123;</span><br><span class="line">                xhr.send(options.data)</span><br><span class="line">            &#125; catch (e) &#123;</span><br><span class="line">                reject(&#123;</span><br><span class="line">                    errorType: &#39;send_error&#39;,</span><br><span class="line">                    error:e</span><br><span class="line">                &#125;)</span><br><span class="line">            &#125;</span><br><span class="line">        &#125;</span><br><span class="line"></span><br><span class="line">    &#125;)</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>]]></content>
+    
+    
+    <summary type="html">&lt;h2 id=&quot;es6–promise&quot;&gt;&lt;a href=&quot;#es6–promise&quot; class=&quot;headerlink&quot; title=&quot;es6–promise&quot;&gt;&lt;/a&gt;es6–promise&lt;/h2&gt;</summary>
+    
+    
+    
+    <category term="es6" scheme="http://yoursite.com/categories/es6/"/>
+    
+    
+    <category term="es6" scheme="http://yoursite.com/tags/es6/"/>
+    
+  </entry>
+  
+  <entry>
+    <title>es6--ES6特性</title>
+    <link href="http://yoursite.com/2020/08/25/ES6%E7%89%B9%E6%80%A7/"/>
+    <id>http://yoursite.com/2020/08/25/ES6%E7%89%B9%E6%80%A7/</id>
+    <published>2020-08-25T12:49:29.786Z</published>
+    <updated>2020-08-25T12:54:48.305Z</updated>
+    
+    <content type="html"><![CDATA[<h2 id="es6–promise"><a href="#es6–promise" class="headerlink" title="es6–promise"></a>es6–promise</h2><a id="more"></a><p><strong>常用的es6新特性：</strong></p><ol><li>let &amp;&amp; const<br>let命令也用于声明对象，但是作用域为局部。</li><li>iterable类型<br>为了统一集合类型，ES6标准引入了新的iterable类型，Array、Map和Set都属于iterable类型，具有iterable类型的集合可以通过新的for … of循环来遍历。</li><li>解构赋值</li><li>箭头函数</li><li>类</li></ol><p>es6 比 es5 增加了很多特殊的方法，如果你遇到了这些特殊的方法，你就可以确定它是 es6。<br>如果你的代码中没有引用这些特殊的方法，那我们就可以认为他是 es5 的。<br>所以前提你需要了解 es6 的语法才能做判断，高频使用的特性有箭头函数、解构赋值、let、const。</p><p>es5的继承是通过原型或者是构造函数机制来实现，es6用过class关键字定义类，里面有构造方法，类之间通过extends关键字实现，<br>子类必须在constructor方法中调用super方法</p><p>let和const有了块级作用域，变量声明不会提升相比于var</p><p><strong>es6generator:</strong><br>加粗样式generator函数就是一个封装的异步任务，也就是异步任务的容器，执行 Generator 函数会返回一个遍历器对象,async函数的实现，就是将Generator函数和自动执行器，包装在一个函数里<br><strong>ES6 和node的commonjs模块化规范的区别。</strong><br>es6是js的增强版，是js的语法规范，commonjs都只是为了解决js文件之间的依赖和引用问题，所以是一种js的包管理规范，其中的代表是Node遵循commonjs规范<br><strong>箭头函数，以及他们的this。</strong><br>所谓的箭头函数是在写法上面很简便和之前相比，类似于:(a,b)=&gt;{return a+b;}，箭头函数的this默认指向在定义它时,它所处的对象,而不是执行时的对象, 定义它的时候,可能环境是window（即继承父级的this）</p>]]></content>
+    
+    
+    <summary type="html">&lt;h2 id=&quot;es6–promise&quot;&gt;&lt;a href=&quot;#es6–promise&quot; class=&quot;headerlink&quot; title=&quot;es6–promise&quot;&gt;&lt;/a&gt;es6–promise&lt;/h2&gt;</summary>
+    
+    
+    
+    <category term="es6" scheme="http://yoursite.com/categories/es6/"/>
+    
+    
+    <category term="es6" scheme="http://yoursite.com/tags/es6/"/>
+    
+  </entry>
+  
+  <entry>
+    <title>es6--promise</title>
+    <link href="http://yoursite.com/2020/08/25/promise/"/>
+    <id>http://yoursite.com/2020/08/25/promise/</id>
+    <published>2020-08-25T12:39:53.799Z</published>
+    <updated>2020-08-25T12:49:03.819Z</updated>
+    
+    <content type="html"><![CDATA[<h2 id="es6–promise"><a href="#es6–promise" class="headerlink" title="es6–promise"></a>es6–promise</h2><a id="more"></a><p>promise是一个异步函数，主要是为了解决异步处理回调地狱(也就是循环嵌套的问题)而产生的，有3种状态，Fulfilled 为成功的状态，Rejected 为失败的状态，Pending 既不是 Fulfilld 也不是 Rejected 的状态，可以理解为 Promise 对象实例创建时候的初始状态<br>参考 <a href="https://www.jianshu.com/p/063f7e490e9a">https://www.jianshu.com/p/063f7e490e9a</a><br>     <a href="https://www.jianshu.com/p/1b63a13c2701">https://www.jianshu.com/p/1b63a13c2701</a></p><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br></pre></td><td class="code"><pre><span class="line">var promise &#x3D; new Promise(function(resolve, reject) &#123;</span><br><span class="line"> if (&#x2F;* 异步操作成功 *&#x2F;)&#123;</span><br><span class="line"> resolve(value);</span><br><span class="line"> &#125; else &#123;</span><br><span class="line"> reject(error);</span><br><span class="line"> &#125;</span><br><span class="line">&#125;);</span><br><span class="line"></span><br><span class="line">promise.then(function(value) &#123;</span><br><span class="line"> &#x2F;&#x2F; success</span><br><span class="line">&#125;, function(value) &#123;</span><br><span class="line"> &#x2F;&#x2F; failure</span><br><span class="line">&#125;);</span><br></pre></td></tr></table></figure>]]></content>
+    
+    
+    <summary type="html">&lt;h2 id=&quot;es6–promise&quot;&gt;&lt;a href=&quot;#es6–promise&quot; class=&quot;headerlink&quot; title=&quot;es6–promise&quot;&gt;&lt;/a&gt;es6–promise&lt;/h2&gt;</summary>
+    
+    
+    
+    <category term="es6" scheme="http://yoursite.com/categories/es6/"/>
+    
+    
+    <category term="es6" scheme="http://yoursite.com/tags/es6/"/>
+    
+  </entry>
   
   <entry>
     <title>cookie如何设置或获取，setTimeout和promise的执行顺序，javaScript的事件流模型，navigator对象，location和history，js的垃圾回收机制，内存泄漏的原因和场景，Dom事件中的target和currentTarget有什么区别，Typeof和instanceof</title>
@@ -337,111 +450,6 @@
     
     
     <summary type="html">&lt;h2 id=&quot;HTML模板语言有哪些&quot;&gt;&lt;a href=&quot;#HTML模板语言有哪些&quot; class=&quot;headerlink&quot; title=&quot;HTML模板语言有哪些&quot;&gt;&lt;/a&gt;HTML模板语言有哪些&lt;/h2&gt;</summary>
-    
-    
-    
-    <category term="Html" scheme="http://yoursite.com/categories/Html/"/>
-    
-    
-    <category term="html基础" scheme="http://yoursite.com/tags/html%E5%9F%BA%E7%A1%80/"/>
-    
-  </entry>
-  
-  <entry>
-    <title>CSS / JS 引入的位置一般在哪里？为什么</title>
-    <link href="http://yoursite.com/2020/08/17/CSS%EF%BC%8CJS%20%E5%BC%95%E5%85%A5%E7%9A%84%E4%BD%8D%E7%BD%AE%E4%B8%80%E8%88%AC%E5%9C%A8%E5%93%AA%E9%87%8C%EF%BC%8C%E4%B8%BA%E4%BB%80%E4%B9%88/"/>
-    <id>http://yoursite.com/2020/08/17/CSS%EF%BC%8CJS%20%E5%BC%95%E5%85%A5%E7%9A%84%E4%BD%8D%E7%BD%AE%E4%B8%80%E8%88%AC%E5%9C%A8%E5%93%AA%E9%87%8C%EF%BC%8C%E4%B8%BA%E4%BB%80%E4%B9%88/</id>
-    <published>2020-08-17T14:45:29.180Z</published>
-    <updated>2020-08-19T09:09:47.220Z</updated>
-    
-    <content type="html"><![CDATA[<h2 id="CSS-JS-引入的位置一般在哪里？为什么"><a href="#CSS-JS-引入的位置一般在哪里？为什么" class="headerlink" title="CSS / JS 引入的位置一般在哪里？为什么"></a>CSS / JS 引入的位置一般在哪里？为什么</h2><a id="more"></a><p>Script标签最好放在</body>标签的前面，因为放在所有body中的标签后面就不会出现网页加载时出现空白的情况，可以持续的给用户提供视觉反馈，同时在有些情况下，会降低错误的发生；而css标签应该放在<head></head>标签之间，因为如果放在</body>标签的前面，那么当DOM树构建完成了，渲染树才构建，那么当渲染树构建完成，浏览器不得不再重新渲染整个页面，这样造成了资源的浪费，效率也不高，如果放在<head></head>之间，浏览器边构建边渲染，效率要高得多  ！</p>]]></content>
-    
-    
-    <summary type="html">&lt;h2 id=&quot;CSS-JS-引入的位置一般在哪里？为什么&quot;&gt;&lt;a href=&quot;#CSS-JS-引入的位置一般在哪里？为什么&quot; class=&quot;headerlink&quot; title=&quot;CSS / JS 引入的位置一般在哪里？为什么&quot;&gt;&lt;/a&gt;CSS / JS 引入的位置一般在哪里？为什么&lt;/h2&gt;</summary>
-    
-    
-    
-    <category term="Html" scheme="http://yoursite.com/categories/Html/"/>
-    
-    
-    <category term="html基础" scheme="http://yoursite.com/tags/html%E5%9F%BA%E7%A1%80/"/>
-    
-  </entry>
-  
-  <entry>
-    <title>为什么要在标签上使用data-, 它有什么好处</title>
-    <link href="http://yoursite.com/2020/08/16/%E4%B8%BA%E4%BB%80%E4%B9%88%E8%A6%81%E5%9C%A8%E6%A0%87%E7%AD%BE%E4%B8%8A%E4%BD%BF%E7%94%A8data-,%20%E5%AE%83%E6%9C%89%E4%BB%80%E4%B9%88%E5%A5%BD%E5%A4%84/"/>
-    <id>http://yoursite.com/2020/08/16/%E4%B8%BA%E4%BB%80%E4%B9%88%E8%A6%81%E5%9C%A8%E6%A0%87%E7%AD%BE%E4%B8%8A%E4%BD%BF%E7%94%A8data-,%20%E5%AE%83%E6%9C%89%E4%BB%80%E4%B9%88%E5%A5%BD%E5%A4%84/</id>
-    <published>2020-08-16T10:30:19.143Z</published>
-    <updated>2020-08-19T09:09:37.868Z</updated>
-    
-    <content type="html"><![CDATA[<h2 id="为什么要在标签上使用data-它有什么好处"><a href="#为什么要在标签上使用data-它有什么好处" class="headerlink" title="为什么要在标签上使用data-, 它有什么好处"></a>为什么要在标签上使用data-, 它有什么好处</h2><a id="more"></a><table><thead><tr><th>1</th><th>html5规范中规定自定义属性需要添加前缀data-,目的是提供与渲染无关的信息</th></tr></thead><tbody><tr><td>2</td><td>使用getAttribute（）方法以及setAttribute()方法操作自定义属性</td></tr><tr><td>3</td><td>使用dataset操作自定义属性。</td></tr><tr><td>4</td><td>dataset属性的兼容性问题，Chrome 8+   Firefox(Gecko) 6.0+   Internet Explorer 11+   Opera11.10+  Safari 6+ 以上浏览器均能很好支持</td></tr><tr><td>5</td><td>使用data-属性选择器好处：绑定DOM强相关数据，js传递数据</td></tr></tbody></table>]]></content>
-    
-    
-    <summary type="html">&lt;h2 id=&quot;为什么要在标签上使用data-它有什么好处&quot;&gt;&lt;a href=&quot;#为什么要在标签上使用data-它有什么好处&quot; class=&quot;headerlink&quot; title=&quot;为什么要在标签上使用data-, 它有什么好处&quot;&gt;&lt;/a&gt;为什么要在标签上使用data-, 它有什么好处&lt;/h2&gt;</summary>
-    
-    
-    
-    <category term="Html" scheme="http://yoursite.com/categories/Html/"/>
-    
-    
-    <category term="html基础" scheme="http://yoursite.com/tags/html%E5%9F%BA%E7%A1%80/"/>
-    
-  </entry>
-  
-  <entry>
-    <title>Meta标签，都有一些什么特性，有什么作用</title>
-    <link href="http://yoursite.com/2020/08/16/%E4%B8%BA%E4%BB%80%E4%B9%88%E8%A6%81%E5%9C%A8%E6%A0%87%E7%AD%BE%E4%B8%8A%E4%BD%BF%E7%94%A8data-,%20%E5%AE%83%E6%9C%89%E4%BB%80%E4%B9%88%E5%A5%BD%E5%A4%84%20copy/"/>
-    <id>http://yoursite.com/2020/08/16/%E4%B8%BA%E4%BB%80%E4%B9%88%E8%A6%81%E5%9C%A8%E6%A0%87%E7%AD%BE%E4%B8%8A%E4%BD%BF%E7%94%A8data-,%20%E5%AE%83%E6%9C%89%E4%BB%80%E4%B9%88%E5%A5%BD%E5%A4%84%20copy/</id>
-    <published>2020-08-16T10:30:19.111Z</published>
-    <updated>2020-08-19T09:09:41.494Z</updated>
-    
-    <content type="html"><![CDATA[<h2 id="Meta标签，都有一些什么特性，有什么作用"><a href="#Meta标签，都有一些什么特性，有什么作用" class="headerlink" title="Meta标签，都有一些什么特性，有什么作用"></a>Meta标签，都有一些什么特性，有什么作用</h2><a id="more"></a><table><thead><tr><th>1</th><th>什么是meta标签:<meta>标签提供关于HTML文档的元数据，它不会显示在页面上，但是对于机器是可读的，可用于浏览器（如何显示内容或重新加载页面），搜索引擎（关键词），或其他web服务。</th></tr></thead><tbody><tr><td>2</td><td>meta的作用:meta里的数据是供机器解读的，告诉机器该如何解析这个页面，还有一个用途是可以添加服务器发送到浏览器的HTTP头部内容。</td></tr><tr><td>3</td><td>常用meta标签总结:Charset：它是声明文档使用的字符编码，以防乱码，而且一定要写在第一行Viewport：主要是影响移动端页面布局的。</td></tr></tbody></table>]]></content>
-    
-    
-    <summary type="html">&lt;h2 id=&quot;Meta标签，都有一些什么特性，有什么作用&quot;&gt;&lt;a href=&quot;#Meta标签，都有一些什么特性，有什么作用&quot; class=&quot;headerlink&quot; title=&quot;Meta标签，都有一些什么特性，有什么作用&quot;&gt;&lt;/a&gt;Meta标签，都有一些什么特性，有什么作用&lt;/h2&gt;</summary>
-    
-    
-    
-    <category term="Html" scheme="http://yoursite.com/categories/Html/"/>
-    
-    
-    <category term="html基础" scheme="http://yoursite.com/tags/html%E5%9F%BA%E7%A1%80/"/>
-    
-  </entry>
-  
-  <entry>
-    <title>浏览器标准模式和怪异模式</title>
-    <link href="http://yoursite.com/2020/08/16/%E6%B5%8F%E8%A7%88%E5%99%A8%E6%A0%87%E5%87%86%E6%A8%A1%E5%BC%8F%E5%92%8C%E6%80%AA%E5%BC%82%E6%A8%A1%E5%BC%8F/"/>
-    <id>http://yoursite.com/2020/08/16/%E6%B5%8F%E8%A7%88%E5%99%A8%E6%A0%87%E5%87%86%E6%A8%A1%E5%BC%8F%E5%92%8C%E6%80%AA%E5%BC%82%E6%A8%A1%E5%BC%8F/</id>
-    <published>2020-08-16T10:30:19.095Z</published>
-    <updated>2020-08-19T09:09:23.654Z</updated>
-    
-    <content type="html"><![CDATA[<h2 id="浏览器标准模式和怪异模式"><a href="#浏览器标准模式和怪异模式" class="headerlink" title="浏览器标准模式和怪异模式"></a>浏览器标准模式和怪异模式</h2><a id="more"></a><h2 id="产生原因："><a href="#产生原因：" class="headerlink" title="产生原因："></a><strong>产生原因：</strong></h2><p>现代的浏览器一般都有两种渲染模式：标准模式和怪异模式，在标准模式下，浏览器按照HTML和CSS标准对文档进行解析和渲染；而在怪异模式下，浏览器则按照旧有的非标准的实现方式对文档进行解析和渲染，这样的话，对于旧有的网页，浏览器就会启动怪异模式，就能够使得旧网页正常显示；对于新的网页，则可以启动标准模式，使得新网页能够使用HTML和CSS的标准特性。<br>|  标准模式|怪异模式  |<br>|–|–|<br>|  给span等行内元素设置width和height无效。|  有效|<br>|margin:0 auto水平居中，在标准模式下没有问题。|用margin:0 auto设置水平居中在怪异模式下会失效，解决办法，用text-align属性来解决|<br>| 右边的这些问题，在标准模式下均不会出现问题！ | 怪异模式下设置图片的padding会失效，怪异模式下Table中的字体属性不能继承上层的设置怪异模式下white-space:pre会失效 |</p>]]></content>
-    
-    
-    <summary type="html">&lt;h2 id=&quot;浏览器标准模式和怪异模式&quot;&gt;&lt;a href=&quot;#浏览器标准模式和怪异模式&quot; class=&quot;headerlink&quot; title=&quot;浏览器标准模式和怪异模式&quot;&gt;&lt;/a&gt;浏览器标准模式和怪异模式&lt;/h2&gt;</summary>
-    
-    
-    
-    <category term="Html" scheme="http://yoursite.com/categories/Html/"/>
-    
-    
-    <category term="html基础" scheme="http://yoursite.com/tags/html%E5%9F%BA%E7%A1%80/"/>
-    
-  </entry>
-  
-  <entry>
-    <title>XHTML与HTML有什么区别</title>
-    <link href="http://yoursite.com/2020/08/16/XHTML%E4%B8%8EHTML%E6%9C%89%E4%BB%80%E4%B9%88%E5%8C%BA%E5%88%AB/"/>
-    <id>http://yoursite.com/2020/08/16/XHTML%E4%B8%8EHTML%E6%9C%89%E4%BB%80%E4%B9%88%E5%8C%BA%E5%88%AB/</id>
-    <published>2020-08-16T10:30:19.093Z</published>
-    <updated>2020-08-19T09:10:05.864Z</updated>
-    
-    <content type="html"><![CDATA[<h2 id="XHTML与HTML有什么区别"><a href="#XHTML与HTML有什么区别" class="headerlink" title="XHTML与HTML有什么区别"></a>XHTML与HTML有什么区别</h2><a id="more"></a><p>1：XHTML元素必须被正确的嵌套。<br>2：XHTML元素必须被关闭。<br>3：标签名必须用小写字母。<br>4：XHTML文档必须拥有根元素。</p>]]></content>
-    
-    
-    <summary type="html">&lt;h2 id=&quot;XHTML与HTML有什么区别&quot;&gt;&lt;a href=&quot;#XHTML与HTML有什么区别&quot; class=&quot;headerlink&quot; title=&quot;XHTML与HTML有什么区别&quot;&gt;&lt;/a&gt;XHTML与HTML有什么区别&lt;/h2&gt;</summary>
     
     
     

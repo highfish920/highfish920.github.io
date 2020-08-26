@@ -100,7 +100,7 @@ var _hmt = _hmt || [];
 			</ul>
 		</nav>
 		<nav>
-			总文章数 41
+			总文章数 46
 		</nav>
 		<nav class="header-smart-menu">
     		
@@ -207,6 +207,786 @@ var _hmt = _hmt || [];
           </div>
           <div id="js-content" class="content-ll">
             
+  
+    <article id="post-ajax" class="article article-type-post  article-index" itemscope itemprop="blogPost">
+  <div class="article-inner">
+    
+      <header class="article-header">
+        
+  
+    <h1 itemprop="name">
+      <a class="article-title" href="/2020/08/22/ajax/">ajax</a>
+    </h1>
+  
+
+        <!--显示阅读次数-->
+
+<!--显示阅读次数完毕-->
+
+
+
+        
+        
+<a href="/2020/08/22/ajax/" class="archive-article-date">
+  	<time datetime="2020-08-22T13:41:00.211Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2020-08-22</time>
+</a>
+        
+      </header>
+      
+    
+    <div class="article-entry" itemprop="articleBody">
+      
+        <a id="more"></a>
+<h2 id="原生创建ajax的五个步骤"><a href="#原生创建ajax的五个步骤" class="headerlink" title="原生创建ajax的五个步骤"></a>原生创建ajax的五个步骤</h2><p>代码引自<a target="_blank" rel="noopener" href="https://www.cnblogs.com/0x29a/p/11231950.html">https://www.cnblogs.com/0x29a/p/11231950.html</a></p>
+<h3 id="1-创建XMLHttpRequest异步对象"><a href="#1-创建XMLHttpRequest异步对象" class="headerlink" title="1.创建XMLHttpRequest异步对象"></a>1.创建XMLHttpRequest异步对象</h3><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">var xhr &#x3D; new XMLHttpRequest()</span><br></pre></td></tr></table></figure>
+
+<h3 id="2-设置回调函数"><a href="#2-设置回调函数" class="headerlink" title="2.设置回调函数"></a>2.设置回调函数</h3><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">xhr.onreadystatechange &#x3D; callback</span><br></pre></td></tr></table></figure>
+
+<h3 id="3-使用open方法与服务器简历连接"><a href="#3-使用open方法与服务器简历连接" class="headerlink" title="3.使用open方法与服务器简历连接"></a>3.使用open方法与服务器简历连接</h3><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line">&#x2F;&#x2F;get方式</span><br><span class="line">xhr.open(&#39;get&#39;,&#39;text.php&#39;,true)</span><br><span class="line">&#x2F;&#x2F;post方式，要设置请求头</span><br><span class="line">xhr.open(&#39;post&#39;,&#39;test.php&#39;,true)</span><br><span class="line">xhr.setRequestHeader(&quot;Content-Type&quot;, &quot;application&#x2F;x-www-form-urlencoded&quot;)</span><br></pre></td></tr></table></figure>
+
+<h3 id="4-发送数据"><a href="#4-发送数据" class="headerlink" title="4.发送数据"></a>4.发送数据</h3><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line">&#x2F;&#x2F; get方法不需要传递数据</span><br><span class="line">xhr.send(null)</span><br><span class="line">&#x2F;&#x2F; post 需要传递数据</span><br><span class="line">xhr.send(&#39;name&#x3D;xxx&amp;age&#x3D;18&#39;)</span><br></pre></td></tr></table></figure>
+
+<h3 id="5-在回调函数中针对不同的响应状态进行处理"><a href="#5-在回调函数中针对不同的响应状态进行处理" class="headerlink" title="5. 在回调函数中针对不同的响应状态进行处理"></a>5. 在回调函数中针对不同的响应状态进行处理</h3><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br></pre></td><td class="code"><pre><span class="line">function callback()&#123;</span><br><span class="line">      &#x2F;&#x2F; 判断异步对象的状态</span><br><span class="line">    if (xhr.readyState &#x3D;&#x3D; 4) &#123;</span><br><span class="line">          &#x2F;&#x2F; 判断交互是否成功</span><br><span class="line">          if (xhr.status &#x3D;&#x3D; 200) &#123;</span><br><span class="line">              &#x2F;&#x2F; 获取服务器响应的数据</span><br><span class="line">              var res &#x3D; xhr.responseText</span><br><span class="line">                &#x2F;&#x2F; 解析数据</span><br><span class="line">              res &#x3D; JSON.parse(res)</span><br><span class="line">          &#125;</span><br><span class="line">    &#125;</span><br><span class="line"></span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+<h2 id="jquery中的ajax"><a href="#jquery中的ajax" class="headerlink" title="jquery中的ajax"></a>jquery中的ajax</h2><p>代码引自 <a target="_blank" rel="noopener" href="https://www.cnblogs.com/enumx/p/12326676.html">https://www.cnblogs.com/enumx/p/12326676.html</a></p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br></pre></td><td class="code"><pre><span class="line">$.ajax(&#123;</span><br><span class="line">    type:&#39;POST&#39;, &#x2F;&#x2F; 规定请求的类型（GET 或 POST）</span><br><span class="line">    url:uploadV, &#x2F;&#x2F; 请求的url地址</span><br><span class="line">    dataType:&#39;json&#39;, &#x2F;&#x2F;预期的服务器响应的数据类型 </span><br><span class="line">    data:&#123;&#125;,&#x2F;&#x2F;规定要发送到服务器的数据</span><br><span class="line">    beforeSend:function()&#123; &#x2F;&#x2F;发送请求前运行的函数（发送之前就会进入这个函数）</span><br><span class="line">        &#x2F;&#x2F; ....</span><br><span class="line">    &#125;,</span><br><span class="line">    success: function(result)&#123; &#x2F;&#x2F; 当请求成功时运行的函数</span><br><span class="line">        &#x2F;&#x2F;...</span><br><span class="line">    &#125;,</span><br><span class="line">    error:function(result)&#123; &#x2F;&#x2F;失败的函数</span><br><span class="line">        &#x2F;&#x2F;...</span><br><span class="line">    &#125;,</span><br><span class="line">    complete:function()&#123; &#x2F;&#x2F;请求完成时运行的函数（在请求成功或失败之后均调用，即在 success 和 error 函数之后，不管成功还是失败 都会进这个函数）</span><br><span class="line">        &#x2F;&#x2F; ...</span><br><span class="line">    &#125;</span><br><span class="line">&#125;);</span><br></pre></td></tr></table></figure>
+<table>
+<thead>
+<tr>
+<th>async</th>
+<th>布尔值，表示请求是否异步处理。默认是 true。</th>
+</tr>
+</thead>
+<tbody><tr>
+<td>beforeSend(xhr)</td>
+<td>发送请求前运行的函数。</td>
+</tr>
+<tr>
+<td>cache</td>
+<td>布尔值，表示浏览器是否缓存被请求页面。默认是 true</td>
+</tr>
+<tr>
+<td>complete(xhr,status)</td>
+<td>请求完成时运行的函数（在请求成功或失败之后均调用，即在 success 和 error 函数之后）</td>
+</tr>
+<tr>
+<td>contentType</td>
+<td>发送数据到服务器时所使用的内容类型。默认是：”application/x-www-form-urlencoded”。</td>
+</tr>
+<tr>
+<td>context</td>
+<td>为所有 AJAX 相关的回调函数规定 “this” 值。</td>
+</tr>
+<tr>
+<td>password</td>
+<td>规定在 HTTP 访问认证请求中使用的密码。</td>
+</tr>
+<tr>
+<td>jsonpCallback</td>
+<td>在一个 jsonp 中规定回调函数的名称。</td>
+</tr>
+<tr>
+<td>jsonp</td>
+<td>在一个 jsonp 中重写回调函数的字符串。</td>
+</tr>
+<tr>
+<td>ifModified</td>
+<td>布尔值，规定是否仅在最后一次请求以来响应发生改变时才请求成功。默认是 false。</td>
+</tr>
+<tr>
+<td>global</td>
+<td>布尔值，规定是否为请求触发全局 AJAX 事件处理程序。默认是 true。</td>
+</tr>
+<tr>
+<td>dataType</td>
+<td>预期的服务器响应的数据类型。</td>
+</tr>
+<tr>
+<td>error(xhr,status,error)</td>
+<td>如果请求失败要运行的函数。</td>
+</tr>
+<tr>
+<td>dataFilter(data,type)</td>
+<td>用于处理 XMLHttpRequest 原始响应数据的函数。</td>
+</tr>
+<tr>
+<td>data</td>
+<td>规定要发送到服务器的数据。</td>
+</tr>
+<tr>
+<td>url</td>
+<td>规定发送请求的 URL。默认是当前页面。</td>
+</tr>
+<tr>
+<td>type</td>
+<td>规定请求的类型（GET 或 POST）。</td>
+</tr>
+<tr>
+<td>traditional</td>
+<td>布尔值，规定是否使用参数序列化的传统样式。</td>
+</tr>
+<tr>
+<td>timeout</td>
+<td>设置本地的请求超时时间（以毫秒计）。</td>
+</tr>
+<tr>
+<td>success(result,status,xhr)</td>
+<td>当请求成功时运行的函数。</td>
+</tr>
+<tr>
+<td>scriptCharset</td>
+<td>规定请求的字符集。</td>
+</tr>
+<tr>
+<td>processData</td>
+<td>布尔值，规定通过请求发送的数据是否转换为查询字符串。默认是 true</td>
+</tr>
+<tr>
+<td>xhr</td>
+<td>用于创建 XMLHttpRequest 对象的函数</td>
+</tr>
+<tr>
+<td>username</td>
+<td>规定在 HTTP 访问认证请求中使用的用户名。</td>
+</tr>
+</tbody></table>
+<h2 id="XMLHttpRequest取得相应"><a href="#XMLHttpRequest取得相应" class="headerlink" title="XMLHttpRequest取得相应"></a>XMLHttpRequest取得相应</h2><ul>
+<li>responseText:获得字符串形式的响应数据</li>
+<li>responseXML：获得xml形式的响应数据</li>
+<li>status和statusText：以数字和文本形势返回http转态码</li>
+<li>getAllResponseHeader():获得所有的相应</li>
+<li>getResponseHeader()：查询相应中的某个字段的值</li>
+<li>readState属性</li>
+</ul>
+<h2 id="readystate的五种返回值所代表的意义："><a href="#readystate的五种返回值所代表的意义：" class="headerlink" title="readystate的五种返回值所代表的意义："></a>readystate的五种返回值所代表的意义：</h2><ul>
+<li>0（未初始化） 还没调用open（）方法</li>
+<li>1（载入）已经调用send方法(),正在发送请求</li>
+<li>2（载入完成）send（）方法已经完成，已收到相应</li>
+<li>3（解析）正在解析响应内容</li>
+<li>4（完成）相应内容解析完成，可在客户端调用。</li>
+</ul>
+<h2 id="ajax中status几种常态说明："><a href="#ajax中status几种常态说明：" class="headerlink" title="ajax中status几种常态说明："></a>ajax中status几种常态说明：</h2><ul>
+<li>100——客户必须继续发出请求</li>
+<li>101——客户要求服务器根据请求转换HTTP协议版本</li>
+<li>200——成功</li>
+<li>201——提示知道新文件的URL</li>
+<li>300——请求的资源可在多处得到</li>
+<li>301——删除请求数据</li>
+<li>404——没有发现文件、查询或URl</li>
+<li>500——服务器产生内部错</li>
+</ul>
+
+      
+      
+<!-- 添加版权声明 -->
+<!-- 
+ -->
+<!-- 添加版权声明结束 -->
+<!-- 百度自动推送方式提交 -->
+<!-- 
+  <script>
+  (function(){
+      var bp = document.createElement('script');
+      var curProtocol = window.location.protocol.split(':')[0];
+      if (curProtocol === 'https') {
+          bp.src = 'https://zz.bdstatic.com/linksubmit/push.js';
+      }
+      else {
+          bp.src = 'http://push.zhanzhang.baidu.com/push.js';
+      }
+      var s = document.getElementsByTagName("script")[0];
+      s.parentNode.insertBefore(bp, s);
+  })();
+  </script>
+ -->
+<!-- 百度自动推送方式提交结束 -->
+
+      
+    </div>
+    <div class="article-info article-info-index">
+      
+      
+	<div class="article-tag tagcloud">
+		<i class="icon-price-tags icon"></i>
+		<ul class="article-tag-list">
+			 
+        		<li class="article-tag-list-item">
+        			<a href="javascript:void(0)" class="js-tag article-tag-list-link color5">ajax</a>
+        		</li>
+      		
+		</ul>
+	</div>
+
+      
+	<div class="article-category tagcloud">
+		<i class="icon-book icon"></i>
+		<ul class="article-tag-list">
+			 
+        		<li class="article-tag-list-item">
+        			<a href="/categories/js//" class="article-tag-list-link color3">js</a>
+        		</li>
+      		
+		</ul>
+	</div>
+
+
+      
+        <p class="article-more-link">
+          <a class="article-more-a" href="/2020/08/22/ajax/">展开全文 >></a>
+        </p>
+      
+
+      
+      <div class="clearfix"></div>
+    </div>
+  </div>
+</article>
+
+<aside class="wrap-side-operation">
+    <div class="mod-side-operation">
+        
+        <div class="jump-container" id="js-jump-container" style="display:none;">
+            <a href="javascript:void(0)" class="mod-side-operation__jump-to-top">
+                <i class="icon-font icon-back"></i>
+            </a>
+            <div id="js-jump-plan-container" class="jump-plan-container" style="top: -11px;">
+                <i class="icon-font icon-plane jump-plane"></i>
+            </div>
+        </div>
+        
+        
+    </div>
+</aside>
+
+
+
+
+
+
+  
+    <article id="post-js面试2" class="article article-type-post  article-index" itemscope itemprop="blogPost">
+  <div class="article-inner">
+    
+      <header class="article-header">
+        
+  
+    <h1 itemprop="name">
+      <a class="article-title" href="/2020/08/21/js%E9%9D%A2%E8%AF%952/">闭包，this，call,apply,bind区别,原型原型链,创建对象的方式,继承,New 一个对象具体做了什么</a>
+    </h1>
+  
+
+        <!--显示阅读次数-->
+
+<!--显示阅读次数完毕-->
+
+
+
+        
+        
+<a href="/2020/08/21/js%E9%9D%A2%E8%AF%952/" class="archive-article-date">
+  	<time datetime="2020-08-21T13:46:53.741Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2020-08-21</time>
+</a>
+        
+      </header>
+      
+    
+    <div class="article-entry" itemprop="articleBody">
+      
+        <a id="more"></a>
+<h2 id="闭包"><a href="#闭包" class="headerlink" title="闭包"></a>闭包</h2><h3 id="对闭包的理解"><a href="#对闭包的理解" class="headerlink" title="对闭包的理解"></a>对闭包的理解</h3><p>函数内部可以直接读取全局变量，但是在函数外部无法读取函数内部的局部变量。闭包就是能够读取其他函数内部变量的函数。内部函数对外部函数的变量有了引用关系——闭包就是这时产生的。每次对外部函数的调用，都会产生一次闭包。</p>
+<h4 id="实现方法："><a href="#实现方法：" class="headerlink" title="实现方法："></a>实现方法：</h4><p>1 给函数添加一些属性<br>2 声明一个变量，将一个函数当做值赋给变量<br>3 new一个对象，然后给对象添加属性和方法<br>4 var obj={}就是声明一个空的对象</p>
+<h4 id="用处"><a href="#用处" class="headerlink" title="用处"></a>用处</h4><p>它的最大用处有两个，一个是前面提到的可以读取函数内部的变量，另一个就是让这些变量的值始终保持在内存中，不会在f1调用后被自动清除。<br>（1）由于闭包会使得函数中的变量都被保存在内存中，内存消耗很大，所以不能滥用闭包，否则会造成网页的性能问题，在IE中可能导致内存泄露。解决方法是，在退出函数之前，将不使用的局部变量全部删除。<br>（2）闭包会在父函数外部，改变父函数内部变量的值。所以，如果你把父函数当作对象（object）使用，把闭包当作它的公用方法（Public Method），把内部变量当作它的私有属性（private value），这时一定要小心，不要随便改变父函数内部变量的值。</p>
+<h2 id="this"><a href="#this" class="headerlink" title="this"></a>this</h2><h4 id="this的使用场景"><a href="#this的使用场景" class="headerlink" title="this的使用场景"></a>this的使用场景</h4><p>1    全局&amp;调用普通函数，在全局环境中，this永远指向window<br>2    构造函数，如果函数作为构造函数使用，那么其中的 this 就代表它即将 new 出来的对象<br>3    对象方法，如果函数作为对象的方法时，方法中的 this 指向该对象。注意：若是在对象方法中定义函数，那么情况就不同了。函数a    虽然是在b内部定义的,但它仍然属于一个普通函数，this仍指向window<br>4    构造函数 prototype 属性，即便是在整个原型链中，this 代表的也是当前对象的值<br>5    函数用 call、apply或者 bind 调用，当一个函数被 call、apply 或者 bind 调用时，this 的值就取传入的对象的值<br>6    DOM event this，前六种情况其实可以总结为： this 指向调用该方法的对象<br>7    箭头函数中的 this，当使用箭头函数的时候，情况就有所不同了：箭头函数内部的 this 是词法作用域，由上下文确定<br>java中this.value可以再本类中调用全局变量,也可以在构造器中用this()调用其他构造器,也可以用this表示当前对象JavaScript中this指的是这个函数所属的对象的值,当new一个函数时,这个this就会指向这个new出来的对象,apply()和call()可以改变一个函数中this指向的对象call和apply都可以改变this指向，不过call的第二个参数是散列分布，apply则可以是一个数组</p>
+<h2 id="call-apply-bind区别"><a href="#call-apply-bind区别" class="headerlink" title="call,apply,bind区别"></a>call,apply,bind区别</h2><p>call() 和apply()的第一个参数相同，就是指定的对象。这个对象就是该函数的执行上下文。<br>call()在第一个参数之后的  后续所有参数就是传入该函数的值。<br>apply() 只有两个参数，第一个是对象，第二个是数组，这个数组就是该函数的参数。<br>bind() 方法和前两者不同在于： bind() 方法会返回执行上下文被改变的函数而不会立即执行，而前两者是直接执行该函数。他的参数和call()相同。</p>
+<h2 id="原型原型链"><a href="#原型原型链" class="headerlink" title="原型原型链"></a>原型原型链</h2><p>在JS中万物皆对象，方法(FUNCTION)是对象，方法的原型（FUNCTION.PROTOTYPE）是对象，对象具有属性（__PROTO__）称为隐式原型，对象的隐式原型指向构造该对象的构造函数的显式原型。原型对象只存在于函数对象。也就是本质上只要是通过NEW FUNCTION创建的函数对象会有一个原型对象</p>
+<h4 id="五条原型原则"><a href="#五条原型原则" class="headerlink" title="五条原型原则"></a>五条原型原则</h4><p>1    所有的引用类型（数组，对象，函数）都具有对象特性，即可自由扩展属性（除了null以外）<br>2    所有的引用类型（数组，对象，函数），都有一个<em>proto_属性，属性值是一个普通的对象    （隐式原型）<br>3    当试图得到一个对象的某个属性时，如果这个对象本身没有这个属性，那么会去它的_proto</em>(即它的构造函数的prototype)中寻找</p>
+<h4 id="原型链解释说明"><a href="#原型链解释说明" class="headerlink" title="原型链解释说明"></a>原型链解释说明</h4><ol>
+<li>INSTANCEOF用于判断引用类型属于那个构造函数的方法，F INSTANCEOF FOO的判断逻辑是：F的_PROTO_一层一层往上，能否对应到FOO.PROTOTYPE再试着判断 F   INSTANCEOF   OBJECT。</li>
+<li>INSTANCEOF用于判断引用类型属于那个构造函数的方法F INSTANCEOF FOO的判断逻辑是：F的_PROTO_一层一层往上，能否对应到FOO.PROTOTYPE再试着判断 F   INSTANCEOF   OBJECT。<h2 id="创建对象的方式"><a href="#创建对象的方式" class="headerlink" title="创建对象的方式"></a>创建对象的方式</h2>工厂模式<br>构造函数模式<br>原型模式<br>组合使用构造模式和原型模式<h2 id="继承"><a href="#继承" class="headerlink" title="继承"></a>继承</h2><table>
+<thead>
+<tr>
+<th>原型继承</th>
+<th>优点：父类的方法（getName）得到了复用  缺点：同理父类的属性（name）也是复用，即子类实例没有自己的属性</th>
+</tr>
+</thead>
+<tbody><tr>
+<td>构造函数继承</td>
+<td>优点：子类的每个实例都有自己的属性（name），不会相互影响缺点：但是继承父类方法的时候就不需要这种特性，没有实现父类方法的复用</td>
+</tr>
+<tr>
+<td>组合式继承</td>
+<td>优点：继承了上述两种方式的优点，摒弃了缺点，复用了方法，子类又有各自的属性缺点： 因为父类构造函数被执行了两次，子类的原型对象(Sub.prototype)中也有一份父类的实例属性，而且这些属性会被子类实例(sub1,sub2)的属性覆盖掉，也存在内存浪费</td>
+</tr>
+<tr>
+<td>寄生组合式继承</td>
+<td>优点：以上优点均有。 缺点：就是在继承父类方法的时候调用了父类构造函数，从而造成内存浪费，// 现在只要解决了这个问题就完美了。那在复用父类方法的时候，// 使用Object.create方法也可以达到目的，没有调用父类构造函数，问题解决</td>
+</tr>
+</tbody></table>
+</li>
+</ol>
+<h2 id="New-一个对象具体做了什么"><a href="#New-一个对象具体做了什么" class="headerlink" title="New 一个对象具体做了什么"></a>New 一个对象具体做了什么</h2><p>使用关键字new创建新实例对象过了以下几步<br>1    创建一个新对象，如：var person = {}<br>2    新对象的_proto_属性指向构造函数的原型对象<br>3    将构造函数的作用域赋值给新对象。（也所以this对象指向新对象）<br>4    执行构造函数内部的代码，将属性添加给person中的this对象<br>5    返回新对象person</p>
+
+      
+      
+<!-- 添加版权声明 -->
+<!-- 
+ -->
+<!-- 添加版权声明结束 -->
+<!-- 百度自动推送方式提交 -->
+<!-- 
+  <script>
+  (function(){
+      var bp = document.createElement('script');
+      var curProtocol = window.location.protocol.split(':')[0];
+      if (curProtocol === 'https') {
+          bp.src = 'https://zz.bdstatic.com/linksubmit/push.js';
+      }
+      else {
+          bp.src = 'http://push.zhanzhang.baidu.com/push.js';
+      }
+      var s = document.getElementsByTagName("script")[0];
+      s.parentNode.insertBefore(bp, s);
+  })();
+  </script>
+ -->
+<!-- 百度自动推送方式提交结束 -->
+
+      
+    </div>
+    <div class="article-info article-info-index">
+      
+      
+	<div class="article-tag tagcloud">
+		<i class="icon-price-tags icon"></i>
+		<ul class="article-tag-list">
+			 
+        		<li class="article-tag-list-item">
+        			<a href="javascript:void(0)" class="js-tag article-tag-list-link color5">js基础</a>
+        		</li>
+      		
+		</ul>
+	</div>
+
+      
+	<div class="article-category tagcloud">
+		<i class="icon-book icon"></i>
+		<ul class="article-tag-list">
+			 
+        		<li class="article-tag-list-item">
+        			<a href="/categories/js//" class="article-tag-list-link color3">js</a>
+        		</li>
+      		
+		</ul>
+	</div>
+
+
+      
+        <p class="article-more-link">
+          <a class="article-more-a" href="/2020/08/21/js%E9%9D%A2%E8%AF%952/">展开全文 >></a>
+        </p>
+      
+
+      
+      <div class="clearfix"></div>
+    </div>
+  </div>
+</article>
+
+<aside class="wrap-side-operation">
+    <div class="mod-side-operation">
+        
+        <div class="jump-container" id="js-jump-container" style="display:none;">
+            <a href="javascript:void(0)" class="mod-side-operation__jump-to-top">
+                <i class="icon-font icon-back"></i>
+            </a>
+            <div id="js-jump-plan-container" class="jump-plan-container" style="top: -11px;">
+                <i class="icon-font icon-plane jump-plane"></i>
+            </div>
+        </div>
+        
+        
+    </div>
+</aside>
+
+
+
+
+
+
+  
+    <article id="post-js面试1" class="article article-type-post  article-index" itemscope itemprop="blogPost">
+  <div class="article-inner">
+    
+      <header class="article-header">
+        
+  
+    <h1 itemprop="name">
+      <a class="article-title" href="/2020/08/21/js%E9%9D%A2%E8%AF%951/">js的基本类型，引用类型有哪些，null和undefined的区别，判断一个变量是Array类型,判断一个变量是Number类型，Object是什么类型，引用类型和基本数据类型有什么区别，堆栈关系， JS常见的DOM操作API，JS常见的DOM操作API，事件委托,事件冒泡和捕获，如何阻止冒泡,如何阻止默认事件</a>
+    </h1>
+  
+
+        <!--显示阅读次数-->
+
+<!--显示阅读次数完毕-->
+
+
+
+        
+        
+<a href="/2020/08/21/js%E9%9D%A2%E8%AF%951/" class="archive-article-date">
+  	<time datetime="2020-08-21T10:39:35.073Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2020-08-21</time>
+</a>
+        
+      </header>
+      
+    
+    <div class="article-entry" itemprop="articleBody">
+      
+        <a id="more"></a>
+<h2 id="js的基本类型，引用类型有哪些，null和undefined的区别"><a href="#js的基本类型，引用类型有哪些，null和undefined的区别" class="headerlink" title="js的基本类型，引用类型有哪些，null和undefined的区别"></a>js的基本类型，引用类型有哪些，null和undefined的区别</h2><p><strong>基本数据类型</strong>：undefined,null,boolean,number,string<br><strong>引用数据类型</strong>：function,obiect,array<br><strong>Undefined</strong>:表示变量声明但未初始化时的值<br><strong>null</strong>表示准备用来保存对象，还没有真正保存对象的值。从逻辑角度看，null值表示一个空对象指针。<br>JavaScript（ECMAScript标准）里共有5种基本类型：Undefined, Null, Boolean, Number, String，和一种复杂类型Object。可以看到null和undefined分属不同的类型，未初始化定义的值用typeof检测出来是”undefined”(字符串)，而null值用typeof检测出来是”object”（字符串）。任何时候都不建议显式的设置一个变量为undefined，但是如果保存对象的变量还没有真正保存对象，应该设置成null。实际上，undefined值是派生自null值的，ECMAScript标准规定对二者进行相等性测试要返回true</p>
+<h2 id="判断一个变量是Array类型-判断一个变量是Number类型"><a href="#判断一个变量是Array类型-判断一个变量是Number类型" class="headerlink" title="判断一个变量是Array类型,判断一个变量是Number类型"></a>判断一个变量是Array类型,判断一个变量是Number类型</h2><p>从原型入手，Array.prototype.isPrototypeOf(obj);也可以从构造函数入手，obj instanceof Array根据对象的class属性(类属性)，跨原型链调用toString()方法。Array.isArray()方法。<br>isNaN（）是一个函数，用isNaN判断一个变量，返回一个Boolean值。若返回的值为false，则为可以转换成数字类型；返回的值是true，则不能转换成数字类型<br>Typeof () 判断</p>
+<h2 id="Object是什么类型，引用类型和基本数据类型有什么区别，堆栈关系"><a href="#Object是什么类型，引用类型和基本数据类型有什么区别，堆栈关系" class="headerlink" title="Object是什么类型，引用类型和基本数据类型有什么区别，堆栈关系"></a>Object是什么类型，引用类型和基本数据类型有什么区别，堆栈关系</h2><p>Object 是引用类型。<br><strong>基本类型：</strong>1.基本类型的值是不可变得，2.基本类型的比较是值的比较。3.基本类型的变量是存放在栈区的（栈区指内存里的栈内存）。<br><strong>引用类型：</strong>1.引用类型的值是可变的，2.引用类型的值是同时保存在栈内存和堆内存中的对象。<br><strong>引用类型与基本类型比较</strong><br>基本类型：string,number,boolean,null,undefined<br>引用类型：Function,Array,Object<br>访问方式<br>基本类型：操作和保存在变量的实际的值<br>引用类型：存在内存中，js不许直接访问内存，操作的是对象的引用<br>存储的位置<br>基本类型：保存在栈区<br>引用类型：引用存放在栈区，实际对象保存在堆区。</p>
+<center>保存在栈区</center>
+
+<p><img src="https://img-blog.csdnimg.cn/20200821173535939.png#pic_center" alt="在这里插入图片描述"></p>
+<center>引用存放在栈区，实际对象保存在堆区。</center>
+
+<p><img src="https://img-blog.csdnimg.cn/20200821173545237.png?x-oss-process=image/watermark,type_ZmFuZ3poZW5naGVpdGk,shadow_10,text_aHR0cHM6Ly9ibG9nLmNzZG4ubmV0L3dlaXhpbl80MjY5MzcxMg==,size_16,color_FFFFFF,t_70#pic_center" alt="在这里插入图片描述"></p>
+<h2 id="JS常见的DOM操作API"><a href="#JS常见的DOM操作API" class="headerlink" title="JS常见的DOM操作API"></a>JS常见的DOM操作API</h2><p>   <img src="https://img-blog.csdnimg.cn/20200821173734509.png?x-oss-process=image/watermark,type_ZmFuZ3poZW5naGVpdGk,shadow_10,text_aHR0cHM6Ly9ibG9nLmNzZG4ubmV0L3dlaXhpbl80MjY5MzcxMg==,size_16,color_FFFFFF,t_70#pic_center" alt="在这里插入图片描述"><br><img src="https://img-blog.csdnimg.cn/20200821173743285.png?x-oss-process=image/watermark,type_ZmFuZ3poZW5naGVpdGk,shadow_10,text_aHR0cHM6Ly9ibG9nLmNzZG4ubmV0L3dlaXhpbl80MjY5MzcxMg==,size_16,color_FFFFFF,t_70#pic_center" alt="在这里插入图片描述"></p>
+<h2 id="事件冒泡和事件捕获"><a href="#事件冒泡和事件捕获" class="headerlink" title="事件冒泡和事件捕获"></a>事件冒泡和事件捕获</h2><p>当你使用事件捕获时，父级元素先触发，子级元素后触发。<br>当你使用事件冒泡时，子级元素先触发，父级元素后触发。</p>
+<h2 id="事件委托-事件冒泡和捕获，如何阻止冒泡-如何阻止默认事件"><a href="#事件委托-事件冒泡和捕获，如何阻止冒泡-如何阻止默认事件" class="headerlink" title="事件委托,事件冒泡和捕获，如何阻止冒泡,如何阻止默认事件"></a>事件委托,事件冒泡和捕获，如何阻止冒泡,如何阻止默认事件</h2><h3 id="事件委托：（参考：https-www-cnblogs-com-liugang-vip-p-5616484-html）"><a href="#事件委托：（参考：https-www-cnblogs-com-liugang-vip-p-5616484-html）" class="headerlink" title="事件委托：（参考：https://www.cnblogs.com/liugang-vip/p/5616484.html）"></a>事件委托：（参考：<a target="_blank" rel="noopener" href="https://www.cnblogs.com/liugang-vip/p/5616484.html%EF%BC%89">https://www.cnblogs.com/liugang-vip/p/5616484.html）</a></h3><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br></pre></td><td class="code"><pre><span class="line">&lt;!DOCTYPE html&gt;</span><br><span class="line">&lt;html lang&#x3D;&quot;en&quot;&gt;</span><br><span class="line">&lt;head&gt;</span><br><span class="line">    &lt;meta charset&#x3D;&quot;UTF-8&quot;&gt;</span><br><span class="line">    &lt;meta name&#x3D;&quot;viewport&quot; content&#x3D;&quot;width&#x3D;device-width, initial-scale&#x3D;1.0&quot;&gt;</span><br><span class="line">    &lt;title&gt;事件委托&lt;&#x2F;title&gt;</span><br><span class="line">    &lt;style&gt;</span><br><span class="line">        .active&#123;</span><br><span class="line">            color: blue;</span><br><span class="line">        &#125;</span><br><span class="line">    &lt;&#x2F;style&gt;</span><br><span class="line">&lt;&#x2F;head&gt;</span><br><span class="line">&lt;body&gt;</span><br><span class="line">    &lt;button class&#x3D;&quot;toolbar&quot;&gt;事件委托&lt;&#x2F;button&gt;</span><br><span class="line">    &lt;script&gt;</span><br><span class="line">        var  toobal &#x3D; document.querySelector(&#39;.toolbar&#39;)</span><br><span class="line">        toobal.addEventListener(&quot;click&quot;,function(e)&#123;</span><br><span class="line">            var button &#x3D; e.target</span><br><span class="line">            if(!button.classList.contains(&#39;active&#39;))&#123;</span><br><span class="line">                button.classList.add(&#39;active&#39;)</span><br><span class="line">            &#125;else&#123;</span><br><span class="line">                button.classList.remove(&#39;active&#39;)</span><br><span class="line">            &#125;</span><br><span class="line">        &#125;)</span><br><span class="line">    &lt;&#x2F;script&gt;</span><br><span class="line">&lt;&#x2F;body&gt;</span><br><span class="line">&lt;&#x2F;html&gt;</span><br></pre></td></tr></table></figure>
+<h3 id="事件冒泡："><a href="#事件冒泡：" class="headerlink" title="事件冒泡："></a>事件冒泡：</h3><p>事件冒泡，就是元素自身的事件被触发后，如果父元素有相同的事件，如onclick事件，那么元素本身的触发状态就会传递，也就是冒到父元素，父元素的相同事件也会一级一级根据嵌套关系向外触发，直到document/window，冒泡过程结束。<br>但是事件冒泡在某些应用场景产生一些问题，就是我们不需要触发的事件，由于冒泡的原因，也会运行。所以在这个时候要取消事件冒泡。阻止事件冒泡如下：</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br></pre></td><td class="code"><pre><span class="line">&lt;!DOCTYPE html&gt;</span><br><span class="line">&lt;html lang&#x3D;&quot;en&quot;&gt;</span><br><span class="line">&lt;head&gt;</span><br><span class="line">    &lt;meta charset&#x3D;&quot;UTF-8&quot;&gt;</span><br><span class="line">    &lt;meta name&#x3D;&quot;viewport&quot; content&#x3D;&quot;width&#x3D;device-width, initial-scale&#x3D;1.0&quot;&gt;</span><br><span class="line">    &lt;title&gt;Document&lt;&#x2F;title&gt;</span><br><span class="line">&lt;&#x2F;head&gt;</span><br><span class="line">&lt;body&gt;</span><br><span class="line">    &lt;div&gt;</span><br><span class="line">        &lt;p&gt;段落文本内容</span><br><span class="line">            &lt;input type&#x3D;&quot;button&quot; value&#x3D;&quot;点击&quot; id&#x3D;&quot;button&quot;&#x2F;&gt;</span><br><span class="line">        &lt;&#x2F;p&gt;</span><br><span class="line">    &lt;&#x2F;div&gt;</span><br><span class="line"> &lt;script&gt;</span><br><span class="line">    </span><br><span class="line">var button &#x3D; document.querySelector(&#39;#button&#39;)</span><br><span class="line">    button.click&#x3D;function(event)&#123;</span><br><span class="line">        &#x2F;&#x2F;阻止冒泡</span><br><span class="line">        event &#x3D; event || window.event</span><br><span class="line">        if (event &amp;&amp; event.stopPropagation) &#123;</span><br><span class="line">            event.stopPropagation()</span><br><span class="line">        &#125;else&#123;</span><br><span class="line">            event.CancelBubble &#x3D; true;</span><br><span class="line">        &#125;</span><br><span class="line">    &#125;</span><br><span class="line"> &lt;&#x2F;script&gt;</span><br><span class="line">&lt;&#x2F;body&gt;</span><br><span class="line">&lt;&#x2F;html&gt;</span><br></pre></td></tr></table></figure>
+<h3 id="事件捕获"><a href="#事件捕获" class="headerlink" title="事件捕获"></a>事件捕获</h3><p>（参考：<a target="_blank" rel="noopener" href="https://www.cnblogs.com/zhuzhenwei918/p/6139880.html%EF%BC%89">https://www.cnblogs.com/zhuzhenwei918/p/6139880.html）</a><br>事件捕获，与事件冒泡相反，事件会从最外层开始发生，直到最具体的元素。事件捕获的概念下发生click事件的顺序应该是document -&gt; html -&gt; body -&gt; div -&gt; p。阻止事件冒泡如下：</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line">document.getElementById(&quot;second&quot;).addEventListener(&quot;click&quot;,function()&#123;</span><br><span class="line">    alert(&quot;second&quot;);</span><br><span class="line">    event.stopImmediatePropagation();</span><br><span class="line">&#125;,true); </span><br></pre></td></tr></table></figure>
+<h3 id="阻止浏览器默认行为"><a href="#阻止浏览器默认行为" class="headerlink" title="阻止浏览器默认行为"></a>阻止浏览器默认行为</h3><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br></pre></td><td class="code"><pre><span class="line">&#x2F;&#x2F; 阻止浏览器默认行为</span><br><span class="line"> function stopDefault(e)&#123;</span><br><span class="line">     if(e &amp;&amp; e.preventDefault)&#123;</span><br><span class="line">         &#x2F;&#x2F; 阻止浏览器默认行为W3C</span><br><span class="line">         e.preventDefault();</span><br><span class="line">     &#125;else&#123;</span><br><span class="line">         &#x2F;&#x2F; IE中阻止浏览器默认行为</span><br><span class="line">         window.event.returnValue &#x3D; false</span><br><span class="line">     &#125;</span><br><span class="line">     return false;</span><br><span class="line"> &#125;</span><br></pre></td></tr></table></figure>
+
+      
+      
+<!-- 添加版权声明 -->
+<!-- 
+ -->
+<!-- 添加版权声明结束 -->
+<!-- 百度自动推送方式提交 -->
+<!-- 
+  <script>
+  (function(){
+      var bp = document.createElement('script');
+      var curProtocol = window.location.protocol.split(':')[0];
+      if (curProtocol === 'https') {
+          bp.src = 'https://zz.bdstatic.com/linksubmit/push.js';
+      }
+      else {
+          bp.src = 'http://push.zhanzhang.baidu.com/push.js';
+      }
+      var s = document.getElementsByTagName("script")[0];
+      s.parentNode.insertBefore(bp, s);
+  })();
+  </script>
+ -->
+<!-- 百度自动推送方式提交结束 -->
+
+      
+    </div>
+    <div class="article-info article-info-index">
+      
+      
+	<div class="article-tag tagcloud">
+		<i class="icon-price-tags icon"></i>
+		<ul class="article-tag-list">
+			 
+        		<li class="article-tag-list-item">
+        			<a href="javascript:void(0)" class="js-tag article-tag-list-link color5">js基础</a>
+        		</li>
+      		
+		</ul>
+	</div>
+
+      
+	<div class="article-category tagcloud">
+		<i class="icon-book icon"></i>
+		<ul class="article-tag-list">
+			 
+        		<li class="article-tag-list-item">
+        			<a href="/categories/js//" class="article-tag-list-link color3">js</a>
+        		</li>
+      		
+		</ul>
+	</div>
+
+
+      
+        <p class="article-more-link">
+          <a class="article-more-a" href="/2020/08/21/js%E9%9D%A2%E8%AF%951/">展开全文 >></a>
+        </p>
+      
+
+      
+      <div class="clearfix"></div>
+    </div>
+  </div>
+</article>
+
+<aside class="wrap-side-operation">
+    <div class="mod-side-operation">
+        
+        <div class="jump-container" id="js-jump-container" style="display:none;">
+            <a href="javascript:void(0)" class="mod-side-operation__jump-to-top">
+                <i class="icon-font icon-back"></i>
+            </a>
+            <div id="js-jump-plan-container" class="jump-plan-container" style="top: -11px;">
+                <i class="icon-font icon-plane jump-plane"></i>
+            </div>
+        </div>
+        
+        
+    </div>
+</aside>
+
+
+
+
+
+
+  
+    <article id="post-两栏布局,DPI,Attribute ，property,流式布局和响应式布局，BFC,雪碧图 （ 精灵图 ），SVG，浏览器兼容问题before和after中的双冒号和单冒号的区别" class="article article-type-post  article-index" itemscope itemprop="blogPost">
+  <div class="article-inner">
+    
+      <header class="article-header">
+        
+  
+    <h1 itemprop="name">
+      <a class="article-title" href="/2020/08/19/%E4%B8%A4%E6%A0%8F%E5%B8%83%E5%B1%80,DPI,Attribute%20%EF%BC%8Cproperty,%E6%B5%81%E5%BC%8F%E5%B8%83%E5%B1%80%E5%92%8C%E5%93%8D%E5%BA%94%E5%BC%8F%E5%B8%83%E5%B1%80%EF%BC%8CBFC,%E9%9B%AA%E7%A2%A7%E5%9B%BE%20%EF%BC%88%20%E7%B2%BE%E7%81%B5%E5%9B%BE%20%EF%BC%89%EF%BC%8CSVG%EF%BC%8C%E6%B5%8F%E8%A7%88%E5%99%A8%E5%85%BC%E5%AE%B9%E9%97%AE%E9%A2%98before%E5%92%8Cafter%E4%B8%AD%E7%9A%84%E5%8F%8C%E5%86%92%E5%8F%B7%E5%92%8C%E5%8D%95%E5%86%92%E5%8F%B7%E7%9A%84%E5%8C%BA%E5%88%AB/">两栏布局,DPI,Attribute / property,流式布局和响应式布局，BFC,雪碧图 （ 精灵图 ），SVG，浏览器兼容问题，“::before”和“:after”中的双冒号和单冒号的区别</a>
+    </h1>
+  
+
+        <!--显示阅读次数-->
+
+<!--显示阅读次数完毕-->
+
+
+
+        
+        
+<a href="/2020/08/19/%E4%B8%A4%E6%A0%8F%E5%B8%83%E5%B1%80,DPI,Attribute%20%EF%BC%8Cproperty,%E6%B5%81%E5%BC%8F%E5%B8%83%E5%B1%80%E5%92%8C%E5%93%8D%E5%BA%94%E5%BC%8F%E5%B8%83%E5%B1%80%EF%BC%8CBFC,%E9%9B%AA%E7%A2%A7%E5%9B%BE%20%EF%BC%88%20%E7%B2%BE%E7%81%B5%E5%9B%BE%20%EF%BC%89%EF%BC%8CSVG%EF%BC%8C%E6%B5%8F%E8%A7%88%E5%99%A8%E5%85%BC%E5%AE%B9%E9%97%AE%E9%A2%98before%E5%92%8Cafter%E4%B8%AD%E7%9A%84%E5%8F%8C%E5%86%92%E5%8F%B7%E5%92%8C%E5%8D%95%E5%86%92%E5%8F%B7%E7%9A%84%E5%8C%BA%E5%88%AB/" class="archive-article-date">
+  	<time datetime="2020-08-19T09:31:47.712Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2020-08-19</time>
+</a>
+        
+      </header>
+      
+    
+    <div class="article-entry" itemprop="articleBody">
+      
+        <h2 id="两栏布局-DPI-Attribute-property-流式布局和响应式布局，BFC-雪碧图-（-精灵图-），SVG，浏览器兼容问题，“-before”和“-after”中的双冒号和单冒号的区别"><a href="#两栏布局-DPI-Attribute-property-流式布局和响应式布局，BFC-雪碧图-（-精灵图-），SVG，浏览器兼容问题，“-before”和“-after”中的双冒号和单冒号的区别" class="headerlink" title="两栏布局,DPI,Attribute / property,流式布局和响应式布局，BFC,雪碧图 （ 精灵图 ），SVG，浏览器兼容问题，“::before”和“:after”中的双冒号和单冒号的区别"></a>两栏布局,DPI,Attribute / property,流式布局和响应式布局，BFC,雪碧图 （ 精灵图 ），SVG，浏览器兼容问题，“::before”和“:after”中的双冒号和单冒号的区别</h2>
+        
+          <a class="article-more-a" href="/2020/08/19/%E4%B8%A4%E6%A0%8F%E5%B8%83%E5%B1%80,DPI,Attribute%20%EF%BC%8Cproperty,%E6%B5%81%E5%BC%8F%E5%B8%83%E5%B1%80%E5%92%8C%E5%93%8D%E5%BA%94%E5%BC%8F%E5%B8%83%E5%B1%80%EF%BC%8CBFC,%E9%9B%AA%E7%A2%A7%E5%9B%BE%20%EF%BC%88%20%E7%B2%BE%E7%81%B5%E5%9B%BE%20%EF%BC%89%EF%BC%8CSVG%EF%BC%8C%E6%B5%8F%E8%A7%88%E5%99%A8%E5%85%BC%E5%AE%B9%E9%97%AE%E9%A2%98before%E5%92%8Cafter%E4%B8%AD%E7%9A%84%E5%8F%8C%E5%86%92%E5%8F%B7%E5%92%8C%E5%8D%95%E5%86%92%E5%8F%B7%E7%9A%84%E5%8C%BA%E5%88%AB/#more">more >></a>
+        
+      
+      
+<!-- 添加版权声明 -->
+<!-- 
+ -->
+<!-- 添加版权声明结束 -->
+<!-- 百度自动推送方式提交 -->
+<!-- 
+  <script>
+  (function(){
+      var bp = document.createElement('script');
+      var curProtocol = window.location.protocol.split(':')[0];
+      if (curProtocol === 'https') {
+          bp.src = 'https://zz.bdstatic.com/linksubmit/push.js';
+      }
+      else {
+          bp.src = 'http://push.zhanzhang.baidu.com/push.js';
+      }
+      var s = document.getElementsByTagName("script")[0];
+      s.parentNode.insertBefore(bp, s);
+  })();
+  </script>
+ -->
+<!-- 百度自动推送方式提交结束 -->
+
+      
+    </div>
+    <div class="article-info article-info-index">
+      
+      
+	<div class="article-tag tagcloud">
+		<i class="icon-price-tags icon"></i>
+		<ul class="article-tag-list">
+			 
+        		<li class="article-tag-list-item">
+        			<a href="javascript:void(0)" class="js-tag article-tag-list-link color1">css基础</a>
+        		</li>
+      		
+		</ul>
+	</div>
+
+      
+	<div class="article-category tagcloud">
+		<i class="icon-book icon"></i>
+		<ul class="article-tag-list">
+			 
+        		<li class="article-tag-list-item">
+        			<a href="/categories/css//" class="article-tag-list-link color4">css</a>
+        		</li>
+      		
+		</ul>
+	</div>
+
+
+      
+        <p class="article-more-link">
+          <a class="article-more-a" href="/2020/08/19/%E4%B8%A4%E6%A0%8F%E5%B8%83%E5%B1%80,DPI,Attribute%20%EF%BC%8Cproperty,%E6%B5%81%E5%BC%8F%E5%B8%83%E5%B1%80%E5%92%8C%E5%93%8D%E5%BA%94%E5%BC%8F%E5%B8%83%E5%B1%80%EF%BC%8CBFC,%E9%9B%AA%E7%A2%A7%E5%9B%BE%20%EF%BC%88%20%E7%B2%BE%E7%81%B5%E5%9B%BE%20%EF%BC%89%EF%BC%8CSVG%EF%BC%8C%E6%B5%8F%E8%A7%88%E5%99%A8%E5%85%BC%E5%AE%B9%E9%97%AE%E9%A2%98before%E5%92%8Cafter%E4%B8%AD%E7%9A%84%E5%8F%8C%E5%86%92%E5%8F%B7%E5%92%8C%E5%8D%95%E5%86%92%E5%8F%B7%E7%9A%84%E5%8C%BA%E5%88%AB/">展开全文 >></a>
+        </p>
+      
+
+      
+      <div class="clearfix"></div>
+    </div>
+  </div>
+</article>
+
+<aside class="wrap-side-operation">
+    <div class="mod-side-operation">
+        
+        <div class="jump-container" id="js-jump-container" style="display:none;">
+            <a href="javascript:void(0)" class="mod-side-operation__jump-to-top">
+                <i class="icon-font icon-back"></i>
+            </a>
+            <div id="js-jump-plan-container" class="jump-plan-container" style="top: -11px;">
+                <i class="icon-font icon-plane jump-plane"></i>
+            </div>
+        </div>
+        
+        
+    </div>
+</aside>
+
+
+
+
+
+
+  
+    <article id="post-盒模型，box-sizing，CSS3新特性，伪类，伪元素，锚伪类，使用CSS实现隐藏元素的方式,盒子在页面水平和垂直居中, inline和inline-block,块级元素,行级元素有哪些以及特点 ,网格布局,传统表格布局" class="article article-type-post  article-index" itemscope itemprop="blogPost">
+  <div class="article-inner">
+    
+      <header class="article-header">
+        
+  
+    <h1 itemprop="name">
+      <a class="article-title" href="/2020/08/19/%E7%9B%92%E6%A8%A1%E5%9E%8B%EF%BC%8Cbox-sizing%EF%BC%8CCSS3%E6%96%B0%E7%89%B9%E6%80%A7%EF%BC%8C%E4%BC%AA%E7%B1%BB%EF%BC%8C%E4%BC%AA%E5%85%83%E7%B4%A0%EF%BC%8C%E9%94%9A%E4%BC%AA%E7%B1%BB%EF%BC%8C%E4%BD%BF%E7%94%A8CSS%E5%AE%9E%E7%8E%B0%E9%9A%90%E8%97%8F%E5%85%83%E7%B4%A0%E7%9A%84%E6%96%B9%E5%BC%8F,%E7%9B%92%E5%AD%90%E5%9C%A8%E9%A1%B5%E9%9D%A2%E6%B0%B4%E5%B9%B3%E5%92%8C%E5%9E%82%E7%9B%B4%E5%B1%85%E4%B8%AD,%20inline%E5%92%8Cinline-block,%E5%9D%97%E7%BA%A7%E5%85%83%E7%B4%A0,%E8%A1%8C%E7%BA%A7%E5%85%83%E7%B4%A0%E6%9C%89%E5%93%AA%E4%BA%9B%E4%BB%A5%E5%8F%8A%E7%89%B9%E7%82%B9%20,%E7%BD%91%E6%A0%BC%E5%B8%83%E5%B1%80,%E4%BC%A0%E7%BB%9F%E8%A1%A8%E6%A0%BC%E5%B8%83%E5%B1%80/">盒模型，box-sizing，CSS3新特性，伪类，伪元素，锚伪类，使用CSS实现隐藏元素的方式,盒子在页面水平和垂直居中, inline和inline-block,块级元素,行级元素有哪些以及特点 ,网格布局,传统表格布局</a>
+    </h1>
+  
+
+        <!--显示阅读次数-->
+
+<!--显示阅读次数完毕-->
+
+
+
+        
+        
+<a href="/2020/08/19/%E7%9B%92%E6%A8%A1%E5%9E%8B%EF%BC%8Cbox-sizing%EF%BC%8CCSS3%E6%96%B0%E7%89%B9%E6%80%A7%EF%BC%8C%E4%BC%AA%E7%B1%BB%EF%BC%8C%E4%BC%AA%E5%85%83%E7%B4%A0%EF%BC%8C%E9%94%9A%E4%BC%AA%E7%B1%BB%EF%BC%8C%E4%BD%BF%E7%94%A8CSS%E5%AE%9E%E7%8E%B0%E9%9A%90%E8%97%8F%E5%85%83%E7%B4%A0%E7%9A%84%E6%96%B9%E5%BC%8F,%E7%9B%92%E5%AD%90%E5%9C%A8%E9%A1%B5%E9%9D%A2%E6%B0%B4%E5%B9%B3%E5%92%8C%E5%9E%82%E7%9B%B4%E5%B1%85%E4%B8%AD,%20inline%E5%92%8Cinline-block,%E5%9D%97%E7%BA%A7%E5%85%83%E7%B4%A0,%E8%A1%8C%E7%BA%A7%E5%85%83%E7%B4%A0%E6%9C%89%E5%93%AA%E4%BA%9B%E4%BB%A5%E5%8F%8A%E7%89%B9%E7%82%B9%20,%E7%BD%91%E6%A0%BC%E5%B8%83%E5%B1%80,%E4%BC%A0%E7%BB%9F%E8%A1%A8%E6%A0%BC%E5%B8%83%E5%B1%80/" class="archive-article-date">
+  	<time datetime="2020-08-19T09:31:47.684Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2020-08-19</time>
+</a>
+        
+      </header>
+      
+    
+    <div class="article-entry" itemprop="articleBody">
+      
+        <h2 id="盒模型，box-sizing，CSS3新特性，伪类，伪元素，锚伪类，使用CSS实现隐藏元素的方式-盒子在页面水平和垂直居中-inline和inline-block-块级元素-行级元素有哪些以及特点-网格布局-传统表格布局"><a href="#盒模型，box-sizing，CSS3新特性，伪类，伪元素，锚伪类，使用CSS实现隐藏元素的方式-盒子在页面水平和垂直居中-inline和inline-block-块级元素-行级元素有哪些以及特点-网格布局-传统表格布局" class="headerlink" title="盒模型，box-sizing，CSS3新特性，伪类，伪元素，锚伪类，使用CSS实现隐藏元素的方式,盒子在页面水平和垂直居中, inline和inline-block,块级元素,行级元素有哪些以及特点 ,网格布局,传统表格布局"></a>盒模型，box-sizing，CSS3新特性，伪类，伪元素，锚伪类，使用CSS实现隐藏元素的方式,盒子在页面水平和垂直居中, inline和inline-block,块级元素,行级元素有哪些以及特点 ,网格布局,传统表格布局</h2>
+        
+          <a class="article-more-a" href="/2020/08/19/%E7%9B%92%E6%A8%A1%E5%9E%8B%EF%BC%8Cbox-sizing%EF%BC%8CCSS3%E6%96%B0%E7%89%B9%E6%80%A7%EF%BC%8C%E4%BC%AA%E7%B1%BB%EF%BC%8C%E4%BC%AA%E5%85%83%E7%B4%A0%EF%BC%8C%E9%94%9A%E4%BC%AA%E7%B1%BB%EF%BC%8C%E4%BD%BF%E7%94%A8CSS%E5%AE%9E%E7%8E%B0%E9%9A%90%E8%97%8F%E5%85%83%E7%B4%A0%E7%9A%84%E6%96%B9%E5%BC%8F,%E7%9B%92%E5%AD%90%E5%9C%A8%E9%A1%B5%E9%9D%A2%E6%B0%B4%E5%B9%B3%E5%92%8C%E5%9E%82%E7%9B%B4%E5%B1%85%E4%B8%AD,%20inline%E5%92%8Cinline-block,%E5%9D%97%E7%BA%A7%E5%85%83%E7%B4%A0,%E8%A1%8C%E7%BA%A7%E5%85%83%E7%B4%A0%E6%9C%89%E5%93%AA%E4%BA%9B%E4%BB%A5%E5%8F%8A%E7%89%B9%E7%82%B9%20,%E7%BD%91%E6%A0%BC%E5%B8%83%E5%B1%80,%E4%BC%A0%E7%BB%9F%E8%A1%A8%E6%A0%BC%E5%B8%83%E5%B1%80/#more">more >></a>
+        
+      
+      
+<!-- 添加版权声明 -->
+<!-- 
+ -->
+<!-- 添加版权声明结束 -->
+<!-- 百度自动推送方式提交 -->
+<!-- 
+  <script>
+  (function(){
+      var bp = document.createElement('script');
+      var curProtocol = window.location.protocol.split(':')[0];
+      if (curProtocol === 'https') {
+          bp.src = 'https://zz.bdstatic.com/linksubmit/push.js';
+      }
+      else {
+          bp.src = 'http://push.zhanzhang.baidu.com/push.js';
+      }
+      var s = document.getElementsByTagName("script")[0];
+      s.parentNode.insertBefore(bp, s);
+  })();
+  </script>
+ -->
+<!-- 百度自动推送方式提交结束 -->
+
+      
+    </div>
+    <div class="article-info article-info-index">
+      
+      
+	<div class="article-tag tagcloud">
+		<i class="icon-price-tags icon"></i>
+		<ul class="article-tag-list">
+			 
+        		<li class="article-tag-list-item">
+        			<a href="javascript:void(0)" class="js-tag article-tag-list-link color1">css基础</a>
+        		</li>
+      		
+		</ul>
+	</div>
+
+      
+	<div class="article-category tagcloud">
+		<i class="icon-book icon"></i>
+		<ul class="article-tag-list">
+			 
+        		<li class="article-tag-list-item">
+        			<a href="/categories/css//" class="article-tag-list-link color4">css</a>
+        		</li>
+      		
+		</ul>
+	</div>
+
+
+      
+        <p class="article-more-link">
+          <a class="article-more-a" href="/2020/08/19/%E7%9B%92%E6%A8%A1%E5%9E%8B%EF%BC%8Cbox-sizing%EF%BC%8CCSS3%E6%96%B0%E7%89%B9%E6%80%A7%EF%BC%8C%E4%BC%AA%E7%B1%BB%EF%BC%8C%E4%BC%AA%E5%85%83%E7%B4%A0%EF%BC%8C%E9%94%9A%E4%BC%AA%E7%B1%BB%EF%BC%8C%E4%BD%BF%E7%94%A8CSS%E5%AE%9E%E7%8E%B0%E9%9A%90%E8%97%8F%E5%85%83%E7%B4%A0%E7%9A%84%E6%96%B9%E5%BC%8F,%E7%9B%92%E5%AD%90%E5%9C%A8%E9%A1%B5%E9%9D%A2%E6%B0%B4%E5%B9%B3%E5%92%8C%E5%9E%82%E7%9B%B4%E5%B1%85%E4%B8%AD,%20inline%E5%92%8Cinline-block,%E5%9D%97%E7%BA%A7%E5%85%83%E7%B4%A0,%E8%A1%8C%E7%BA%A7%E5%85%83%E7%B4%A0%E6%9C%89%E5%93%AA%E4%BA%9B%E4%BB%A5%E5%8F%8A%E7%89%B9%E7%82%B9%20,%E7%BD%91%E6%A0%BC%E5%B8%83%E5%B1%80,%E4%BC%A0%E7%BB%9F%E8%A1%A8%E6%A0%BC%E5%B8%83%E5%B1%80/">展开全文 >></a>
+        </p>
+      
+
+      
+      <div class="clearfix"></div>
+    </div>
+  </div>
+</article>
+
+<aside class="wrap-side-operation">
+    <div class="mod-side-operation">
+        
+        <div class="jump-container" id="js-jump-container" style="display:none;">
+            <a href="javascript:void(0)" class="mod-side-operation__jump-to-top">
+                <i class="icon-font icon-back"></i>
+            </a>
+            <div id="js-jump-plan-container" class="jump-plan-container" style="top: -11px;">
+                <i class="icon-font icon-plane jump-plane"></i>
+            </div>
+        </div>
+        
+        
+    </div>
+</aside>
+
+
+
+
+
+
   
     <article id="post-什么是渐进式渲染" class="article article-type-post  article-index" itemscope itemprop="blogPost">
   <div class="article-inner">
@@ -808,606 +1588,6 @@ var _hmt = _hmt || [];
 
 
   
-    <article id="post-HTML模板语言有哪些 " class="article article-type-post  article-index" itemscope itemprop="blogPost">
-  <div class="article-inner">
-    
-      <header class="article-header">
-        
-  
-    <h1 itemprop="name">
-      <a class="article-title" href="/2020/08/17/HTML%E6%A8%A1%E6%9D%BF%E8%AF%AD%E8%A8%80%E6%9C%89%E5%93%AA%E4%BA%9B%20/">HTML模板语言有哪些</a>
-    </h1>
-  
-
-        <!--显示阅读次数-->
-
-<!--显示阅读次数完毕-->
-
-
-
-        
-        
-<a href="/2020/08/17/HTML%E6%A8%A1%E6%9D%BF%E8%AF%AD%E8%A8%80%E6%9C%89%E5%93%AA%E4%BA%9B%20/" class="archive-article-date">
-  	<time datetime="2020-08-17T14:45:29.217Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2020-08-17</time>
-</a>
-        
-      </header>
-      
-    
-    <div class="article-entry" itemprop="articleBody">
-      
-        <h2 id="HTML模板语言有哪些"><a href="#HTML模板语言有哪些" class="headerlink" title="HTML模板语言有哪些"></a>HTML模板语言有哪些</h2>
-        
-          <a class="article-more-a" href="/2020/08/17/HTML%E6%A8%A1%E6%9D%BF%E8%AF%AD%E8%A8%80%E6%9C%89%E5%93%AA%E4%BA%9B%20/#more">more >></a>
-        
-      
-      
-<!-- 添加版权声明 -->
-<!-- 
- -->
-<!-- 添加版权声明结束 -->
-<!-- 百度自动推送方式提交 -->
-<!-- 
-  <script>
-  (function(){
-      var bp = document.createElement('script');
-      var curProtocol = window.location.protocol.split(':')[0];
-      if (curProtocol === 'https') {
-          bp.src = 'https://zz.bdstatic.com/linksubmit/push.js';
-      }
-      else {
-          bp.src = 'http://push.zhanzhang.baidu.com/push.js';
-      }
-      var s = document.getElementsByTagName("script")[0];
-      s.parentNode.insertBefore(bp, s);
-  })();
-  </script>
- -->
-<!-- 百度自动推送方式提交结束 -->
-
-      
-    </div>
-    <div class="article-info article-info-index">
-      
-      
-	<div class="article-tag tagcloud">
-		<i class="icon-price-tags icon"></i>
-		<ul class="article-tag-list">
-			 
-        		<li class="article-tag-list-item">
-        			<a href="javascript:void(0)" class="js-tag article-tag-list-link color2">html基础</a>
-        		</li>
-      		
-		</ul>
-	</div>
-
-      
-	<div class="article-category tagcloud">
-		<i class="icon-book icon"></i>
-		<ul class="article-tag-list">
-			 
-        		<li class="article-tag-list-item">
-        			<a href="/categories/Html//" class="article-tag-list-link color5">Html</a>
-        		</li>
-      		
-		</ul>
-	</div>
-
-
-      
-        <p class="article-more-link">
-          <a class="article-more-a" href="/2020/08/17/HTML%E6%A8%A1%E6%9D%BF%E8%AF%AD%E8%A8%80%E6%9C%89%E5%93%AA%E4%BA%9B%20/">展开全文 >></a>
-        </p>
-      
-
-      
-      <div class="clearfix"></div>
-    </div>
-  </div>
-</article>
-
-<aside class="wrap-side-operation">
-    <div class="mod-side-operation">
-        
-        <div class="jump-container" id="js-jump-container" style="display:none;">
-            <a href="javascript:void(0)" class="mod-side-operation__jump-to-top">
-                <i class="icon-font icon-back"></i>
-            </a>
-            <div id="js-jump-plan-container" class="jump-plan-container" style="top: -11px;">
-                <i class="icon-font icon-plane jump-plane"></i>
-            </div>
-        </div>
-        
-        
-    </div>
-</aside>
-
-
-
-
-
-
-  
-    <article id="post-CSS，JS 引入的位置一般在哪里，为什么" class="article article-type-post  article-index" itemscope itemprop="blogPost">
-  <div class="article-inner">
-    
-      <header class="article-header">
-        
-  
-    <h1 itemprop="name">
-      <a class="article-title" href="/2020/08/17/CSS%EF%BC%8CJS%20%E5%BC%95%E5%85%A5%E7%9A%84%E4%BD%8D%E7%BD%AE%E4%B8%80%E8%88%AC%E5%9C%A8%E5%93%AA%E9%87%8C%EF%BC%8C%E4%B8%BA%E4%BB%80%E4%B9%88/">CSS / JS 引入的位置一般在哪里？为什么</a>
-    </h1>
-  
-
-        <!--显示阅读次数-->
-
-<!--显示阅读次数完毕-->
-
-
-
-        
-        
-<a href="/2020/08/17/CSS%EF%BC%8CJS%20%E5%BC%95%E5%85%A5%E7%9A%84%E4%BD%8D%E7%BD%AE%E4%B8%80%E8%88%AC%E5%9C%A8%E5%93%AA%E9%87%8C%EF%BC%8C%E4%B8%BA%E4%BB%80%E4%B9%88/" class="archive-article-date">
-  	<time datetime="2020-08-17T14:45:29.180Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2020-08-17</time>
-</a>
-        
-      </header>
-      
-    
-    <div class="article-entry" itemprop="articleBody">
-      
-        <h2 id="CSS-JS-引入的位置一般在哪里？为什么"><a href="#CSS-JS-引入的位置一般在哪里？为什么" class="headerlink" title="CSS / JS 引入的位置一般在哪里？为什么"></a>CSS / JS 引入的位置一般在哪里？为什么</h2>
-        
-          <a class="article-more-a" href="/2020/08/17/CSS%EF%BC%8CJS%20%E5%BC%95%E5%85%A5%E7%9A%84%E4%BD%8D%E7%BD%AE%E4%B8%80%E8%88%AC%E5%9C%A8%E5%93%AA%E9%87%8C%EF%BC%8C%E4%B8%BA%E4%BB%80%E4%B9%88/#more">more >></a>
-        
-      
-      
-<!-- 添加版权声明 -->
-<!-- 
- -->
-<!-- 添加版权声明结束 -->
-<!-- 百度自动推送方式提交 -->
-<!-- 
-  <script>
-  (function(){
-      var bp = document.createElement('script');
-      var curProtocol = window.location.protocol.split(':')[0];
-      if (curProtocol === 'https') {
-          bp.src = 'https://zz.bdstatic.com/linksubmit/push.js';
-      }
-      else {
-          bp.src = 'http://push.zhanzhang.baidu.com/push.js';
-      }
-      var s = document.getElementsByTagName("script")[0];
-      s.parentNode.insertBefore(bp, s);
-  })();
-  </script>
- -->
-<!-- 百度自动推送方式提交结束 -->
-
-      
-    </div>
-    <div class="article-info article-info-index">
-      
-      
-	<div class="article-tag tagcloud">
-		<i class="icon-price-tags icon"></i>
-		<ul class="article-tag-list">
-			 
-        		<li class="article-tag-list-item">
-        			<a href="javascript:void(0)" class="js-tag article-tag-list-link color2">html基础</a>
-        		</li>
-      		
-		</ul>
-	</div>
-
-      
-	<div class="article-category tagcloud">
-		<i class="icon-book icon"></i>
-		<ul class="article-tag-list">
-			 
-        		<li class="article-tag-list-item">
-        			<a href="/categories/Html//" class="article-tag-list-link color5">Html</a>
-        		</li>
-      		
-		</ul>
-	</div>
-
-
-      
-        <p class="article-more-link">
-          <a class="article-more-a" href="/2020/08/17/CSS%EF%BC%8CJS%20%E5%BC%95%E5%85%A5%E7%9A%84%E4%BD%8D%E7%BD%AE%E4%B8%80%E8%88%AC%E5%9C%A8%E5%93%AA%E9%87%8C%EF%BC%8C%E4%B8%BA%E4%BB%80%E4%B9%88/">展开全文 >></a>
-        </p>
-      
-
-      
-      <div class="clearfix"></div>
-    </div>
-  </div>
-</article>
-
-<aside class="wrap-side-operation">
-    <div class="mod-side-operation">
-        
-        <div class="jump-container" id="js-jump-container" style="display:none;">
-            <a href="javascript:void(0)" class="mod-side-operation__jump-to-top">
-                <i class="icon-font icon-back"></i>
-            </a>
-            <div id="js-jump-plan-container" class="jump-plan-container" style="top: -11px;">
-                <i class="icon-font icon-plane jump-plane"></i>
-            </div>
-        </div>
-        
-        
-    </div>
-</aside>
-
-
-
-
-
-
-  
-    <article id="post-为什么要在标签上使用data-, 它有什么好处" class="article article-type-post  article-index" itemscope itemprop="blogPost">
-  <div class="article-inner">
-    
-      <header class="article-header">
-        
-  
-    <h1 itemprop="name">
-      <a class="article-title" href="/2020/08/16/%E4%B8%BA%E4%BB%80%E4%B9%88%E8%A6%81%E5%9C%A8%E6%A0%87%E7%AD%BE%E4%B8%8A%E4%BD%BF%E7%94%A8data-,%20%E5%AE%83%E6%9C%89%E4%BB%80%E4%B9%88%E5%A5%BD%E5%A4%84/">为什么要在标签上使用data-, 它有什么好处</a>
-    </h1>
-  
-
-        <!--显示阅读次数-->
-
-<!--显示阅读次数完毕-->
-
-
-
-        
-        
-<a href="/2020/08/16/%E4%B8%BA%E4%BB%80%E4%B9%88%E8%A6%81%E5%9C%A8%E6%A0%87%E7%AD%BE%E4%B8%8A%E4%BD%BF%E7%94%A8data-,%20%E5%AE%83%E6%9C%89%E4%BB%80%E4%B9%88%E5%A5%BD%E5%A4%84/" class="archive-article-date">
-  	<time datetime="2020-08-16T10:30:19.143Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2020-08-16</time>
-</a>
-        
-      </header>
-      
-    
-    <div class="article-entry" itemprop="articleBody">
-      
-        <h2 id="为什么要在标签上使用data-它有什么好处"><a href="#为什么要在标签上使用data-它有什么好处" class="headerlink" title="为什么要在标签上使用data-, 它有什么好处"></a>为什么要在标签上使用data-, 它有什么好处</h2>
-        
-          <a class="article-more-a" href="/2020/08/16/%E4%B8%BA%E4%BB%80%E4%B9%88%E8%A6%81%E5%9C%A8%E6%A0%87%E7%AD%BE%E4%B8%8A%E4%BD%BF%E7%94%A8data-,%20%E5%AE%83%E6%9C%89%E4%BB%80%E4%B9%88%E5%A5%BD%E5%A4%84/#more">more >></a>
-        
-      
-      
-<!-- 添加版权声明 -->
-<!-- 
- -->
-<!-- 添加版权声明结束 -->
-<!-- 百度自动推送方式提交 -->
-<!-- 
-  <script>
-  (function(){
-      var bp = document.createElement('script');
-      var curProtocol = window.location.protocol.split(':')[0];
-      if (curProtocol === 'https') {
-          bp.src = 'https://zz.bdstatic.com/linksubmit/push.js';
-      }
-      else {
-          bp.src = 'http://push.zhanzhang.baidu.com/push.js';
-      }
-      var s = document.getElementsByTagName("script")[0];
-      s.parentNode.insertBefore(bp, s);
-  })();
-  </script>
- -->
-<!-- 百度自动推送方式提交结束 -->
-
-      
-    </div>
-    <div class="article-info article-info-index">
-      
-      
-	<div class="article-tag tagcloud">
-		<i class="icon-price-tags icon"></i>
-		<ul class="article-tag-list">
-			 
-        		<li class="article-tag-list-item">
-        			<a href="javascript:void(0)" class="js-tag article-tag-list-link color2">html基础</a>
-        		</li>
-      		
-		</ul>
-	</div>
-
-      
-	<div class="article-category tagcloud">
-		<i class="icon-book icon"></i>
-		<ul class="article-tag-list">
-			 
-        		<li class="article-tag-list-item">
-        			<a href="/categories/Html//" class="article-tag-list-link color5">Html</a>
-        		</li>
-      		
-		</ul>
-	</div>
-
-
-      
-        <p class="article-more-link">
-          <a class="article-more-a" href="/2020/08/16/%E4%B8%BA%E4%BB%80%E4%B9%88%E8%A6%81%E5%9C%A8%E6%A0%87%E7%AD%BE%E4%B8%8A%E4%BD%BF%E7%94%A8data-,%20%E5%AE%83%E6%9C%89%E4%BB%80%E4%B9%88%E5%A5%BD%E5%A4%84/">展开全文 >></a>
-        </p>
-      
-
-      
-      <div class="clearfix"></div>
-    </div>
-  </div>
-</article>
-
-<aside class="wrap-side-operation">
-    <div class="mod-side-operation">
-        
-        <div class="jump-container" id="js-jump-container" style="display:none;">
-            <a href="javascript:void(0)" class="mod-side-operation__jump-to-top">
-                <i class="icon-font icon-back"></i>
-            </a>
-            <div id="js-jump-plan-container" class="jump-plan-container" style="top: -11px;">
-                <i class="icon-font icon-plane jump-plane"></i>
-            </div>
-        </div>
-        
-        
-    </div>
-</aside>
-
-
-
-
-
-
-  
-    <article id="post-为什么要在标签上使用data-, 它有什么好处 copy" class="article article-type-post  article-index" itemscope itemprop="blogPost">
-  <div class="article-inner">
-    
-      <header class="article-header">
-        
-  
-    <h1 itemprop="name">
-      <a class="article-title" href="/2020/08/16/%E4%B8%BA%E4%BB%80%E4%B9%88%E8%A6%81%E5%9C%A8%E6%A0%87%E7%AD%BE%E4%B8%8A%E4%BD%BF%E7%94%A8data-,%20%E5%AE%83%E6%9C%89%E4%BB%80%E4%B9%88%E5%A5%BD%E5%A4%84%20copy/">Meta标签，都有一些什么特性，有什么作用</a>
-    </h1>
-  
-
-        <!--显示阅读次数-->
-
-<!--显示阅读次数完毕-->
-
-
-
-        
-        
-<a href="/2020/08/16/%E4%B8%BA%E4%BB%80%E4%B9%88%E8%A6%81%E5%9C%A8%E6%A0%87%E7%AD%BE%E4%B8%8A%E4%BD%BF%E7%94%A8data-,%20%E5%AE%83%E6%9C%89%E4%BB%80%E4%B9%88%E5%A5%BD%E5%A4%84%20copy/" class="archive-article-date">
-  	<time datetime="2020-08-16T10:30:19.111Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2020-08-16</time>
-</a>
-        
-      </header>
-      
-    
-    <div class="article-entry" itemprop="articleBody">
-      
-        <h2 id="Meta标签，都有一些什么特性，有什么作用"><a href="#Meta标签，都有一些什么特性，有什么作用" class="headerlink" title="Meta标签，都有一些什么特性，有什么作用"></a>Meta标签，都有一些什么特性，有什么作用</h2>
-        
-          <a class="article-more-a" href="/2020/08/16/%E4%B8%BA%E4%BB%80%E4%B9%88%E8%A6%81%E5%9C%A8%E6%A0%87%E7%AD%BE%E4%B8%8A%E4%BD%BF%E7%94%A8data-,%20%E5%AE%83%E6%9C%89%E4%BB%80%E4%B9%88%E5%A5%BD%E5%A4%84%20copy/#more">more >></a>
-        
-      
-      
-<!-- 添加版权声明 -->
-<!-- 
- -->
-<!-- 添加版权声明结束 -->
-<!-- 百度自动推送方式提交 -->
-<!-- 
-  <script>
-  (function(){
-      var bp = document.createElement('script');
-      var curProtocol = window.location.protocol.split(':')[0];
-      if (curProtocol === 'https') {
-          bp.src = 'https://zz.bdstatic.com/linksubmit/push.js';
-      }
-      else {
-          bp.src = 'http://push.zhanzhang.baidu.com/push.js';
-      }
-      var s = document.getElementsByTagName("script")[0];
-      s.parentNode.insertBefore(bp, s);
-  })();
-  </script>
- -->
-<!-- 百度自动推送方式提交结束 -->
-
-      
-    </div>
-    <div class="article-info article-info-index">
-      
-      
-	<div class="article-tag tagcloud">
-		<i class="icon-price-tags icon"></i>
-		<ul class="article-tag-list">
-			 
-        		<li class="article-tag-list-item">
-        			<a href="javascript:void(0)" class="js-tag article-tag-list-link color2">html基础</a>
-        		</li>
-      		
-		</ul>
-	</div>
-
-      
-	<div class="article-category tagcloud">
-		<i class="icon-book icon"></i>
-		<ul class="article-tag-list">
-			 
-        		<li class="article-tag-list-item">
-        			<a href="/categories/Html//" class="article-tag-list-link color5">Html</a>
-        		</li>
-      		
-		</ul>
-	</div>
-
-
-      
-        <p class="article-more-link">
-          <a class="article-more-a" href="/2020/08/16/%E4%B8%BA%E4%BB%80%E4%B9%88%E8%A6%81%E5%9C%A8%E6%A0%87%E7%AD%BE%E4%B8%8A%E4%BD%BF%E7%94%A8data-,%20%E5%AE%83%E6%9C%89%E4%BB%80%E4%B9%88%E5%A5%BD%E5%A4%84%20copy/">展开全文 >></a>
-        </p>
-      
-
-      
-      <div class="clearfix"></div>
-    </div>
-  </div>
-</article>
-
-<aside class="wrap-side-operation">
-    <div class="mod-side-operation">
-        
-        <div class="jump-container" id="js-jump-container" style="display:none;">
-            <a href="javascript:void(0)" class="mod-side-operation__jump-to-top">
-                <i class="icon-font icon-back"></i>
-            </a>
-            <div id="js-jump-plan-container" class="jump-plan-container" style="top: -11px;">
-                <i class="icon-font icon-plane jump-plane"></i>
-            </div>
-        </div>
-        
-        
-    </div>
-</aside>
-
-
-
-
-
-
-  
-    <article id="post-浏览器标准模式和怪异模式" class="article article-type-post  article-index" itemscope itemprop="blogPost">
-  <div class="article-inner">
-    
-      <header class="article-header">
-        
-  
-    <h1 itemprop="name">
-      <a class="article-title" href="/2020/08/16/%E6%B5%8F%E8%A7%88%E5%99%A8%E6%A0%87%E5%87%86%E6%A8%A1%E5%BC%8F%E5%92%8C%E6%80%AA%E5%BC%82%E6%A8%A1%E5%BC%8F/">浏览器标准模式和怪异模式</a>
-    </h1>
-  
-
-        <!--显示阅读次数-->
-
-<!--显示阅读次数完毕-->
-
-
-
-        
-        
-<a href="/2020/08/16/%E6%B5%8F%E8%A7%88%E5%99%A8%E6%A0%87%E5%87%86%E6%A8%A1%E5%BC%8F%E5%92%8C%E6%80%AA%E5%BC%82%E6%A8%A1%E5%BC%8F/" class="archive-article-date">
-  	<time datetime="2020-08-16T10:30:19.095Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2020-08-16</time>
-</a>
-        
-      </header>
-      
-    
-    <div class="article-entry" itemprop="articleBody">
-      
-        <h2 id="浏览器标准模式和怪异模式"><a href="#浏览器标准模式和怪异模式" class="headerlink" title="浏览器标准模式和怪异模式"></a>浏览器标准模式和怪异模式</h2>
-        
-          <a class="article-more-a" href="/2020/08/16/%E6%B5%8F%E8%A7%88%E5%99%A8%E6%A0%87%E5%87%86%E6%A8%A1%E5%BC%8F%E5%92%8C%E6%80%AA%E5%BC%82%E6%A8%A1%E5%BC%8F/#more">more >></a>
-        
-      
-      
-<!-- 添加版权声明 -->
-<!-- 
- -->
-<!-- 添加版权声明结束 -->
-<!-- 百度自动推送方式提交 -->
-<!-- 
-  <script>
-  (function(){
-      var bp = document.createElement('script');
-      var curProtocol = window.location.protocol.split(':')[0];
-      if (curProtocol === 'https') {
-          bp.src = 'https://zz.bdstatic.com/linksubmit/push.js';
-      }
-      else {
-          bp.src = 'http://push.zhanzhang.baidu.com/push.js';
-      }
-      var s = document.getElementsByTagName("script")[0];
-      s.parentNode.insertBefore(bp, s);
-  })();
-  </script>
- -->
-<!-- 百度自动推送方式提交结束 -->
-
-      
-    </div>
-    <div class="article-info article-info-index">
-      
-      
-	<div class="article-tag tagcloud">
-		<i class="icon-price-tags icon"></i>
-		<ul class="article-tag-list">
-			 
-        		<li class="article-tag-list-item">
-        			<a href="javascript:void(0)" class="js-tag article-tag-list-link color2">html基础</a>
-        		</li>
-      		
-		</ul>
-	</div>
-
-      
-	<div class="article-category tagcloud">
-		<i class="icon-book icon"></i>
-		<ul class="article-tag-list">
-			 
-        		<li class="article-tag-list-item">
-        			<a href="/categories/Html//" class="article-tag-list-link color5">Html</a>
-        		</li>
-      		
-		</ul>
-	</div>
-
-
-      
-        <p class="article-more-link">
-          <a class="article-more-a" href="/2020/08/16/%E6%B5%8F%E8%A7%88%E5%99%A8%E6%A0%87%E5%87%86%E6%A8%A1%E5%BC%8F%E5%92%8C%E6%80%AA%E5%BC%82%E6%A8%A1%E5%BC%8F/">展开全文 >></a>
-        </p>
-      
-
-      
-      <div class="clearfix"></div>
-    </div>
-  </div>
-</article>
-
-<aside class="wrap-side-operation">
-    <div class="mod-side-operation">
-        
-        <div class="jump-container" id="js-jump-container" style="display:none;">
-            <a href="javascript:void(0)" class="mod-side-operation__jump-to-top">
-                <i class="icon-font icon-back"></i>
-            </a>
-            <div id="js-jump-plan-container" class="jump-plan-container" style="top: -11px;">
-                <i class="icon-font icon-plane jump-plane"></i>
-            </div>
-        </div>
-        
-        
-    </div>
-</aside>
-
-
-
-
-
-
-  
   
     <nav id="page-nav">
       <a class="extend prev" rel="prev" href="/">&amp;laquo; Prev</a><a class="page-number" href="/">1</a><span class="page-number current">2</span><a class="page-number" href="/page/3/">3</a><a class="page-number" href="/page/4/">4</a><a class="page-number" href="/page/5/">5</a><a class="extend next" rel="next" href="/page/3/">Next &amp;raquo;</a>
@@ -1529,6 +1709,10 @@ return o(i(t),arguments.length<2?void 0:u(arguments[1]))}})},function(t,n,r){var
               </li>
              
               <li class="article-tag-list-item">
+                <a href="javascript:void(0)" class="js-tag color4">es6</a>
+              </li>
+             
+              <li class="article-tag-list-item">
                 <a href="javascript:void(0)" class="js-tag color5">ajax</a>
               </li>
              
@@ -1542,6 +1726,10 @@ return o(i(t),arguments.length<2?void 0:u(arguments[1]))}})},function(t,n,r){var
              
               <li class="article-tag-list-item">
                 <a href="javascript:void(0)" class="js-tag color1">css基础</a>
+              </li>
+             
+              <li class="article-tag-list-item">
+                <a href="javascript:void(0)" class="js-tag color1">计算机网络</a>
               </li>
             
             <div class="clearfix"></div>
