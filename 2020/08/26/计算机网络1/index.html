@@ -9,15 +9,15 @@
   <link rel="dns-prefetch" href="http://yoursite.com">
   <title>HTTP协议头包含哪些重要部分，HTTP状态码。网络url输入到输出都做了什么，为什么说性能优化就要减少HTTP的访问次数，HTTP的请求过程与原理，HTTP的请求过程与原理，TLS的中文名？TLS在那一网络层，TCP连接的特点，TCP连接如何保证安全可靠 | highfish920的博客</title>
   <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
-  <meta name="description" content="HTTP协议头包含哪些重要部分，HTTP状态码。HTTP协议头包括通用头，请求头，响应头和实体头四个部分200    请求已成功，请求所希望的响应头或数据体将随此响应返回302    Moved Permanently（重定向）请求的URL已移走。Response中应该包含一个Location URL, 说明资源现在所处的位置304    Not Modified（未修改）客户的缓存资源是最新的，">
+  <meta name="description" content="HTTP协议头包含哪些重要部分，HTTP状态码。">
 <meta property="og:type" content="article">
 <meta property="og:title" content="HTTP协议头包含哪些重要部分，HTTP状态码。网络url输入到输出都做了什么，为什么说性能优化就要减少HTTP的访问次数，HTTP的请求过程与原理，HTTP的请求过程与原理，TLS的中文名？TLS在那一网络层，TCP连接的特点，TCP连接如何保证安全可靠">
 <meta property="og:url" content="http://yoursite.com/2020/08/26/%E8%AE%A1%E7%AE%97%E6%9C%BA%E7%BD%91%E7%BB%9C1/index.html">
 <meta property="og:site_name" content="highfish920的博客">
-<meta property="og:description" content="HTTP协议头包含哪些重要部分，HTTP状态码。HTTP协议头包括通用头，请求头，响应头和实体头四个部分200    请求已成功，请求所希望的响应头或数据体将随此响应返回302    Moved Permanently（重定向）请求的URL已移走。Response中应该包含一个Location URL, 说明资源现在所处的位置304    Not Modified（未修改）客户的缓存资源是最新的，">
+<meta property="og:description" content="HTTP协议头包含哪些重要部分，HTTP状态码。">
 <meta property="og:locale" content="zh_CN">
 <meta property="article:published_time" content="2020-08-26T08:28:14.957Z">
-<meta property="article:modified_time" content="2020-08-26T08:52:40.300Z">
+<meta property="article:modified_time" content="2020-08-26T08:56:44.708Z">
 <meta property="article:author" content="highfish">
 <meta property="article:tag" content="计算机网络">
 <meta name="twitter:card" content="summary">
@@ -252,8 +252,9 @@ var _hmt = _hmt || [];
     
     <div class="article-entry" itemprop="articleBody">
       
-        <h2 id="HTTP协议头包含哪些重要部分，HTTP状态码。"><a href="#HTTP协议头包含哪些重要部分，HTTP状态码。" class="headerlink" title="HTTP协议头包含哪些重要部分，HTTP状态码。"></a>HTTP协议头包含哪些重要部分，HTTP状态码。</h2><p>HTTP协议头包括通用头，请求头，响应头和实体头四个部分<br>200    请求已成功，请求所希望的响应头或数据体将随此响应返回<br>302    Moved Permanently（重定向）请求的URL已移走。Response中应该包含一个Location URL, 说明资源现在所处的位置<br>304    Not Modified（未修改）客户的缓存资源是最新的， 要客户端使用缓存<br>404    Not Found 未找到资源，可能是路径方面的错误<br>503    服务器目前无法为请求提供服务，但过一段时间就可以恢复服务</p>
-<a id="more"></a>
+        <h2 id="HTTP协议头包含哪些重要部分，HTTP状态码。"><a href="#HTTP协议头包含哪些重要部分，HTTP状态码。" class="headerlink" title="HTTP协议头包含哪些重要部分，HTTP状态码。"></a>HTTP协议头包含哪些重要部分，HTTP状态码。</h2><a id="more"></a>
+
+<p>HTTP协议头包括通用头，请求头，响应头和实体头四个部分<br>200    请求已成功，请求所希望的响应头或数据体将随此响应返回<br>302    Moved Permanently（重定向）请求的URL已移走。Response中应该包含一个Location URL, 说明资源现在所处的位置<br>304    Not Modified（未修改）客户的缓存资源是最新的， 要客户端使用缓存<br>404    Not Found 未找到资源，可能是路径方面的错误<br>503    服务器目前无法为请求提供服务，但过一段时间就可以恢复服务</p>
 <h2 id="网络url输入到输出都做了什么"><a href="#网络url输入到输出都做了什么" class="headerlink" title="网络url输入到输出都做了什么"></a>网络url输入到输出都做了什么</h2><p>1    当我们输入一个域名像：<a target="_blank" rel="noopener" href="http://www.baidu.com/">www.baidu.com</a> </p>
 <p>2    浏览器查找浏览器缓存，如果有域名的IP地址则返回，如果没有继续查找<br>3    系统查找系统缓存，如果有域名的IP地址则返回，如果没有继续查找<br>4    路由器查找路由器缓存，如果有域名的IP地址则返回，如果没有继续查找<br>5    本地域名服务器采用迭代查询，它先向一个根域名服务器查询<br>6    根域名服务器告诉本地域名服务器，下一次应查询的顶级域名服务器dns.com的IP地址<br>7    本地域名服务器向顶级域名服务器dns.com进行查询<br>8    顶级域名服务器dns.com告诉本地域名服务器，下一次应查询的权限域名服务器dns.baidu.com的IP地址<br>9    本地域名服务器向权限域名服务器dns.baidu.com进行查询<br>10    权限域名服务器dns.baidu.com告诉本地域名服务器，所查询的主机<a target="_blank" rel="noopener" href="http://www.baidu.com的ip地址/">www.baidu.com的IP地址</a><br>11    本地域名服务器最后把查询结果告诉主机<br>12    主机浏览器获取到Web服务器的IP地址后，与服务器建立TCP连接<br>13    浏览器所在的客户机向服务器发出连接请求报文<br>14    服务器接收报文后，同意建立连接，向客户机发出确认报文<br>15    客户机接收到确认报文后，再次向服务器发出报文，确认已接收到确认报文<br>16    此处客户机与服务器之间的TCP连接建立完成，开始通信<br>17    浏览器发出取文件命令：GET<br>18    服务器给出响应，将指定文件发送给浏览器<br>19    浏览器释放TCP连接<br>20    浏览器所在主机向服务器发出连接释放报文，然后停止发送数据<br>21    服务器接收到释放报文后发出确认报文，然后将服务器上未传送完的数据发送完<br>22    服务器数据传输完毕后，向客户机发送连接释放报文<br>23    客户机接收到报文后，发出确认，然后等待一段时间后，释放TCP连接<br>24    浏览器显示页面中所有文本</p>
 <h2 id="为什么说性能优化就要减少HTTP的访问次数"><a href="#为什么说性能优化就要减少HTTP的访问次数" class="headerlink" title="为什么说性能优化就要减少HTTP的访问次数"></a>为什么说性能优化就要减少HTTP的访问次数</h2><p>1    http请求头的数据量：每次请求都会带上一些额外的信息进行传输,所以请求越多的时候，在网络上传输的数据就会变多了，速度就变慢了<br>2    http连接的开销：从用户输入URL到看到页面，经过一系列的解析和连接，以及等待</p>

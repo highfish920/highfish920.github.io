@@ -325,7 +325,7 @@ var _hmt = _hmt || [];
     
     <div class="article-entry" itemprop="articleBody">
       
-        <h2 id="为什么TCP连接需要三次握手"><a href="#为什么TCP连接需要三次握手" class="headerlink" title="为什么TCP连接需要三次握手"></a>为什么TCP连接需要三次握手</h2><p>三次握手为了确认客户端跟服务器都能接受到对方的信息,两次的话服务器不能确认客户端能否接收自己发的包<hr>第一次握手，客户端给服务器发包。 此时服务器确认自己可以接收客户端的包，客户端不确认服务器是否接收到了自己发的包<hr>第二次握手，服务器端回复客户端。 此时客户端确认自己发的包被服务器收到，也确认自己可以正常接收服务器包，客户端对此次通信没有疑问了。服务器可以确认自己能接收到客户端的包，但不能确认客户端能否接收自己发的包<hr>第三次握手，客户端回复服务器。 客户端已经没有疑问了，服务器也确认刚刚客户端收到了自己的包。两边都没有问题，开始通信<hr>简单概括：第一次：服务端和客户端建立联系；第二次：服务器端回复客户端；第三次：客户端回复服务器</p>
+        <h2 id="为什么TCP连接需要三次握手"><a href="#为什么TCP连接需要三次握手" class="headerlink" title="为什么TCP连接需要三次握手"></a>为什么TCP连接需要三次握手</h2>
         
           <a class="article-more-a" href="/2020/08/26/%E8%AE%A1%E7%AE%97%E6%9C%BA%E7%BD%91%E7%BB%9C2/#more">more >></a>
         
@@ -445,7 +445,7 @@ var _hmt = _hmt || [];
     
     <div class="article-entry" itemprop="articleBody">
       
-        <h2 id="HTTP协议头包含哪些重要部分，HTTP状态码。"><a href="#HTTP协议头包含哪些重要部分，HTTP状态码。" class="headerlink" title="HTTP协议头包含哪些重要部分，HTTP状态码。"></a>HTTP协议头包含哪些重要部分，HTTP状态码。</h2><p>HTTP协议头包括通用头，请求头，响应头和实体头四个部分<br>200    请求已成功，请求所希望的响应头或数据体将随此响应返回<br>302    Moved Permanently（重定向）请求的URL已移走。Response中应该包含一个Location URL, 说明资源现在所处的位置<br>304    Not Modified（未修改）客户的缓存资源是最新的， 要客户端使用缓存<br>404    Not Found 未找到资源，可能是路径方面的错误<br>503    服务器目前无法为请求提供服务，但过一段时间就可以恢复服务</p>
+        <h2 id="HTTP协议头包含哪些重要部分，HTTP状态码。"><a href="#HTTP协议头包含哪些重要部分，HTTP状态码。" class="headerlink" title="HTTP协议头包含哪些重要部分，HTTP状态码。"></a>HTTP协议头包含哪些重要部分，HTTP状态码。</h2>
         
           <a class="article-more-a" href="/2020/08/26/%E8%AE%A1%E7%AE%97%E6%9C%BA%E7%BD%91%E7%BB%9C1/#more">more >></a>
         
