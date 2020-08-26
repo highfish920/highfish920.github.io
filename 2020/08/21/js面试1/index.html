@@ -9,19 +9,19 @@
   <link rel="dns-prefetch" href="http://yoursite.com">
   <title>js的基本类型，引用类型有哪些，null和undefined的区别，判断一个变量是Array类型,判断一个变量是Number类型，Object是什么类型，引用类型和基本数据类型有什么区别，堆栈关系， JS常见的DOM操作API，JS常见的DOM操作API，事件委托,事件冒泡和捕获，如何阻止冒泡,如何阻止默认事件 | highfish920的博客</title>
   <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
-  <meta name="description" content="js的基本类型，引用类型有哪些，null和undefined的区别基本数据类型：undefined,null,boolean,number,string引用数据类型：function,obiect,arrayUndefined:表示变量声明但未初始化时的值null表示准备用来保存对象，还没有真正保存对象的值。从逻辑角度看，null值表示一个空对象指针。JavaScript（ECMAScript标">
+  <meta name="description" content="js的基本类型，引用类型有哪些，null和undefined的区别">
 <meta property="og:type" content="article">
 <meta property="og:title" content="js的基本类型，引用类型有哪些，null和undefined的区别，判断一个变量是Array类型,判断一个变量是Number类型，Object是什么类型，引用类型和基本数据类型有什么区别，堆栈关系， JS常见的DOM操作API，JS常见的DOM操作API，事件委托,事件冒泡和捕获，如何阻止冒泡,如何阻止默认事件">
 <meta property="og:url" content="http://yoursite.com/2020/08/21/js%E9%9D%A2%E8%AF%951/index.html">
 <meta property="og:site_name" content="highfish920的博客">
-<meta property="og:description" content="js的基本类型，引用类型有哪些，null和undefined的区别基本数据类型：undefined,null,boolean,number,string引用数据类型：function,obiect,arrayUndefined:表示变量声明但未初始化时的值null表示准备用来保存对象，还没有真正保存对象的值。从逻辑角度看，null值表示一个空对象指针。JavaScript（ECMAScript标">
+<meta property="og:description" content="js的基本类型，引用类型有哪些，null和undefined的区别">
 <meta property="og:locale" content="zh_CN">
 <meta property="og:image" content="https://img-blog.csdnimg.cn/20200821173535939.png#pic_center">
 <meta property="og:image" content="https://img-blog.csdnimg.cn/20200821173545237.png?x-oss-process=image/watermark,type_ZmFuZ3poZW5naGVpdGk,shadow_10,text_aHR0cHM6Ly9ibG9nLmNzZG4ubmV0L3dlaXhpbl80MjY5MzcxMg==,size_16,color_FFFFFF,t_70#pic_center">
 <meta property="og:image" content="https://img-blog.csdnimg.cn/20200821173734509.png?x-oss-process=image/watermark,type_ZmFuZ3poZW5naGVpdGk,shadow_10,text_aHR0cHM6Ly9ibG9nLmNzZG4ubmV0L3dlaXhpbl80MjY5MzcxMg==,size_16,color_FFFFFF,t_70#pic_center">
 <meta property="og:image" content="https://img-blog.csdnimg.cn/20200821173743285.png?x-oss-process=image/watermark,type_ZmFuZ3poZW5naGVpdGk,shadow_10,text_aHR0cHM6Ly9ibG9nLmNzZG4ubmV0L3dlaXhpbl80MjY5MzcxMg==,size_16,color_FFFFFF,t_70#pic_center">
 <meta property="article:published_time" content="2020-08-21T10:39:35.073Z">
-<meta property="article:modified_time" content="2020-08-21T10:43:27.238Z">
+<meta property="article:modified_time" content="2020-08-26T09:12:56.192Z">
 <meta property="article:author" content="highfish">
 <meta property="article:tag" content="js基础">
 <meta name="twitter:card" content="summary">
@@ -257,8 +257,9 @@ var _hmt = _hmt || [];
     
     <div class="article-entry" itemprop="articleBody">
       
-        <a id="more"></a>
-<h2 id="js的基本类型，引用类型有哪些，null和undefined的区别"><a href="#js的基本类型，引用类型有哪些，null和undefined的区别" class="headerlink" title="js的基本类型，引用类型有哪些，null和undefined的区别"></a>js的基本类型，引用类型有哪些，null和undefined的区别</h2><p><strong>基本数据类型</strong>：undefined,null,boolean,number,string<br><strong>引用数据类型</strong>：function,obiect,array<br><strong>Undefined</strong>:表示变量声明但未初始化时的值<br><strong>null</strong>表示准备用来保存对象，还没有真正保存对象的值。从逻辑角度看，null值表示一个空对象指针。<br>JavaScript（ECMAScript标准）里共有5种基本类型：Undefined, Null, Boolean, Number, String，和一种复杂类型Object。可以看到null和undefined分属不同的类型，未初始化定义的值用typeof检测出来是”undefined”(字符串)，而null值用typeof检测出来是”object”（字符串）。任何时候都不建议显式的设置一个变量为undefined，但是如果保存对象的变量还没有真正保存对象，应该设置成null。实际上，undefined值是派生自null值的，ECMAScript标准规定对二者进行相等性测试要返回true</p>
+        <h2 id="js的基本类型，引用类型有哪些，null和undefined的区别"><a href="#js的基本类型，引用类型有哪些，null和undefined的区别" class="headerlink" title="js的基本类型，引用类型有哪些，null和undefined的区别"></a>js的基本类型，引用类型有哪些，null和undefined的区别</h2><a id="more"></a>
+
+<p><strong>基本数据类型</strong>：undefined,null,boolean,number,string<br><strong>引用数据类型</strong>：function,obiect,array<br><strong>Undefined</strong>:表示变量声明但未初始化时的值<br><strong>null</strong>表示准备用来保存对象，还没有真正保存对象的值。从逻辑角度看，null值表示一个空对象指针。<br>JavaScript（ECMAScript标准）里共有5种基本类型：Undefined, Null, Boolean, Number, String，和一种复杂类型Object。可以看到null和undefined分属不同的类型，未初始化定义的值用typeof检测出来是”undefined”(字符串)，而null值用typeof检测出来是”object”（字符串）。任何时候都不建议显式的设置一个变量为undefined，但是如果保存对象的变量还没有真正保存对象，应该设置成null。实际上，undefined值是派生自null值的，ECMAScript标准规定对二者进行相等性测试要返回true</p>
 <h2 id="判断一个变量是Array类型-判断一个变量是Number类型"><a href="#判断一个变量是Array类型-判断一个变量是Number类型" class="headerlink" title="判断一个变量是Array类型,判断一个变量是Number类型"></a>判断一个变量是Array类型,判断一个变量是Number类型</h2><p>从原型入手，Array.prototype.isPrototypeOf(obj);也可以从构造函数入手，obj instanceof Array根据对象的class属性(类属性)，跨原型链调用toString()方法。Array.isArray()方法。<br>isNaN（）是一个函数，用isNaN判断一个变量，返回一个Boolean值。若返回的值为false，则为可以转换成数字类型；返回的值是true，则不能转换成数字类型<br>Typeof () 判断</p>
 <h2 id="Object是什么类型，引用类型和基本数据类型有什么区别，堆栈关系"><a href="#Object是什么类型，引用类型和基本数据类型有什么区别，堆栈关系" class="headerlink" title="Object是什么类型，引用类型和基本数据类型有什么区别，堆栈关系"></a>Object是什么类型，引用类型和基本数据类型有什么区别，堆栈关系</h2><p>Object 是引用类型。<br><strong>基本类型：</strong>1.基本类型的值是不可变得，2.基本类型的比较是值的比较。3.基本类型的变量是存放在栈区的（栈区指内存里的栈内存）。<br><strong>引用类型：</strong>1.引用类型的值是可变的，2.引用类型的值是同时保存在栈内存和堆内存中的对象。<br><strong>引用类型与基本类型比较</strong><br>基本类型：string,number,boolean,null,undefined<br>引用类型：Function,Array,Object<br>访问方式<br>基本类型：操作和保存在变量的实际的值<br>引用类型：存在内存中，js不许直接访问内存，操作的是对象的引用<br>存储的位置<br>基本类型：保存在栈区<br>引用类型：引用存放在栈区，实际对象保存在堆区。</p>
 <center>保存在栈区</center>

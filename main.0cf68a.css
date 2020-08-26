@@ -868,13 +868,13 @@ button,
 input,
 select,
 textarea {
-  color: #1a1a1a;
+  /* color: #1a1a1a; */
   font-family: lucida grande, lucida sans unicode, lucida, helvetica, Hiragino Sans GB, Microsoft YaHei, WenQuanYi Micro Hei, sans-serif;
   font-size: 16px;
   font-size: 1rem;
   line-height: 1.75;
   font-weight: bold;
-  color:#4ed2d6;
+  color:#000;
 }
 
 body {
@@ -963,7 +963,7 @@ html {
 }
 
 .left-col #header a {
-  color: #4ed2d6
+  color: rgb(43, 255, 0)
 }
 
 .left-col #header a:hover {
@@ -1005,11 +1005,11 @@ html {
   min-width: 300px;
   font-size: large;
   font-weight: bold;
-  color:#4ed2d6;
+  color:#00f7ff;
   opacity: .8;
 }
 .left-col #header .header-menu li a:hover{
-  color:#51ed4b;
+  color:#48ff00;
   opacity: 1;
 }
 
