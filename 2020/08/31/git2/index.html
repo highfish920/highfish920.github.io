@@ -28,7 +28,7 @@
 <meta property="og:image" content="https://img-blog.csdnimg.cn/202008311727484.png#pic_center">
 <meta property="og:image" content="https://img-blog.csdnimg.cn/20200831172955638.png?x-oss-process=image/watermark,type_ZmFuZ3poZW5naGVpdGk,shadow_10,text_aHR0cHM6Ly9ibG9nLmNzZG4ubmV0L3dlaXhpbl80MjY5MzcxMg==,size_16,color_FFFFFF,t_70#pic_center">
 <meta property="article:published_time" content="2020-08-31T09:36:52.809Z">
-<meta property="article:modified_time" content="2020-08-31T10:17:09.819Z">
+<meta property="article:modified_time" content="2020-08-31T10:59:55.408Z">
 <meta property="article:author" content="highfish">
 <meta property="article:tag" content="git">
 <meta name="twitter:card" content="summary">
@@ -266,7 +266,6 @@ var _hmt = _hmt || [];
       
         <h2 id="拉取远端代码：使用Git命令下载远程仓库到本地"><a href="#拉取远端代码：使用Git命令下载远程仓库到本地" class="headerlink" title="拉取远端代码：使用Git命令下载远程仓库到本地"></a>拉取远端代码：使用Git命令下载远程仓库到本地</h2><a id="more"></a>
 
-
 <h3 id="1-创建远程代码仓库"><a href="#1-创建远程代码仓库" class="headerlink" title="1. 创建远程代码仓库"></a>1. 创建远程代码仓库</h3><h4 id="1-1-在github或者码云注册账号并且创建仓库（实例github）"><a href="#1-1-在github或者码云注册账号并且创建仓库（实例github）" class="headerlink" title="1.1 在github或者码云注册账号并且创建仓库（实例github）"></a>1.1 在github或者码云注册账号并且创建仓库（实例github）</h4><p>注册过程不再演示</p>
 <h5 id="1-1-1-点击new即可"><a href="#1-1-1-点击new即可" class="headerlink" title="1.1.1 点击new即可"></a>1.1.1 点击new即可<img src="https://img-blog.csdnimg.cn/20200831165911624.png?x-oss-process=image/watermark,type_ZmFuZ3poZW5naGVpdGk,shadow_10,text_aHR0cHM6Ly9ibG9nLmNzZG4ubmV0L3dlaXhpbl80MjY5MzcxMg==,size_16,color_FFFFFF,t_70#pic_center" alt="在这里插入图片描述"></h5><h5 id="1-1-2-输入仓库名称及介绍点击确定即可"><a href="#1-1-2-输入仓库名称及介绍点击确定即可" class="headerlink" title="1.1.2 输入仓库名称及介绍点击确定即可"></a>1.1.2 输入仓库名称及介绍点击确定即可<img src="https://img-blog.csdnimg.cn/20200831170006169.png?x-oss-process=image/watermark,type_ZmFuZ3poZW5naGVpdGk,shadow_10,text_aHR0cHM6Ly9ibG9nLmNzZG4ubmV0L3dlaXhpbl80MjY5MzcxMg==,size_16,color_FFFFFF,t_70#pic_center" alt="在这里插入图片描述"></h5><p>创建好之后 复制地址<br><img src="https://img-blog.csdnimg.cn/20200831170411722.png?x-oss-process=image/watermark,type_ZmFuZ3poZW5naGVpdGk,shadow_10,text_aHR0cHM6Ly9ibG9nLmNzZG4ubmV0L3dlaXhpbl80MjY5MzcxMg==,size_16,color_FFFFFF,t_70#pic_center" alt="在这里插入图片描述"></p>
 <p>建立远程仓库之后，默认里面有几个文件；接下来我们通过 git 的命令将远程仓库拉取到本地，一般会提供 HTTP 协议和 SSH 两种协议提供管理，两种协议所使用的鉴权方式不同，下面我们将两种方法都实践一次；</p>
@@ -294,8 +293,8 @@ var _hmt = _hmt || [];
 <h3 id="3-SSH拉取"><a href="#3-SSH拉取" class="headerlink" title="3.SSH拉取"></a>3.SSH拉取</h3><h4 id="3-1-1-拉取代码"><a href="#3-1-1-拉取代码" class="headerlink" title="3.1.1 拉取代码"></a>3.1.1 拉取代码</h4><p>现在我们再来看看SSH方式，相比HTTP(S)来说更加安全,因为SSH方式使用的是非对称加密，采用公钥与私钥的方式，不过相对来说配置起来会麻烦一些；好处是一次配置之后，后续不需要每次都进行认证，也更加安全。<br>ssh 方式首次拉取代码的命令没有什么变化，相比来说只是远程地址有变化，如下命令所示<br><img src="https://img-blog.csdnimg.cn/20200831171337935.png?x-oss-process=image/watermark,type_ZmFuZ3poZW5naGVpdGk,shadow_10,text_aHR0cHM6Ly9ibG9nLmNzZG4ubmV0L3dlaXhpbl80MjY5MzcxMg==,size_16,color_FFFFFF,t_70#pic_center" alt="在这里插入图片描述"></p>
 <figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">git <span class="built_in">clone</span> git@github.com:highfish920/text-git.git  git-text-ssh</span><br></pre></td></tr></table></figure>
 <p>可以看到成功了<br><img src="https://img-blog.csdnimg.cn/20200831171505877.png?x-oss-process=image/watermark,type_ZmFuZ3poZW5naGVpdGk,shadow_10,text_aHR0cHM6Ly9ibG9nLmNzZG4ubmV0L3dlaXhpbl80MjY5MzcxMg==,size_16,color_FFFFFF,t_70#pic_center" alt="在这里插入图片描述"></p>
-<h4 id="3-1-2-创建一个ssh-key（github）"><a href="#3-1-2-创建一个ssh-key（github）" class="headerlink" title="3.1.2 创建一个ssh key（github）"></a>3.1.2 创建一个ssh key（github）</h4><p><strong>如果没有拉取成功的原因是没有配置公钥与私钥的话</strong><br>通过 ssh 协议拉取代码首先要保证当前用户的主目录存在一个.ssh的文件夹，并且里面已经存在私钥文件，如果没有的话我们可以通过<code>ssh-keygen</code>，生成一份公钥与私钥，如下命令所示<br>直接回车，输入y，接着回车<br><img src="https://img-blog.csdnimg.cn/20200831171900256.png?x-oss-process=image/watermark,type_ZmFuZ3poZW5naGVpdGk,shadow_10,text_aHR0cHM6Ly9ibG9nLmNzZG4ubmV0L3dlaXhpbl80MjY5MzcxMg==,size_16,color_FFFFFF,t_70#pic_center" alt="在这里插入图片描述"><br>其中这两个地址分别保存了秘钥与公钥<br><img src="https://img-blog.csdnimg.cn/20200831172433386.png#pic_center" alt="在这里插入图片描述"><br>接下来复制公钥<br>打开github，点击头像下面的settings<br><img src="https://img-blog.csdnimg.cn/202008311727484.png#pic_center" alt="在这里插入图片描述"><br>然后点击SSH那个，点击new GPG key 粘贴公钥即可，其中的Title随便写（这里原先配置过，所以有一个）<br><img src="https://img-blog.csdnimg.cn/20200831172955638.png?x-oss-process=image/watermark,type_ZmFuZ3poZW5naGVpdGk,shadow_10,text_aHR0cHM6Ly9ibG9nLmNzZG4ubmV0L3dlaXhpbl80MjY5MzcxMg==,size_16,color_FFFFFF,t_70#pic_center" alt="在这里插入图片描述"><br>配置成功后在尝试拉取代码即可</p>
-<h4 id="3-1-3-创建一个ssh-key（码云）"><a href="#3-1-3-创建一个ssh-key（码云）" class="headerlink" title="3.1.3 创建一个ssh key（码云）"></a>3.1.3 创建一个ssh key（码云）</h4><p>当确认公钥和私钥生成完毕之后，我们还需要将公钥放到远程的 git 仓库中去，在码云的版本库中，右上角有一个管理，在管理页面的左侧菜单中有一个添加公钥的选项，我们将上面的公钥内容复制进去即可</p>
+<h4 id="3-1-2-创建一个ssh-key（github）"><a href="#3-1-2-创建一个ssh-key（github）" class="headerlink" title="3.1.2 创建一个ssh key（github）"></a>3.1.2 创建一个ssh key（github）</h4><p><strong>如果没有拉取成功的原因是没有配置公钥与私钥的话</strong><br>通过 ssh 协议拉取代码首先要保证当前用户的主目录存在一个.ssh的文件夹，并且里面已经存在私钥文件，如果没有的话我们可以通过<code>ssh-keygen</code>，生成一份公钥与私钥，如下命令所示<br>直接回车，输入y，接着回车<br><img src="https://img-blog.csdnimg.cn/20200831171900256.png?x-oss-process=image/watermark,type_ZmFuZ3poZW5naGVpdGk,shadow_10,text_aHR0cHM6Ly9ibG9nLmNzZG4ubmV0L3dlaXhpbl80MjY5MzcxMg==,size_16,color_FFFFFF,t_70#pic_center" alt="在这里插入图片描述"><br>其中这两个地址分别保存了秘钥与公钥<br><img src="https://img-blog.csdnimg.cn/20200831172433386.png#pic_center" alt="在这里插入图片描述"><br>接下来复制公钥（重新生成之后会覆盖原先的公钥，需要github和码云重新配置）<br>打开github，点击头像下面的settings<br><img src="https://img-blog.csdnimg.cn/202008311727484.png#pic_center" alt="在这里插入图片描述"><br>然后点击SSH那个，点击new GPG key 粘贴公钥即可，其中的Title随便写（这里原先配置过，所以有一个）<br><img src="https://img-blog.csdnimg.cn/20200831172955638.png?x-oss-process=image/watermark,type_ZmFuZ3poZW5naGVpdGk,shadow_10,text_aHR0cHM6Ly9ibG9nLmNzZG4ubmV0L3dlaXhpbl80MjY5MzcxMg==,size_16,color_FFFFFF,t_70#pic_center" alt="在这里插入图片描述"><br>配置成功后在尝试拉取代码即可</p>
+<h4 id="3-1-3-创建一个ssh-key（码云）"><a href="#3-1-3-创建一个ssh-key（码云）" class="headerlink" title="3.1.3 创建一个ssh key（码云）"></a>3.1.3 创建一个ssh key（码云）</h4><p>当确认公钥和私钥生成完毕之后，我们还需要将公钥放到远程的 git 仓库中去，在码云的版本库中，个人设置》安全》ssh公钥，在管理页面的左侧菜单中有一个添加公钥的选项，我们将上面的公钥内容复制进去即可</p>
 <h4 id="3-1-4-更新代码"><a href="#3-1-4-更新代码" class="headerlink" title="3.1.4 更新代码"></a>3.1.4 更新代码</h4><p>ssh 方式更新代码命令和上面的 http 方式拉取代码命令一致，同样需要在 git-text-ssh目录下执行命令：git pull，然后可以看到git成功的拉取到了代码<br>本文整理自 <a target="_blank" rel="noopener" href="http://www.imooc.com/read/51">http://www.imooc.com/read/51</a></p>
 
       
@@ -658,19 +657,19 @@ return o(i(t),arguments.length<2?void 0:u(arguments[1]))}})},function(t,n,r){var
               </li>
              
               <li class="article-tag-list-item">
-                <a href="javascript:void(0)" class="js-tag color4">CDN</a>
-              </li>
-             
-              <li class="article-tag-list-item">
                 <a href="javascript:void(0)" class="js-tag color5">ajax</a>
               </li>
              
               <li class="article-tag-list-item">
-                <a href="javascript:void(0)" class="js-tag color4">dom</a>
+                <a href="javascript:void(0)" class="js-tag color4">git</a>
               </li>
              
               <li class="article-tag-list-item">
-                <a href="javascript:void(0)" class="js-tag color4">git</a>
+                <a href="javascript:void(0)" class="js-tag color4">CDN</a>
+              </li>
+             
+              <li class="article-tag-list-item">
+                <a href="javascript:void(0)" class="js-tag color4">dom</a>
               </li>
              
               <li class="article-tag-list-item">
