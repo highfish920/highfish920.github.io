@@ -1,3 +1,5 @@
+http://yoursite.com/2020/09/05/%E4%BB%A3%E7%90%86%E6%A8%A1%E5%BC%8F/
+http://yoursite.com/2020/09/05/%E5%8D%95%E4%BE%8B%E6%A8%A1%E5%BC%8F/
 http://yoursite.com/2020/09/04/%E5%B7%A5%E5%8E%82%E6%A8%A1%E5%BC%8F/
 http://yoursite.com/2020/08/31/git4/
 http://yoursite.com/2020/08/31/git3/
@@ -16,5 +18,3 @@ http://yoursite.com/2020/08/27/%E6%B5%8F%E8%A7%88%E5%99%A8%E7%9B%B8%E5%85%B32/
 http://yoursite.com/2020/08/27/%E6%B5%8F%E8%A7%88%E5%99%A8%E7%9B%B8%E5%85%B3/
 http://yoursite.com/2020/08/26/%E8%AE%A1%E7%AE%97%E6%9C%BA%E7%BD%91%E7%BB%9C2/
 http://yoursite.com/2020/08/26/%E8%AE%A1%E7%AE%97%E6%9C%BA%E7%BD%91%E7%BB%9C1/
-http://yoursite.com/2020/08/25/Promise%E5%A6%82%E4%BD%95%E5%B0%81%E8%A3%85%E4%B8%80%E4%B8%AAAJAX/
-http://yoursite.com/2020/08/25/ES6%E7%89%B9%E6%80%A7/
