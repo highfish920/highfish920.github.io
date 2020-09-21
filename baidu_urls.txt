@@ -1,3 +1,5 @@
+http://yoursite.com/2020/09/21/oracle%E5%8D%B8%E8%BD%BD/
+http://yoursite.com/2020/09/21/oracle%E5%AE%89%E8%A3%85/
 http://yoursite.com/2020/09/19/linux5/
 http://yoursite.com/2020/09/16/linux4/
 http://yoursite.com/2020/09/16/linux3/
@@ -16,5 +18,3 @@ http://yoursite.com/2020/08/30/seo/
 http://yoursite.com/2020/08/30/dom%E4%BC%98%E5%8C%96/
 http://yoursite.com/2020/08/30/cdn/
 http://yoursite.com/2020/08/30/%E6%95%B0%E6%8D%AE%E7%BB%93%E6%9E%84/
-http://yoursite.com/2020/08/29/%E6%A1%86%E6%9E%B6/
-http://yoursite.com/2020/08/28/java-%E6%B7%B1%E6%8B%B7%E8%B4%9D%E6%B5%85%E6%8B%B7%E8%B4%9D/
