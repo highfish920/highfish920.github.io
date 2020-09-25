@@ -1,3 +1,5 @@
+http://yoursite.com/2020/09/25/linux7/
+http://yoursite.com/2020/09/25/linux6/
 http://yoursite.com/2020/09/23/css1/
 http://yoursite.com/2020/09/21/oracle%E5%8D%B8%E8%BD%BD/
 http://yoursite.com/2020/09/21/oracle%E5%AE%89%E8%A3%85/
@@ -16,5 +18,3 @@ http://yoursite.com/2020/08/31/git3/
 http://yoursite.com/2020/08/31/git2/
 http://yoursite.com/2020/08/31/git1/
 http://yoursite.com/2020/08/30/seo/
-http://yoursite.com/2020/08/30/dom%E4%BC%98%E5%8C%96/
-http://yoursite.com/2020/08/30/cdn/
