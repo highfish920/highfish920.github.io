@@ -1,3 +1,4 @@
+http://yoursite.com/2020/09/26/echarts/
 http://yoursite.com/2020/09/25/linux7/
 http://yoursite.com/2020/09/25/linux6/
 http://yoursite.com/2020/09/23/css1/
@@ -17,4 +18,3 @@ http://yoursite.com/2020/08/31/git4/
 http://yoursite.com/2020/08/31/git3/
 http://yoursite.com/2020/08/31/git2/
 http://yoursite.com/2020/08/31/git1/
-http://yoursite.com/2020/08/30/seo/

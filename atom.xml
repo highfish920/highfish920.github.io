@@ -6,7 +6,7 @@
   <link href="http://yoursite.com/atom.xml" rel="self"/>
   
   <link href="http://yoursite.com/"/>
-  <updated>2020-09-25T13:36:47.332Z</updated>
+  <updated>2020-09-26T14:05:52.511Z</updated>
   <id>http://yoursite.com/</id>
   
   <author>
@@ -15,6 +15,27 @@
   </author>
   
   <generator uri="https://hexo.io/">Hexo</generator>
+  
+  <entry>
+    <title>ECharts数据可视化项目</title>
+    <link href="http://yoursite.com/2020/09/26/echarts/"/>
+    <id>http://yoursite.com/2020/09/26/echarts/</id>
+    <published>2020-09-26T14:05:14.241Z</published>
+    <updated>2020-09-26T14:05:52.511Z</updated>
+    
+    <content type="html"><![CDATA[<h4 id="学习视频：https-www-bilibili-com-video-BV1v7411R7mp-p-1"><a href="#学习视频：https-www-bilibili-com-video-BV1v7411R7mp-p-1" class="headerlink" title="学习视频：https://www.bilibili.com/video/BV1v7411R7mp?p=1"></a>学习视频：<a href="https://www.bilibili.com/video/BV1v7411R7mp?p=1">https://www.bilibili.com/video/BV1v7411R7mp?p=1</a></h4><p>个人博客：<a href="https://highfish920.github.io/">https://highfish920.github.io/</a><br>代码地址：<a href="https://github.com/highfish920/ECharts-">https://github.com/highfish920/ECharts-</a></p><a id="more"></a><p>项目展示<img src="https://img-blog.csdnimg.cn/20200926220304486.png?x-oss-process=image/watermark,type_ZmFuZ3poZW5naGVpdGk,shadow_10,text_aHR0cHM6Ly9ibG9nLmNzZG4ubmV0L3dlaXhpbl80MjY5MzcxMg==,size_16,color_FFFFFF,t_70#pic_center" alt="在这里插入图片描述"></p>]]></content>
+    
+    
+    <summary type="html">&lt;h4 id=&quot;学习视频：https-www-bilibili-com-video-BV1v7411R7mp-p-1&quot;&gt;&lt;a href=&quot;#学习视频：https-www-bilibili-com-video-BV1v7411R7mp-p-1&quot; class=&quot;headerlink&quot; title=&quot;学习视频：https://www.bilibili.com/video/BV1v7411R7mp?p=1&quot;&gt;&lt;/a&gt;学习视频：&lt;a href=&quot;https://www.bilibili.com/video/BV1v7411R7mp?p=1&quot;&gt;https://www.bilibili.com/video/BV1v7411R7mp?p=1&lt;/a&gt;&lt;/h4&gt;&lt;p&gt;个人博客：&lt;a href=&quot;https://highfish920.github.io/&quot;&gt;https://highfish920.github.io/&lt;/a&gt;&lt;br&gt;代码地址：&lt;a href=&quot;https://github.com/highfish920/ECharts-&quot;&gt;https://github.com/highfish920/ECharts-&lt;/a&gt;&lt;/p&gt;</summary>
+    
+    
+    
+    <category term="ECharts" scheme="http://yoursite.com/categories/ECharts/"/>
+    
+    
+    <category term="ECharts" scheme="http://yoursite.com/tags/ECharts/"/>
+    
+  </entry>
   
   <entry>
     <title>linux--基于linux搭建hadoop开发环境</title>
@@ -412,27 +433,6 @@
     
     
     <category term="git" scheme="http://yoursite.com/tags/git/"/>
-    
-  </entry>
-  
-  <entry>
-    <title>单页面应用有什么SEO方案</title>
-    <link href="http://yoursite.com/2020/08/30/seo/"/>
-    <id>http://yoursite.com/2020/08/30/seo/</id>
-    <published>2020-08-30T08:44:02.195Z</published>
-    <updated>2020-08-30T08:44:34.619Z</updated>
-    
-    <content type="html"><![CDATA[<h2 id="单页面应用有什么SEO方案"><a href="#单页面应用有什么SEO方案" class="headerlink" title="单页面应用有什么SEO方案"></a>单页面应用有什么SEO方案</h2><a id="more"></a><p>1    前端要采用history模式（HTML5 History API），一般用来写单页应用的框架都有这个模式。<br>2    要用后端做一套页面，内容和对应的前端页面一模一样，即所谓静态化，我用的sails框架即可实现这一点，主流的如Node.js的express框架也可以，php应该也行。<br>3    必须用nginx做代理跳转，将搜索引擎识别出后流量引到后端的端口上，看到预先渲染给搜索引擎看的页面，还有history模式自带的404问题也需要在nginx里将404转index.html或者rewrite才可以<br><strong>原因：</strong> 较之于传统页面，单页应用需要先下载框架（数据 / 模板），然后才能开始加载数据<br>方案：<br>1    服务器端渲染首屏（SSR基于vue的服务端下载）<br>2    让服务端把首屏的数据渲染在页面上<br>3    进行基本的css 模板 js的编译合并<br>4    减少请求次数，使用gulp工具，把 css 打包成一个文件, js打包成一个文件, 模板打包成一个js文件($templateCache) 可以和js 文件打包成一起（促使模板JS文件和JS文件一次性请求）<br>5    代码分块，如果首屏不需要的块，就不用加载了<br>6    路由组件懒加载。当打包构建应用时，Javascript 包会变得非常大，影响页面加载。如果我们能把不同路由对应的组件分割成不同的代码块，然后当路由被访问的时候才加载对应组件，这样更加高效。<br>7    如果有大量图片使用懒加载</p>]]></content>
-    
-    
-    <summary type="html">&lt;h2 id=&quot;单页面应用有什么SEO方案&quot;&gt;&lt;a href=&quot;#单页面应用有什么SEO方案&quot; class=&quot;headerlink&quot; title=&quot;单页面应用有什么SEO方案&quot;&gt;&lt;/a&gt;单页面应用有什么SEO方案&lt;/h2&gt;</summary>
-    
-    
-    
-    <category term="性能优化" scheme="http://yoursite.com/categories/%E6%80%A7%E8%83%BD%E4%BC%98%E5%8C%96/"/>
-    
-    
-    <category term="SEO" scheme="http://yoursite.com/tags/SEO/"/>
     
   </entry>
   
