@@ -7,17 +7,15 @@
   <meta name="renderer" content="webkit">
   <meta http-equiv="X-UA-Compatible" content="IE=edge">
   <link rel="dns-prefetch" href="http://yoursite.com">
-  <title>maven基础 | highfish920的博客</title>
+  <title>Archives: 2020/10 | highfish920的博客</title>
   <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
-  <meta name="description" content="maven基础">
-<meta property="og:type" content="article">
-<meta property="og:title" content="maven基础">
-<meta property="og:url" content="http://yoursite.com/2020/08/12/maven%E9%AB%98%E7%BA%A7%E4%BB%A5%E5%8F%8Amaven%E9%A1%B9%E7%9B%AE%E6%95%B4%E5%90%88ssm%E6%A1%86%E6%9E%B6pom.xml%E9%9C%80%E8%A6%81%E5%AF%BC%E5%85%A5%E7%9A%84jar%E5%8C%85/index.html">
+  <meta name="description" content="让编程擦出爱的火花">
+<meta property="og:type" content="website">
+<meta property="og:title" content="highfish920的博客">
+<meta property="og:url" content="http://yoursite.com/archives/2020/10/index.html">
 <meta property="og:site_name" content="highfish920的博客">
-<meta property="og:description" content="maven基础">
+<meta property="og:description" content="让编程擦出爱的火花">
 <meta property="og:locale" content="zh_CN">
-<meta property="article:published_time" content="2020-08-12T11:43:07.450Z">
-<meta property="article:modified_time" content="2020-08-14T09:53:04.012Z">
 <meta property="article:author" content="highfish">
 <meta name="twitter:card" content="summary">
   
@@ -209,132 +207,48 @@ var _hmt = _hmt || [];
           </div>
           <div id="js-content" class="content-ll">
             
-  <article id="post-maven高级以及maven项目整合ssm框架pom.xml需要导入的jar包" class="article article-type-post " itemscope itemprop="blogPost">
-  <div class="article-inner">
-    
-      <header class="article-header">
-        
   
-    <h1 class="article-title" itemprop="name">
-      maven基础
+  
+    
+    
+      
+      
+      <section class="archives-wrap">
+        <div class="archive-year-wrap">
+          <a href="/archives/2020" class="archive-year">2020</a>
+        </div>
+        <div class="archives">
+    
+    <article class="archive-article archive-type-post">
+  <div class="archive-article-inner">
+    <header class="archive-article-header">
+      	<div class="article-meta">
+	      	
+<a href="/2020/10/03/Eclipse&IDEA%E4%B8%ADMaven%E5%92%8CGit%E5%BF%AB%E9%80%9F%E9%85%8D%E7%BD%AE%E5%8F%8A%E4%BD%BF%E7%94%A8/" class="archive-article-date">
+  	<time datetime="2020-10-03T15:13:02.428Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2020-10-03</time>
+</a>
+        </div>
+    	 
+  
+    <h1 itemprop="name">
+      <a class="archive-article-title" href="/2020/10/03/Eclipse&IDEA%E4%B8%ADMaven%E5%92%8CGit%E5%BF%AB%E9%80%9F%E9%85%8D%E7%BD%AE%E5%8F%8A%E4%BD%BF%E7%94%A8/">Eclipse&amp;IDEA中Maven和Git快速配置及使用</a>
     </h1>
   
 
-        <!--显示阅读次数-->
-
-  <br/>
-  <a class="cloud-tie-join-count" href="javascript:void(0);" style="color:gray;font-size:14px;">
-  <span class="icon-sort"></span>
-  <span id="busuanzi_container_page_pv" style="color:#ef7522;font-size:14px;">
-            阅读数: <span id="busuanzi_value_page_pv"></span>次 &nbsp;&nbsp;
-            字数：1.8k字 | 预计阅读时长：9分钟
-  </span>
-  </a>
-
-<!--显示阅读次数完毕-->
-
-
-
-        
-        
-	<!-- 不蒜子统计 -->
-	<span id="busuanzi_container_page_pv" style='display:none' class="archive-article-date">
-		  <i class="icon-smile icon"></i> 阅读数：<span id="busuanzi_value_page_pv"></span>次
-	</span>
-
-<a href="/2020/08/12/maven%E9%AB%98%E7%BA%A7%E4%BB%A5%E5%8F%8Amaven%E9%A1%B9%E7%9B%AE%E6%95%B4%E5%90%88ssm%E6%A1%86%E6%9E%B6pom.xml%E9%9C%80%E8%A6%81%E5%AF%BC%E5%85%A5%E7%9A%84jar%E5%8C%85/" class="archive-article-date">
-  	<time datetime="2020-08-12T11:43:07.450Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2020-08-12</time>
-</a>
-        
-      </header>
-      
-    
-    <div class="article-entry" itemprop="articleBody">
-      
-        <h2 id="maven基础"><a href="#maven基础" class="headerlink" title="maven基础"></a>maven基础</h2><a id="more"></a>
-<p>介绍了maven基础以及maven项目整合ssm框架pom.xml需要导入的jar包（已解决jar包冲突问题）</p>
-<p><strong>maven是一个项目管理工具</strong>  <strong>依赖管理</strong>  ：<br>    1.maven对项目中jar包的管理过程。传统工程里面我们直接把jar包放置在项目里面<br>  2.maven工程真正的jar包放置在仓库中，项目中只用防止jar包的坐标<br> <strong>仓库的种类</strong>：本地仓库 远程仓库  中央仓库（联网即可）<br> <strong>仓库之间的关系</strong>：当我们启动一个maven工程的时候，maven会通过pom文见中去本地仓库找jar包，如果本地没有，去中央仓库下载，如果本地还没有，从私服下载，如果没有私服，可以从中央仓库下载，也可以从本地上传。<br><strong>一键构建</strong>：maven自身集成了tomcat插件，可以对项目进行编译，测试，安装，发布等操作<br><strong>maven常用命令</strong>：clean,compile,test,package,install,deploy.<br><strong>maven三套生命周期</strong>：清理生命周期，默认生命周期，站点生命周期。<br><strong>maven解决jar包冲突问题1</strong>：第一申明优先原则，那个靠上就是哪个申明的，先申明jar包下面的依赖包，可以优先进入项目中。<br><strong>maven解决jar包冲突问题2</strong>：直接依赖：项目里面直接导入的jar包就是直接依赖包。传递依赖：就是项目中没有直接导入的包通过直接以来jar包传递到项目中。路劲近者优先原则：直接依赖比传递依赖近。<br><strong>maven解决jar包冲突问题3（推荐）</strong>：当我们要排除jar包下面的依赖包的时候，在配置exclusion标签的时候，可以不写版本号，因为此时使用的和默认版本一样<br><strong>ssm三大框架结合pom.xml需要导入的包，已经解决冲突问题，可以直接使用</strong></p>
-<figure class="highlight"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br><span class="line">32</span><br><span class="line">33</span><br><span class="line">34</span><br><span class="line">35</span><br><span class="line">36</span><br><span class="line">37</span><br><span class="line">38</span><br><span class="line">39</span><br><span class="line">40</span><br><span class="line">41</span><br><span class="line">42</span><br><span class="line">43</span><br><span class="line">44</span><br><span class="line">45</span><br><span class="line">46</span><br><span class="line">47</span><br><span class="line">48</span><br><span class="line">49</span><br><span class="line">50</span><br><span class="line">51</span><br><span class="line">52</span><br><span class="line">53</span><br><span class="line">54</span><br><span class="line">55</span><br><span class="line">56</span><br><span class="line">57</span><br><span class="line">58</span><br><span class="line">59</span><br><span class="line">60</span><br><span class="line">61</span><br><span class="line">62</span><br><span class="line">63</span><br><span class="line">64</span><br><span class="line">65</span><br><span class="line">66</span><br><span class="line">67</span><br><span class="line">68</span><br><span class="line">69</span><br><span class="line">70</span><br><span class="line">71</span><br><span class="line">72</span><br><span class="line">73</span><br><span class="line">74</span><br><span class="line">75</span><br><span class="line">76</span><br><span class="line">77</span><br><span class="line">78</span><br><span class="line">79</span><br><span class="line">80</span><br><span class="line">81</span><br><span class="line">82</span><br><span class="line">83</span><br><span class="line">84</span><br><span class="line">85</span><br><span class="line">86</span><br><span class="line">87</span><br><span class="line">88</span><br><span class="line">89</span><br><span class="line">90</span><br><span class="line">91</span><br><span class="line">92</span><br><span class="line">93</span><br><span class="line">94</span><br><span class="line">95</span><br><span class="line">96</span><br><span class="line">97</span><br><span class="line">98</span><br><span class="line">99</span><br><span class="line">100</span><br><span class="line">101</span><br><span class="line">102</span><br><span class="line">103</span><br><span class="line">104</span><br><span class="line">105</span><br><span class="line">106</span><br><span class="line">107</span><br><span class="line">108</span><br><span class="line">109</span><br><span class="line">110</span><br><span class="line">111</span><br><span class="line">112</span><br><span class="line">113</span><br><span class="line">114</span><br><span class="line">115</span><br><span class="line">116</span><br><span class="line">117</span><br><span class="line">118</span><br><span class="line">119</span><br><span class="line">120</span><br><span class="line">121</span><br><span class="line">122</span><br><span class="line">123</span><br><span class="line">124</span><br><span class="line">125</span><br><span class="line">126</span><br><span class="line">127</span><br><span class="line">128</span><br><span class="line">129</span><br><span class="line">130</span><br><span class="line">131</span><br><span class="line">132</span><br><span class="line">133</span><br><span class="line">134</span><br><span class="line">135</span><br><span class="line">136</span><br><span class="line">137</span><br><span class="line">138</span><br><span class="line">139</span><br><span class="line">140</span><br><span class="line">141</span><br><span class="line">142</span><br><span class="line">143</span><br><span class="line">144</span><br><span class="line">145</span><br><span class="line">146</span><br><span class="line">147</span><br><span class="line">148</span><br><span class="line">149</span><br><span class="line">150</span><br><span class="line">151</span><br><span class="line">152</span><br><span class="line">153</span><br><span class="line">154</span><br><span class="line">155</span><br><span class="line">156</span><br><span class="line">157</span><br><span class="line">158</span><br><span class="line">159</span><br><span class="line">160</span><br><span class="line">161</span><br><span class="line">162</span><br><span class="line">163</span><br><span class="line">164</span><br><span class="line">165</span><br><span class="line">166</span><br><span class="line">167</span><br><span class="line">168</span><br><span class="line">169</span><br><span class="line">170</span><br><span class="line">171</span><br><span class="line">172</span><br><span class="line">173</span><br><span class="line">174</span><br><span class="line">175</span><br><span class="line">176</span><br><span class="line">177</span><br><span class="line">178</span><br><span class="line">179</span><br><span class="line">180</span><br><span class="line">181</span><br><span class="line">182</span><br><span class="line">183</span><br><span class="line">184</span><br><span class="line">185</span><br><span class="line">186</span><br><span class="line">187</span><br><span class="line">188</span><br><span class="line">189</span><br><span class="line">190</span><br><span class="line">191</span><br><span class="line">192</span><br><span class="line">193</span><br><span class="line">194</span><br><span class="line">195</span><br><span class="line">196</span><br><span class="line">197</span><br><span class="line">198</span><br><span class="line">199</span><br><span class="line">200</span><br><span class="line">201</span><br><span class="line">202</span><br><span class="line">203</span><br><span class="line">204</span><br><span class="line">205</span><br><span class="line">206</span><br><span class="line">207</span><br><span class="line">208</span><br></pre></td><td class="code"><pre><span class="line">&lt;!-- 统一管理jar包版本 --&gt;</span><br><span class="line">&lt;properties&gt;</span><br><span class="line">    &lt;spring.version&gt;5.0.2.RELEASE&lt;/spring.version&gt;</span><br><span class="line">    &lt;slf4j.version&gt;1.6.6&lt;/slf4j.version&gt;</span><br><span class="line">    &lt;log4j.version&gt;1.2.12&lt;/log4j.version&gt;</span><br><span class="line">    &lt;shiro.version&gt;1.2.3&lt;/shiro.version&gt;</span><br><span class="line">    &lt;mysql.version&gt;5.1.6&lt;/mysql.version&gt;</span><br><span class="line">    &lt;mybatis.version&gt;3.4.5&lt;/mybatis.version&gt;</span><br><span class="line">    &lt;spring.security.version&gt;5.0.1.RELEASE&lt;/spring.security.version&gt;</span><br><span class="line">&lt;/properties&gt;</span><br><span class="line"></span><br><span class="line">&lt;!-- 锁定jar包版本 --&gt;</span><br><span class="line">&lt;dependencyManagement&gt;</span><br><span class="line">    &lt;dependencies&gt;</span><br><span class="line">        &lt;dependency&gt;</span><br><span class="line">            &lt;groupId&gt;org.springframework&lt;/groupId&gt;</span><br><span class="line">            &lt;artifactId&gt;spring-context&lt;/artifactId&gt;</span><br><span class="line">            &lt;version&gt;$&#123;spring.version&#125;&lt;/version&gt;</span><br><span class="line">        &lt;/dependency&gt;</span><br><span class="line">        &lt;dependency&gt;</span><br><span class="line">            &lt;groupId&gt;org.springframework&lt;/groupId&gt;</span><br><span class="line">            &lt;artifactId&gt;spring-web&lt;/artifactId&gt;</span><br><span class="line">            &lt;version&gt;$&#123;spring.version&#125;&lt;/version&gt;</span><br><span class="line">        &lt;/dependency&gt;</span><br><span class="line">        &lt;dependency&gt;</span><br><span class="line">            &lt;groupId&gt;org.springframework&lt;/groupId&gt;</span><br><span class="line">            &lt;artifactId&gt;spring-webmvc&lt;/artifactId&gt;</span><br><span class="line">            &lt;version&gt;$&#123;spring.version&#125;&lt;/version&gt;</span><br><span class="line">        &lt;/dependency&gt;</span><br><span class="line">        &lt;dependency&gt;</span><br><span class="line">            &lt;groupId&gt;org.springframework&lt;/groupId&gt;</span><br><span class="line">            &lt;artifactId&gt;spring-tx&lt;/artifactId&gt;</span><br><span class="line">            &lt;version&gt;$&#123;spring.version&#125;&lt;/version&gt;</span><br><span class="line">        &lt;/dependency&gt;</span><br><span class="line">        &lt;dependency&gt;</span><br><span class="line">            &lt;groupId&gt;org.springframework&lt;/groupId&gt;</span><br><span class="line">            &lt;artifactId&gt;spring-test&lt;/artifactId&gt;</span><br><span class="line">            &lt;version&gt;$&#123;spring.version&#125;&lt;/version&gt;</span><br><span class="line">        &lt;/dependency&gt;</span><br><span class="line">        &lt;dependency&gt;</span><br><span class="line">            &lt;groupId&gt;org.mybatis&lt;/groupId&gt;</span><br><span class="line">            &lt;artifactId&gt;mybatis&lt;/artifactId&gt;</span><br><span class="line">            &lt;version&gt;$&#123;mybatis.version&#125;&lt;/version&gt;</span><br><span class="line">        &lt;/dependency&gt;</span><br><span class="line">    &lt;/dependencies&gt;</span><br><span class="line">&lt;/dependencyManagement&gt;</span><br><span class="line"></span><br><span class="line">&lt;!-- 项目依赖jar包 --&gt;</span><br><span class="line">&lt;dependencies&gt;</span><br><span class="line">    &lt;!-- spring --&gt;</span><br><span class="line">    &lt;dependency&gt;</span><br><span class="line">        &lt;groupId&gt;org.aspectj&lt;/groupId&gt;</span><br><span class="line">        &lt;artifactId&gt;aspectjweaver&lt;/artifactId&gt;</span><br><span class="line">        &lt;version&gt;1.6.8&lt;/version&gt;</span><br><span class="line">    &lt;/dependency&gt;</span><br><span class="line">    &lt;dependency&gt;</span><br><span class="line">        &lt;groupId&gt;org.springframework&lt;/groupId&gt;</span><br><span class="line">        &lt;artifactId&gt;spring-aop&lt;/artifactId&gt;</span><br><span class="line">        &lt;version&gt;$&#123;spring.version&#125;&lt;/version&gt;</span><br><span class="line">    &lt;/dependency&gt;</span><br><span class="line">    &lt;dependency&gt;</span><br><span class="line">        &lt;groupId&gt;org.springframework&lt;/groupId&gt;</span><br><span class="line">        &lt;artifactId&gt;spring-context&lt;/artifactId&gt;</span><br><span class="line">        &lt;version&gt;$&#123;spring.version&#125;&lt;/version&gt;</span><br><span class="line">    &lt;/dependency&gt;</span><br><span class="line">    &lt;dependency&gt;</span><br><span class="line">        &lt;groupId&gt;org.springframework&lt;/groupId&gt;</span><br><span class="line">        &lt;artifactId&gt;spring-context-support&lt;/artifactId&gt;</span><br><span class="line">        &lt;version&gt;$&#123;spring.version&#125;&lt;/version&gt;</span><br><span class="line">    &lt;/dependency&gt;</span><br><span class="line">    &lt;dependency&gt;</span><br><span class="line">        &lt;groupId&gt;org.springframework&lt;/groupId&gt;</span><br><span class="line">        &lt;artifactId&gt;spring-web&lt;/artifactId&gt;</span><br><span class="line">        &lt;version&gt;$&#123;spring.version&#125;&lt;/version&gt;</span><br><span class="line">    &lt;/dependency&gt;</span><br><span class="line">    &lt;dependency&gt;</span><br><span class="line">        &lt;groupId&gt;org.springframework&lt;/groupId&gt;</span><br><span class="line">        &lt;artifactId&gt;spring-orm&lt;/artifactId&gt;</span><br><span class="line">        &lt;version&gt;$&#123;spring.version&#125;&lt;/version&gt;</span><br><span class="line">    &lt;/dependency&gt;</span><br><span class="line">    &lt;dependency&gt;</span><br><span class="line">        &lt;groupId&gt;org.springframework&lt;/groupId&gt;</span><br><span class="line">        &lt;artifactId&gt;spring-beans&lt;/artifactId&gt;</span><br><span class="line">        &lt;version&gt;$&#123;spring.version&#125;&lt;/version&gt;</span><br><span class="line">    &lt;/dependency&gt;</span><br><span class="line">    &lt;dependency&gt;</span><br><span class="line">        &lt;groupId&gt;org.springframework&lt;/groupId&gt;</span><br><span class="line">        &lt;artifactId&gt;spring-core&lt;/artifactId&gt;</span><br><span class="line">        &lt;version&gt;$&#123;spring.version&#125;&lt;/version&gt;</span><br><span class="line">    &lt;/dependency&gt;</span><br><span class="line">    &lt;dependency&gt;</span><br><span class="line">        &lt;groupId&gt;org.springframework&lt;/groupId&gt;</span><br><span class="line">        &lt;artifactId&gt;spring-test&lt;/artifactId&gt;</span><br><span class="line">        &lt;version&gt;$&#123;spring.version&#125;&lt;/version&gt;</span><br><span class="line">    &lt;/dependency&gt;</span><br><span class="line">    &lt;dependency&gt;</span><br><span class="line">        &lt;groupId&gt;org.springframework&lt;/groupId&gt;</span><br><span class="line">        &lt;artifactId&gt;spring-webmvc&lt;/artifactId&gt;</span><br><span class="line">        &lt;version&gt;$&#123;spring.version&#125;&lt;/version&gt;</span><br><span class="line">    &lt;/dependency&gt;</span><br><span class="line">    &lt;dependency&gt;</span><br><span class="line">        &lt;groupId&gt;org.springframework&lt;/groupId&gt;</span><br><span class="line">        &lt;artifactId&gt;spring-tx&lt;/artifactId&gt;</span><br><span class="line">        &lt;version&gt;$&#123;spring.version&#125;&lt;/version&gt;</span><br><span class="line">    &lt;/dependency&gt;</span><br><span class="line">    &lt;dependency&gt;</span><br><span class="line">        &lt;groupId&gt;junit&lt;/groupId&gt;</span><br><span class="line">        &lt;artifactId&gt;junit&lt;/artifactId&gt;</span><br><span class="line">        &lt;version&gt;4.12&lt;/version&gt;</span><br><span class="line">        &lt;scope&gt;test&lt;/scope&gt;</span><br><span class="line">    &lt;/dependency&gt;</span><br><span class="line">    &lt;dependency&gt;</span><br><span class="line">        &lt;groupId&gt;mysql&lt;/groupId&gt;</span><br><span class="line">        &lt;artifactId&gt;mysql-connector-java&lt;/artifactId&gt;</span><br><span class="line">        &lt;version&gt;$&#123;mysql.version&#125;&lt;/version&gt;</span><br><span class="line">    &lt;/dependency&gt;</span><br><span class="line">    &lt;dependency&gt;</span><br><span class="line">        &lt;groupId&gt;javax.servlet&lt;/groupId&gt;</span><br><span class="line">        &lt;artifactId&gt;javax.servlet-api&lt;/artifactId&gt;</span><br><span class="line">        &lt;version&gt;3.1.0&lt;/version&gt;</span><br><span class="line">        &lt;scope&gt;provided&lt;/scope&gt;</span><br><span class="line">    &lt;/dependency&gt;</span><br><span class="line">    &lt;dependency&gt;</span><br><span class="line">        &lt;groupId&gt;javax.servlet.jsp&lt;/groupId&gt;</span><br><span class="line">        &lt;artifactId&gt;jsp-api&lt;/artifactId&gt;</span><br><span class="line">        &lt;version&gt;2.0&lt;/version&gt;</span><br><span class="line">        &lt;scope&gt;provided&lt;/scope&gt;</span><br><span class="line">    &lt;/dependency&gt;</span><br><span class="line">    &lt;dependency&gt;</span><br><span class="line">        &lt;groupId&gt;jstl&lt;/groupId&gt;</span><br><span class="line">        &lt;artifactId&gt;jstl&lt;/artifactId&gt;</span><br><span class="line">        &lt;version&gt;1.2&lt;/version&gt;</span><br><span class="line">    &lt;/dependency&gt;</span><br><span class="line">    &lt;!-- log start --&gt;</span><br><span class="line">    &lt;dependency&gt;</span><br><span class="line">        &lt;groupId&gt;log4j&lt;/groupId&gt;</span><br><span class="line">        &lt;artifactId&gt;log4j&lt;/artifactId&gt;</span><br><span class="line">        &lt;version&gt;$&#123;log4j.version&#125;&lt;/version&gt;</span><br><span class="line">    &lt;/dependency&gt;</span><br><span class="line">    &lt;dependency&gt;</span><br><span class="line">        &lt;groupId&gt;org.slf4j&lt;/groupId&gt;</span><br><span class="line">        &lt;artifactId&gt;slf4j-api&lt;/artifactId&gt;</span><br><span class="line">        &lt;version&gt;$&#123;slf4j.version&#125;&lt;/version&gt;</span><br><span class="line">    &lt;/dependency&gt;</span><br><span class="line">    &lt;dependency&gt;</span><br><span class="line">        &lt;groupId&gt;org.slf4j&lt;/groupId&gt;</span><br><span class="line">        &lt;artifactId&gt;slf4j-log4j12&lt;/artifactId&gt;</span><br><span class="line">        &lt;version&gt;$&#123;slf4j.version&#125;&lt;/version&gt;</span><br><span class="line">    &lt;/dependency&gt;</span><br><span class="line">    &lt;!-- log end --&gt;</span><br><span class="line">    &lt;dependency&gt;</span><br><span class="line">        &lt;groupId&gt;org.mybatis&lt;/groupId&gt;</span><br><span class="line">        &lt;artifactId&gt;mybatis&lt;/artifactId&gt;</span><br><span class="line">        &lt;version&gt;$&#123;mybatis.version&#125;&lt;/version&gt;</span><br><span class="line">    &lt;/dependency&gt;</span><br><span class="line">    &lt;dependency&gt;</span><br><span class="line">        &lt;groupId&gt;org.mybatis&lt;/groupId&gt;</span><br><span class="line">        &lt;artifactId&gt;mybatis-spring&lt;/artifactId&gt;</span><br><span class="line">        &lt;version&gt;1.3.0&lt;/version&gt;</span><br><span class="line">    &lt;/dependency&gt;</span><br><span class="line">    &lt;dependency&gt;</span><br><span class="line">        &lt;groupId&gt;c3p0&lt;/groupId&gt;</span><br><span class="line">        &lt;artifactId&gt;c3p0&lt;/artifactId&gt;</span><br><span class="line">        &lt;version&gt;0.9.1.2&lt;/version&gt;</span><br><span class="line">        &lt;type&gt;jar&lt;/type&gt;</span><br><span class="line">        &lt;scope&gt;compile&lt;/scope&gt;</span><br><span class="line">    &lt;/dependency&gt;</span><br><span class="line">    &lt;dependency&gt;</span><br><span class="line">        &lt;groupId&gt;com.github.pagehelper&lt;/groupId&gt;</span><br><span class="line">        &lt;artifactId&gt;pagehelper&lt;/artifactId&gt;</span><br><span class="line">        &lt;version&gt;5.1.2&lt;/version&gt;</span><br><span class="line">    &lt;/dependency&gt;</span><br><span class="line">    &lt;dependency&gt;</span><br><span class="line">        &lt;groupId&gt;org.springframework.security&lt;/groupId&gt;</span><br><span class="line">        &lt;artifactId&gt;spring-security-web&lt;/artifactId&gt;</span><br><span class="line">        &lt;version&gt;$&#123;spring.security.version&#125;&lt;/version&gt;</span><br><span class="line">    &lt;/dependency&gt;</span><br><span class="line">    &lt;dependency&gt;</span><br><span class="line">        &lt;groupId&gt;org.springframework.security&lt;/groupId&gt;</span><br><span class="line">        &lt;artifactId&gt;spring-security-config&lt;/artifactId&gt;</span><br><span class="line">        &lt;version&gt;$&#123;spring.security.version&#125;&lt;/version&gt;</span><br><span class="line">    &lt;/dependency&gt;</span><br><span class="line">    &lt;dependency&gt;</span><br><span class="line">        &lt;groupId&gt;org.springframework.security&lt;/groupId&gt;</span><br><span class="line">        &lt;artifactId&gt;spring-security-core&lt;/artifactId&gt;</span><br><span class="line">        &lt;version&gt;$&#123;spring.security.version&#125;&lt;/version&gt;</span><br><span class="line">    &lt;/dependency&gt;</span><br><span class="line">    &lt;dependency&gt;</span><br><span class="line">        &lt;groupId&gt;org.springframework.security&lt;/groupId&gt;</span><br><span class="line">        &lt;artifactId&gt;spring-security-taglibs&lt;/artifactId&gt;</span><br><span class="line">        &lt;version&gt;$&#123;spring.security.version&#125;&lt;/version&gt;</span><br><span class="line">    &lt;/dependency&gt;</span><br><span class="line">    &lt;dependency&gt;</span><br><span class="line">        &lt;groupId&gt;com.alibaba&lt;/groupId&gt;</span><br><span class="line">        &lt;artifactId&gt;druid&lt;/artifactId&gt;</span><br><span class="line">        &lt;version&gt;1.0.9&lt;/version&gt;</span><br><span class="line">    &lt;/dependency&gt;</span><br><span class="line">&lt;/dependencies&gt;</span><br><span class="line">&lt;!-- 添加tomcat7插件 --&gt;</span><br><span class="line">&lt;build&gt;</span><br><span class="line">    &lt;plugins&gt;</span><br><span class="line">        &lt;plugin&gt;</span><br><span class="line">            &lt;groupId&gt;org.apache.tomcat.maven&lt;/groupId&gt;</span><br><span class="line">            &lt;artifactId&gt;tomcat7-maven-plugin&lt;/artifactId&gt;</span><br><span class="line">            &lt;version&gt;2.2&lt;/version&gt;</span><br><span class="line">        &lt;/plugin&gt;</span><br><span class="line">    &lt;/plugins&gt;</span><br><span class="line">&lt;/build&gt;</span><br></pre></td></tr></table></figure>
-
-      
-      
-        
-          <div class="essayending">
-            <div>
-             <div style="text-align:center;color: #ccc;font-size:22px;">
-             <br/>
-             <br/>
-  -------------本文结束<i class="fa fa-paw"></i>感谢您的阅读-------------
-             <br/>
-             <br/>
-              <br/>
-              <br/>
-             </div>
-            </div>
-          </div>
+        <div class="article-info info-on-right">
           
- 
-   
-<!-- 添加版权声明 -->
-<!-- 
- -->
-<!-- 添加版权声明结束 -->
-<!-- 百度自动推送方式提交 -->
-<!-- 
-  <script>
-  (function(){
-      var bp = document.createElement('script');
-      var curProtocol = window.location.protocol.split(':')[0];
-      if (curProtocol === 'https') {
-          bp.src = 'https://zz.bdstatic.com/linksubmit/push.js';
-      }
-      else {
-          bp.src = 'http://push.zhanzhang.baidu.com/push.js';
-      }
-      var s = document.getElementsByTagName("script")[0];
-      s.parentNode.insertBefore(bp, s);
-  })();
-  </script>
- -->
-<!-- 百度自动推送方式提交结束 -->
+	<div class="article-tag tagcloud">
+		<i class="icon-price-tags icon"></i>
+		<ul class="article-tag-list">
+			 
+        		<li class="article-tag-list-item">
+        			<a href="javascript:void(0)" class="js-tag article-tag-list-link color1">maven</a>
+        		</li>
+      		
+		</ul>
+	</div>
 
-      
-        <div class="page-reward">
-          <a href="javascript:;" class="page-reward-btn tooltip-top">
-            <div class="tooltip tooltip-east">
-            <span class="tooltip-item">
-              赏
-            </span>
-            <span class="tooltip-content">
-              <span class="tooltip-text">
-                <span class="tooltip-inner">
-                  <p class="reward-p"><i class="icon icon-quo-left"></i>谢谢你请我吃糖果<i class="icon icon-quo-right"></i></p>
-                  <div class="reward-box">
-                    
-                    <div class="reward-box-item">
-                      <img class="reward-img" src="/assets/zhifubao.jpg">
-                      <span class="reward-type">支付宝</span>
-                    </div>
-                    
-                    
-                    <div class="reward-box-item">
-                      <img class="reward-img" src="/assets/weixin.png">
-                      <span class="reward-type">微信</span>
-                    </div>
-                    
-                  </div>
-                </span>
-              </span>
-            </span>
-          </div>
-          </a>
-        </div>
-      
-    </div>
-    <div class="article-info article-info-index">
-      
-      
-      
+          
 	<div class="article-category tagcloud">
 		<i class="icon-book icon"></i>
 		<ul class="article-tag-list">
@@ -347,144 +261,17 @@ var _hmt = _hmt || [];
 	</div>
 
 
-      
-
-      
-        
-<div class="share-btn share-icons tooltip-left">
-  <div class="tooltip tooltip-east">
-    <span class="tooltip-item">
-      <a href="javascript:;" class="share-sns share-outer">
-        <i class="icon icon-share"></i>
-      </a>
-    </span>
-    <span class="tooltip-content">
-      <div class="share-wrap">
-        <div class="share-icons">
-          <a class="weibo share-sns" href="javascript:;" data-type="weibo">
-            <i class="icon icon-weibo"></i>
-          </a>
-          <a class="weixin share-sns wxFab" href="javascript:;" data-type="weixin">
-            <i class="icon icon-weixin"></i>
-          </a>
-          <a class="qq share-sns" href="javascript:;" data-type="qq">
-            <i class="icon icon-qq"></i>
-          </a>
-          <a class="douban share-sns" href="javascript:;" data-type="douban">
-            <i class="icon icon-douban"></i>
-          </a>
-          <a class="qzone share-sns" href="javascript:;" data-type="qzone">
-            <i class="icon icon-qzone"></i>
-          </a>
-          <a class="facebook share-sns" href="javascript:;" data-type="facebook">
-            <i class="icon icon-facebook"></i>
-          </a>
-          <a class="twitter share-sns" href="javascript:;" data-type="twitter">
-            <i class="icon icon-twitter"></i>
-          </a>
-          <a class="google share-sns" href="javascript:;" data-type="google">
-            <i class="icon icon-google"></i>
-          </a>
         </div>
-      </div>
-    </span>
-  </div>
-</div>
-
-<div class="page-modal wx-share js-wx-box">
-    <a class="close js-modal-close" href="javascript:;"><i class="icon icon-close"></i></a>
-    <p>扫一扫，分享到微信</p>
-    <div class="wx-qrcode">
-      <img src="//pan.baidu.com/share/qrcode?url=http://yoursite.com/2020/08/12/maven%E9%AB%98%E7%BA%A7%E4%BB%A5%E5%8F%8Amaven%E9%A1%B9%E7%9B%AE%E6%95%B4%E5%90%88ssm%E6%A1%86%E6%9E%B6pom.xml%E9%9C%80%E8%A6%81%E5%AF%BC%E5%85%A5%E7%9A%84jar%E5%8C%85/" alt="微信分享二维码">
-    </div>
-</div>
-
-<div class="mask js-mask"></div>
-      
-      <div class="clearfix"></div>
-    </div>
+        <div class="clearfix"></div>
+    </header>
   </div>
 </article>
-
-  
-<nav id="article-nav">
-  
-    <a href="/2020/08/12/%E8%A7%A3%E5%86%B3oracle%E6%95%B0%E6%8D%AE%E5%BA%93%E4%B8%AD%E6%96%87%E4%B9%B1%E7%A0%81%E9%97%AE%E9%A2%98/" id="article-nav-newer" class="article-nav-link-wrap">
-      <i class="icon-circle-left"></i>
-      <div class="article-nav-title">
-        
-          对于maven中pom.xml依赖报红问题
-        
-      </div>
-    </a>
   
   
-    <a href="/2020/08/12/%E5%9C%A8%E6%96%B0%E7%89%88%E6%9C%AC%E7%9A%84vue-cli%E9%A1%B9%E7%9B%AE%E4%B8%AD%E5%9C%A8vue.config.js%E4%B8%AD%E7%A6%81%E7%94%A8eslint/" id="article-nav-older" class="article-nav-link-wrap">
-      <div class="article-nav-title">在写vue项目的时候，由于有eslint严格模式...</div>
-      <i class="icon-circle-right"></i>
-    </a>
-  
-</nav>
-
-
-<aside class="wrap-side-operation">
-    <div class="mod-side-operation">
-        
-        <div class="jump-container" id="js-jump-container" style="display:none;">
-            <a href="javascript:void(0)" class="mod-side-operation__jump-to-top">
-                <i class="icon-font icon-back"></i>
-            </a>
-            <div id="js-jump-plan-container" class="jump-plan-container" style="top: -11px;">
-                <i class="icon-font icon-plane jump-plane"></i>
-            </div>
-        </div>
-        
-        
-        <div class="toc-container tooltip-left">
-            <i class="icon-font icon-category"></i>
-            <div class="tooltip tooltip-east">
-                <span class="tooltip-item">
-                </span>
-                <span class="tooltip-content">
-                    <div class="toc-article">
-                    <ol class="toc"><li class="toc-item toc-level-2"><a class="toc-link" href="#maven%E5%9F%BA%E7%A1%80"><span class="toc-number">1.</span> <span class="toc-text">maven基础</span></a></li></ol>
-                    </div>
-                </span>
-            </div>
-        </div>
-        
-    </div>
-</aside>
-
-
-
-  
-  
+    </div></section>
   
 
-  
-
-  
-
-  
-  <div id="gitment-ctn"></div> 
-<link rel="stylesheet" href="//imsun.github.io/gitment/style/default.css">
-<script src="//imsun.github.io/gitment/dist/gitment.browser.js"></script>
-<script>
-var gitment = new Gitment({
-  id: "http://yoursite.com/2020/08/12/maven%E9%AB%98%E7%BA%A7%E4%BB%A5%E5%8F%8Amaven%E9%A1%B9%E7%9B%AE%E6%95%B4%E5%90%88ssm%E6%A1%86%E6%9E%B6pom.xml%E9%9C%80%E8%A6%81%E5%AF%BC%E5%85%A5%E7%9A%84jar%E5%8C%85/",
-  owner: 'highfish920',
-  repo: 'yilia-plus-demo',
-  oauth: {
-    client_id: 'e395876fa94364c99e78',
-    client_secret: '3fbb3c40f226d26cd47f10c1beb836e9d2775730',
-  },
-})
-gitment.render('gitment-ctn')
-</script>
-  
-
-
+    
 
 
           </div>
@@ -525,8 +312,8 @@ gitment.render('gitment-ctn')
 	var yiliaConfig = {
 		mathjax: false,
 		isHome: false,
-		isPost: true,
-		isArchive: false,
+		isPost: false,
+		isArchive: true,
 		isTag: false,
 		isCategory: false,
 		open_in_new: false,
@@ -602,6 +389,10 @@ return o(i(t),arguments.length<2?void 0:u(arguments[1]))}})},function(t,n,r){var
              
               <li class="article-tag-list-item">
                 <a href="javascript:void(0)" class="js-tag color4">es6</a>
+              </li>
+             
+              <li class="article-tag-list-item">
+                <a href="javascript:void(0)" class="js-tag color1">maven</a>
               </li>
              
               <li class="article-tag-list-item">

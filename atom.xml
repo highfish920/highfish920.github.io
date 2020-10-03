@@ -6,7 +6,7 @@
   <link href="http://yoursite.com/atom.xml" rel="self"/>
   
   <link href="http://yoursite.com/"/>
-  <updated>2020-09-26T14:05:52.511Z</updated>
+  <updated>2020-10-03T15:15:13.618Z</updated>
   <id>http://yoursite.com/</id>
   
   <author>
@@ -15,6 +15,27 @@
   </author>
   
   <generator uri="https://hexo.io/">Hexo</generator>
+  
+  <entry>
+    <title>Eclipse&amp;IDEA中Maven和Git快速配置及使用</title>
+    <link href="http://yoursite.com/2020/10/03/Eclipse&amp;IDEA%E4%B8%ADMaven%E5%92%8CGit%E5%BF%AB%E9%80%9F%E9%85%8D%E7%BD%AE%E5%8F%8A%E4%BD%BF%E7%94%A8/"/>
+    <id>http://yoursite.com/2020/10/03/Eclipse&amp;IDEA%E4%B8%ADMaven%E5%92%8CGit%E5%BF%AB%E9%80%9F%E9%85%8D%E7%BD%AE%E5%8F%8A%E4%BD%BF%E7%94%A8/</id>
+    <published>2020-10-03T15:13:02.428Z</published>
+    <updated>2020-10-03T15:15:13.618Z</updated>
+    
+    <content type="html"><![CDATA[<h4 id="Eclipse-amp-IDEA中Maven和Git快速配置及使用"><a href="#Eclipse-amp-IDEA中Maven和Git快速配置及使用" class="headerlink" title="Eclipse&amp;IDEA中Maven和Git快速配置及使用"></a>Eclipse&amp;IDEA中Maven和Git快速配置及使用</h4><a id="more"></a><p>见资料：<br>链接：<a href="https://pan.baidu.com/s/1kzd4_sKwkq9sRTs45HE91Q">https://pan.baidu.com/s/1kzd4_sKwkq9sRTs45HE91Q</a><br>提取码：1314 </p><p>视频：<a href="https://www.bilibili.com/video/BV1Te411W7N6?p=1">https://www.bilibili.com/video/BV1Te411W7N6?p=1</a></p>]]></content>
+    
+    
+    <summary type="html">&lt;h4 id=&quot;Eclipse-amp-IDEA中Maven和Git快速配置及使用&quot;&gt;&lt;a href=&quot;#Eclipse-amp-IDEA中Maven和Git快速配置及使用&quot; class=&quot;headerlink&quot; title=&quot;Eclipse&amp;amp;IDEA中Maven和Git快速配置及使用&quot;&gt;&lt;/a&gt;Eclipse&amp;amp;IDEA中Maven和Git快速配置及使用&lt;/h4&gt;</summary>
+    
+    
+    
+    <category term="maven" scheme="http://yoursite.com/categories/maven/"/>
+    
+    
+    <category term="maven" scheme="http://yoursite.com/tags/maven/"/>
+    
+  </entry>
   
   <entry>
     <title>ECharts数据可视化项目</title>
@@ -405,27 +426,6 @@
     
     
     <summary type="html">&lt;h2 id=&quot;拉取远端代码：使用Git命令下载远程仓库到本地&quot;&gt;&lt;a href=&quot;#拉取远端代码：使用Git命令下载远程仓库到本地&quot; class=&quot;headerlink&quot; title=&quot;拉取远端代码：使用Git命令下载远程仓库到本地&quot;&gt;&lt;/a&gt;拉取远端代码：使用Git命令下载远程仓库到本地&lt;/h2&gt;</summary>
-    
-    
-    
-    <category term="Git" scheme="http://yoursite.com/categories/Git/"/>
-    
-    
-    <category term="git" scheme="http://yoursite.com/tags/git/"/>
-    
-  </entry>
-  
-  <entry>
-    <title>GIT篇---1.安装GIt以及GIT基本认识和配置(Windows系统)</title>
-    <link href="http://yoursite.com/2020/08/31/git1/"/>
-    <id>http://yoursite.com/2020/08/31/git1/</id>
-    <published>2020-08-31T08:52:21.972Z</published>
-    <updated>2020-08-31T10:17:16.325Z</updated>
-    
-    <content type="html"><![CDATA[<h2 id="1-安装-Git"><a href="#1-安装-Git" class="headerlink" title="1. 安装 Git"></a>1. 安装 Git</h2><a id="more"></a><p>在 Windows 系统中安装Git非常简单，只需要下载Git的安装包，然后安装引导点击安装即可：</p><p>Git下载地址：<a href="https://git-scm.com/download/win">https://git-scm.com/download/win</a><br>下载完安装包之后，双击 EXE 安装包，一直点击Next安装即可在安装完成之后，会在你的右键菜单栏中增加一个Git的选项，你可以在电脑桌面点击鼠标右键，会看到多出两个菜单，如下图所示：<br><img src="https://img-blog.csdnimg.cn/20200831162657644.png#pic_center" alt="在这里插入图片描述"><br>当你点击Git bash Here菜单之后，可以看到一个终端窗口，在终端里面输入命令git –version，如果可以看到 git 的版本信息，则说明安装成功，如下图所示：<br><img src="https://img-blog.csdnimg.cn/20200831165049265.png#pic_center" alt="在这里插入图片描述"></p><h2 id="2-本地创建一个-Git-仓库"><a href="#2-本地创建一个-Git-仓库" class="headerlink" title="2.本地创建一个 Git 仓库"></a>2.本地创建一个 Git 仓库</h2><ol><li>创建本地文件夹text</li><li>进入本地文件夹目录终端输入 <code>git init</code> 初始化仓库，初始化后，会发现文件夹里面多出了一个.git的文件<br><img src="https://img-blog.csdnimg.cn/20200831163313603.png?x-oss-process=image/watermark,type_ZmFuZ3poZW5naGVpdGk,shadow_10,text_aHR0cHM6Ly9ibG9nLmNzZG4ubmV0L3dlaXhpbl80MjY5MzcxMg==,size_16,color_FFFFFF,t_70#pic_center" alt="在这里插入图片描述"></li><li>简单认识.git</li></ol><p><img src="https://img-blog.csdnimg.cn/20200831163522222.png#pic_center" alt="在这里插入图片描述"></p><ul><li>hooks 目录包含客户端或服务端的钩子脚本</li><li>objects 目录存储所有数据内容</li><li>info 目录包含一个全局性排除文件</li><li>refs 目录存储分支的提交对象的指针</li><li>description用来显示对仓库的描述信息</li><li>HEAD 文件指示目前被检出的分支</li><li>config 文件包含项目特有的配置选项</li></ul><ol start="4"><li>查看配置信息<br>在设置昵称和邮箱之前，可以先检查一下之前有没有配置过昵称和邮箱<br>查看昵称的命令如下：</li></ol><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">git config user.name</span><br></pre></td></tr></table></figure><p>查看邮箱的命令如下:</p><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">git config user.email</span><br></pre></td></tr></table></figure><p><img src="https://img-blog.csdnimg.cn/20200831163906797.png#pic_center" alt="在这里插入图片描述"></p><p>4.1 设置配置信息<br>如果执行上面的命令没有返回相应的昵称和邮箱，说明你还没有配置昵称和邮箱。那么就需要进行配置<br>配置昵称的命令参考如下：</p><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">git config --global user.name <span class="string">&quot;你的昵称&quot;</span></span><br></pre></td></tr></table></figure><p>配置邮箱的命令参考如下：</p><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">git config --global user.email <span class="string">&quot;你的邮箱&quot;</span></span><br></pre></td></tr></table></figure><p>4.2 修改配置信息<br>在配置中如果不小心配置错了，或者后面想修改配置的时候，是不能通过重复执行上面的设置昵称命令，来修改昵称的，邮箱修改同理。如果你多次设置昵称，它会在命令执行后提示你无法重复配置或者可能不给你提示，但是这种情况会导致一个 key 配置了多个 value 的问题。</p><p><strong>介绍两种方法， 第一种是通过命令行，第二种是通过修改配置文件。</strong></p><p>4.2.1 <strong>命令行修改配置</strong></p><p>通过命令行修改的方式比较简单，直接执行以下的命令即可<br>修改昵称参考命令如下：</p><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">git config --global --replace-all user.name <span class="string">&quot;your user name&quot;</span></span><br></pre></td></tr></table></figure><p>修改邮箱地址参考命令如下：</p><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">git config --global --replace-all user.email<span class="string">&quot;your user email&quot;</span></span><br></pre></td></tr></table></figure><p>4.2.2 <strong>修改配置文件</strong></p><p>Windows 系统位于用户主目录下，假设你当前的用户是administrator，那么对应的配置文件的路径应该是 C:\Users\administrator.gitconfig，可以直接使用记事本修改里边的 name 或者 email。</p><p>如果之前已经配置过昵称和邮箱的情况下，当使用记事本打开配置文件之后，可以看到如下配置：</p><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">[user]</span><br><span class="line">        name = daxia</span><br><span class="line">        email = 78778443@qq.com</span><br></pre></td></tr></table></figure><p>在如果有重复的 name 或 email，可以将其删掉，只剩下一个就好。修改完，通过 git bash 输入 git config –list可以查看是否修改成功了。<br>本文整理自 <a href="http://www.imooc.com/read/51">http://www.imooc.com/read/51</a></p>]]></content>
-    
-    
-    <summary type="html">&lt;h2 id=&quot;1-安装-Git&quot;&gt;&lt;a href=&quot;#1-安装-Git&quot; class=&quot;headerlink&quot; title=&quot;1. 安装 Git&quot;&gt;&lt;/a&gt;1. 安装 Git&lt;/h2&gt;</summary>
     
     
     
