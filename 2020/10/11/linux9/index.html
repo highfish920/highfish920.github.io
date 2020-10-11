@@ -7,17 +7,57 @@
   <meta name="renderer" content="webkit">
   <meta http-equiv="X-UA-Compatible" content="IE=edge">
   <link rel="dns-prefetch" href="http://yoursite.com">
-  <title>Tag: 观察者模式 | highfish920的博客</title>
+  <title>linux--Zookeeper安装与配置 | highfish920的博客</title>
   <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
-  <meta name="description" content="让编程擦出爱的火花">
-<meta property="og:type" content="website">
-<meta property="og:title" content="highfish920的博客">
-<meta property="og:url" content="http://yoursite.com/tags/%E8%A7%82%E5%AF%9F%E8%80%85%E6%A8%A1%E5%BC%8F/index.html">
+  <meta name="description" content="Linux–Zookeeper安装与配置">
+<meta property="og:type" content="article">
+<meta property="og:title" content="linux--Zookeeper安装与配置">
+<meta property="og:url" content="http://yoursite.com/2020/10/11/linux9/index.html">
 <meta property="og:site_name" content="highfish920的博客">
-<meta property="og:description" content="让编程擦出爱的火花">
+<meta property="og:description" content="Linux–Zookeeper安装与配置">
 <meta property="og:locale" content="zh_CN">
+<meta property="og:image" content="https://img-blog.csdnimg.cn/20201011102017831.png#pic_center">
+<meta property="og:image" content="https://img-blog.csdnimg.cn/20201011102234563.png?x-oss-process=image/watermark,type_ZmFuZ3poZW5naGVpdGk,shadow_10,text_aHR0cHM6Ly9ibG9nLmNzZG4ubmV0L3dlaXhpbl80MjY5MzcxMg==,size_16,color_FFFFFF,t_70#pic_center">
+<meta property="og:image" content="https://img-blog.csdnimg.cn/20201011102259459.png?x-oss-process=image/watermark,type_ZmFuZ3poZW5naGVpdGk,shadow_10,text_aHR0cHM6Ly9ibG9nLmNzZG4ubmV0L3dlaXhpbl80MjY5MzcxMg==,size_16,color_FFFFFF,t_70#pic_center">
+<meta property="og:image" content="https://img-blog.csdnimg.cn/20201011102337329.png#pic_center">
+<meta property="og:image" content="https://img-blog.csdnimg.cn/20201011102652790.png#pic_center">
+<meta property="og:image" content="https://img-blog.csdnimg.cn/20201011102801703.png#pic_center">
+<meta property="og:image" content="https://img-blog.csdnimg.cn/20201011102838893.png#pic_center">
+<meta property="og:image" content="https://img-blog.csdnimg.cn/20201011105805707.png?x-oss-process=image/watermark,type_ZmFuZ3poZW5naGVpdGk,shadow_10,text_aHR0cHM6Ly9ibG9nLmNzZG4ubmV0L3dlaXhpbl80MjY5MzcxMg==,size_16,color_FFFFFF,t_70#pic_center">
+<meta property="og:image" content="https://img-blog.csdnimg.cn/20201011110406905.png?x-oss-process=image/watermark,type_ZmFuZ3poZW5naGVpdGk,shadow_10,text_aHR0cHM6Ly9ibG9nLmNzZG4ubmV0L3dlaXhpbl80MjY5MzcxMg==,size_16,color_FFFFFF,t_70#pic_center">
+<meta property="og:image" content="https://img-blog.csdnimg.cn/20201011110427666.png?x-oss-process=image/watermark,type_ZmFuZ3poZW5naGVpdGk,shadow_10,text_aHR0cHM6Ly9ibG9nLmNzZG4ubmV0L3dlaXhpbl80MjY5MzcxMg==,size_16,color_FFFFFF,t_70#pic_center">
+<meta property="og:image" content="https://img-blog.csdnimg.cn/2020101111060654.png#pic_center">
+<meta property="og:image" content="https://img-blog.csdnimg.cn/20201011110628760.png#pic_center">
+<meta property="og:image" content="https://img-blog.csdnimg.cn/20201011110707831.png#pic_center">
+<meta property="og:image" content="https://img-blog.csdnimg.cn/20201011111121578.png?x-oss-process=image/watermark,type_ZmFuZ3poZW5naGVpdGk,shadow_10,text_aHR0cHM6Ly9ibG9nLmNzZG4ubmV0L3dlaXhpbl80MjY5MzcxMg==,size_16,color_FFFFFF,t_70#pic_center">
+<meta property="og:image" content="https://img-blog.csdnimg.cn/20201011214243590.png#pic_center">
+<meta property="og:image" content="https://img-blog.csdnimg.cn/2020101121430949.png#pic_center">
+<meta property="og:image" content="https://img-blog.csdnimg.cn/20201011214402994.png#pic_center">
+<meta property="og:image" content="https://img-blog.csdnimg.cn/20201011214606996.png?x-oss-process=image/watermark,type_ZmFuZ3poZW5naGVpdGk,shadow_10,text_aHR0cHM6Ly9ibG9nLmNzZG4ubmV0L3dlaXhpbl80MjY5MzcxMg==,size_16,color_FFFFFF,t_70#pic_center">
+<meta property="og:image" content="https://img-blog.csdnimg.cn/20201011214628644.png?x-oss-process=image/watermark,type_ZmFuZ3poZW5naGVpdGk,shadow_10,text_aHR0cHM6Ly9ibG9nLmNzZG4ubmV0L3dlaXhpbl80MjY5MzcxMg==,size_16,color_FFFFFF,t_70#pic_center">
+<meta property="og:image" content="https://img-blog.csdnimg.cn/20201011214800138.png?x-oss-process=image/watermark,type_ZmFuZ3poZW5naGVpdGk,shadow_10,text_aHR0cHM6Ly9ibG9nLmNzZG4ubmV0L3dlaXhpbl80MjY5MzcxMg==,size_16,color_FFFFFF,t_70#pic_center">
+<meta property="og:image" content="https://img-blog.csdnimg.cn/20201011214711896.png?x-oss-process=image/watermark,type_ZmFuZ3poZW5naGVpdGk,shadow_10,text_aHR0cHM6Ly9ibG9nLmNzZG4ubmV0L3dlaXhpbl80MjY5MzcxMg==,size_16,color_FFFFFF,t_70#pic_center">
+<meta property="og:image" content="https://img-blog.csdnimg.cn/20201011214905260.png#pic_center">
+<meta property="og:image" content="https://img-blog.csdnimg.cn/20201011215031405.png#pic_center">
+<meta property="og:image" content="https://img-blog.csdnimg.cn/20201011215320385.png#pic_center">
+<meta property="og:image" content="https://img-blog.csdnimg.cn/20201011215350473.png#pic_center">
+<meta property="og:image" content="https://img-blog.csdnimg.cn/20201011215531989.png#pic_center">
+<meta property="og:image" content="https://img-blog.csdnimg.cn/20201011215515961.png#pic_center">
+<meta property="og:image" content="https://img-blog.csdnimg.cn/2020101121560090.png#pic_center">
+<meta property="og:image" content="https://img-blog.csdnimg.cn/20201011215617968.png#pic_center">
+<meta property="og:image" content="https://img-blog.csdnimg.cn/20201011215646942.png#pic_center">
+<meta property="og:image" content="https://img-blog.csdnimg.cn/20201011215906810.png?x-oss-process=image/watermark,type_ZmFuZ3poZW5naGVpdGk,shadow_10,text_aHR0cHM6Ly9ibG9nLmNzZG4ubmV0L3dlaXhpbl80MjY5MzcxMg==,size_16,color_FFFFFF,t_70#pic_center">
+<meta property="og:image" content="https://img-blog.csdnimg.cn/20201011220030948.png#pic_center">
+<meta property="og:image" content="https://img-blog.csdnimg.cn/20201011220116551.png#pic_center">
+<meta property="og:image" content="https://img-blog.csdnimg.cn/20201011220233567.png?x-oss-process=image/watermark,type_ZmFuZ3poZW5naGVpdGk,shadow_10,text_aHR0cHM6Ly9ibG9nLmNzZG4ubmV0L3dlaXhpbl80MjY5MzcxMg==,size_16,color_FFFFFF,t_70#pic_center">
+<meta property="og:image" content="https://img-blog.csdnimg.cn/20201011220317308.png?x-oss-process=image/watermark,type_ZmFuZ3poZW5naGVpdGk,shadow_10,text_aHR0cHM6Ly9ibG9nLmNzZG4ubmV0L3dlaXhpbl80MjY5MzcxMg==,size_16,color_FFFFFF,t_70#pic_center">
+<meta property="og:image" content="https://img-blog.csdnimg.cn/20201011220355319.png?x-oss-process=image/watermark,type_ZmFuZ3poZW5naGVpdGk,shadow_10,text_aHR0cHM6Ly9ibG9nLmNzZG4ubmV0L3dlaXhpbl80MjY5MzcxMg==,size_16,color_FFFFFF,t_70#pic_center">
+<meta property="article:published_time" content="2020-10-11T02:55:21.521Z">
+<meta property="article:modified_time" content="2020-10-11T14:15:22.378Z">
 <meta property="article:author" content="highfish">
+<meta property="article:tag" content="linux">
 <meta name="twitter:card" content="summary">
+<meta name="twitter:image" content="https://img-blog.csdnimg.cn/20201011102017831.png#pic_center">
   
   <link rel="alternative" href="/atom.xml" title="highfish920的博客" type="application/atom+xml">
   
@@ -207,71 +247,303 @@ var _hmt = _hmt || [];
           </div>
           <div id="js-content" class="content-ll">
             
-  
-  
+  <article id="post-linux9" class="article article-type-post " itemscope itemprop="blogPost">
+  <div class="article-inner">
     
-    
-      
-      
-      <section class="archives-wrap">
-        <div class="archive-year-wrap">
-          <a href="/archives/2020" class="archive-year">2020</a>
-        </div>
-        <div class="archives">
-    
-    <article class="archive-article archive-type-post">
-  <div class="archive-article-inner">
-    <header class="archive-article-header">
-      	<div class="article-meta">
-	      	
-<a href="/2020/09/06/%E8%A7%82%E5%AF%9F%E8%80%85%E6%A8%A1%E5%BC%8F/" class="archive-article-date">
-  	<time datetime="2020-09-06T09:33:23.387Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2020-09-06</time>
-</a>
-        </div>
-    	 
+      <header class="article-header">
+        
   
-    <h1 itemprop="name">
-      <a class="archive-article-title" href="/2020/09/06/%E8%A7%82%E5%AF%9F%E8%80%85%E6%A8%A1%E5%BC%8F/">设计模式---观察者模式</a>
+    <h1 class="article-title" itemprop="name">
+      linux--Zookeeper安装与配置
     </h1>
   
 
-        <div class="article-info info-on-right">
+        <!--显示阅读次数-->
+
+  <br/>
+  <a class="cloud-tie-join-count" href="javascript:void(0);" style="color:gray;font-size:14px;">
+  <span class="icon-sort"></span>
+  <span id="busuanzi_container_page_pv" style="color:#ef7522;font-size:14px;">
+            阅读数: <span id="busuanzi_value_page_pv"></span>次 &nbsp;&nbsp;
+            字数：285字 | 预计阅读时长：1分钟
+  </span>
+  </a>
+
+<!--显示阅读次数完毕-->
+
+
+
+        
+        
+	<!-- 不蒜子统计 -->
+	<span id="busuanzi_container_page_pv" style='display:none' class="archive-article-date">
+		  <i class="icon-smile icon"></i> 阅读数：<span id="busuanzi_value_page_pv"></span>次
+	</span>
+
+<a href="/2020/10/11/linux9/" class="archive-article-date">
+  	<time datetime="2020-10-11T02:55:21.521Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2020-10-11</time>
+</a>
+        
+      </header>
+      
+    
+    <div class="article-entry" itemprop="articleBody">
+      
+        <h4 id="Linux–Zookeeper安装与配置"><a href="#Linux–Zookeeper安装与配置" class="headerlink" title="Linux–Zookeeper安装与配置"></a>Linux–Zookeeper安装与配置</h4><a id="more"></a>
+<ol>
+<li><p>上传zookeeper压缩包到root目录下并查看<br><img src="https://img-blog.csdnimg.cn/20201011102017831.png#pic_center" alt="在这里插入图片描述"></p>
+</li>
+<li><p>解压<code>tar -zxvf zookeeper-3.4.10.tar.gz -C /usr</code><br><img src="https://img-blog.csdnimg.cn/20201011102234563.png?x-oss-process=image/watermark,type_ZmFuZ3poZW5naGVpdGk,shadow_10,text_aHR0cHM6Ly9ibG9nLmNzZG4ubmV0L3dlaXhpbl80MjY5MzcxMg==,size_16,color_FFFFFF,t_70#pic_center" alt="在这里插入图片描述"><br><img src="https://img-blog.csdnimg.cn/20201011102259459.png?x-oss-process=image/watermark,type_ZmFuZ3poZW5naGVpdGk,shadow_10,text_aHR0cHM6Ly9ibG9nLmNzZG4ubmV0L3dlaXhpbl80MjY5MzcxMg==,size_16,color_FFFFFF,t_70#pic_center" alt="在这里插入图片描述"></p>
+</li>
+<li><p>查看usr目录<img src="https://img-blog.csdnimg.cn/20201011102337329.png#pic_center" alt="在这里插入图片描述"></p>
+</li>
+<li><p>配置环境变量<br><code>vi /etc/profile</code><br><img src="https://img-blog.csdnimg.cn/20201011102652790.png#pic_center" alt="在这里插入图片描述"></p>
+</li>
+</ol>
+<p>在最后添加内容<br><code>zookeeper environment export ZOOKEEPER_HOME=/usr/zookeeper-3.4.10 export PATH=$PATH:$ZOOKEEPER_HOME/bin </code><br><img src="https://img-blog.csdnimg.cn/20201011102801703.png#pic_center" alt="在这里插入图片描述"></p>
+<p>刷新配置<br><code>source /etc/profile</code><br><img src="https://img-blog.csdnimg.cn/20201011102838893.png#pic_center" alt="在这里插入图片描述"><br>5. 修改文件夹权限<br>在root用户下修改zookeeper-3.4.10的权限，使用gaoyu(如果是hadoop请用hadoop)用户对<br>zookeeper-3.4.10文件夹具有控制权。<br><code>chown -R gaoyu:gaoyu /usr/zookeeper-3.4.10</code><br><img src="https://img-blog.csdnimg.cn/20201011105805707.png?x-oss-process=image/watermark,type_ZmFuZ3poZW5naGVpdGk,shadow_10,text_aHR0cHM6Ly9ibG9nLmNzZG4ubmV0L3dlaXhpbl80MjY5MzcxMg==,size_16,color_FFFFFF,t_70#pic_center" alt="在这里插入图片描述"></p>
+<ol start="6">
+<li>在usr/zookeeper下创建dataDir文件夹<br><img src="https://img-blog.csdnimg.cn/20201011110406905.png?x-oss-process=image/watermark,type_ZmFuZ3poZW5naGVpdGk,shadow_10,text_aHR0cHM6Ly9ibG9nLmNzZG4ubmV0L3dlaXhpbl80MjY5MzcxMg==,size_16,color_FFFFFF,t_70#pic_center" alt="在这里插入图片描述"><br>并修改所属组<img src="https://img-blog.csdnimg.cn/20201011110427666.png?x-oss-process=image/watermark,type_ZmFuZ3poZW5naGVpdGk,shadow_10,text_aHR0cHM6Ly9ibG9nLmNzZG4ubmV0L3dlaXhpbl80MjY5MzcxMg==,size_16,color_FFFFFF,t_70#pic_center" alt="在这里插入图片描述"></li>
+<li>配置zoo.cfg,重命名zoo_sample.cfg<br><img src="https://img-blog.csdnimg.cn/2020101111060654.png#pic_center" alt="在这里插入图片描述"></li>
+</ol>
+<p><img src="https://img-blog.csdnimg.cn/20201011110628760.png#pic_center" alt="在这里插入图片描述"><br><img src="https://img-blog.csdnimg.cn/20201011110707831.png#pic_center" alt="在这里插入图片描述"><br>8. 配置zoo.cfg<br><code>vi zoo.cfg</code><br><img src="https://img-blog.csdnimg.cn/20201011111121578.png?x-oss-process=image/watermark,type_ZmFuZ3poZW5naGVpdGk,shadow_10,text_aHR0cHM6Ly9ibG9nLmNzZG4ubmV0L3dlaXhpbl80MjY5MzcxMg==,size_16,color_FFFFFF,t_70#pic_center" alt="在这里插入图片描述"><br>9. 配置myid<br> 在新建的dataDir文件夹下，新建名为myid的文件，输入zoo.cfg各主机对应的编号，如gaoyu对应为1<br> <img src="https://img-blog.csdnimg.cn/20201011214243590.png#pic_center" alt="在这里插入图片描述"><br><img src="https://img-blog.csdnimg.cn/2020101121430949.png#pic_center" alt="在这里插入图片描述"><br>10. 复制到其他机器<br>``<img src="https://img-blog.csdnimg.cn/20201011214402994.png#pic_center" alt="在这里插入图片描述"><br><code>scp -r /usr/zookeeper-3.4.10/ gaoyu1:/usr</code><br><code>scp -r /usr/zookeeper-3.4.10/ gaoyu2:/usr</code><br><img src="https://img-blog.csdnimg.cn/20201011214606996.png?x-oss-process=image/watermark,type_ZmFuZ3poZW5naGVpdGk,shadow_10,text_aHR0cHM6Ly9ibG9nLmNzZG4ubmV0L3dlaXhpbl80MjY5MzcxMg==,size_16,color_FFFFFF,t_70#pic_center" alt="在这里插入图片描述"><br><img src="https://img-blog.csdnimg.cn/20201011214628644.png?x-oss-process=image/watermark,type_ZmFuZ3poZW5naGVpdGk,shadow_10,text_aHR0cHM6Ly9ibG9nLmNzZG4ubmV0L3dlaXhpbl80MjY5MzcxMg==,size_16,color_FFFFFF,t_70#pic_center" alt="在这里插入图片描述"></p>
+<p><img src="https://img-blog.csdnimg.cn/20201011214800138.png?x-oss-process=image/watermark,type_ZmFuZ3poZW5naGVpdGk,shadow_10,text_aHR0cHM6Ly9ibG9nLmNzZG4ubmV0L3dlaXhpbl80MjY5MzcxMg==,size_16,color_FFFFFF,t_70#pic_center" alt="在这里插入图片描述"></p>
+<p><img src="https://img-blog.csdnimg.cn/20201011214711896.png?x-oss-process=image/watermark,type_ZmFuZ3poZW5naGVpdGk,shadow_10,text_aHR0cHM6Ly9ibG9nLmNzZG4ubmV0L3dlaXhpbl80MjY5MzcxMg==,size_16,color_FFFFFF,t_70#pic_center" alt="在这里插入图片描述"><br><img src="https://img-blog.csdnimg.cn/20201011214905260.png#pic_center" alt="在这里插入图片描述"><br>11. 登录到其他机器刷新profile文件<br><img src="https://img-blog.csdnimg.cn/20201011215031405.png#pic_center" alt="在这里插入图片描述"><br>12. 修改其他两台机器权限</p>
+<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">chown -R hadoop:hadoop /usr/zookeeper-3.4.10</span><br></pre></td></tr></table></figure>
+<p><img src="https://img-blog.csdnimg.cn/20201011215320385.png#pic_center" alt="在这里插入图片描述"><br><img src="https://img-blog.csdnimg.cn/20201011215350473.png#pic_center" alt="在这里插入图片描述"><br>13. 更改各机器上dataDir里面mydi的值，gaoyu1是2，gaoyu2是3<br><img src="https://img-blog.csdnimg.cn/20201011215531989.png#pic_center" alt="在这里插入图片描述"></p>
+<p><img src="https://img-blog.csdnimg.cn/20201011215515961.png#pic_center" alt="在这里插入图片描述"><br><img src="https://img-blog.csdnimg.cn/2020101121560090.png#pic_center" alt="在这里插入图片描述"><br><img src="https://img-blog.csdnimg.cn/20201011215617968.png#pic_center" alt="在这里插入图片描述"><br>回到主机<br><img src="https://img-blog.csdnimg.cn/20201011215646942.png#pic_center" alt="在这里插入图片描述"><br>14. 测试<br>启动dfs<img src="https://img-blog.csdnimg.cn/20201011215906810.png?x-oss-process=image/watermark,type_ZmFuZ3poZW5naGVpdGk,shadow_10,text_aHR0cHM6Ly9ibG9nLmNzZG4ubmV0L3dlaXhpbl80MjY5MzcxMg==,size_16,color_FFFFFF,t_70#pic_center" alt="在这里插入图片描述"><br>启动zookeeper<br><img src="https://img-blog.csdnimg.cn/20201011220030948.png#pic_center" alt="在这里插入图片描述"><br>关闭<img src="https://img-blog.csdnimg.cn/20201011220116551.png#pic_center" alt="在这里插入图片描述"><br>15. jps查看<br><img src="https://img-blog.csdnimg.cn/20201011220233567.png?x-oss-process=image/watermark,type_ZmFuZ3poZW5naGVpdGk,shadow_10,text_aHR0cHM6Ly9ibG9nLmNzZG4ubmV0L3dlaXhpbl80MjY5MzcxMg==,size_16,color_FFFFFF,t_70#pic_center" alt="在这里插入图片描述"><br><img src="https://img-blog.csdnimg.cn/20201011220317308.png?x-oss-process=image/watermark,type_ZmFuZ3poZW5naGVpdGk,shadow_10,text_aHR0cHM6Ly9ibG9nLmNzZG4ubmV0L3dlaXhpbl80MjY5MzcxMg==,size_16,color_FFFFFF,t_70#pic_center" alt="在这里插入图片描述"><br><img src="https://img-blog.csdnimg.cn/20201011220355319.png?x-oss-process=image/watermark,type_ZmFuZ3poZW5naGVpdGk,shadow_10,text_aHR0cHM6Ly9ibG9nLmNzZG4ubmV0L3dlaXhpbl80MjY5MzcxMg==,size_16,color_FFFFFF,t_70#pic_center" alt="在这里插入图片描述"></p>
+
+      
+      
+        
+          <div class="essayending">
+            <div>
+             <div style="text-align:center;color: #ccc;font-size:22px;">
+             <br/>
+             <br/>
+  -------------本文结束<i class="fa fa-paw"></i>感谢您的阅读-------------
+             <br/>
+             <br/>
+              <br/>
+              <br/>
+             </div>
+            </div>
+          </div>
           
+ 
+   
+<!-- 添加版权声明 -->
+<!-- 
+ -->
+<!-- 添加版权声明结束 -->
+<!-- 百度自动推送方式提交 -->
+<!-- 
+  <script>
+  (function(){
+      var bp = document.createElement('script');
+      var curProtocol = window.location.protocol.split(':')[0];
+      if (curProtocol === 'https') {
+          bp.src = 'https://zz.bdstatic.com/linksubmit/push.js';
+      }
+      else {
+          bp.src = 'http://push.zhanzhang.baidu.com/push.js';
+      }
+      var s = document.getElementsByTagName("script")[0];
+      s.parentNode.insertBefore(bp, s);
+  })();
+  </script>
+ -->
+<!-- 百度自动推送方式提交结束 -->
+
+      
+        <div class="page-reward">
+          <a href="javascript:;" class="page-reward-btn tooltip-top">
+            <div class="tooltip tooltip-east">
+            <span class="tooltip-item">
+              赏
+            </span>
+            <span class="tooltip-content">
+              <span class="tooltip-text">
+                <span class="tooltip-inner">
+                  <p class="reward-p"><i class="icon icon-quo-left"></i>谢谢你请我吃糖果<i class="icon icon-quo-right"></i></p>
+                  <div class="reward-box">
+                    
+                    <div class="reward-box-item">
+                      <img class="reward-img" src="/assets/zhifubao.jpg">
+                      <span class="reward-type">支付宝</span>
+                    </div>
+                    
+                    
+                    <div class="reward-box-item">
+                      <img class="reward-img" src="/assets/weixin.png">
+                      <span class="reward-type">微信</span>
+                    </div>
+                    
+                  </div>
+                </span>
+              </span>
+            </span>
+          </div>
+          </a>
+        </div>
+      
+    </div>
+    <div class="article-info article-info-index">
+      
+      
 	<div class="article-tag tagcloud">
 		<i class="icon-price-tags icon"></i>
 		<ul class="article-tag-list">
 			 
         		<li class="article-tag-list-item">
-        			<a href="javascript:void(0)" class="js-tag article-tag-list-link color1">观察者模式</a>
+        			<a href="javascript:void(0)" class="js-tag article-tag-list-link color1">linux</a>
         		</li>
       		
 		</ul>
 	</div>
 
-          
+      
 	<div class="article-category tagcloud">
 		<i class="icon-book icon"></i>
 		<ul class="article-tag-list">
 			 
         		<li class="article-tag-list-item">
-        			<a href="/categories/设计模式//" class="article-tag-list-link color5">设计模式</a>
+        			<a href="/categories/linux//" class="article-tag-list-link color1">linux</a>
         		</li>
       		
 		</ul>
 	</div>
 
 
+      
+
+      
+        
+<div class="share-btn share-icons tooltip-left">
+  <div class="tooltip tooltip-east">
+    <span class="tooltip-item">
+      <a href="javascript:;" class="share-sns share-outer">
+        <i class="icon icon-share"></i>
+      </a>
+    </span>
+    <span class="tooltip-content">
+      <div class="share-wrap">
+        <div class="share-icons">
+          <a class="weibo share-sns" href="javascript:;" data-type="weibo">
+            <i class="icon icon-weibo"></i>
+          </a>
+          <a class="weixin share-sns wxFab" href="javascript:;" data-type="weixin">
+            <i class="icon icon-weixin"></i>
+          </a>
+          <a class="qq share-sns" href="javascript:;" data-type="qq">
+            <i class="icon icon-qq"></i>
+          </a>
+          <a class="douban share-sns" href="javascript:;" data-type="douban">
+            <i class="icon icon-douban"></i>
+          </a>
+          <a class="qzone share-sns" href="javascript:;" data-type="qzone">
+            <i class="icon icon-qzone"></i>
+          </a>
+          <a class="facebook share-sns" href="javascript:;" data-type="facebook">
+            <i class="icon icon-facebook"></i>
+          </a>
+          <a class="twitter share-sns" href="javascript:;" data-type="twitter">
+            <i class="icon icon-twitter"></i>
+          </a>
+          <a class="google share-sns" href="javascript:;" data-type="google">
+            <i class="icon icon-google"></i>
+          </a>
         </div>
-        <div class="clearfix"></div>
-    </header>
+      </div>
+    </span>
+  </div>
+</div>
+
+<div class="page-modal wx-share js-wx-box">
+    <a class="close js-modal-close" href="javascript:;"><i class="icon icon-close"></i></a>
+    <p>扫一扫，分享到微信</p>
+    <div class="wx-qrcode">
+      <img src="//pan.baidu.com/share/qrcode?url=http://yoursite.com/2020/10/11/linux9/" alt="微信分享二维码">
+    </div>
+</div>
+
+<div class="mask js-mask"></div>
+      
+      <div class="clearfix"></div>
+    </div>
   </div>
 </article>
+
+  
+<nav id="article-nav">
   
   
-    </div></section>
+    <a href="/2020/10/11/linux8/" id="article-nav-older" class="article-nav-link-wrap">
+      <div class="article-nav-title">linux--MapReduce经典案例--数据去重</div>
+      <i class="icon-circle-right"></i>
+    </a>
+  
+</nav>
+
+
+<aside class="wrap-side-operation">
+    <div class="mod-side-operation">
+        
+        <div class="jump-container" id="js-jump-container" style="display:none;">
+            <a href="javascript:void(0)" class="mod-side-operation__jump-to-top">
+                <i class="icon-font icon-back"></i>
+            </a>
+            <div id="js-jump-plan-container" class="jump-plan-container" style="top: -11px;">
+                <i class="icon-font icon-plane jump-plane"></i>
+            </div>
+        </div>
+        
+        
+        <div class="toc-container tooltip-left">
+            <i class="icon-font icon-category"></i>
+            <div class="tooltip tooltip-east">
+                <span class="tooltip-item">
+                </span>
+                <span class="tooltip-content">
+                    <div class="toc-article">
+                    <ol class="toc"><li class="toc-item toc-level-4"><a class="toc-link" href="#Linux%E2%80%93Zookeeper%E5%AE%89%E8%A3%85%E4%B8%8E%E9%85%8D%E7%BD%AE"><span class="toc-number">1.</span> <span class="toc-text">Linux–Zookeeper安装与配置</span></a></li></ol>
+                    </div>
+                </span>
+            </div>
+        </div>
+        
+    </div>
+</aside>
+
+
+
+  
+  
   
 
-    
+  
+
+  
+
+  
+  <div id="gitment-ctn"></div> 
+<link rel="stylesheet" href="//imsun.github.io/gitment/style/default.css">
+<script src="//imsun.github.io/gitment/dist/gitment.browser.js"></script>
+<script>
+var gitment = new Gitment({
+  id: "http://yoursite.com/2020/10/11/linux9/",
+  owner: 'highfish920',
+  repo: 'yilia-plus-demo',
+  oauth: {
+    client_id: 'e395876fa94364c99e78',
+    client_secret: '3fbb3c40f226d26cd47f10c1beb836e9d2775730',
+  },
+})
+gitment.render('gitment-ctn')
+</script>
+  
+
+
 
 
           </div>
@@ -312,9 +584,9 @@ var _hmt = _hmt || [];
 	var yiliaConfig = {
 		mathjax: false,
 		isHome: false,
-		isPost: false,
+		isPost: true,
 		isArchive: false,
-		isTag: true,
+		isTag: false,
 		isCategory: false,
 		open_in_new: false,
 		toc_hide_index: true,

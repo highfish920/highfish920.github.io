@@ -6,7 +6,7 @@
   <link href="http://yoursite.com/atom.xml" rel="self"/>
   
   <link href="http://yoursite.com/"/>
-  <updated>2020-10-11T01:34:37.379Z</updated>
+  <updated>2020-10-11T14:15:22.378Z</updated>
   <id>http://yoursite.com/</id>
   
   <author>
@@ -15,6 +15,27 @@
   </author>
   
   <generator uri="https://hexo.io/">Hexo</generator>
+  
+  <entry>
+    <title>linux--Zookeeper安装与配置</title>
+    <link href="http://yoursite.com/2020/10/11/linux9/"/>
+    <id>http://yoursite.com/2020/10/11/linux9/</id>
+    <published>2020-10-11T02:55:21.521Z</published>
+    <updated>2020-10-11T14:15:22.378Z</updated>
+    
+    <content type="html"><![CDATA[<h4 id="Linux–Zookeeper安装与配置"><a href="#Linux–Zookeeper安装与配置" class="headerlink" title="Linux–Zookeeper安装与配置"></a>Linux–Zookeeper安装与配置</h4><a id="more"></a><ol><li><p>上传zookeeper压缩包到root目录下并查看<br><img src="https://img-blog.csdnimg.cn/20201011102017831.png#pic_center" alt="在这里插入图片描述"></p></li><li><p>解压<code>tar -zxvf zookeeper-3.4.10.tar.gz -C /usr</code><br><img src="https://img-blog.csdnimg.cn/20201011102234563.png?x-oss-process=image/watermark,type_ZmFuZ3poZW5naGVpdGk,shadow_10,text_aHR0cHM6Ly9ibG9nLmNzZG4ubmV0L3dlaXhpbl80MjY5MzcxMg==,size_16,color_FFFFFF,t_70#pic_center" alt="在这里插入图片描述"><br><img src="https://img-blog.csdnimg.cn/20201011102259459.png?x-oss-process=image/watermark,type_ZmFuZ3poZW5naGVpdGk,shadow_10,text_aHR0cHM6Ly9ibG9nLmNzZG4ubmV0L3dlaXhpbl80MjY5MzcxMg==,size_16,color_FFFFFF,t_70#pic_center" alt="在这里插入图片描述"></p></li><li><p>查看usr目录<img src="https://img-blog.csdnimg.cn/20201011102337329.png#pic_center" alt="在这里插入图片描述"></p></li><li><p>配置环境变量<br><code>vi /etc/profile</code><br><img src="https://img-blog.csdnimg.cn/20201011102652790.png#pic_center" alt="在这里插入图片描述"></p></li></ol><p>在最后添加内容<br><code>zookeeper environment export ZOOKEEPER_HOME=/usr/zookeeper-3.4.10 export PATH=$PATH:$ZOOKEEPER_HOME/bin </code><br><img src="https://img-blog.csdnimg.cn/20201011102801703.png#pic_center" alt="在这里插入图片描述"></p><p>刷新配置<br><code>source /etc/profile</code><br><img src="https://img-blog.csdnimg.cn/20201011102838893.png#pic_center" alt="在这里插入图片描述"><br>5. 修改文件夹权限<br>在root用户下修改zookeeper-3.4.10的权限，使用gaoyu(如果是hadoop请用hadoop)用户对<br>zookeeper-3.4.10文件夹具有控制权。<br><code>chown -R gaoyu:gaoyu /usr/zookeeper-3.4.10</code><br><img src="https://img-blog.csdnimg.cn/20201011105805707.png?x-oss-process=image/watermark,type_ZmFuZ3poZW5naGVpdGk,shadow_10,text_aHR0cHM6Ly9ibG9nLmNzZG4ubmV0L3dlaXhpbl80MjY5MzcxMg==,size_16,color_FFFFFF,t_70#pic_center" alt="在这里插入图片描述"></p><ol start="6"><li>在usr/zookeeper下创建dataDir文件夹<br><img src="https://img-blog.csdnimg.cn/20201011110406905.png?x-oss-process=image/watermark,type_ZmFuZ3poZW5naGVpdGk,shadow_10,text_aHR0cHM6Ly9ibG9nLmNzZG4ubmV0L3dlaXhpbl80MjY5MzcxMg==,size_16,color_FFFFFF,t_70#pic_center" alt="在这里插入图片描述"><br>并修改所属组<img src="https://img-blog.csdnimg.cn/20201011110427666.png?x-oss-process=image/watermark,type_ZmFuZ3poZW5naGVpdGk,shadow_10,text_aHR0cHM6Ly9ibG9nLmNzZG4ubmV0L3dlaXhpbl80MjY5MzcxMg==,size_16,color_FFFFFF,t_70#pic_center" alt="在这里插入图片描述"></li><li>配置zoo.cfg,重命名zoo_sample.cfg<br><img src="https://img-blog.csdnimg.cn/2020101111060654.png#pic_center" alt="在这里插入图片描述"></li></ol><p><img src="https://img-blog.csdnimg.cn/20201011110628760.png#pic_center" alt="在这里插入图片描述"><br><img src="https://img-blog.csdnimg.cn/20201011110707831.png#pic_center" alt="在这里插入图片描述"><br>8. 配置zoo.cfg<br><code>vi zoo.cfg</code><br><img src="https://img-blog.csdnimg.cn/20201011111121578.png?x-oss-process=image/watermark,type_ZmFuZ3poZW5naGVpdGk,shadow_10,text_aHR0cHM6Ly9ibG9nLmNzZG4ubmV0L3dlaXhpbl80MjY5MzcxMg==,size_16,color_FFFFFF,t_70#pic_center" alt="在这里插入图片描述"><br>9. 配置myid<br> 在新建的dataDir文件夹下，新建名为myid的文件，输入zoo.cfg各主机对应的编号，如gaoyu对应为1<br> <img src="https://img-blog.csdnimg.cn/20201011214243590.png#pic_center" alt="在这里插入图片描述"><br><img src="https://img-blog.csdnimg.cn/2020101121430949.png#pic_center" alt="在这里插入图片描述"><br>10. 复制到其他机器<br>``<img src="https://img-blog.csdnimg.cn/20201011214402994.png#pic_center" alt="在这里插入图片描述"><br><code>scp -r /usr/zookeeper-3.4.10/ gaoyu1:/usr</code><br><code>scp -r /usr/zookeeper-3.4.10/ gaoyu2:/usr</code><br><img src="https://img-blog.csdnimg.cn/20201011214606996.png?x-oss-process=image/watermark,type_ZmFuZ3poZW5naGVpdGk,shadow_10,text_aHR0cHM6Ly9ibG9nLmNzZG4ubmV0L3dlaXhpbl80MjY5MzcxMg==,size_16,color_FFFFFF,t_70#pic_center" alt="在这里插入图片描述"><br><img src="https://img-blog.csdnimg.cn/20201011214628644.png?x-oss-process=image/watermark,type_ZmFuZ3poZW5naGVpdGk,shadow_10,text_aHR0cHM6Ly9ibG9nLmNzZG4ubmV0L3dlaXhpbl80MjY5MzcxMg==,size_16,color_FFFFFF,t_70#pic_center" alt="在这里插入图片描述"></p><p><img src="https://img-blog.csdnimg.cn/20201011214800138.png?x-oss-process=image/watermark,type_ZmFuZ3poZW5naGVpdGk,shadow_10,text_aHR0cHM6Ly9ibG9nLmNzZG4ubmV0L3dlaXhpbl80MjY5MzcxMg==,size_16,color_FFFFFF,t_70#pic_center" alt="在这里插入图片描述"></p><p><img src="https://img-blog.csdnimg.cn/20201011214711896.png?x-oss-process=image/watermark,type_ZmFuZ3poZW5naGVpdGk,shadow_10,text_aHR0cHM6Ly9ibG9nLmNzZG4ubmV0L3dlaXhpbl80MjY5MzcxMg==,size_16,color_FFFFFF,t_70#pic_center" alt="在这里插入图片描述"><br><img src="https://img-blog.csdnimg.cn/20201011214905260.png#pic_center" alt="在这里插入图片描述"><br>11. 登录到其他机器刷新profile文件<br><img src="https://img-blog.csdnimg.cn/20201011215031405.png#pic_center" alt="在这里插入图片描述"><br>12. 修改其他两台机器权限</p><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">chown -R hadoop:hadoop /usr/zookeeper-3.4.10</span><br></pre></td></tr></table></figure><p><img src="https://img-blog.csdnimg.cn/20201011215320385.png#pic_center" alt="在这里插入图片描述"><br><img src="https://img-blog.csdnimg.cn/20201011215350473.png#pic_center" alt="在这里插入图片描述"><br>13. 更改各机器上dataDir里面mydi的值，gaoyu1是2，gaoyu2是3<br><img src="https://img-blog.csdnimg.cn/20201011215531989.png#pic_center" alt="在这里插入图片描述"></p><p><img src="https://img-blog.csdnimg.cn/20201011215515961.png#pic_center" alt="在这里插入图片描述"><br><img src="https://img-blog.csdnimg.cn/2020101121560090.png#pic_center" alt="在这里插入图片描述"><br><img src="https://img-blog.csdnimg.cn/20201011215617968.png#pic_center" alt="在这里插入图片描述"><br>回到主机<br><img src="https://img-blog.csdnimg.cn/20201011215646942.png#pic_center" alt="在这里插入图片描述"><br>14. 测试<br>启动dfs<img src="https://img-blog.csdnimg.cn/20201011215906810.png?x-oss-process=image/watermark,type_ZmFuZ3poZW5naGVpdGk,shadow_10,text_aHR0cHM6Ly9ibG9nLmNzZG4ubmV0L3dlaXhpbl80MjY5MzcxMg==,size_16,color_FFFFFF,t_70#pic_center" alt="在这里插入图片描述"><br>启动zookeeper<br><img src="https://img-blog.csdnimg.cn/20201011220030948.png#pic_center" alt="在这里插入图片描述"><br>关闭<img src="https://img-blog.csdnimg.cn/20201011220116551.png#pic_center" alt="在这里插入图片描述"><br>15. jps查看<br><img src="https://img-blog.csdnimg.cn/20201011220233567.png?x-oss-process=image/watermark,type_ZmFuZ3poZW5naGVpdGk,shadow_10,text_aHR0cHM6Ly9ibG9nLmNzZG4ubmV0L3dlaXhpbl80MjY5MzcxMg==,size_16,color_FFFFFF,t_70#pic_center" alt="在这里插入图片描述"><br><img src="https://img-blog.csdnimg.cn/20201011220317308.png?x-oss-process=image/watermark,type_ZmFuZ3poZW5naGVpdGk,shadow_10,text_aHR0cHM6Ly9ibG9nLmNzZG4ubmV0L3dlaXhpbl80MjY5MzcxMg==,size_16,color_FFFFFF,t_70#pic_center" alt="在这里插入图片描述"><br><img src="https://img-blog.csdnimg.cn/20201011220355319.png?x-oss-process=image/watermark,type_ZmFuZ3poZW5naGVpdGk,shadow_10,text_aHR0cHM6Ly9ibG9nLmNzZG4ubmV0L3dlaXhpbl80MjY5MzcxMg==,size_16,color_FFFFFF,t_70#pic_center" alt="在这里插入图片描述"></p>]]></content>
+    
+    
+    <summary type="html">&lt;h4 id=&quot;Linux–Zookeeper安装与配置&quot;&gt;&lt;a href=&quot;#Linux–Zookeeper安装与配置&quot; class=&quot;headerlink&quot; title=&quot;Linux–Zookeeper安装与配置&quot;&gt;&lt;/a&gt;Linux–Zookeeper安装与配置&lt;/h4&gt;</summary>
+    
+    
+    
+    <category term="linux" scheme="http://yoursite.com/categories/linux/"/>
+    
+    
+    <category term="linux" scheme="http://yoursite.com/tags/linux/"/>
+    
+  </entry>
   
   <entry>
     <title>linux--MapReduce经典案例--数据去重</title>
@@ -405,27 +426,6 @@
     
     
     <summary type="html">&lt;h2 id=&quot;1-名词定义&quot;&gt;&lt;a href=&quot;#1-名词定义&quot; class=&quot;headerlink&quot; title=&quot;1.名词定义&quot;&gt;&lt;/a&gt;1.名词定义&lt;/h2&gt;</summary>
-    
-    
-    
-    <category term="Git" scheme="http://yoursite.com/categories/Git/"/>
-    
-    
-    <category term="git" scheme="http://yoursite.com/tags/git/"/>
-    
-  </entry>
-  
-  <entry>
-    <title>GIT篇---3.如何把修改后的代码提交到远程仓库(Windows系统)</title>
-    <link href="http://yoursite.com/2020/08/31/git3/"/>
-    <id>http://yoursite.com/2020/08/31/git3/</id>
-    <published>2020-08-31T09:48:53.962Z</published>
-    <updated>2020-08-31T10:17:03.723Z</updated>
-    
-    <content type="html"><![CDATA[<h6 id="将代码提交到远程仓库中，其实通常只需要两条命令即可，首先是提交到本地，然后再将本地的记录推送到远端。但在实际工作中，为了防止本地仓库和远程仓库出现冲突，一般先让把远程代码同步到本地代码，让本地代码保持最新，然后再提交改动到本地，最后进行推送。"><a href="#将代码提交到远程仓库中，其实通常只需要两条命令即可，首先是提交到本地，然后再将本地的记录推送到远端。但在实际工作中，为了防止本地仓库和远程仓库出现冲突，一般先让把远程代码同步到本地代码，让本地代码保持最新，然后再提交改动到本地，最后进行推送。" class="headerlink" title="将代码提交到远程仓库中，其实通常只需要两条命令即可，首先是提交到本地，然后再将本地的记录推送到远端。但在实际工作中，为了防止本地仓库和远程仓库出现冲突，一般先让把远程代码同步到本地代码，让本地代码保持最新，然后再提交改动到本地，最后进行推送。"></a>将代码提交到远程仓库中，其实通常只需要两条命令即可，首先是提交到本地，然后再将本地的记录推送到远端。但在实际工作中，为了防止本地仓库和远程仓库出现冲突，一般先让把远程代码同步到本地代码，让本地代码保持最新，然后再提交改动到本地，最后进行推送。</h6><a id="more"></a><h2 id="1-同步远程代码"><a href="#1-同步远程代码" class="headerlink" title="1.同步远程代码"></a>1.同步远程代码</h2><p>一个远程仓库有可能有多人有权限推送，所以存在远程代码比你本地仓库更新，因此在提交代码之前需要先拉取服务器代码，让本地仓库保持最新的版本记录；这样做的目的是为了防止当你提交代码之后，推送到远端出现代码冲突问题，拉取远程代码参考命令如下所示：</p><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">git pull </span><br></pre></td></tr></table></figure><h2 id="2-检查改动文件"><a href="#2-检查改动文件" class="headerlink" title="2.检查改动文件"></a>2.检查改动文件</h2><p>当远端最新的代码拉下来之后，我们最好（非必须，建议每次提交前检查）通过git status命令检查一下有哪些文件被改动了，参考命令如下所示：</p><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">git status</span><br></pre></td></tr></table></figure><p>在终端执行完命令之后，有删除的、有添加的、也有修改内容的</p><ul><li>Untracked: 未跟踪,一般为新增文件，此文件在文件夹中, 但并没有加入到git库, 不参与版本控制. 通过git add 状态变为Staged.</li><li>Modified: 文件已修改, 仅仅是修改, 并没有进行其他的操作.</li><li>deleted： 文件已删除，本地删除，服务器上还没有删除.</li><li>renamed：文件名称被改变<br>如果发现无意中编辑了某一个文件，但实际上并不想改变它，这里可以使用git checkout 文件名来撤销更改，参考命令如下：</li></ul><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">git checkout README.md</span><br></pre></td></tr></table></figure><p>撤销后，再次使用<code>git status</code>进行查看变动</p><h2 id="3-添加文件到缓存"><a href="#3-添加文件到缓存" class="headerlink" title="3.添加文件到缓存"></a>3.添加文件到缓存</h2><p>通过检查并将不需要改动的代码恢复后，就可以开始将需要提交的文件添加到暂存区中，添加文件到暂存区可以指定添加文件或目录，或者一次性添加全部改动到缓存。<br>先来看看提交指定文件或目录至缓存的格式，参考命令如下：<code>git add index.php</code><br>也可以使用刚才的命令将 app目录,提交到缓存中去，参考命令如下：<code>git add app</code><br>如果一次性添加所有文件，那么可以把命令这样写<code>git add .</code>(记住有点)</p><h2 id="4-提交代码"><a href="#4-提交代码" class="headerlink" title="4. 提交代码"></a>4. 提交代码</h2><p>当你将所需要提交的代码都添加到缓存区域后，接下来就可以将代码提交到本地仓库中，参考命令如下所示 ：</p><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">git commit . -m “这是备注信息”</span><br></pre></td></tr></table></figure><h2 id="5-推送代码"><a href="#5-推送代码" class="headerlink" title="5.推送代码"></a>5.推送代码</h2><p>当代码提交之后，在本地的工作就已经完成了，此时为了让其他人拉取你的代码，通常还需要将代码推送到远程仓库，这里我告诉大家最简单的方式，参考命令如下：</p><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">git push</span><br></pre></td></tr></table></figure><p>本文整理自 <a href="http://www.imooc.com/read/51">http://www.imooc.com/read/51</a></p>]]></content>
-    
-    
-    <summary type="html">&lt;h6 id=&quot;将代码提交到远程仓库中，其实通常只需要两条命令即可，首先是提交到本地，然后再将本地的记录推送到远端。但在实际工作中，为了防止本地仓库和远程仓库出现冲突，一般先让把远程代码同步到本地代码，让本地代码保持最新，然后再提交改动到本地，最后进行推送。&quot;&gt;&lt;a href=&quot;#将代码提交到远程仓库中，其实通常只需要两条命令即可，首先是提交到本地，然后再将本地的记录推送到远端。但在实际工作中，为了防止本地仓库和远程仓库出现冲突，一般先让把远程代码同步到本地代码，让本地代码保持最新，然后再提交改动到本地，最后进行推送。&quot; class=&quot;headerlink&quot; title=&quot;将代码提交到远程仓库中，其实通常只需要两条命令即可，首先是提交到本地，然后再将本地的记录推送到远端。但在实际工作中，为了防止本地仓库和远程仓库出现冲突，一般先让把远程代码同步到本地代码，让本地代码保持最新，然后再提交改动到本地，最后进行推送。&quot;&gt;&lt;/a&gt;将代码提交到远程仓库中，其实通常只需要两条命令即可，首先是提交到本地，然后再将本地的记录推送到远端。但在实际工作中，为了防止本地仓库和远程仓库出现冲突，一般先让把远程代码同步到本地代码，让本地代码保持最新，然后再提交改动到本地，最后进行推送。&lt;/h6&gt;</summary>
     
     
     
