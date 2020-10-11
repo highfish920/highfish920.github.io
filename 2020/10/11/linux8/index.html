@@ -7,19 +7,27 @@
   <meta name="renderer" content="webkit">
   <meta http-equiv="X-UA-Compatible" content="IE=edge">
   <link rel="dns-prefetch" href="http://yoursite.com">
-  <title>highfish920的博客</title>
+  <title>linux--MapReduce经典案例--数据去重 | highfish920的博客</title>
   <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
-  <meta name="description" content="icxpIklOHh">
-<meta property="og:type" content="website">
-<meta property="og:title" content="highfish920的博客">
-<meta property="og:url" content="http://yoursite.com/baidu_verify_icxpIklOHh.html">
+  <meta name="description" content="MapReduce经典案例–数据去重">
+<meta property="og:type" content="article">
+<meta property="og:title" content="linux--MapReduce经典案例--数据去重">
+<meta property="og:url" content="http://yoursite.com/2020/10/11/linux8/index.html">
 <meta property="og:site_name" content="highfish920的博客">
-<meta property="og:description" content="icxpIklOHh">
+<meta property="og:description" content="MapReduce经典案例–数据去重">
 <meta property="og:locale" content="zh_CN">
-<meta property="article:published_time" content="2020-08-15T10:05:06.628Z">
-<meta property="article:modified_time" content="2020-08-15T08:51:45.394Z">
+<meta property="og:image" content="https://img-blog.csdnimg.cn/20201011093239110.png?x-oss-process=image/watermark,type_ZmFuZ3poZW5naGVpdGk,shadow_10,text_aHR0cHM6Ly9ibG9nLmNzZG4ubmV0L3dlaXhpbl80MjY5MzcxMg==,size_16,color_FFFFFF,t_70#pic_center">
+<meta property="og:image" content="https://img-blog.csdnimg.cn/2020101109084582.png?x-oss-process=image/watermark,type_ZmFuZ3poZW5naGVpdGk,shadow_10,text_aHR0cHM6Ly9ibG9nLmNzZG4ubmV0L3dlaXhpbl80MjY5MzcxMg==,size_16,color_FFFFFF,t_70#pic_center">
+<meta property="og:image" content="https://img-blog.csdnimg.cn/20201011091125870.png#pic_center">
+<meta property="og:image" content="https://img-blog.csdnimg.cn/20201011090713887.png?x-oss-process=image/watermark,type_ZmFuZ3poZW5naGVpdGk,shadow_10,text_aHR0cHM6Ly9ibG9nLmNzZG4ubmV0L3dlaXhpbl80MjY5MzcxMg==,size_16,color_FFFFFF,t_70#pic_center">
+<meta property="og:image" content="https://img-blog.csdnimg.cn/20201011091709803.png?x-oss-process=image/watermark,type_ZmFuZ3poZW5naGVpdGk,shadow_10,text_aHR0cHM6Ly9ibG9nLmNzZG4ubmV0L3dlaXhpbl80MjY5MzcxMg==,size_16,color_FFFFFF,t_70#pic_center">
+<meta property="og:image" content="https://img-blog.csdnimg.cn/20201011091828934.png?x-oss-process=image/watermark,type_ZmFuZ3poZW5naGVpdGk,shadow_10,text_aHR0cHM6Ly9ibG9nLmNzZG4ubmV0L3dlaXhpbl80MjY5MzcxMg==,size_16,color_FFFFFF,t_70#pic_center">
+<meta property="article:published_time" content="2020-10-11T01:34:02.042Z">
+<meta property="article:modified_time" content="2020-10-11T01:34:37.379Z">
 <meta property="article:author" content="highfish">
+<meta property="article:tag" content="linux">
 <meta name="twitter:card" content="summary">
+<meta name="twitter:image" content="https://img-blog.csdnimg.cn/20201011093239110.png?x-oss-process=image/watermark,type_ZmFuZ3poZW5naGVpdGk,shadow_10,text_aHR0cHM6Ly9ibG9nLmNzZG4ubmV0L3dlaXhpbl80MjY5MzcxMg==,size_16,color_FFFFFF,t_70#pic_center">
   
   <link rel="alternative" href="/atom.xml" title="highfish920的博客" type="application/atom+xml">
   
@@ -102,7 +110,7 @@ var _hmt = _hmt || [];
 			</ul>
 		</nav>
 		<nav>
-			总文章数 77
+			总文章数 78
 		</nav>
 		<nav class="header-smart-menu">
     		
@@ -208,12 +216,76 @@ var _hmt = _hmt || [];
             <canvas data-colors="#eaeaea" data-sectionHeight="100" data-contentId="js-content" id="myCanvas1" class="anm-canvas"></canvas>
           </div>
           <div id="js-content" class="content-ll">
-            <article id="page-" class="article article-type-page " itemscope itemprop="blogPost">
+            
+  <article id="post-linux8" class="article article-type-post " itemscope itemprop="blogPost">
   <div class="article-inner">
+    
+      <header class="article-header">
+        
+  
+    <h1 class="article-title" itemprop="name">
+      linux--MapReduce经典案例--数据去重
+    </h1>
+  
+
+        <!--显示阅读次数-->
+
+  <br/>
+  <a class="cloud-tie-join-count" href="javascript:void(0);" style="color:gray;font-size:14px;">
+  <span class="icon-sort"></span>
+  <span id="busuanzi_container_page_pv" style="color:#ef7522;font-size:14px;">
+            阅读数: <span id="busuanzi_value_page_pv"></span>次 &nbsp;&nbsp;
+            字数：1.4k字 | 预计阅读时长：7分钟
+  </span>
+  </a>
+
+<!--显示阅读次数完毕-->
+
+
+
+        
+        
+	<!-- 不蒜子统计 -->
+	<span id="busuanzi_container_page_pv" style='display:none' class="archive-article-date">
+		  <i class="icon-smile icon"></i> 阅读数：<span id="busuanzi_value_page_pv"></span>次
+	</span>
+
+<a href="/2020/10/11/linux8/" class="archive-article-date">
+  	<time datetime="2020-10-11T01:34:02.042Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2020-10-11</time>
+</a>
+        
+      </header>
+      
     
     <div class="article-entry" itemprop="articleBody">
       
-        icxpIklOHh
+        <h4 id="MapReduce经典案例–数据去重"><a href="#MapReduce经典案例–数据去重" class="headerlink" title="MapReduce经典案例–数据去重"></a>MapReduce经典案例–数据去重</h4><a id="more"></a>
+<p>项目完整代码以及两个test文件以及maven环境所需jar包：<br>链接：<a target="_blank" rel="noopener" href="https://pan.baidu.com/s/10MEBxCfy_ShTaCf_RhGzMw">https://pan.baidu.com/s/10MEBxCfy_ShTaCf_RhGzMw</a><br>提取码：1314<br><img src="https://img-blog.csdnimg.cn/20201011093239110.png?x-oss-process=image/watermark,type_ZmFuZ3poZW5naGVpdGk,shadow_10,text_aHR0cHM6Ly9ibG9nLmNzZG4ubmV0L3dlaXhpbl80MjY5MzcxMg==,size_16,color_FFFFFF,t_70#pic_center" alt="在这里插入图片描述"></p>
+<ol>
+<li>首先要在windows上搭建开发环境 见<a target="_blank" rel="noopener" href="https://blog.csdn.net/weixin_42693712/article/details/108796708">https://blog.csdn.net/weixin_42693712/article/details/108796708</a></li>
+<li>打开本机eclipse，创建一个maven工程</li>
+</ol>
+<ul>
+<li>选择file-&gt;new-&gt;maven project创建maven工程，选择create a simple project选项，点击next GroupId写com.itcast,Artifact写HadoopDemo，其他默认就好</li>
+<li>编辑pom.xml添加依赖，依赖添加成功后，在maven Dependenciens下面自动会有jar包<figure class="highlight"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br><span class="line">32</span><br><span class="line">33</span><br><span class="line">34</span><br><span class="line">35</span><br><span class="line">36</span><br><span class="line">37</span><br><span class="line">38</span><br><span class="line">39</span><br><span class="line">40</span><br><span class="line">41</span><br><span class="line">42</span><br><span class="line">43</span><br><span class="line">44</span><br></pre></td><td class="code"><pre><span class="line">&lt;project xmlns=<span class="string">&quot;http://maven.apache.org/POM/4.0.0&quot;</span></span><br><span class="line">    xmlns:xsi=<span class="string">&quot;http://www.w3.org/2001/XMLSchema-instance&quot;</span></span><br><span class="line">    xsi:schemaLocation=<span class="string">&quot;http://maven.apache.org/POM/4.0.0 http://maven.apache.org/xsd/maven-4.0.0.xsd&quot;</span>&gt;</span><br><span class="line">    &lt;modelVersion&gt;4.0.0&lt;/modelVersion&gt;</span><br><span class="line">    &lt;groupId&gt;com.itcast&lt;/groupId&gt;</span><br><span class="line">    &lt;artifactId&gt;HadoopDemo&lt;/artifactId&gt;</span><br><span class="line">    &lt;version&gt;0.0.1-SNAPSHOT&lt;/version&gt;</span><br><span class="line"></span><br><span class="line">    &lt;dependencies&gt;</span><br><span class="line"></span><br><span class="line">        &lt;dependency&gt;</span><br><span class="line">            &lt;groupId&gt;org.apache.hadoop&lt;/groupId&gt;</span><br><span class="line">            &lt;artifactId&gt;hadoop-common&lt;/artifactId&gt;</span><br><span class="line">            &lt;version&gt;2.7.4&lt;/version&gt;</span><br><span class="line">        &lt;/dependency&gt;</span><br><span class="line"></span><br><span class="line">        &lt;dependency&gt;</span><br><span class="line">            &lt;groupId&gt;org.apache.hadoop&lt;/groupId&gt;</span><br><span class="line">            &lt;artifactId&gt;hadoop-hdfs&lt;/artifactId&gt;</span><br><span class="line">            &lt;version&gt;2.7.4&lt;/version&gt;</span><br><span class="line">        &lt;/dependency&gt;</span><br><span class="line"></span><br><span class="line">        &lt;dependency&gt;</span><br><span class="line">            &lt;groupId&gt;org.apache.hadoop&lt;/groupId&gt;</span><br><span class="line">            &lt;artifactId&gt;hadoop-client&lt;/artifactId&gt;</span><br><span class="line">            &lt;version&gt;2.7.4&lt;/version&gt;</span><br><span class="line">        &lt;/dependency&gt;</span><br><span class="line"></span><br><span class="line">        &lt;dependency&gt;</span><br><span class="line">            &lt;groupId&gt;junit&lt;/groupId&gt;</span><br><span class="line">            &lt;artifactId&gt;junit&lt;/artifactId&gt;</span><br><span class="line">            &lt;version&gt;RELEASE&lt;/version&gt;</span><br><span class="line">        &lt;/dependency&gt;</span><br><span class="line"></span><br><span class="line">        &lt;dependency&gt;</span><br><span class="line">            &lt;groupId&gt;jdk.tools&lt;/groupId&gt;</span><br><span class="line">            &lt;artifactId&gt;jdk.tools&lt;/artifactId&gt;</span><br><span class="line">            &lt;version&gt;1.8&lt;/version&gt;</span><br><span class="line">            &lt;scope&gt;system&lt;/scope&gt;</span><br><span class="line">            &lt;systemPath&gt;$&#123;JAVA_HOME&#125;/lib/tools.jar&lt;/systemPath&gt;</span><br><span class="line">        &lt;/dependency&gt;</span><br><span class="line"></span><br><span class="line">    &lt;/dependencies&gt;</span><br><span class="line">&lt;/project&gt;</span><br></pre></td></tr></table></figure></li>
+<li>在src下建立com.itcast.hdfsdemo包，建立HDFS_CRUD类以初始化客户端对象</li>
+</ul>
+<figure class="highlight java"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br><span class="line">32</span><br><span class="line">33</span><br><span class="line">34</span><br><span class="line">35</span><br><span class="line">36</span><br><span class="line">37</span><br><span class="line">38</span><br><span class="line">39</span><br><span class="line">40</span><br><span class="line">41</span><br><span class="line">42</span><br><span class="line">43</span><br><span class="line">44</span><br><span class="line">45</span><br><span class="line">46</span><br><span class="line">47</span><br><span class="line">48</span><br><span class="line">49</span><br><span class="line">50</span><br><span class="line">51</span><br><span class="line">52</span><br><span class="line">53</span><br><span class="line">54</span><br><span class="line">55</span><br><span class="line">56</span><br><span class="line">57</span><br><span class="line">58</span><br><span class="line">59</span><br><span class="line">60</span><br><span class="line">61</span><br><span class="line">62</span><br><span class="line">63</span><br><span class="line">64</span><br><span class="line">65</span><br><span class="line">66</span><br><span class="line">67</span><br><span class="line">68</span><br><span class="line">69</span><br><span class="line">70</span><br><span class="line">71</span><br><span class="line">72</span><br><span class="line">73</span><br><span class="line">74</span><br><span class="line">75</span><br><span class="line">76</span><br><span class="line">77</span><br><span class="line">78</span><br><span class="line">79</span><br><span class="line">80</span><br><span class="line">81</span><br><span class="line">82</span><br><span class="line">83</span><br><span class="line">84</span><br><span class="line">85</span><br><span class="line">86</span><br><span class="line">87</span><br><span class="line">88</span><br><span class="line">89</span><br><span class="line">90</span><br><span class="line">91</span><br><span class="line">92</span><br><span class="line">93</span><br><span class="line">94</span><br><span class="line">95</span><br><span class="line">96</span><br><span class="line">97</span><br><span class="line">98</span><br><span class="line">99</span><br><span class="line">100</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">package</span> com.itcast.hdfsdemo;</span><br><span class="line"></span><br><span class="line"><span class="keyword">import</span> java.io.FileNotFoundException;</span><br><span class="line"><span class="keyword">import</span> java.io.IOException;</span><br><span class="line"><span class="keyword">import</span> java.util.Comparator;</span><br><span class="line"><span class="keyword">import</span> java.util.Locale;</span><br><span class="line"></span><br><span class="line"><span class="keyword">import</span> javax.tools.JavaFileManager;</span><br><span class="line"></span><br><span class="line"><span class="keyword">import</span> org.apache.hadoop.conf.Configuration;</span><br><span class="line"><span class="keyword">import</span> org.apache.hadoop.fs.BlockLocation;</span><br><span class="line"><span class="keyword">import</span> org.apache.hadoop.fs.FileSystem;</span><br><span class="line"><span class="keyword">import</span> org.apache.hadoop.fs.LocatedFileStatus;</span><br><span class="line"><span class="keyword">import</span> org.apache.hadoop.fs.Path;</span><br><span class="line"><span class="keyword">import</span> org.apache.hadoop.fs.RemoteIterator;</span><br><span class="line"><span class="keyword">import</span> org.junit.Before;</span><br><span class="line"><span class="keyword">import</span> org.junit.Test;</span><br><span class="line"><span class="keyword">import</span> com.sun.javadoc.DocErrorReporter;</span><br><span class="line"><span class="keyword">import</span> com.sun.javadoc.ProgramElementDoc;</span><br><span class="line"><span class="keyword">import</span> com.sun.javadoc.SourcePosition;</span><br><span class="line"><span class="keyword">import</span> com.sun.tools.doclets.internal.toolkit.Content;</span><br><span class="line"><span class="keyword">import</span> com.sun.tools.doclets.internal.toolkit.WriterFactory;</span><br><span class="line"><span class="keyword">import</span> com.sun.tools.doclets.internal.toolkit.util.MessageRetriever;</span><br><span class="line"></span><br><span class="line"><span class="keyword">public</span> <span class="class"><span class="keyword">class</span> <span class="title">HDFS_CRUD</span> </span>&#123;</span><br><span class="line">    FileSystem fs = <span class="keyword">null</span>;</span><br><span class="line">    <span class="meta">@Before</span></span><br><span class="line">    <span class="function"><span class="keyword">public</span> <span class="keyword">void</span> <span class="title">init</span><span class="params">()</span> <span class="keyword">throws</span> Exception</span>&#123;</span><br><span class="line">        <span class="comment">//要访问hdfs的url</span></span><br><span class="line">        Configuration conf = <span class="keyword">new</span> Configuration(); </span><br><span class="line">        <span class="comment">//执行hdfs</span></span><br><span class="line">        conf.set(<span class="string">&quot;fs.defaultFS&quot;</span>,<span class="string">&quot;hdfs://gaoyu:9000&quot;</span>);</span><br><span class="line">        <span class="comment">//进行客户端设置</span></span><br><span class="line">        System.setProperty(<span class="string">&quot;HADOOP_USER_NAME&quot;</span>, <span class="string">&quot;root&quot;</span>);</span><br><span class="line">        <span class="comment">//静态方法获取客户端对象</span></span><br><span class="line">        fs = FileSystem.get(conf);</span><br><span class="line">    &#125;</span><br><span class="line">    </span><br><span class="line">    <span class="meta">@Test</span></span><br><span class="line">    <span class="function"><span class="keyword">public</span> <span class="keyword">void</span> <span class="title">testAddFileToHdfs</span><span class="params">()</span> <span class="keyword">throws</span> IOException</span>&#123;</span><br><span class="line">        <span class="comment">//将上传的文件保存在本地路劲</span></span><br><span class="line">        Path src = <span class="keyword">new</span> Path(<span class="string">&quot;D:/test.txt&quot;</span>);</span><br><span class="line">        <span class="comment">//要上川岛hdfs目标路劲</span></span><br><span class="line">        Path dst = <span class="keyword">new</span> Path(<span class="string">&quot;/testFile&quot;</span>);</span><br><span class="line">        <span class="comment">//上传文件方法</span></span><br><span class="line">        fs.copyFromLocalFile(src, dst);</span><br><span class="line">        <span class="comment">//关闭资源</span></span><br><span class="line">        fs.close();</span><br><span class="line">    &#125;</span><br><span class="line">    </span><br><span class="line">    <span class="meta">@Test</span></span><br><span class="line">    <span class="function"><span class="keyword">public</span> <span class="keyword">void</span> <span class="title">testDownloadFileTolocal</span><span class="params">()</span> <span class="keyword">throws</span> IllegalMonitorStateException,IOException</span>&#123;</span><br><span class="line">        <span class="comment">//下载文件</span></span><br><span class="line">        fs.copyToLocalFile(<span class="keyword">new</span> Path(<span class="string">&quot;/testFile&quot;</span>), <span class="keyword">new</span> Path(<span class="string">&quot;D://&quot;</span>));</span><br><span class="line">        fs.close();</span><br><span class="line">    &#125;</span><br><span class="line">    </span><br><span class="line">    <span class="comment">//创建删除重命名文件</span></span><br><span class="line">    <span class="meta">@Test</span></span><br><span class="line">    <span class="function"><span class="keyword">public</span> <span class="keyword">void</span> <span class="title">testMkdirAndDeleteAndRename</span><span class="params">()</span> <span class="keyword">throws</span> Exception</span>&#123;</span><br><span class="line">        <span class="comment">//创建目录</span></span><br><span class="line">        fs.mkdirs(<span class="keyword">new</span> Path(<span class="string">&quot;/a/b/c&quot;</span>));</span><br><span class="line">        fs.mkdirs(<span class="keyword">new</span> Path(<span class="string">&quot;/a2/b2/c2&quot;</span>));</span><br><span class="line">        <span class="comment">//重命名文件或文件夹</span></span><br><span class="line">        fs.rename(<span class="keyword">new</span> Path(<span class="string">&quot;/a&quot;</span>), <span class="keyword">new</span> Path(<span class="string">&quot;/a3&quot;</span>));</span><br><span class="line">        <span class="comment">//删除文件夹</span></span><br><span class="line">        fs.delete(<span class="keyword">new</span> Path(<span class="string">&quot;/a2&quot;</span>),<span class="keyword">true</span>);</span><br><span class="line">        </span><br><span class="line">    &#125;</span><br><span class="line">    </span><br><span class="line">    <span class="meta">@Test</span></span><br><span class="line">    <span class="function"><span class="keyword">public</span> <span class="keyword">void</span> <span class="title">testListFiles</span><span class="params">()</span> <span class="keyword">throws</span> FileNotFoundException,IllegalArgumentException,IOException</span>&#123;</span><br><span class="line">        <span class="comment">//获取迭代器对象</span></span><br><span class="line">        RemoteIterator&lt;LocatedFileStatus&gt;listFiles = fs.listFiles(<span class="keyword">new</span> Path(<span class="string">&quot;/&quot;</span>), <span class="keyword">true</span>);</span><br><span class="line">        <span class="keyword">while</span>(listFiles.hasNext()) &#123;</span><br><span class="line">            LocatedFileStatus fileStatus = listFiles.next();</span><br><span class="line">            <span class="comment">//打印当前文件名</span></span><br><span class="line">            System.out.println(fileStatus.getPath().getName());</span><br><span class="line">            <span class="comment">//打印当前文件块大小</span></span><br><span class="line">            System.out.println(fileStatus.getBlockSize());</span><br><span class="line">            <span class="comment">//打印当前文件权限</span></span><br><span class="line">            System.out.println(fileStatus.getPermission());</span><br><span class="line">            <span class="comment">//打印当前文件内容长度</span></span><br><span class="line">            System.out.println(fileStatus.getLen());</span><br><span class="line">            <span class="comment">//获取文件块信息</span></span><br><span class="line">            BlockLocation[] blockLocations = fileStatus.getBlockLocations();</span><br><span class="line">            <span class="keyword">for</span>(BlockLocation b1 : blockLocations) &#123;</span><br><span class="line">                System.out.println(<span class="string">&quot;block-length:&quot;</span>+b1.getLength()+<span class="string">&quot;--&quot;</span>+<span class="string">&quot;block-offset:&quot;</span>+b1.getOffset());</span><br><span class="line">                String[] hosts = b1.getHosts();</span><br><span class="line">                <span class="keyword">for</span>(String host : hosts) &#123;</span><br><span class="line">                    System.out.println(host);</span><br><span class="line">                &#125;</span><br><span class="line">            &#125;</span><br><span class="line">            System.out.println(<span class="string">&quot;-------------分割线--------------------&quot;</span>);</span><br><span class="line">        &#125;</span><br><span class="line">    &#125;</span><br><span class="line">    </span><br><span class="line"></span><br><span class="line">&#125;</span><br><span class="line"></span><br></pre></td></tr></table></figure>
+<p><strong><em>注意：</em></strong><br>gaoyu:9000s是自己设置的在core-site.xml中，自行查看<br><img src="https://img-blog.csdnimg.cn/2020101109084582.png?x-oss-process=image/watermark,type_ZmFuZ3poZW5naGVpdGk,shadow_10,text_aHR0cHM6Ly9ibG9nLmNzZG4ubmV0L3dlaXhpbl80MjY5MzcxMg==,size_16,color_FFFFFF,t_70#pic_center" alt="在这里插入图片描述"><br>其中output在本地目录下不用创建，会自动生成，input目录需要自行创建在相应路劲下，我的是在D:\Dedup\input目录下，和代码中位置需要一直一致<img src="https://img-blog.csdnimg.cn/20201011091125870.png#pic_center" alt="在这里插入图片描述"><img src="https://img-blog.csdnimg.cn/20201011090713887.png?x-oss-process=image/watermark,type_ZmFuZ3poZW5naGVpdGk,shadow_10,text_aHR0cHM6Ly9ibG9nLmNzZG4ubmV0L3dlaXhpbl80MjY5MzcxMg==,size_16,color_FFFFFF,t_70#pic_center" alt="在这里插入图片描述"></p>
+<ul>
+<li>创建cn.itcast.mr.dedup包，在该路径下编写自定义Mapper类DedupMapper，自定义Reducer类DedupReducer以及运行主类DedupDriver</li>
+</ul>
+<p>DedupMapper 类</p>
+<figure class="highlight java"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">package</span> cn.itcast.mr.dedup;</span><br><span class="line"></span><br><span class="line"><span class="keyword">import</span> java.io.IOException;</span><br><span class="line"></span><br><span class="line"><span class="keyword">import</span> org.apache.hadoop.io.LongWritable;</span><br><span class="line"><span class="keyword">import</span> org.apache.hadoop.io.NullWritable;</span><br><span class="line"><span class="keyword">import</span> org.apache.hadoop.io.Text;</span><br><span class="line"><span class="keyword">import</span> org.apache.hadoop.mapreduce.Mapper;</span><br><span class="line"></span><br><span class="line"><span class="keyword">public</span> <span class="class"><span class="keyword">class</span> <span class="title">DedupMapper</span> <span class="keyword">extends</span> <span class="title">Mapper</span>&lt;<span class="title">LongWritable</span>, <span class="title">Text</span>, <span class="title">Text</span>, <span class="title">NullWritable</span>&gt; </span>&#123;</span><br><span class="line"></span><br><span class="line">    <span class="keyword">private</span> <span class="keyword">static</span> Text field = <span class="keyword">new</span> Text();</span><br><span class="line">    <span class="comment">// &lt;0,2018-3-3 c&gt;&lt;11,2018-3-4 d&gt;</span></span><br><span class="line">    <span class="meta">@Override</span></span><br><span class="line">    <span class="function"><span class="keyword">protected</span> <span class="keyword">void</span> <span class="title">map</span><span class="params">(LongWritable key, Text value, Context context)</span> <span class="keyword">throws</span> IOException, InterruptedException </span>&#123;</span><br><span class="line">        field = value;</span><br><span class="line">        context.write(field, NullWritable.get());</span><br><span class="line">    &#125;</span><br><span class="line">    <span class="comment">// &lt;2018-3-3 c,null&gt; &lt;2018-3-4 d,null&gt;</span></span><br><span class="line">&#125;</span><br><span class="line"></span><br></pre></td></tr></table></figure>
+<p>DedupReducer类</p>
+<figure class="highlight java"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">package</span> cn.itcast.mr.dedup;</span><br><span class="line"></span><br><span class="line"><span class="keyword">import</span> java.io.IOException;</span><br><span class="line"></span><br><span class="line"><span class="keyword">import</span> org.apache.hadoop.io.NullWritable;</span><br><span class="line"><span class="keyword">import</span> org.apache.hadoop.io.Text;</span><br><span class="line"><span class="keyword">import</span> org.apache.hadoop.mapreduce.Reducer;</span><br><span class="line"></span><br><span class="line"><span class="keyword">public</span> <span class="class"><span class="keyword">class</span> <span class="title">DedupReducer</span> <span class="keyword">extends</span> <span class="title">Reducer</span>&lt;<span class="title">Text</span>, <span class="title">NullWritable</span>, <span class="title">Text</span>, <span class="title">NullWritable</span>&gt; </span>&#123;</span><br><span class="line">    <span class="comment">// &lt;2018-3-3 c,null&gt; &lt;2018-3-4 d,null&gt;&lt;2018-3-4 d,null&gt;</span></span><br><span class="line">    <span class="meta">@Override</span></span><br><span class="line">    <span class="function"><span class="keyword">protected</span> <span class="keyword">void</span> <span class="title">reduce</span><span class="params">(Text key, Iterable&lt;NullWritable&gt; values, Context context)</span></span></span><br><span class="line"><span class="function">            <span class="keyword">throws</span> IOException, InterruptedException </span>&#123;</span><br><span class="line">        context.write(key, NullWritable.get());</span><br><span class="line">    &#125;</span><br><span class="line">&#125;</span><br><span class="line"></span><br></pre></td></tr></table></figure>
+<p>DedupRunner类</p>
+<figure class="highlight java"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br><span class="line">32</span><br><span class="line">33</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">package</span> cn.itcast.mr.dedup;</span><br><span class="line"></span><br><span class="line"><span class="keyword">import</span> java.io.IOException;</span><br><span class="line"></span><br><span class="line"><span class="keyword">import</span> org.apache.hadoop.conf.Configuration;</span><br><span class="line"><span class="keyword">import</span> org.apache.hadoop.fs.Path;</span><br><span class="line"><span class="keyword">import</span> org.apache.hadoop.io.NullWritable;</span><br><span class="line"><span class="keyword">import</span> org.apache.hadoop.io.Text;</span><br><span class="line"><span class="keyword">import</span> org.apache.hadoop.mapreduce.Job;</span><br><span class="line"><span class="keyword">import</span> org.apache.hadoop.mapreduce.lib.input.FileInputFormat;</span><br><span class="line"><span class="keyword">import</span> org.apache.hadoop.mapreduce.lib.output.FileOutputFormat;</span><br><span class="line"></span><br><span class="line"><span class="keyword">public</span> <span class="class"><span class="keyword">class</span> <span class="title">DedupRunner</span> </span>&#123;</span><br><span class="line">    <span class="function"><span class="keyword">public</span> <span class="keyword">static</span> <span class="keyword">void</span> <span class="title">main</span><span class="params">(String[] args)</span> <span class="keyword">throws</span> IOException, ClassNotFoundException, InterruptedException </span>&#123;</span><br><span class="line">        Configuration conf = <span class="keyword">new</span> Configuration();</span><br><span class="line">        Job job = Job.getInstance(conf);</span><br><span class="line"></span><br><span class="line">        job.setJarByClass(DedupRunner.class);</span><br><span class="line">        job.setMapperClass(DedupMapper.class);</span><br><span class="line">        job.setReducerClass(DedupReducer.class);</span><br><span class="line"></span><br><span class="line">        job.setOutputKeyClass(Text.class);</span><br><span class="line">        job.setOutputValueClass(NullWritable.class);</span><br><span class="line"></span><br><span class="line">        FileInputFormat.setInputPaths(job, <span class="keyword">new</span> Path(<span class="string">&quot;D:\\Dedup\\input&quot;</span>));</span><br><span class="line">        <span class="comment">// 指定处理完成之后的结果所保存的位置</span></span><br><span class="line">        FileOutputFormat.setOutputPath(job, <span class="keyword">new</span> Path(<span class="string">&quot;D:\\Dedup\\output&quot;</span>));</span><br><span class="line"></span><br><span class="line">        job.waitForCompletion(<span class="keyword">true</span>);</span><br><span class="line"></span><br><span class="line">    &#125;</span><br><span class="line">&#125;</span><br><span class="line"></span><br></pre></td></tr></table></figure>
+<ul>
+<li>代码编写完毕后，打开虚拟机开启所有服务进程<code>start-all.sh</code></li>
+<li>然后运行主类DedupRunner，在output目录下查看结果<img src="https://img-blog.csdnimg.cn/20201011091709803.png?x-oss-process=image/watermark,type_ZmFuZ3poZW5naGVpdGk,shadow_10,text_aHR0cHM6Ly9ibG9nLmNzZG4ubmV0L3dlaXhpbl80MjY5MzcxMg==,size_16,color_FFFFFF,t_70#pic_center" alt="在这里插入图片描述"><br>查看文件part-r-00000发现已经成功<img src="https://img-blog.csdnimg.cn/20201011091828934.png?x-oss-process=image/watermark,type_ZmFuZ3poZW5naGVpdGk,shadow_10,text_aHR0cHM6Ly9ibG9nLmNzZG4ubmV0L3dlaXhpbl80MjY5MzcxMg==,size_16,color_FFFFFF,t_70#pic_center" alt="在这里插入图片描述"></li>
+</ul>
+
       
       
         
@@ -292,7 +364,29 @@ var _hmt = _hmt || [];
     <div class="article-info article-info-index">
       
       
+	<div class="article-tag tagcloud">
+		<i class="icon-price-tags icon"></i>
+		<ul class="article-tag-list">
+			 
+        		<li class="article-tag-list-item">
+        			<a href="javascript:void(0)" class="js-tag article-tag-list-link color1">linux</a>
+        		</li>
+      		
+		</ul>
+	</div>
+
       
+	<div class="article-category tagcloud">
+		<i class="icon-book icon"></i>
+		<ul class="article-tag-list">
+			 
+        		<li class="article-tag-list-item">
+        			<a href="/categories/linux//" class="article-tag-list-link color1">linux</a>
+        		</li>
+      		
+		</ul>
+	</div>
+
 
       
 
@@ -342,7 +436,7 @@ var _hmt = _hmt || [];
     <a class="close js-modal-close" href="javascript:;"><i class="icon icon-close"></i></a>
     <p>扫一扫，分享到微信</p>
     <div class="wx-qrcode">
-      <img src="//pan.baidu.com/share/qrcode?url=http://yoursite.com/baidu_verify_icxpIklOHh.html" alt="微信分享二维码">
+      <img src="//pan.baidu.com/share/qrcode?url=http://yoursite.com/2020/10/11/linux8/" alt="微信分享二维码">
     </div>
 </div>
 
@@ -354,6 +448,16 @@ var _hmt = _hmt || [];
 </article>
 
   
+<nav id="article-nav">
+  
+  
+    <a href="/2020/10/03/Eclipse&IDEA%E4%B8%ADMaven%E5%92%8CGit%E5%BF%AB%E9%80%9F%E9%85%8D%E7%BD%AE%E5%8F%8A%E4%BD%BF%E7%94%A8/" id="article-nav-older" class="article-nav-link-wrap">
+      <div class="article-nav-title">Eclipse&amp;IDEA中Maven和Git快速配置及使用</div>
+      <i class="icon-circle-right"></i>
+    </a>
+  
+</nav>
+
 
 <aside class="wrap-side-operation">
     <div class="mod-side-operation">
@@ -375,7 +479,7 @@ var _hmt = _hmt || [];
                 </span>
                 <span class="tooltip-content">
                     <div class="toc-article">
-                    目录，不存在的…
+                    <ol class="toc"><li class="toc-item toc-level-4"><a class="toc-link" href="#MapReduce%E7%BB%8F%E5%85%B8%E6%A1%88%E4%BE%8B%E2%80%93%E6%95%B0%E6%8D%AE%E5%8E%BB%E9%87%8D"><span class="toc-number">1.</span> <span class="toc-text">MapReduce经典案例–数据去重</span></a></li></ol>
                     </div>
                 </span>
             </div>
@@ -400,7 +504,7 @@ var _hmt = _hmt || [];
 <script src="//imsun.github.io/gitment/dist/gitment.browser.js"></script>
 <script>
 var gitment = new Gitment({
-  id: "http://yoursite.com/baidu_verify_icxpIklOHh.html",
+  id: "http://yoursite.com/2020/10/11/linux8/",
   owner: 'highfish920',
   repo: 'yilia-plus-demo',
   oauth: {
@@ -453,7 +557,7 @@ gitment.render('gitment-ctn')
 	var yiliaConfig = {
 		mathjax: false,
 		isHome: false,
-		isPost: false,
+		isPost: true,
 		isArchive: false,
 		isTag: false,
 		isCategory: false,
