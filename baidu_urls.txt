@@ -1,3 +1,4 @@
+http://yoursite.com/2020/10/12/oracle2/
 http://yoursite.com/2020/10/11/linux9/
 http://yoursite.com/2020/10/11/linux8/
 http://yoursite.com/2020/10/03/Eclipse&IDEA%E4%B8%ADMaven%E5%92%8CGit%E5%BF%AB%E9%80%9F%E9%85%8D%E7%BD%AE%E5%8F%8A%E4%BD%BF%E7%94%A8/
@@ -17,4 +18,3 @@ http://yoursite.com/2020/09/06/%E8%A7%82%E5%AF%9F%E8%80%85%E6%A8%A1%E5%BC%8F/
 http://yoursite.com/2020/09/05/%E4%BB%A3%E7%90%86%E6%A8%A1%E5%BC%8F/
 http://yoursite.com/2020/09/05/%E5%8D%95%E4%BE%8B%E6%A8%A1%E5%BC%8F/
 http://yoursite.com/2020/09/04/%E5%B7%A5%E5%8E%82%E6%A8%A1%E5%BC%8F/
-http://yoursite.com/2020/08/31/git4/

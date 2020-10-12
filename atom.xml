@@ -6,7 +6,7 @@
   <link href="http://yoursite.com/atom.xml" rel="self"/>
   
   <link href="http://yoursite.com/"/>
-  <updated>2020-10-11T14:15:22.378Z</updated>
+  <updated>2020-10-12T13:19:56.876Z</updated>
   <id>http://yoursite.com/</id>
   
   <author>
@@ -15,6 +15,30 @@
   </author>
   
   <generator uri="https://hexo.io/">Hexo</generator>
+  
+  <entry>
+    <title>oracle 11g已经安装好了但没有scott用户，如何创建新的scott用户？</title>
+    <link href="http://yoursite.com/2020/10/12/oracle2/"/>
+    <id>http://yoursite.com/2020/10/12/oracle2/</id>
+    <published>2020-10-12T13:19:01.856Z</published>
+    <updated>2020-10-12T13:19:56.876Z</updated>
+    
+    <content type="html"><![CDATA[<h4 id="oracle-11g已经安装好了但没有scott用户，如何创建新的scott用户？"><a href="#oracle-11g已经安装好了但没有scott用户，如何创建新的scott用户？" class="headerlink" title="oracle 11g已经安装好了但没有scott用户，如何创建新的scott用户？"></a>oracle 11g已经安装好了但没有scott用户，如何创建新的scott用户？</h4><p>首先 用system用户登陆。<br>导入scott.sql脚本（可以在oracle的安装目录的查找），例如我本机的路径，导入就可以写成：<br>@G:\app\85463\product\11.2.0\dbhome_1\RDBMS\ADMIN\scott.sql<br>其次 输入：<br>alter user scott account unlock; 解锁用户<br>alter user scott identified by oracle; 修改scott密码<br>退出在用scott用户登陆<br>show user (看看当前用户是否是scott)<br>select * from emp;<br>检查是否有表<br>用PLSQL Developer查看结果<br>PLSQL Developer<img src="https://img-blog.csdnimg.cn/20201012211735475.png#pic_center" alt="在这里插入图片描述"><br>scott用户创建成功</p>]]></content>
+    
+    
+      
+      
+    <summary type="html">&lt;h4 id=&quot;oracle-11g已经安装好了但没有scott用户，如何创建新的scott用户？&quot;&gt;&lt;a href=&quot;#oracle-11g已经安装好了但没有scott用户，如何创建新的scott用户？&quot; class=&quot;headerlink&quot; title=&quot;oracle 11g</summary>
+      
+    
+    
+    
+    <category term="Oracle" scheme="http://yoursite.com/categories/Oracle/"/>
+    
+    
+    <category term="Oracle" scheme="http://yoursite.com/tags/Oracle/"/>
+    
+  </entry>
   
   <entry>
     <title>linux--Zookeeper安装与配置</title>
@@ -412,27 +436,6 @@
     
     
     <category term="工厂模式" scheme="http://yoursite.com/tags/%E5%B7%A5%E5%8E%82%E6%A8%A1%E5%BC%8F/"/>
-    
-  </entry>
-  
-  <entry>
-    <title>GIT篇---4.使用 diff 查看修改了哪些代码，分支管理(Windows系统)</title>
-    <link href="http://yoursite.com/2020/08/31/git4/"/>
-    <id>http://yoursite.com/2020/08/31/git4/</id>
-    <published>2020-08-31T10:12:16.927Z</published>
-    <updated>2020-08-31T10:16:56.490Z</updated>
-    
-    <content type="html"><![CDATA[<h2 id="1-名词定义"><a href="#1-名词定义" class="headerlink" title="1.名词定义"></a>1.名词定义</h2><a id="more"></a><p>在学习 Git 的diff命令之前，我们先来统一 一下两个名词的理解，分别是工作区和暂存区。</p><h3 id="1-1-工作区"><a href="#1-1-工作区" class="headerlink" title="1.1 工作区"></a>1.1 工作区</h3><p>工作区，指的是当前正在编辑的文件，将还没有修改的内容通过git add命令暂存起来；比如我现在修改了index.php文件中的一行代码，没有执行git add index.php命令，那么 index.php 便处于工作区状态。</p><h3 id="1-2-暂存区"><a href="#1-2-暂存区" class="headerlink" title="1.2 暂存区"></a>1.2 暂存区</h3><p>暂存区，指的是文件修改之后并且通过git add命令临时存储到版本记录里了，但还没有正式通过git commit提交的阶段；比如我现在新增一个test.php文件，使用了git add test.php命令，那么此时， test.php 文件的改动就已经进入到了暂存区。</p><h3 id="1-3-比较工作区变动"><a href="#1-3-比较工作区变动" class="headerlink" title="1.3 比较工作区变动"></a>1.3 比较工作区变动</h3><p>现在我编辑了index.php文件，并且在里面加入了内容，如果我想通过 git 命令查看增加了哪些内容，参考命令如下</p><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">git diff </span><br></pre></td></tr></table></figure><h3 id="1-4-比较暂存区变动"><a href="#1-4-比较暂存区变动" class="headerlink" title="1.4  比较暂存区变动"></a>1.4  比较暂存区变动</h3><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">git diff --cached  diff.php</span><br></pre></td></tr></table></figure><h3 id="1-5-与指定记录比较"><a href="#1-5-与指定记录比较" class="headerlink" title="1.5 与指定记录比较"></a>1.5 与指定记录比较</h3><p>有些时候，我们可能需要代码和历史的某一个版本进行比较，这个时候你可以先通过<code>git log</code></p><h3 id="1-6-工作区比较"><a href="#1-6-工作区比较" class="headerlink" title="1.6 工作区比较"></a>1.6 工作区比较</h3><p>将要比较的 hash 值复制下来，然后执行如下所示命令：</p><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">git diff <span class="built_in">hash</span>值</span><br></pre></td></tr></table></figure><h3 id="1-7-暂存区比较"><a href="#1-7-暂存区比较" class="headerlink" title="1.7 暂存区比较"></a>1.7 暂存区比较</h3><p>有些时候，我们想把暂存区的改动和指定记录进行对比，那么在命令中加入–cached 即可，参考命令如下：</p><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">git diff --cached <span class="built_in">hash</span>值</span><br></pre></td></tr></table></figure><h3 id="1-8-与最新版本库比较"><a href="#1-8-与最新版本库比较" class="headerlink" title="1.8 与最新版本库比较"></a>1.8 与最新版本库比较</h3><p>很多时候，我们只需要将未正式提交的代码（包含工作区与暂存区）与最新的 commit 记录进行比较，虽然也可以通过指定 commit 的 hash 值进行，但是却很不方便，需要先获取到 hash 值，这里介绍一个简单的方法，可以通过git diff HEAD命令方式快速对比，参考命令如下：</p><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">git diff HEAD</span><br></pre></td></tr></table></figure><p>在执行的命令中，HEAD指的是当前所在的分支名，如果你想比较其他分支也可以将 HEAD 改成其他分支名。</p><h3 id="1-9-比较两个历史记录"><a href="#1-9-比较两个历史记录" class="headerlink" title="1.9 比较两个历史记录"></a>1.9 比较两个历史记录</h3><p>有时候，可能会需要查看某一次提交记录修改了什么内容，这个时候就需要将两个历史记录进行比较；首先通过git log命令获取到需要查看的记录 hash 值，然后再找到这个记录的上一个版本的 hash 值，拼接的参考命令如下所示：</p><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">git diff <span class="built_in">hash</span>值1  <span class="built_in">hash</span>值2</span><br></pre></td></tr></table></figure><h2 id="2-分支管理"><a href="#2-分支管理" class="headerlink" title="2.分支管理"></a>2.分支管理</h2><h3 id="2-1查看分支"><a href="#2-1查看分支" class="headerlink" title="2.1查看分支"></a>2.1查看分支</h3><p>在学习分支管理之前，我们先来查看一下分支。分支分为两种，一种是本地已经存在的，还有一种是服务器上有，但本地不存在的分支，查看的方式稍有区别。</p><h3 id="2-2查看本地的分支"><a href="#2-2查看本地的分支" class="headerlink" title="2.2查看本地的分支"></a>2.2查看本地的分支</h3><p>Git 查看分支的命令为 git branch，在不带参数的情况下，默认查看到的是本地分支列表，参考命令如下：</p><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">git branch </span><br></pre></td></tr></table></figure><h4 id="2-3查看所有分支"><a href="#2-3查看所有分支" class="headerlink" title="2.3查看所有分支"></a>2.3查看所有分支</h4><p>在 git branch 中再加入一个 -a 参数，可以理解为 all 的意思，就是查看本地的分支和远程的所有分支，参考命令如下：</p><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">git branch -a </span><br></pre></td></tr></table></figure><h3 id="2-4新建分支"><a href="#2-4新建分支" class="headerlink" title="2.4新建分支"></a>2.4新建分支</h3><p>新建分支有两种情况，第一种是远程已经有的分支，需要把它在本地也同样创建一份；还有一种是新建一个远端和本地都不存在的分支。</p><h4 id="2-4-1导入远程分支"><a href="#2-4-1导入远程分支" class="headerlink" title="2.4.1导入远程分支"></a>2.4.1导入远程分支</h4><p>把远程分支在本地创建，可以通过 <code>git checkout</code> 分支名 命令进行，<strong>这个命令其实是切换分支用的</strong>。但当它发现你本地不存在这个分支，会自动找到远程对应的分支然后在本地进行创建，参考命令如下所示：<br>（在执行前，需要确保这个分支在远程或者本地已经存在）</p><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">git checkout master</span><br></pre></td></tr></table></figure><p>切换分支成功之后，会提示已经切换分支成功，以及提示你当前分支对应远程的分支名</p><h4 id="2-4-2-新建本地分支"><a href="#2-4-2-新建本地分支" class="headerlink" title="2.4.2 新建本地分支"></a>2.4.2 新建本地分支</h4><p>新建一个远程和本地都不存在的分支方式，和切换分支区别不大，只需要在 <code>git checkout</code> 分支名 中间加入参数 <code>-b</code> 即可。通过这种方式，创建的分支结构和内容会与当前所在的分支一模一样，也就是说，它其实就是复制了当前的分支，参考命令如下：</p><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">git checkout -b <span class="built_in">test</span></span><br></pre></td></tr></table></figure><p>在提示中，同样可以看到会告诉你切换分支成功，但没有提示你对应远程的分支名，因为远程现在还不存在这个分支。所以你此时如果使用 <code>git push</code> 是不能直接推送的，需要在第一次推送的时候指定远程分支名，参考命令如下图所示：</p><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">git push --<span class="built_in">set</span>-upstream origin <span class="built_in">test</span></span><br></pre></td></tr></table></figure><h3 id="2-5合并分支"><a href="#2-5合并分支" class="headerlink" title="2.5合并分支"></a>2.5合并分支</h3><p>假设我们现在有三个分支，分别是:master生产环境、develop开发环境、test bug 修复分支。现在我在 test 分支中修复了 BUG，需要发布到线上生产服务器上，那么我们就可以通过合并分支的方式将test分支的代码合并到 master 分支中去。</p><h4 id="2-5-1-合并代码"><a href="#2-5-1-合并代码" class="headerlink" title="2.5.1 合并代码"></a>2.5.1 合并代码</h4><p>合并的时候， Git 会对比两个分支代码的差异，当 test 分支处于比较新的状态时候，Git 会将 test 分支的代码和提交记录复制到 master 分支中来，合并代码的参考命令如下：</p><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">git merge <span class="built_in">test</span></span><br></pre></td></tr></table></figure><h4 id="2-5-2-查看合并记录"><a href="#2-5-2-查看合并记录" class="headerlink" title="2.5.2 查看合并记录"></a>2.5.2 查看合并记录</h4><p>在代码合并之后，可以通过 <code>git log</code> 方式查看到合并记录，参考命令如下：</p><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">git <span class="built_in">log</span></span><br></pre></td></tr></table></figure><h4 id="2-5-3-删除分支"><a href="#2-5-3-删除分支" class="headerlink" title="2.5.3  删除分支"></a>2.5.3  删除分支</h4><p>一般用来修复 BUG 的分支，我们可以把它当做是一个临时分支，当合并到 master 之后，就可以删除掉它了，这样可以减少 Git 仓库的体积。删除分支有两种方式，普通删除和强制删除。</p><h5 id="2-5-3-1-普通删除"><a href="#2-5-3-1-普通删除" class="headerlink" title="2.5.3.1 普通删除"></a>2.5.3.1 普通删除</h5><p>Git 中删除分支的命令为<code>git branch -d</code> 分支名，其中参数-d代表的是普通删除。一般情况下，删除使用普通删除即可。普通删除相对来说比较安全，避免造成数据丢失的情况，参考命令如下：</p><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">git branch -d <span class="built_in">test</span></span><br></pre></td></tr></table></figure><h5 id="2-5-3-2-强制删除"><a href="#2-5-3-2-强制删除" class="headerlink" title="2.5.3.2 强制删除"></a>2.5.3.2 强制删除</h5><p>在极少数情况下你可能会遇到普通删除无法将分支删除的情况，这个时候你可以将-d替换成-D，这样就可以进行强制删除，参考命令如下：</p><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">git branch -D <span class="built_in">test</span></span><br></pre></td></tr></table></figure><p>本文整理自 <a href="http://www.imooc.com/read/51">http://www.imooc.com/read/51</a></p>]]></content>
-    
-    
-    <summary type="html">&lt;h2 id=&quot;1-名词定义&quot;&gt;&lt;a href=&quot;#1-名词定义&quot; class=&quot;headerlink&quot; title=&quot;1.名词定义&quot;&gt;&lt;/a&gt;1.名词定义&lt;/h2&gt;</summary>
-    
-    
-    
-    <category term="Git" scheme="http://yoursite.com/categories/Git/"/>
-    
-    
-    <category term="git" scheme="http://yoursite.com/tags/git/"/>
     
   </entry>
   
