@@ -1,3 +1,5 @@
+http://yoursite.com/2020/11/10/%E9%80%92%E5%BD%92/
+http://yoursite.com/2020/11/10/linux12/
 http://yoursite.com/2020/11/08/PR%E6%8F%92%E4%BB%B6/
 http://yoursite.com/2020/11/07/linux11/
 http://yoursite.com/2020/11/07/linux10/
@@ -16,5 +18,3 @@ http://yoursite.com/2020/09/16/linux4/
 http://yoursite.com/2020/09/16/linux3/
 http://yoursite.com/2020/09/09/linux2/
 http://yoursite.com/2020/09/09/linux1/
-http://yoursite.com/2020/09/06/%E7%AD%96%E7%95%A5%E6%A8%A1%E5%BC%8F/
-http://yoursite.com/2020/09/06/%E8%A7%82%E5%AF%9F%E8%80%85%E6%A8%A1%E5%BC%8F/
