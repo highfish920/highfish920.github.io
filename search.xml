@@ -26,13 +26,13 @@
 <figure class="highlight java"><table><tr><td class="code"><pre><span class="line">String str = <span class="string">&quot;Runoob&quot;</span>;</span><br></pre></td></tr></table></figure>
 </li>
 <li>
-<p>使用构造方法来创建 <code>String</code> 对象</p>
+<p>使用构造方法来创建 <code>String</code>对象</p>
 <figure class="highlight java"><table><tr><td class="code"><pre><span class="line">String str2=<span class="keyword">new</span> string(<span class="string">&quot;Runoob&quot;</span>);</span><br></pre></td></tr></table></figure>
 <p><strong>两种创建方式区别：</strong></p>
-<figure class="highlight plain"><figcaption><span>创建的字符串存储在公共池中，而 ```new```创建的字符串对象在堆上：</span></figcaption><table><tr><td class="code"><pre><span class="line"></span><br><span class="line">  ![image-20210124215030300](C:\Users\gaoyu\AppData\Roaming\Typora\typora-user-images\image-20210124215030300.png)</span><br><span class="line"></span><br><span class="line">string简单理解就是将其转换为字符串:例</span><br><span class="line"></span><br><span class="line">&#96;&#96;&#96;java</span><br><span class="line">public class StringDemo&#123;</span><br><span class="line">   public static void main(String args[])&#123;</span><br><span class="line">      char[] helloArray &#x3D; &#123; &#39;r&#39;, &#39;u&#39;, &#39;n&#39;, &#39;o&#39;, &#39;o&#39;, &#39;b&#39;&#125;;</span><br><span class="line">      String helloString &#x3D; new String(helloArray);  </span><br><span class="line">      System.out.println( helloString ); &#x2F;&#x2F;runoob 此时就是应用第二种创建方式将单个字符转换为了字符串</span><br><span class="line">   &#125;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+<figure class="highlight plain"><figcaption><span>```new```创建的字符串对象在堆上：</span></figcaption><table><tr><td class="code"><pre><span class="line"></span><br><span class="line"> ![在这里插入图片描述](https:&#x2F;&#x2F;img-blog.csdnimg.cn&#x2F;20210124230455855.png?x-oss-process&#x3D;image&#x2F;watermark,type_ZmFuZ3poZW5naGVpdGk,shadow_10,text_aHR0cHM6Ly9ibG9nLmNzZG4ubmV0L3dlaXhpbl80MjY5MzcxMg&#x3D;&#x3D;,size_16,color_FFFFFF,t_70)</span><br><span class="line"></span><br><span class="line"></span><br><span class="line">string简单理解就是将其转换为字符串:例</span><br><span class="line"></span><br><span class="line">&#96;&#96;&#96;java</span><br><span class="line">public class StringDemo&#123;</span><br><span class="line">   public static void main(String args[])&#123;</span><br><span class="line">      char[] helloArray &#x3D; &#123; &#39;r&#39;, &#39;u&#39;, &#39;n&#39;, &#39;o&#39;, &#39;o&#39;, &#39;b&#39;&#125;;</span><br><span class="line">      String helloString &#x3D; new String(helloArray);  </span><br><span class="line">      System.out.println( helloString ); &#x2F;&#x2F;runoob 此时就是应用第二种创建方式将单个字符转换为了字符串</span><br><span class="line">   &#125;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
 </li>
 </ul>
-<p><strong>注意:</strong><code>String</code> 类是不可改变的，所以你一旦创建了 <code>String</code> 对象，那它的值就无法改变了（详看笔记部分解析）。</p>
+<p><strong>注意:</strong><code>String</code>类是不可改变的，所以你一旦创建了 <code>String</code>对象，那它的值就无法改变了（详看笔记部分解析）。</p>
 <p>由于String被声明为final，所以不可变，具体参考：<a href="https://github.com/CyC2018/CS-Notes/blob/master/notes/Java%20%E5%9F%BA%E7%A1%80.md#%E4%BA%8Cstring">https://github.com/CyC2018/CS-Notes/blob/master/notes/Java 基础.md#二string</a></p>
 <p>如果需要对字符串做很多修改，那么应该选择使用 <a href="https://www.runoob.com/java/java-stringbuffer.html">StringBuffer &amp; StringBuilder 类</a>。</p>
 <h2 id="2string中的方法"><a class="markdownIt-Anchor" href="#2string中的方法"></a> 2.String中的方法</h2>
@@ -41,16 +41,16 @@
 <p>获取字符串长度 <code>字符串.length();</code></p>
 </li>
 <li>
-<p>获取角标  <code>字符串.charAt(索引)</code> 获取的是对应的数值</p>
+<p>获取角标  <code>字符串.charAt(索引)</code>获取的是对应的数值</p>
 </li>
 <li>
-<p>截取(1)   <code>字符串.substring(索引)</code> 从这个数开始往后的内容进行截取，不包含本数</p>
+<p>截取(1)   <code>字符串.substring(索引)</code>从这个数开始往后的内容进行截取，不包含本数</p>
 </li>
 <li>
-<p>截取(2)   <code>字符串.substring(索引1,索引2)</code>  截取到哪一位  从1位置开始到2位置之前     含头不含尾</p>
+<p>截取(2)   <code>字符串.substring(索引1,索引2)</code>截取到哪一位  从1位置开始到2位置之前     含头不含尾</p>
 </li>
 <li>
-<p>索引 <code>字符串.indexOf</code>  返回具体那个数的索引</p>
+<p>索引 <code>字符串.indexOf</code>返回具体那个数的索引</p>
 </li>
 <li>
 <p>大写 <code>字符串.toUpperCase()</code></p>
@@ -60,8 +60,8 @@
 </li>
 <li>
 <p>连接字符串两种方法</p>
-<p>​    a：<code>string1.concat(string2);</code> 使用<code>concat()</code>来连接，但是少用</p>
-<p>​	b:  使用+号来连接，<code>&quot;Hello,&quot; + &quot; runoob&quot; + &quot;!&quot;</code>  输出 ```“Hello, runoob!”``</p>
+<p>​    a：<code>string1.concat(string2);</code>使用<code>concat()</code>来连接，但是少用</p>
+<p>​	b:  使用+号来连接，<code>&quot;Hello,&quot; + &quot; runoob&quot; + &quot;!&quot;</code>输出 ```“Hello, runoob!”``</p>
 <p>所以如果想要使一个数变成字符串，那么拼接上一个<code>&quot;&quot;</code>， 如：<code>数+&quot;&quot;</code>即可</p>
 </li>
 <li>
