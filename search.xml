@@ -15,6 +15,99 @@
       </tags>
   </entry>
   <entry>
+    <title>对于java中String的理解</title>
+    <url>/2021/01/24/spring/</url>
+    <content><![CDATA[<h1 id="对于java中string的理解"><a class="markdownIt-Anchor" href="#对于java中string的理解"></a> 对于java中String的理解</h1>
+<a id="more"></a>
+<h2 id="1创建字符串"><a class="markdownIt-Anchor" href="#1创建字符串"></a> 1.创建字符串</h2>
+<ul>
+<li>
+<p>使用关键字创建</p>
+<figure class="highlight java"><table><tr><td class="code"><pre><span class="line">String str = <span class="string">&quot;Runoob&quot;</span>;</span><br></pre></td></tr></table></figure>
+</li>
+<li>
+<p>使用构造方法来创建 <code>String</code> 对象</p>
+<figure class="highlight java"><table><tr><td class="code"><pre><span class="line">String str2=<span class="keyword">new</span> string(<span class="string">&quot;Runoob&quot;</span>);</span><br></pre></td></tr></table></figure>
+<p><strong>两种创建方式区别：</strong></p>
+<figure class="highlight plain"><figcaption><span>创建的字符串存储在公共池中，而 ```new```创建的字符串对象在堆上：</span></figcaption><table><tr><td class="code"><pre><span class="line"></span><br><span class="line">  ![image-20210124215030300](C:\Users\gaoyu\AppData\Roaming\Typora\typora-user-images\image-20210124215030300.png)</span><br><span class="line"></span><br><span class="line">string简单理解就是将其转换为字符串:例</span><br><span class="line"></span><br><span class="line">&#96;&#96;&#96;java</span><br><span class="line">public class StringDemo&#123;</span><br><span class="line">   public static void main(String args[])&#123;</span><br><span class="line">      char[] helloArray &#x3D; &#123; &#39;r&#39;, &#39;u&#39;, &#39;n&#39;, &#39;o&#39;, &#39;o&#39;, &#39;b&#39;&#125;;</span><br><span class="line">      String helloString &#x3D; new String(helloArray);  </span><br><span class="line">      System.out.println( helloString ); &#x2F;&#x2F;runoob 此时就是应用第二种创建方式将单个字符转换为了字符串</span><br><span class="line">   &#125;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+</li>
+</ul>
+<p><strong>注意:</strong><code>String</code> 类是不可改变的，所以你一旦创建了 <code>String</code> 对象，那它的值就无法改变了（详看笔记部分解析）。</p>
+<p>由于String被声明为final，所以不可变，具体参考：<a href="https://github.com/CyC2018/CS-Notes/blob/master/notes/Java%20%E5%9F%BA%E7%A1%80.md#%E4%BA%8Cstring">https://github.com/CyC2018/CS-Notes/blob/master/notes/Java 基础.md#二string</a></p>
+<p>如果需要对字符串做很多修改，那么应该选择使用 <a href="https://www.runoob.com/java/java-stringbuffer.html">StringBuffer &amp; StringBuilder 类</a>。</p>
+<h2 id="2string中的方法"><a class="markdownIt-Anchor" href="#2string中的方法"></a> 2.String中的方法</h2>
+<ul>
+<li>
+<p>获取字符串长度 <code>字符串.length();</code></p>
+</li>
+<li>
+<p>获取角标  <code>字符串.charAt(索引)</code> 获取的是对应的数值</p>
+</li>
+<li>
+<p>截取(1)   <code>字符串.substring(索引)</code> 从这个数开始往后的内容进行截取，不包含本数</p>
+</li>
+<li>
+<p>截取(2)   <code>字符串.substring(索引1,索引2)</code>  截取到哪一位  从1位置开始到2位置之前     含头不含尾</p>
+</li>
+<li>
+<p>索引 <code>字符串.indexOf</code>  返回具体那个数的索引</p>
+</li>
+<li>
+<p>大写 <code>字符串.toUpperCase()</code></p>
+</li>
+<li>
+<p>小写 <code>字符串.toLowerCase()</code></p>
+</li>
+<li>
+<p>连接字符串两种方法</p>
+<p>​    a：<code>string1.concat(string2);</code> 使用<code>concat()</code>来连接，但是少用</p>
+<p>​	b:  使用+号来连接，<code>&quot;Hello,&quot; + &quot; runoob&quot; + &quot;!&quot;</code>  输出 ```“Hello, runoob!”``</p>
+<p>所以如果想要使一个数变成字符串，那么拼接上一个<code>&quot;&quot;</code>， 如：<code>数+&quot;&quot;</code>即可</p>
+</li>
+<li>
+<p>比较字符串 <code>equals</code>和<code>==</code>的区别(使用equals和hashCode方法一般要进行重写，重写之后比较的是内容，否则是其地址值的比较)</p>
+</li>
+</ul>
+<figure class="highlight java"><table><tr><td class="code"><pre><span class="line">String s2 = <span class="keyword">new</span> String(<span class="string">&quot;abc&quot;</span>);</span><br><span class="line">System.out.println(s2);</span><br><span class="line">System.out.println(s2.equals(<span class="string">&quot;abc&quot;</span>));<span class="comment">//true 因为equals方法重写了，所以比较的是内容</span></span><br><span class="line">System.out.println(s2==<span class="string">&quot;abc&quot;</span>);<span class="comment">//比较的是地址值</span></span><br></pre></td></tr></table></figure>
+<ul>
+<li>
+<p>查看是否包含 <code>contains</code></p>
+<figure class="highlight java"><table><tr><td class="code"><pre><span class="line">String s5 = <span class="string">&quot;123&quot;</span>;</span><br><span class="line"><span class="keyword">boolean</span> contains = s5.contains(<span class="string">&quot;1&quot;</span>);</span><br><span class="line">System.out.println(contains); <span class="comment">//true</span></span><br></pre></td></tr></table></figure>
+</li>
+<li>
+<p>忽略大小写比较 <code>equalsIgnoreCase</code></p>
+<figure class="highlight java"><table><tr><td class="code"><pre><span class="line"><span class="keyword">boolean</span> c = <span class="string">&quot;abc&quot;</span>.equalsIgnoreCase(<span class="string">&quot;ABc&quot;</span>);</span><br><span class="line">System.out.println(c);<span class="comment">//true</span></span><br></pre></td></tr></table></figure>
+</li>
+<li>
+<p>以什么开头 <code>startsWith</code></p>
+<figure class="highlight java"><table><tr><td class="code"><pre><span class="line">String s5 = <span class="string">&quot;123&quot;</span>;</span><br><span class="line"><span class="keyword">boolean</span> startsWith = s5.startsWith(<span class="string">&quot;1&quot;</span>);</span><br><span class="line">System.out.println(startsWith);<span class="comment">//true	</span></span><br></pre></td></tr></table></figure>
+</li>
+<li>
+<p>以什么结尾</p>
+</li>
+</ul>
+<figure class="highlight java"><table><tr><td class="code"><pre><span class="line">String s5 = <span class="string">&quot;123&quot;</span>;</span><br><span class="line"><span class="keyword">boolean</span> endsWith = s5.endsWith(<span class="string">&quot;3&quot;</span>);</span><br><span class="line">System.out.println(endsWith);<span class="comment">//true</span></span><br></pre></td></tr></table></figure>
+<ul>
+<li>
+<p>是不是空字符串</p>
+<figure class="highlight java"><table><tr><td class="code"><pre><span class="line">String s5 = <span class="string">&quot;123&quot;</span>;</span><br><span class="line"><span class="keyword">boolean</span> empty = s5.isEmpty();</span><br><span class="line">System.out.println(empty);<span class="comment">//false</span></span><br></pre></td></tr></table></figure>
+</li>
+</ul>
+<h2 id="3tostring"><a class="markdownIt-Anchor" href="#3tostring"></a> 3.toString()</h2>
+<p>因为<code>toString</code>方法是<code>Object</code>里面已经有了的方法，而所有类都是继承<code>Object</code>，所以“所有对象都有这个方法”。</p>
+<p>它通常只是为了方便输出，比如System.out.println(xx)，括号里面的“xx”如果不是<code>String</code>类型的话，就自动调用xx的<code>toString()</code>方法。</p>
+<p>总而言之，它只是<code>sun</code>公司开发<code>java</code>的时候为了方便所有类的字符串操作而特意加入的一个方法</p>
+<p>就是想要输出成<code>String</code>类型但是这个东西本身不是String’类型就要调用<code>toString()</code>方法</p>
+<p>参考：<a href="https://www.cnblogs.com/huan-guo/p/8404891.html">https://www.cnblogs.com/huan-guo/p/8404891.html</a></p>
+]]></content>
+      <categories>
+        <category>java</category>
+      </categories>
+      <tags>
+        <tag>String</tag>
+      </tags>
+  </entry>
+  <entry>
     <title>vue生命周期</title>
     <url>/2020/11/27/vue%E7%94%9F%E5%91%BD%E5%91%A8%E6%9C%9F/</url>
     <content><![CDATA[<h2 id="vue生命周期"><a class="markdownIt-Anchor" href="#vue生命周期"></a> vue生命周期</h2>
@@ -2399,146 +2492,6 @@ es6是js的增强版，是js的语法规范，commonjs都只是为了解决js文
       </tags>
   </entry>
   <entry>
-    <title>cookie如何设置或获取，setTimeout和promise的执行顺序，javaScript的事件流模型，navigator对象，location和history，js的垃圾回收机制，内存泄漏的原因和场景，Dom事件中的target和currentTarget有什么区别，Typeof和instanceof</title>
-    <url>/2020/08/24/js%E9%9D%A2%E8%AF%955/</url>
-    <content><![CDATA[<h2 id="cookie如何设置或获取"><a class="markdownIt-Anchor" href="#cookie如何设置或获取"></a> cookie如何设置或获取</h2>
-<a id="more"></a>
-<figure class="highlight xml"><table><tr><td class="code"><pre><span class="line"><span class="tag">&lt;<span class="name">script</span>&gt;</span></span><br><span class="line"><span class="javascript">    <span class="comment">//1.设置cookie</span></span></span><br><span class="line"><span class="javascript">    <span class="function"><span class="keyword">function</span> <span class="title">setCookie</span>(<span class="params">cname, cvalue, exdays</span>) </span>&#123;</span></span><br><span class="line"><span class="javascript">        <span class="keyword">var</span> d = <span class="keyword">new</span> <span class="built_in">Date</span>()</span></span><br><span class="line">        d.setTime(d.getTime() + (exdays * 24 * 60 * 60 * 1000))</span><br><span class="line"><span class="javascript">        <span class="keyword">var</span> expires = <span class="string">&quot;expires=&quot;</span> + d.toGMTString();</span></span><br><span class="line"><span class="javascript">        <span class="built_in">document</span>.cookie = cname + <span class="string">&quot;=&quot;</span> + cvalue + <span class="string">&quot;;&quot;</span> + expires</span></span><br><span class="line">    &#125;</span><br><span class="line"><span class="javascript">    <span class="comment">//2.获取cookie</span></span></span><br><span class="line"><span class="javascript">    <span class="function"><span class="keyword">function</span> <span class="title">getCookie</span>(<span class="params">cname</span>) </span>&#123;</span></span><br><span class="line"><span class="javascript">        <span class="keyword">var</span> name = cname + <span class="string">&quot;=&quot;</span></span></span><br><span class="line"><span class="javascript">        <span class="keyword">var</span> ca = <span class="built_in">document</span>.cookie.split(<span class="string">&#x27;;&#x27;</span>)</span></span><br><span class="line"><span class="javascript">        <span class="keyword">for</span> (<span class="keyword">var</span> i = <span class="number">0</span>; i &lt; ca.length; i++) &#123;</span></span><br><span class="line"><span class="javascript">            <span class="keyword">var</span> c = ca[i].trim();</span></span><br><span class="line"><span class="javascript">            <span class="keyword">if</span> (c.indexOf(name) == <span class="number">0</span>) <span class="keyword">return</span> c.substring(name.length, c.length);</span></span><br><span class="line">        &#125;</span><br><span class="line"><span class="javascript">        <span class="keyword">return</span> <span class="string">&quot;&quot;</span>;</span></span><br><span class="line">    &#125;</span><br><span class="line"><span class="tag">&lt;/<span class="name">script</span>&gt;</span></span><br></pre></td></tr></table></figure>
-<h2 id="settimeout和promise的执行顺序"><a class="markdownIt-Anchor" href="#settimeout和promise的执行顺序"></a> setTimeout和promise的执行顺序</h2>
-<p>setTimeout有一个4ms的最短时间，也就是说不管你设定多少，反正最少都要间隔4ms才运行里面的回调，<br />
-从具体实现上来说，这俩的异步队列不一样，Promise所在的那个异步队列优先级要高一些</p>
-<h2 id="javascript的事件流模型"><a class="markdownIt-Anchor" href="#javascript的事件流模型"></a> javaScript的事件流模型</h2>
-<p>捕获流：	在捕获模式的定义中，当事件发生时，该事件由高层次向低层次传递<br />
-冒泡流：	在冒泡流的定义中，当事件发生时，该事件由低层次向高层次传播（像是水泡向上冒出）<br />
-DOM中的事件流：	当事件发生时，事件由捕获过程-&gt;冒泡过程，即由捕获阶段-&gt;处于目标对象阶段-&gt;冒泡阶段组成</p>
-<h2 id="navigator对象location和history"><a class="markdownIt-Anchor" href="#navigator对象location和history"></a> navigator对象，location和history</h2>
-<p>Navigator对象<br />
-1	History 对象包含用户（在浏览器窗口中）访问过的 URL。<br />
-2	History 对象是 window 对象的一部分，可通过 window.history 属性对其进行访问。<br />
-Navigator对象方法<br />
-1	Back():加载history列表中的前一个URL<br />
-2	Forward():加载history列表中的下一个URL<br />
-3	Go():加载 history 列表中的某个具体页面。<br />
-Location对象<br />
-1	Location 对象包含有关当前 URL 的信息。<br />
-2	Location 对象是 Window 对象的一个部分，可通过 window.location 属性来访问。<br />
-Location对象方法<br />
-hash<br />
-设置或返回从井号 (#) 开始的 URL（锚）。<br />
-host<br />
-设置或返回主机名和当前 URL 的端口号。<br />
-hostname<br />
-设置或返回当前 URL 的主机名。<br />
-href<br />
-设置或返回完整的 URL。<br />
-pathname<br />
-设置或返回当前 URL 的路径部分。<br />
-port<br />
-设置或返回当前 URL 的端口号。<br />
-protocol<br />
-设置或返回当前 URL 的协议。<br />
-search<br />
-设置或返回从问号 (?) 开始的 URL（查询部分）。<br />
-assign()<br />
-加载新的文档。<br />
-reload()<br />
-重新加载当前文档。<br />
-replace()<br />
-用新的文档替换当前文档。</p>
-<h2 id="js的垃圾回收机制"><a class="markdownIt-Anchor" href="#js的垃圾回收机制"></a> js的垃圾回收机制</h2>
-<p>javascript具有自动垃圾回收机制，执行环境会负责管理代码执行过程中使用的内存。原理就是找出那些不再继续使用的变量，然后释放其占有内存</p>
-<h2 id="内存泄漏的原因和场景"><a class="markdownIt-Anchor" href="#内存泄漏的原因和场景"></a> 内存泄漏的原因和场景</h2>
-<p>程序的运行需要内存。只要程序提出要求，操作系统或者运行时（runtime）就必须供给内存。<br />
-对于持续运行的服务进程（daemon），必须及时释放不再用到的内存。否则，内存占用越来越高，轻则影响系统性能，重则导致进程崩溃。<br />
-不再用到的内存，没有及时释放，就叫做内存泄漏（memory leak）</p>
-<h2 id="dom事件中的target和currenttarget有什么区别"><a class="markdownIt-Anchor" href="#dom事件中的target和currenttarget有什么区别"></a> Dom事件中的target和currentTarget有什么区别</h2>
-<p>target在事件流的目标阶段；currentTarget在事件流的捕获，目标及冒泡阶段。只有当事件流处在目标阶段的时候，两个的指向才是一样的， 而当处于捕获和冒泡阶段的时候，target指向被单击的对象而currentTarget指向当前事件活动的对象(注册该事件的对象)（一般为父级）</p>
-<h2 id="typeof和instanceof"><a class="markdownIt-Anchor" href="#typeof和instanceof"></a> Typeof和instanceof</h2>
-<p>Typeof:	typeof 是一个一元运算，放在一个运算数之前，运算数可以是任意类型。<br />
-它返回值是一个字符串，该字符串说明运算数的类型<br />
-instanceof	用于判断一个变量是否某个对象的实例<br />
-原理：nstanceof 检测一个对象A是不是另一个对象B的实例的原理是：查看对象B的prototype指向的对象是否在对象A的[[prototype]]链上。如果在，则返回true,如果不在则返回false。不过有一个特殊的情况，当对象B的prototype为null将会报错(类似于空指针异常)</p>
-]]></content>
-      <categories>
-        <category>javascript</category>
-      </categories>
-      <tags>
-        <tag>js基础</tag>
-      </tags>
-  </entry>
-  <entry>
-    <title>JS动画和CSS3动画有什么区别,倒计时,JS处理异常的语句有哪些举例说明,JS的设计模式,轮播图组件开发，我有10000万张图片要轮播，websocket,手指点击触控屏幕是什么事件，函数柯里化是什么,JS代码调试</title>
-    <url>/2020/08/24/js%E9%9D%A2%E8%AF%956/</url>
-    <content><![CDATA[<h2 id="js动画和css3动画有什么区别"><a class="markdownIt-Anchor" href="#js动画和css3动画有什么区别"></a> JS动画和CSS3动画有什么区别</h2>
-<a id="more"></a>
-<p>功能涵盖面，JS比CSS3大定义动画过程的@keyframes不支持递归定义，如果有多种类似的动画过程，需要调节多个参数来生成的话，将会有很大的冗余（比如jQuery Mobile的动画方案），而JS则天然可以以一套函数实现多个不同的动画过程时间尺度上，@keyframes的动画粒度粗，而JS的动画粒度控制可以很细<br />
-CSS3动画里被支持的时间函数非常少，不够灵活以现有的接口，CSS3动画无法做到支持两个以上的状态转化<br />
-实现/重构难度不一，CSS3比JS更简单，性能调优方向固定对于帧速表现不好的低版本浏览器，CSS3可以做到自然降级，而JS则需要撰写额外代码CSS动画有天然事件支持（TransitionEnd、AnimationEnd，但是它们都需要针对浏览器加前缀），JS则需要自己写事件CSS3有兼容性问题，而JS大多时候没有兼容性问题</p>
-<h1 id="倒计时"><a class="markdownIt-Anchor" href="#倒计时"></a> 倒计时</h1>
-<figure class="highlight xml"><table><tr><td class="code"><pre><span class="line"><span class="meta">&lt;!DOCTYPE <span class="meta-keyword">html</span>&gt;</span></span><br><span class="line"><span class="tag">&lt;<span class="name">html</span> <span class="attr">lang</span>=<span class="string">&quot;en&quot;</span>&gt;</span></span><br><span class="line"><span class="tag">&lt;<span class="name">head</span>&gt;</span></span><br><span class="line">    <span class="tag">&lt;<span class="name">meta</span> <span class="attr">charset</span>=<span class="string">&quot;UTF-8&quot;</span>&gt;</span></span><br><span class="line">    <span class="tag">&lt;<span class="name">meta</span> <span class="attr">name</span>=<span class="string">&quot;viewport&quot;</span> <span class="attr">content</span>=<span class="string">&quot;width=device-width, initial-scale=1.0&quot;</span>&gt;</span></span><br><span class="line">    <span class="tag">&lt;<span class="name">title</span>&gt;</span>Document<span class="tag">&lt;/<span class="name">title</span>&gt;</span></span><br><span class="line"><span class="tag">&lt;/<span class="name">head</span>&gt;</span></span><br><span class="line"><span class="tag">&lt;<span class="name">body</span>&gt;</span></span><br><span class="line">    <span class="tag">&lt;<span class="name">div</span> <span class="attr">id</span>=<span class="string">&quot;time&quot;</span>&gt;</span><span class="tag">&lt;/<span class="name">div</span>&gt;</span></span><br><span class="line">    <span class="tag">&lt;<span class="name">script</span>&gt;</span></span><br><span class="line"><span class="javascript">      <span class="keyword">var</span> time =   <span class="built_in">document</span>.querySelector(<span class="string">&quot;#time&quot;</span>)</span></span><br><span class="line"><span class="javascript">      <span class="keyword">var</span> d = <span class="number">6</span>;</span></span><br><span class="line"><span class="javascript">      <span class="function"><span class="keyword">function</span> <span class="title">setTime</span>(<span class="params"></span>)</span>&#123;</span></span><br><span class="line">          d--;</span><br><span class="line"><span class="javascript">          time.innerHTML=<span class="string">&quot;时间：&quot;</span>+d</span></span><br><span class="line">          if(d==0)&#123;</span><br><span class="line"><span class="javascript">              <span class="keyword">return</span>  time.innerHTML=<span class="string">&#x27;结束&#x27;</span></span></span><br><span class="line">          &#125;</span><br><span class="line"><span class="javascript">          <span class="built_in">setTimeout</span>(<span class="string">&#x27;setTime()&#x27;</span>,<span class="number">1000</span>)</span></span><br><span class="line">      &#125;</span><br><span class="line">      setTime()</span><br><span class="line">    <span class="tag">&lt;/<span class="name">script</span>&gt;</span></span><br><span class="line"><span class="tag">&lt;/<span class="name">body</span>&gt;</span></span><br><span class="line"><span class="tag">&lt;/<span class="name">html</span>&gt;</span></span><br></pre></td></tr></table></figure>
-<h2 id="js处理异常的语句有哪些举例说明"><a class="markdownIt-Anchor" href="#js处理异常的语句有哪些举例说明"></a> JS处理异常的语句有哪些举例说明</h2>
-<p>Javascript的异常捕获机制<br />
-1	try…catch语句<br />
-try{ console.log(b); console.log(“我不会输出的，不要找了”) }catch(error){ console.log(“发生错误了”) } console.log(“我try catch后面的代码”)<br />
-2	finally语句<br />
-try{ console.log(b); console.log(“我不会输出的，不要找了”) }catch(error){ console.log(“发生错误了”) }finally { console.log(“不管发生不发生错误，我都会执行”) } console.log(“我try catch后面的代码”)</p>
-<h2 id="js的设计模式"><a class="markdownIt-Anchor" href="#js的设计模式"></a> JS的设计模式</h2>
-<p>1	工厂模式<br />
-优点	能解决多个相似的问题<br />
-缺点	不能知道对象识别的问题(对象的类型不知道)<br />
-2	单体模式<br />
-单体模式是一个用来划分命名空间并将一批属性和方法组织在一起的对象，如果它可以被实例化，那么它只能被实例化一次<br />
-单体模式的优点是：<br />
-1	可以用来划分命名空间，减少全局变量的数量<br />
-2	使用单体模式可以使代码组织的更为一致，使代码容易阅读和维护<br />
-3	可以被实例化，且实例化一次<br />
-3	模块模式<br />
-模块模式使用了一个返回对象的匿名函数。在这个匿名函数内部，先定义了私有变量和函数，供内部函数使用，然后将一个对象字面量作为函数的值返回，返回的对象字面量中只包含可以公开的属性和方法。这样的话，可以提供外部使用该方法；由于该返回对象中的公有方法是在匿名函数内部定义的，因此它可以访问内部的私有变量和函数<br />
-我们什么时候使用模块模式？<br />
-如果我们必须创建一个对象并以某些数据进行初始化，同时还要公开一些能够访问这些私有数据的方法，那么我们这个时候就可以使用模块模式了<br />
-4	代理模式<br />
-代理的优点：<br />
-1	代理对象可以代替本体被实例化，并使其可以被远程访问；<br />
-2	它还可以把本体实例化推迟到真正需要的时候；对于实例化比较费时的本体对象，或者因为尺寸比较大以至于不用时不适于保存在内存中的本体，我们可以推迟实例化该对象</p>
-<h1 id="轮播图组件开发我有10000万张图片要轮播"><a class="markdownIt-Anchor" href="#轮播图组件开发我有10000万张图片要轮播"></a> 轮播图组件开发，我有10000万张图片要轮播</h1>
-<p>首先让一组图片绝对定位，让其重叠在一起，然后通过一个函数来控制图片的透明度变化。同时还有一个定时器，不停的触发这个函数，每次改变不同图片的透明度，让其显示。（更简单的效果是直接修改display属性，让该显示的图片display:block,而不显示的设为display:none就可以，只是效果上会差一些，但原理相同）<br />
-1	图片切换函数。接受一个参数，表示滚动方向。调用缓动函数切换图片。调用切换按钮图标函数点亮相应的按钮<br />
-2	缓动函数<br />
-3	点亮按钮函数<br />
-4	初始化函数。用于绑定事件，创建按钮和箭头，初始化最初位置<br />
-5	创建箭头函数<br />
-6	创建按钮函数<br />
-7	开始轮播函数<br />
-8	轮播函数<br />
-9	停止函数。用于停止轮播<br />
-还有一些公用方法：<span class="katex"><span class="katex-mathml"><math><semantics><mrow><mo stretchy="false">(</mo><mo stretchy="false">)</mo><mi mathvariant="normal">：</mi><mi mathvariant="normal">选</mi><mi mathvariant="normal">择</mi><mi>D</mi><mi>O</mi><mi>M</mi><mi mathvariant="normal">元</mi><mi mathvariant="normal">素</mi><mi mathvariant="normal">。</mi><mi>a</mi><mi>d</mi><mi>d</mi><mi>C</mi><mi>l</mi><mi>a</mi><mi>s</mi><mi>s</mi><mo stretchy="false">(</mo><mi>e</mi><mi>l</mi><mi>e</mi><mo separator="true">,</mo><mi mathvariant="normal">&quot;</mi><mi>c</mi><mi>l</mi><mi>a</mi><mi>s</mi><mi>s</mi><mi>N</mi><mi>a</mi><mi>m</mi><mi>e</mi><mi mathvariant="normal">&quot;</mi><mo stretchy="false">)</mo><mi mathvariant="normal">：</mi><mi mathvariant="normal">给</mi><mi mathvariant="normal">元</mi><mi mathvariant="normal">素</mi><mi mathvariant="normal">添</mi><mi mathvariant="normal">加</mi><mi mathvariant="normal">类</mi><mi mathvariant="normal">名</mi><mi mathvariant="normal">。</mi><mi>r</mi><mi>e</mi><mi>m</mi><mi>o</mi><mi>v</mi><mi>e</mi><mi>C</mi><mi>l</mi><mi>a</mi><mi>s</mi><mi>s</mi><mo stretchy="false">(</mo><mi>e</mi><mi>l</mi><mi>e</mi><mo separator="true">,</mo><mi mathvariant="normal">&quot;</mi><mi>c</mi><mi>l</mi><mi>a</mi><mi>s</mi><mi>s</mi><mi>N</mi><mi>a</mi><mi>m</mi><mi>e</mi><mi mathvariant="normal">&quot;</mi><mo stretchy="false">)</mo><mi mathvariant="normal">移</mi><mi mathvariant="normal">除</mi><mi mathvariant="normal">元</mi><mi mathvariant="normal">素</mi><mi mathvariant="normal">的</mi><mi mathvariant="normal">类</mi><mi mathvariant="normal">名</mi><mi mathvariant="normal">。</mi></mrow><annotation encoding="application/x-tex">()：选择DOM元素。addClass(ele,&quot;className&quot;)：给元素添加类名。removeClass(ele,&quot;className&quot;)移除元素的类名。</annotation></semantics></math></span><span class="katex-html" aria-hidden="true"><span class="base"><span class="strut" style="height:1em;vertical-align:-0.25em;"></span><span class="mopen">(</span><span class="mclose">)</span><span class="mord cjk_fallback">：</span><span class="mord cjk_fallback">选</span><span class="mord cjk_fallback">择</span><span class="mord mathdefault" style="margin-right:0.02778em;">D</span><span class="mord mathdefault" style="margin-right:0.02778em;">O</span><span class="mord mathdefault" style="margin-right:0.10903em;">M</span><span class="mord cjk_fallback">元</span><span class="mord cjk_fallback">素</span><span class="mord cjk_fallback">。</span><span class="mord mathdefault">a</span><span class="mord mathdefault">d</span><span class="mord mathdefault">d</span><span class="mord mathdefault" style="margin-right:0.07153em;">C</span><span class="mord mathdefault" style="margin-right:0.01968em;">l</span><span class="mord mathdefault">a</span><span class="mord mathdefault">s</span><span class="mord mathdefault">s</span><span class="mopen">(</span><span class="mord mathdefault">e</span><span class="mord mathdefault" style="margin-right:0.01968em;">l</span><span class="mord mathdefault">e</span><span class="mpunct">,</span><span class="mspace" style="margin-right:0.16666666666666666em;"></span><span class="mord">&quot;</span><span class="mord mathdefault">c</span><span class="mord mathdefault" style="margin-right:0.01968em;">l</span><span class="mord mathdefault">a</span><span class="mord mathdefault">s</span><span class="mord mathdefault">s</span><span class="mord mathdefault" style="margin-right:0.10903em;">N</span><span class="mord mathdefault">a</span><span class="mord mathdefault">m</span><span class="mord mathdefault">e</span><span class="mord">&quot;</span><span class="mclose">)</span><span class="mord cjk_fallback">：</span><span class="mord cjk_fallback">给</span><span class="mord cjk_fallback">元</span><span class="mord cjk_fallback">素</span><span class="mord cjk_fallback">添</span><span class="mord cjk_fallback">加</span><span class="mord cjk_fallback">类</span><span class="mord cjk_fallback">名</span><span class="mord cjk_fallback">。</span><span class="mord mathdefault" style="margin-right:0.02778em;">r</span><span class="mord mathdefault">e</span><span class="mord mathdefault">m</span><span class="mord mathdefault">o</span><span class="mord mathdefault" style="margin-right:0.03588em;">v</span><span class="mord mathdefault">e</span><span class="mord mathdefault" style="margin-right:0.07153em;">C</span><span class="mord mathdefault" style="margin-right:0.01968em;">l</span><span class="mord mathdefault">a</span><span class="mord mathdefault">s</span><span class="mord mathdefault">s</span><span class="mopen">(</span><span class="mord mathdefault">e</span><span class="mord mathdefault" style="margin-right:0.01968em;">l</span><span class="mord mathdefault">e</span><span class="mpunct">,</span><span class="mspace" style="margin-right:0.16666666666666666em;"></span><span class="mord">&quot;</span><span class="mord mathdefault">c</span><span class="mord mathdefault" style="margin-right:0.01968em;">l</span><span class="mord mathdefault">a</span><span class="mord mathdefault">s</span><span class="mord mathdefault">s</span><span class="mord mathdefault" style="margin-right:0.10903em;">N</span><span class="mord mathdefault">a</span><span class="mord mathdefault">m</span><span class="mord mathdefault">e</span><span class="mord">&quot;</span><span class="mclose">)</span><span class="mord cjk_fallback">移</span><span class="mord cjk_fallback">除</span><span class="mord cjk_fallback">元</span><span class="mord cjk_fallback">素</span><span class="mord cjk_fallback">的</span><span class="mord cjk_fallback">类</span><span class="mord cjk_fallback">名</span><span class="mord cjk_fallback">。</span></span></span></span>.add(ele,“type”,fun)：给一个DOM节点绑定事件。getCSS(ele,“prop”)：获取元素相应属性的值。$.delegateTag(“selector”,“tagName”,“type”,fun)：事件代理。</p>
-<h2 id="websocket"><a class="markdownIt-Anchor" href="#websocket"></a> websocket</h2>
-<p>WebSocket是一种双向通信协议，在建立连接后，WebSocket服务器和Browser/Client Agent都能主动的向对方发送或接收数据，就像Socket一样；WebSocket需要类似TCP的客户端和服务器端通过握手连接，连接成功后才能相互通信</p>
-<h2 id="手指点击触控屏幕是什么事件函数柯里化是什么"><a class="markdownIt-Anchor" href="#手指点击触控屏幕是什么事件函数柯里化是什么"></a> 手指点击触控屏幕是什么事件，函数柯里化是什么</h2>
-<p>手指点击称为：touch事件；<br />
-什么是函数柯里化：<br />
-柯里化是一个转换过程，把接受多个参数的函数变换成接受一个单一参数(译注：最初函数的第一个参数)的函数，如果其他的参数是必要的，返回接受余下的参数且返回结果的新函数<br />
-柯理化函数思想：一个js预先处理的思想；利用函数执行可以形成一个不销毁的作用域的原理，把需要预先处理的内容都储存在这个不销毁的作用域中，并且返回一个小函数，以后我们执行的都是小函数，在小函数中把之前预先存储的值进行相关的操作处理即可；<br />
-bind方法的作用：把传递进来的callback回调方法中的this预先处理为上下文context;</p>
-<h2 id="js代码调试"><a class="markdownIt-Anchor" href="#js代码调试"></a> JS代码调试</h2>
-<p>1	可以在JavaScript代码中加入一句debugger;来手工造成一个断点效果。<br />
-需要带有条件的断点吗？你只需要用if语句包围它<br />
-2	设置在DOM node发生变化时触发断点，谷歌浏览器的开发工具里有一个超级好用的功能，专门可以对付这种情况，叫做“Break on…”，你在DOM节点上右键，就能看到这个菜单项。断点的触发条件可以设置成这个节点被删除、节点的属性有任何变化，或它的某个子节点有变化发生<br />
-3	Ajax 断点：XHR断点，或Ajax断点，就像它们的名字一样，可以让我们设置一个断点，在特点的Ajax调用发生时触发它们。<br />
-当你在调试Web应用的网络传输时，这一招非常的有效<br />
-4	移动设备模拟环境：谷歌浏览器里有一些非常有趣的模拟移动设备的工具，帮助我们调试程序在移动设备里的运行情况。找到它的方法是：按F12，调出开发者工具，然后按ESC键(当前tab不能是Console)，你就会看到第二层调试窗口出现，里面的Emulation标签页里有各种模拟设备可选。当然，这不会就变成了真正的iPhone，只是模拟了iPhone的尺寸，触摸事件和浏览器User Agent值<br />
-5	使用Audits改进你的网站<br />
-YSlow是一个非常棒的工具。谷歌浏览器的开发者工具里也有一个非常类似的工具，叫Audits。<br />
-它可快速的审计你的网站，给你提出非常实际有效的优化你的网站的建议和方法</p>
-]]></content>
-      <categories>
-        <category>javascript</category>
-      </categories>
-      <tags>
-        <tag>js基础</tag>
-      </tags>
-  </entry>
-  <entry>
     <title>窗口坐标，深拷贝与浅拷贝，可复用的事件监听方法，Js的字符串类型，正则表达式的函数使用</title>
     <url>/2020/08/23/%E7%AA%97%E5%8F%A3%E5%9D%90%E6%A0%87%EF%BC%8C%E6%B7%B1%E6%8B%B7%E8%B4%9D%E4%B8%8E%E6%B5%85%E6%8B%B7%E8%B4%9D%EF%BC%8C%E5%8F%AF%E5%A4%8D%E7%94%A8%E7%9A%84%E4%BA%8B%E4%BB%B6%E7%9B%91%E5%90%AC%E6%96%B9%E6%B3%95%EF%BC%8CJs%E7%9A%84%E5%AD%97%E7%AC%A6%E4%B8%B2%E7%B1%BB%E5%9E%8B%EF%BC%8C%E6%AD%A3%E5%88%99%E8%A1%A8%E8%BE%BE%E5%BC%8F%E7%9A%84%E5%87%BD%E6%95%B0%E4%BD%BF%E7%94%A8/</url>
     <content><![CDATA[<h2 id="窗口坐标"><a class="markdownIt-Anchor" href="#窗口坐标"></a> 窗口坐标</h2>
@@ -2604,92 +2557,6 @@ newObj[b]=deepCopy({b:10}[b])=deepCopy(10)=10.<br />
 <h2 id="可复用的事件监听方法"><a class="markdownIt-Anchor" href="#可复用的事件监听方法"></a> 可复用的事件监听方法</h2>
 <p>当同一个对象使用.onclick的写法触发多个方法的时候，后一个方法会把前一个方法覆盖掉，也就是说，在对象的onclick事件发生时，只会执行最后绑定的方法。而用事件监听则不会有覆盖的现象，每个绑定的事件都会被执行。如下：</p>
 <figure class="highlight plain"><table><tr><td class="code"><pre><span class="line">&lt;!DOCTYPE html&gt;</span><br><span class="line">&lt;html lang&#x3D;&quot;en&quot;&gt;</span><br><span class="line"></span><br><span class="line">&lt;head&gt;</span><br><span class="line">    &lt;meta charset&#x3D;&quot;UTF-8&quot;&gt;</span><br><span class="line">    &lt;meta name&#x3D;&quot;viewport&quot; content&#x3D;&quot;width&#x3D;device-width, initial-scale&#x3D;1.0&quot;&gt;</span><br><span class="line">    &lt;title&gt;Document&lt;&#x2F;title&gt;</span><br><span class="line">&lt;&#x2F;head&gt;</span><br><span class="line"></span><br><span class="line">&lt;body&gt;</span><br><span class="line">    &lt;button class&#x3D;&quot;eventyuan&quot;&gt;点击1&lt;&#x2F;button&gt;</span><br><span class="line">    &lt;button class&#x3D;&quot;eventyuan1&quot;&gt;点击2&lt;&#x2F;button&gt;</span><br><span class="line">    &lt;script&gt;</span><br><span class="line">        &#x2F;&#x2F; 当同一个对象使用.onclick的写法触发多个方法的时候， 后一个方法会把前一个方法覆盖掉， 也就是说，</span><br><span class="line">        &#x2F;&#x2F; 在对象的onclick事件发生时， 只会执行最后绑定的方法。 而用事件监听则不会有覆盖的现象， 每个绑定的事件都会被执行。 如下：</span><br><span class="line">        var eventOne &#x3D; function()&#123;</span><br><span class="line">            alert(&#39;第一个监听事件&#39;)</span><br><span class="line">        &#125;</span><br><span class="line">        var eventTwo &#x3D; function()&#123;</span><br><span class="line">            alert(&#39;第二个监听事件&#39;)</span><br><span class="line">        &#125;</span><br><span class="line">        window.onload &#x3D; function()&#123;</span><br><span class="line">            var btn &#x3D; document.querySelector(&#39;.eventyuan&#39;)</span><br><span class="line">            btn.addEventListener(&#39;click&#39;,eventOne)</span><br><span class="line">            btn.addEventListener(&#39;click&#39;,eventTwo)</span><br><span class="line">        &#125;</span><br><span class="line">        &#x2F;&#x2F; 输出第一个监听事件 第二个监听事件</span><br><span class="line"></span><br><span class="line"></span><br><span class="line">        &#x2F;&#x2F; 采用事件监听给对象绑定方法后，可以解除相应的绑定，写法如下</span><br><span class="line">        var eventOne &#x3D; function()&#123;</span><br><span class="line">            alert(&#39;第一个监听事件&#39;)</span><br><span class="line">        &#125;</span><br><span class="line">        var eventTwo &#x3D; function()&#123;</span><br><span class="line">            alert(&#39;第二个监听事件&#39;)</span><br><span class="line">        &#125;</span><br><span class="line">        window.onload &#x3D; function()&#123;</span><br><span class="line">            var btn1 &#x3D; document.querySelector(&#39;.eventyuan1&#39;)</span><br><span class="line">            btn1.addEventListener(&#39;click&#39;,eventOne)</span><br><span class="line">            btn1.addEventListener(&#39;click&#39;,eventTwo)</span><br><span class="line">            btn1.removeEventListener(&#39;click&#39;,eventOne)</span><br><span class="line">        &#125;</span><br><span class="line">    &lt;&#x2F;script&gt;</span><br><span class="line">&lt;&#x2F;body&gt;</span><br><span class="line"></span><br><span class="line">&lt;&#x2F;html&gt;</span><br></pre></td></tr></table></figure>
-]]></content>
-      <categories>
-        <category>javascript</category>
-      </categories>
-      <tags>
-        <tag>js基础</tag>
-      </tags>
-  </entry>
-  <entry>
-    <title>数组,重载和多态,作用域,use strict,Typeof,=== 和 == 和 undefined,匿名函数,宿主对象和原生,变量提升,Attribute和property,Document load和document DOMContentLoaded两个事件之前的区别</title>
-    <url>/2020/08/22/js%E9%9D%A2%E8%AF%953/</url>
-    <content><![CDATA[<h2 id="变量提升"><a class="markdownIt-Anchor" href="#变量提升"></a> 变量提升</h2>
-<a id="more"></a>
-<p>JavaScript 中，函数及变量的声明都将被提升到函数的最顶部。<br />
-JavaScript 中，变量可以在使用后声明，也就是变量可以先使用再声明。<br />
-JavaScript 只有声明的变量会提升，初始化的不会</p>
-<h2 id="匿名函数"><a class="markdownIt-Anchor" href="#匿名函数"></a> 匿名函数</h2>
-<p><img src="https://img-blog.csdnimg.cn/20200822214720334.png#pic_center" alt="在这里插入图片描述" /></p>
-<h2 id="宿主对象和原生对象"><a class="markdownIt-Anchor" href="#宿主对象和原生对象"></a> 宿主对象和原生对象</h2>
-<p>内置（Build-in）对象与原生（Naitve）对象的区别在于：前者总是在引擎初始化阶段，就被创建好的对象，是后者的一个子集；而后者包括了一些在运行过程中动态创建的对象。宿主对象不是引擎的原生对象，而是由宿主框架通过某种机制注册到JavaScript引擎中的对象。<br />
-因为你不知道哪一天浏览器或javascript本身就会实现这个方法，而且和你扩展的实现有不一致的表现。到时候你的javascript代码可能已经在无数个页面中一直执行，而浏览器的实现导致所有使用扩展原型的代码都崩溃了<br />
-String对象	字符串对象，提供了对字符串进行操作的属性和方法<br />
-Array对象	数组对象，提供了数组操作方面的属性和方法<br />
-Date对象	日期时间对象，可以获取系统的日期时间信息<br />
-Boolean对象	布尔对象，一个布尔变量就是一个布尔对象。(没有可用的属性和方法)<br />
-Number对象	数值对象。一个数值变量就是一个数值对象<br />
-Math对象	数学对象，提供了数学运算方面的属性和方法</p>
-<h2 id="attribute和property之间的区别"><a class="markdownIt-Anchor" href="#attribute和property之间的区别"></a> Attribute和property之间的区别</h2>
-<p>property是DOM中的属性，是JavaScript里的对象<br />
-attribute是HTML标签上的特性，它的值只能够是字符串</p>
-<h2 id="document-load和document-domcontentloaded两个事件之前的区别"><a class="markdownIt-Anchor" href="#document-load和document-domcontentloaded两个事件之前的区别"></a> Document load和document DOMContentLoaded两个事件之前的区别</h2>
-<p>说明：他们的区别是，触发的时机不一样，先触发DOMContentLoaded事件，后触发load事件<br />
-DOM文档加载的步骤为<br />
-1	解析HTML结构<br />
-2	加载外部脚本和样式表文件<br />
-3	解析并执行脚本代码<br />
-4	DOM树构建完成。//DOMContentLoaded<br />
-5	加载图片等外部文件<br />
-6	页面加载完毕。//load<br />
-备注：在第4步，会触发DOMContentLoaded事件。在第6步，触发load事件</p>
-<h2 id="和-和-undefined"><a class="markdownIt-Anchor" href="#和-和-undefined"></a> === 和 == 和 undefined</h2>
-<p>=== 和 == , [] === [], undefined === undefined,[] == [], undefined == undefined<br />
-===：三个等号我们称为等同符，当等号两边的值为相同类型的时候，直接比较等号两边的值，值相同则返回true，若等号两边的值类型不同时直接返回false<br />
-==：两个等号我们称为等值符，当等号两边的值为相同类型时比较值是否相同，类型不同时会发生类型的自动转换，转换为相同的类型后再作比较</p>
-<h2 id="typeof"><a class="markdownIt-Anchor" href="#typeof"></a> Typeof</h2>
-<p>number	boolean	string	undefined	object	function</p>
-<h2 id="use-strict"><a class="markdownIt-Anchor" href="#use-strict"></a> use strict</h2>
-<p>ECMAscript 5添加了第二种运行模式：“严格模式”（strict mode）。顾名思义，这种模式使得Javascript在更严格的条件下运行。<br />
-设立&quot;严格模式&quot;的目的，主要有以下几个：<br />
-1：消除Javascript语法的一些不合理、不严谨之处，减少一些怪异行为;<br />
-2：消除代码运行的一些不安全之处，保证代码运行的安全；<br />
-3：提高编译器效率，增加运行速度；<br />
-4：为未来新版本的Javascript做好铺垫。<br />
-注：经过测试 IE6,7,8,9 均不支持严格模式。<br />
-缺点：<br />
-现在网站的 JS 都会进行压缩，一些文件用了严格模式，而另一些没有。这时这些本来是严格模式的文件，被 merge 后，这个串就到了文件的中间，不仅没有指示严格模式，反而在压缩后浪费了字节</p>
-<h2 id="作用域"><a class="markdownIt-Anchor" href="#作用域"></a> 作用域</h2>
-<p>函数作用域的含义是指，属于这个函数的全部变量都可以在整个函数的范围内使用及复用(事实上在嵌套的作用域中也可以使用)。这种设计方案是非常有用的，能充分利用 JavaScript 变量可以根据需要改变值类型的“动态”特性<br />
-1.全局变量：声明在函数外部的变量（所有没有var直接赋值的变量都属于全局变量）<br />
-2.局部变量：声明在函数内部的变量（所有没有var直接赋值的变量都属于全局变量）<br />
-全局变量在整个上下文都有效只是在没有赋值之前调用，会输出undefined<br />
-函数作用域:是针对局部变量来说的，在函数中定义的变量在函数外不能获取<br />
-块级作用域:概念“{}”中间的部分都是块级作用域ex：for while if ，js中没有块级作用域，但是可以用闭包实现类似功能</p>
-<h2 id="重载和多态"><a class="markdownIt-Anchor" href="#重载和多态"></a> 重载和多态</h2>
-<p>多态：	多态的实现可以采用和继承类似的方法。首先定义一个抽象类，其中调用一些虚方法，虚方法在抽象类中没用定义，而是通过其具体的实现类来实现<br />
-重载：	重载的定义是指函数的方法名相同，但参数不同<br />
-JS中如何实现方法重载？这涉及到三个问题<br />
-1	同名函数的调用问题<br />
-2	函数中特殊的参数arguments<br />
-3	如何利用arguments实现方法重载<br />
-实现重载主要就是利用ARGUMENTS</p>
-<h2 id="数组"><a class="markdownIt-Anchor" href="#数组"></a> 数组</h2>
-<p>常用API<br />
-操作方法如下<br />
-concat():	基于当前数组，创建一个新的数组，并返回这个新数组，不会改变原数组<br><br />
-slice():	可以接受一个或两个参数，要返回项的起始和结束位置，返回所截取数组的项，但是不包括结束位置的项，不会改变原数组<br><br />
-splice():	主要用法是向数组的中部插入项，会改变原数组，是最强大的数组方法。最多指定3个参数<br><br />
-indexOf()和lastIndexOf()。这两个方法都接受两个参数：要查找的项和表示查找起点位置的索引。indexOf()从数组的开头开始向后查找，lastIndexOf()从数组的末尾开始向前查找<br><br />
-迭代方法<br />
-A	every():对数组的每一项运行给定函数，如果数组的每一项都返回true，则返回true。对数组应用该方法，有返回值为true或false<br><br />
-B	some():对数组的每一项运行给定函数，如果数组的任一项都返回true，则返回true。对数组应用该方法，有返回值为true或false<br><br />
-C	filter():对数组的每一项运行给定函数，返回该函数中会返回true的项组成的数组。有返回值，为符合条件的项组成的数组<br><br />
-D	map()::对数组的每一项运行给定函数,有返回每次函数调用的结果组成的数组<br><br />
-E	forEach():对数组的每一项运行给定函数,这个方法没有返回值。本质上与使用for循环迭代数组是一样的<br><br />
-归并方法<br />
-reduce()和reduceRight()。他们的区别在于从哪头开始遍历数组，除此之外，它们完全相同。 这两个方法都接收两个参宿：一个在每一项上调用的函数和(可选)作为归并基础的初始值。 传给reduce()和reduceRight()的函数接收4个参数：前一个值、当前值、项的索引和数组对象</p>
 ]]></content>
       <categories>
         <category>javascript</category>
@@ -2853,149 +2720,6 @@ reduce()和reduceRight()。他们的区别在于从哪头开始遍历数组，�
       </categories>
       <tags>
         <tag>ajax</tag>
-      </tags>
-  </entry>
-  <entry>
-    <title>闭包，this，call,apply,bind区别,原型原型链,创建对象的方式,继承,New 一个对象具体做了什么</title>
-    <url>/2020/08/21/js%E9%9D%A2%E8%AF%952/</url>
-    <content><![CDATA[<h2 id="闭包"><a class="markdownIt-Anchor" href="#闭包"></a> 闭包</h2>
-<a id="more"></a>
-<h3 id="对闭包的理解"><a class="markdownIt-Anchor" href="#对闭包的理解"></a> 对闭包的理解</h3>
-<p>函数内部可以直接读取全局变量，但是在函数外部无法读取函数内部的局部变量。闭包就是能够读取其他函数内部变量的函数。内部函数对外部函数的变量有了引用关系——闭包就是这时产生的。每次对外部函数的调用，都会产生一次闭包。</p>
-<h4 id="实现方法"><a class="markdownIt-Anchor" href="#实现方法"></a> 实现方法：</h4>
-<p>1 给函数添加一些属性<br />
-2 声明一个变量，将一个函数当做值赋给变量<br />
-3 new一个对象，然后给对象添加属性和方法<br />
-4 var obj={}就是声明一个空的对象</p>
-<h4 id="用处"><a class="markdownIt-Anchor" href="#用处"></a> 用处</h4>
-<p>它的最大用处有两个，一个是前面提到的可以读取函数内部的变量，另一个就是让这些变量的值始终保持在内存中，不会在f1调用后被自动清除。<br />
-（1）由于闭包会使得函数中的变量都被保存在内存中，内存消耗很大，所以不能滥用闭包，否则会造成网页的性能问题，在IE中可能导致内存泄露。解决方法是，在退出函数之前，将不使用的局部变量全部删除。<br />
-（2）闭包会在父函数外部，改变父函数内部变量的值。所以，如果你把父函数当作对象（object）使用，把闭包当作它的公用方法（Public Method），把内部变量当作它的私有属性（private value），这时一定要小心，不要随便改变父函数内部变量的值。</p>
-<h2 id="this"><a class="markdownIt-Anchor" href="#this"></a> this</h2>
-<h4 id="this的使用场景"><a class="markdownIt-Anchor" href="#this的使用场景"></a> this的使用场景</h4>
-<p>1	全局&amp;调用普通函数，在全局环境中，this永远指向window<br />
-2	构造函数，如果函数作为构造函数使用，那么其中的 this 就代表它即将 new 出来的对象<br />
-3	对象方法，如果函数作为对象的方法时，方法中的 this 指向该对象。注意：若是在对象方法中定义函数，那么情况就不同了。函数a	虽然是在b内部定义的,但它仍然属于一个普通函数，this仍指向window<br />
-4	构造函数 prototype 属性，即便是在整个原型链中，this 代表的也是当前对象的值<br />
-5	函数用 call、apply或者 bind 调用，当一个函数被 call、apply 或者 bind 调用时，this 的值就取传入的对象的值<br />
-6	DOM event this，前六种情况其实可以总结为： this 指向调用该方法的对象<br />
-7	箭头函数中的 this，当使用箭头函数的时候，情况就有所不同了：箭头函数内部的 this 是词法作用域，由上下文确定<br />
-java中this.value可以再本类中调用全局变量,也可以在构造器中用this()调用其他构造器,也可以用this表示当前对象JavaScript中this指的是这个函数所属的对象的值,当new一个函数时,这个this就会指向这个new出来的对象,apply()和call()可以改变一个函数中this指向的对象call和apply都可以改变this指向，不过call的第二个参数是散列分布，apply则可以是一个数组</p>
-<h2 id="callapplybind区别"><a class="markdownIt-Anchor" href="#callapplybind区别"></a> call,apply,bind区别</h2>
-<p>call() 和apply()的第一个参数相同，就是指定的对象。这个对象就是该函数的执行上下文。<br />
-call()在第一个参数之后的  后续所有参数就是传入该函数的值。<br />
-apply() 只有两个参数，第一个是对象，第二个是数组，这个数组就是该函数的参数。<br />
-bind() 方法和前两者不同在于： bind() 方法会返回执行上下文被改变的函数而不会立即执行，而前两者是直接执行该函数。他的参数和call()相同。</p>
-<h2 id="原型原型链"><a class="markdownIt-Anchor" href="#原型原型链"></a> 原型原型链</h2>
-<p>在JS中万物皆对象，方法(FUNCTION)是对象，方法的原型（FUNCTION.PROTOTYPE）是对象，对象具有属性（<strong>PROTO</strong>）称为隐式原型，对象的隐式原型指向构造该对象的构造函数的显式原型。原型对象只存在于函数对象。也就是本质上只要是通过NEW FUNCTION创建的函数对象会有一个原型对象</p>
-<h4 id="五条原型原则"><a class="markdownIt-Anchor" href="#五条原型原则"></a> 五条原型原则</h4>
-<p>1	所有的引用类型（数组，对象，函数）都具有对象特性，即可自由扩展属性（除了null以外）<br />
-2	所有的引用类型（数组，对象，函数），都有一个_proto_属性，属性值是一个普通的对象    （隐式原型）<br />
-3	当试图得到一个对象的某个属性时，如果这个对象本身没有这个属性，那么会去它的_proto_(即它的构造函数的prototype)中寻找</p>
-<h4 id="原型链解释说明"><a class="markdownIt-Anchor" href="#原型链解释说明"></a> 原型链解释说明</h4>
-<ol>
-<li>INSTANCEOF用于判断引用类型属于那个构造函数的方法，F INSTANCEOF FOO的判断逻辑是：F的_PROTO_一层一层往上，能否对应到FOO.PROTOTYPE再试着判断 F   INSTANCEOF   OBJECT。</li>
-<li>INSTANCEOF用于判断引用类型属于那个构造函数的方法F INSTANCEOF FOO的判断逻辑是：F的_PROTO_一层一层往上，能否对应到FOO.PROTOTYPE再试着判断 F   INSTANCEOF   OBJECT。</li>
-</ol>
-<h2 id="创建对象的方式"><a class="markdownIt-Anchor" href="#创建对象的方式"></a> 创建对象的方式</h2>
-<p>工厂模式<br />
-构造函数模式<br />
-原型模式<br />
-组合使用构造模式和原型模式</p>
-<h2 id="继承"><a class="markdownIt-Anchor" href="#继承"></a> 继承</h2>
-<table>
-<thead>
-<tr>
-<th>原型继承</th>
-<th>优点：父类的方法（getName）得到了复用  缺点：同理父类的属性（name）也是复用，即子类实例没有自己的属性</th>
-</tr>
-</thead>
-<tbody>
-<tr>
-<td>构造函数继承</td>
-<td>优点：子类的每个实例都有自己的属性（name），不会相互影响缺点：但是继承父类方法的时候就不需要这种特性，没有实现父类方法的复用</td>
-</tr>
-<tr>
-<td>组合式继承</td>
-<td>优点：继承了上述两种方式的优点，摒弃了缺点，复用了方法，子类又有各自的属性缺点： 因为父类构造函数被执行了两次，子类的原型对象(Sub.prototype)中也有一份父类的实例属性，而且这些属性会被子类实例(sub1,sub2)的属性覆盖掉，也存在内存浪费</td>
-</tr>
-<tr>
-<td>寄生组合式继承</td>
-<td>优点：以上优点均有。 缺点：就是在继承父类方法的时候调用了父类构造函数，从而造成内存浪费，// 现在只要解决了这个问题就完美了。那在复用父类方法的时候，// 使用Object.create方法也可以达到目的，没有调用父类构造函数，问题解决</td>
-</tr>
-</tbody>
-</table>
-<h2 id="new-一个对象具体做了什么"><a class="markdownIt-Anchor" href="#new-一个对象具体做了什么"></a> New 一个对象具体做了什么</h2>
-<p>使用关键字new创建新实例对象过了以下几步<br />
-1	创建一个新对象，如：var person = {}<br />
-2	新对象的_proto_属性指向构造函数的原型对象<br />
-3	将构造函数的作用域赋值给新对象。（也所以this对象指向新对象）<br />
-4	执行构造函数内部的代码，将属性添加给person中的this对象<br />
-5	返回新对象person</p>
-]]></content>
-      <categories>
-        <category>javascript</category>
-      </categories>
-      <tags>
-        <tag>js基础</tag>
-      </tags>
-  </entry>
-  <entry>
-    <title>js的基本类型，引用类型有哪些，null和undefined的区别，判断一个变量是Array类型,判断一个变量是Number类型，Object是什么类型，引用类型和基本数据类型有什么区别，堆栈关系， JS常见的DOM操作API，JS常见的DOM操作API，事件委托,事件冒泡和捕获，如何阻止冒泡,如何阻止默认事件</title>
-    <url>/2020/08/21/js%E9%9D%A2%E8%AF%951/</url>
-    <content><![CDATA[<h2 id="js的基本类型引用类型有哪些null和undefined的区别"><a class="markdownIt-Anchor" href="#js的基本类型引用类型有哪些null和undefined的区别"></a> js的基本类型，引用类型有哪些，null和undefined的区别</h2>
-<a id="more"></a>
-<p><strong>基本数据类型</strong>：undefined,null,boolean,number,string<br />
-<strong>引用数据类型</strong>：function,obiect,array<br />
-<strong>Undefined</strong>:表示变量声明但未初始化时的值<br />
-<strong>null</strong>表示准备用来保存对象，还没有真正保存对象的值。从逻辑角度看，null值表示一个空对象指针。<br />
-JavaScript（ECMAScript标准）里共有5种基本类型：Undefined, Null, Boolean, Number, String，和一种复杂类型Object。可以看到null和undefined分属不同的类型，未初始化定义的值用typeof检测出来是&quot;undefined&quot;(字符串)，而null值用typeof检测出来是&quot;object&quot;（字符串）。任何时候都不建议显式的设置一个变量为undefined，但是如果保存对象的变量还没有真正保存对象，应该设置成null。实际上，undefined值是派生自null值的，ECMAScript标准规定对二者进行相等性测试要返回true</p>
-<h2 id="判断一个变量是array类型判断一个变量是number类型"><a class="markdownIt-Anchor" href="#判断一个变量是array类型判断一个变量是number类型"></a> 判断一个变量是Array类型,判断一个变量是Number类型</h2>
-<p>从原型入手，Array.prototype.isPrototypeOf(obj);也可以从构造函数入手，obj instanceof Array根据对象的class属性(类属性)，跨原型链调用toString()方法。Array.isArray()方法。<br />
-isNaN（）是一个函数，用isNaN判断一个变量，返回一个Boolean值。若返回的值为false，则为可以转换成数字类型；返回的值是true，则不能转换成数字类型<br />
-Typeof () 判断</p>
-<h2 id="object是什么类型引用类型和基本数据类型有什么区别堆栈关系"><a class="markdownIt-Anchor" href="#object是什么类型引用类型和基本数据类型有什么区别堆栈关系"></a> Object是什么类型，引用类型和基本数据类型有什么区别，堆栈关系</h2>
-<p>Object 是引用类型。<br />
-**基本类型：**1.基本类型的值是不可变得，2.基本类型的比较是值的比较。3.基本类型的变量是存放在栈区的（栈区指内存里的栈内存）。<br />
-**引用类型：**1.引用类型的值是可变的，2.引用类型的值是同时保存在栈内存和堆内存中的对象。<br />
-<strong>引用类型与基本类型比较</strong><br />
-基本类型：string,number,boolean,null,undefined	<br />
-引用类型：Function,Array,Object<br />
-访问方式<br />
-基本类型：操作和保存在变量的实际的值	<br />
-引用类型：存在内存中，js不许直接访问内存，操作的是对象的引用<br />
-存储的位置<br />
-基本类型：保存在栈区<br />
-引用类型：引用存放在栈区，实际对象保存在堆区。</p>
-<center>保存在栈区</center>
-<p><img src="https://img-blog.csdnimg.cn/20200821173535939.png#pic_center" alt="在这里插入图片描述" /></p>
-<center>引用存放在栈区，实际对象保存在堆区。</center>
-<p><img src="https://img-blog.csdnimg.cn/20200821173545237.png?x-oss-process=image/watermark,type_ZmFuZ3poZW5naGVpdGk,shadow_10,text_aHR0cHM6Ly9ibG9nLmNzZG4ubmV0L3dlaXhpbl80MjY5MzcxMg==,size_16,color_FFFFFF,t_70#pic_center" alt="在这里插入图片描述" /></p>
-<h2 id="js常见的dom操作api"><a class="markdownIt-Anchor" href="#js常见的dom操作api"></a> JS常见的DOM操作API</h2>
-<p><img src="https://img-blog.csdnimg.cn/20200821173734509.png?x-oss-process=image/watermark,type_ZmFuZ3poZW5naGVpdGk,shadow_10,text_aHR0cHM6Ly9ibG9nLmNzZG4ubmV0L3dlaXhpbl80MjY5MzcxMg==,size_16,color_FFFFFF,t_70#pic_center" alt="在这里插入图片描述" /><br />
-<img src="https://img-blog.csdnimg.cn/20200821173743285.png?x-oss-process=image/watermark,type_ZmFuZ3poZW5naGVpdGk,shadow_10,text_aHR0cHM6Ly9ibG9nLmNzZG4ubmV0L3dlaXhpbl80MjY5MzcxMg==,size_16,color_FFFFFF,t_70#pic_center" alt="在这里插入图片描述" /></p>
-<h2 id="事件冒泡和事件捕获"><a class="markdownIt-Anchor" href="#事件冒泡和事件捕获"></a> 事件冒泡和事件捕获</h2>
-<p>当你使用事件捕获时，父级元素先触发，子级元素后触发。<br />
-当你使用事件冒泡时，子级元素先触发，父级元素后触发。</p>
-<h2 id="事件委托事件冒泡和捕获如何阻止冒泡如何阻止默认事件"><a class="markdownIt-Anchor" href="#事件委托事件冒泡和捕获如何阻止冒泡如何阻止默认事件"></a> 事件委托,事件冒泡和捕获，如何阻止冒泡,如何阻止默认事件</h2>
-<h3 id="事件委托参考httpswwwcnblogscomliugang-vipp5616484html"><a class="markdownIt-Anchor" href="#事件委托参考httpswwwcnblogscomliugang-vipp5616484html"></a> 事件委托：（参考：<a href="https://www.cnblogs.com/liugang-vip/p/5616484.html%EF%BC%89">https://www.cnblogs.com/liugang-vip/p/5616484.html）</a></h3>
-<figure class="highlight plain"><table><tr><td class="code"><pre><span class="line">&lt;!DOCTYPE html&gt;</span><br><span class="line">&lt;html lang&#x3D;&quot;en&quot;&gt;</span><br><span class="line">&lt;head&gt;</span><br><span class="line">    &lt;meta charset&#x3D;&quot;UTF-8&quot;&gt;</span><br><span class="line">    &lt;meta name&#x3D;&quot;viewport&quot; content&#x3D;&quot;width&#x3D;device-width, initial-scale&#x3D;1.0&quot;&gt;</span><br><span class="line">    &lt;title&gt;事件委托&lt;&#x2F;title&gt;</span><br><span class="line">    &lt;style&gt;</span><br><span class="line">        .active&#123;</span><br><span class="line">            color: blue;</span><br><span class="line">        &#125;</span><br><span class="line">    &lt;&#x2F;style&gt;</span><br><span class="line">&lt;&#x2F;head&gt;</span><br><span class="line">&lt;body&gt;</span><br><span class="line">    &lt;button class&#x3D;&quot;toolbar&quot;&gt;事件委托&lt;&#x2F;button&gt;</span><br><span class="line">    &lt;script&gt;</span><br><span class="line">        var  toobal &#x3D; document.querySelector(&#39;.toolbar&#39;)</span><br><span class="line">        toobal.addEventListener(&quot;click&quot;,function(e)&#123;</span><br><span class="line">            var button &#x3D; e.target</span><br><span class="line">            if(!button.classList.contains(&#39;active&#39;))&#123;</span><br><span class="line">                button.classList.add(&#39;active&#39;)</span><br><span class="line">            &#125;else&#123;</span><br><span class="line">                button.classList.remove(&#39;active&#39;)</span><br><span class="line">            &#125;</span><br><span class="line">        &#125;)</span><br><span class="line">    &lt;&#x2F;script&gt;</span><br><span class="line">&lt;&#x2F;body&gt;</span><br><span class="line">&lt;&#x2F;html&gt;</span><br></pre></td></tr></table></figure>
-<h3 id="事件冒泡"><a class="markdownIt-Anchor" href="#事件冒泡"></a> 事件冒泡：</h3>
-<p>事件冒泡，就是元素自身的事件被触发后，如果父元素有相同的事件，如onclick事件，那么元素本身的触发状态就会传递，也就是冒到父元素，父元素的相同事件也会一级一级根据嵌套关系向外触发，直到document/window，冒泡过程结束。<br />
-但是事件冒泡在某些应用场景产生一些问题，就是我们不需要触发的事件，由于冒泡的原因，也会运行。所以在这个时候要取消事件冒泡。阻止事件冒泡如下：</p>
-<figure class="highlight plain"><table><tr><td class="code"><pre><span class="line">&lt;!DOCTYPE html&gt;</span><br><span class="line">&lt;html lang&#x3D;&quot;en&quot;&gt;</span><br><span class="line">&lt;head&gt;</span><br><span class="line">    &lt;meta charset&#x3D;&quot;UTF-8&quot;&gt;</span><br><span class="line">    &lt;meta name&#x3D;&quot;viewport&quot; content&#x3D;&quot;width&#x3D;device-width, initial-scale&#x3D;1.0&quot;&gt;</span><br><span class="line">    &lt;title&gt;Document&lt;&#x2F;title&gt;</span><br><span class="line">&lt;&#x2F;head&gt;</span><br><span class="line">&lt;body&gt;</span><br><span class="line">    &lt;div&gt;</span><br><span class="line">        &lt;p&gt;段落文本内容</span><br><span class="line">            &lt;input type&#x3D;&quot;button&quot; value&#x3D;&quot;点击&quot; id&#x3D;&quot;button&quot;&#x2F;&gt;</span><br><span class="line">        &lt;&#x2F;p&gt;</span><br><span class="line">    &lt;&#x2F;div&gt;</span><br><span class="line"> &lt;script&gt;</span><br><span class="line">    </span><br><span class="line">var button &#x3D; document.querySelector(&#39;#button&#39;)</span><br><span class="line">    button.click&#x3D;function(event)&#123;</span><br><span class="line">        &#x2F;&#x2F;阻止冒泡</span><br><span class="line">        event &#x3D; event || window.event</span><br><span class="line">        if (event &amp;&amp; event.stopPropagation) &#123;</span><br><span class="line">            event.stopPropagation()</span><br><span class="line">        &#125;else&#123;</span><br><span class="line">            event.CancelBubble &#x3D; true;</span><br><span class="line">        &#125;</span><br><span class="line">    &#125;</span><br><span class="line"> &lt;&#x2F;script&gt;</span><br><span class="line">&lt;&#x2F;body&gt;</span><br><span class="line">&lt;&#x2F;html&gt;</span><br></pre></td></tr></table></figure>
-<h3 id="事件捕获"><a class="markdownIt-Anchor" href="#事件捕获"></a> 事件捕获</h3>
-<p>（参考：<a href="https://www.cnblogs.com/zhuzhenwei918/p/6139880.html%EF%BC%89">https://www.cnblogs.com/zhuzhenwei918/p/6139880.html）</a><br />
-事件捕获，与事件冒泡相反，事件会从最外层开始发生，直到最具体的元素。事件捕获的概念下发生click事件的顺序应该是document -&gt; html -&gt; body -&gt; div -&gt; p。阻止事件冒泡如下：</p>
-<figure class="highlight plain"><table><tr><td class="code"><pre><span class="line">document.getElementById(&quot;second&quot;).addEventListener(&quot;click&quot;,function()&#123;</span><br><span class="line">    alert(&quot;second&quot;);</span><br><span class="line">    event.stopImmediatePropagation();</span><br><span class="line">&#125;,true); </span><br></pre></td></tr></table></figure>
-<h3 id="阻止浏览器默认行为"><a class="markdownIt-Anchor" href="#阻止浏览器默认行为"></a> 阻止浏览器默认行为</h3>
-<figure class="highlight plain"><table><tr><td class="code"><pre><span class="line">&#x2F;&#x2F; 阻止浏览器默认行为</span><br><span class="line"> function stopDefault(e)&#123;</span><br><span class="line">     if(e &amp;&amp; e.preventDefault)&#123;</span><br><span class="line">         &#x2F;&#x2F; 阻止浏览器默认行为W3C</span><br><span class="line">         e.preventDefault();</span><br><span class="line">     &#125;else&#123;</span><br><span class="line">         &#x2F;&#x2F; IE中阻止浏览器默认行为</span><br><span class="line">         window.event.returnValue &#x3D; false</span><br><span class="line">     &#125;</span><br><span class="line">     return false;</span><br><span class="line"> &#125;</span><br></pre></td></tr></table></figure>
-]]></content>
-      <categories>
-        <category>javascript</category>
-      </categories>
-      <tags>
-        <tag>js基础</tag>
       </tags>
   </entry>
   <entry>
