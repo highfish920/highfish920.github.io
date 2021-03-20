@@ -6,7 +6,7 @@
   <link href="https://highfish920.github.io/atom.xml" rel="self"/>
   
   <link href="https://highfish920.github.io/"/>
-  <updated>2021-01-24T15:14:08.562Z</updated>
+  <updated>2021-03-20T03:20:33.865Z</updated>
   <id>https://highfish920.github.io/</id>
   
   <author>
@@ -17,11 +17,30 @@
   <generator uri="https://hexo.io/">Hexo</generator>
   
   <entry>
+    <title>hashMap 与 hashTable 的区别</title>
+    <link href="https://highfish920.github.io/2021/03/20/hashCode%E5%92%8ChashTable%E5%8C%BA%E5%88%AB/"/>
+    <id>https://highfish920.github.io/2021/03/20/hashCode%E5%92%8ChashTable%E5%8C%BA%E5%88%AB/</id>
+    <published>2021-03-20T03:13:57.236Z</published>
+    <updated>2021-03-20T03:20:33.865Z</updated>
+    
+    
+    <summary type="html">&lt;h2 id=&quot;hashmap-与-hashtable-的区别&quot;&gt;&lt;a class=&quot;markdownIt-Anchor&quot; href=&quot;#hashmap-与-hashtable-的区别&quot;&gt;&lt;/a&gt; hashMap 与 hashTable 的区别&lt;/h2&gt;</summary>
+    
+    
+    
+    <category term="java" scheme="https://highfish920.github.io/categories/java/"/>
+    
+    
+    <category term="java" scheme="https://highfish920.github.io/tags/java/"/>
+    
+  </entry>
+  
+  <entry>
     <title>对于java中String的理解</title>
-    <link href="https://highfish920.github.io/2021/01/24/spring/"/>
-    <id>https://highfish920.github.io/2021/01/24/spring/</id>
+    <link href="https://highfish920.github.io/2021/01/24/string/"/>
+    <id>https://highfish920.github.io/2021/01/24/string/</id>
     <published>2021-01-24T14:53:03.258Z</published>
-    <updated>2021-01-24T15:14:08.562Z</updated>
+    <updated>2021-01-26T07:56:44.783Z</updated>
     
     
     <summary type="html">&lt;h1 id=&quot;对于java中string的理解&quot;&gt;&lt;a class=&quot;markdownIt-Anchor&quot; href=&quot;#对于java中string的理解&quot;&gt;&lt;/a&gt; 对于java中String的理解&lt;/h1&gt;</summary>
@@ -383,25 +402,6 @@
     
     
     <category term="linux" scheme="https://highfish920.github.io/tags/linux/"/>
-    
-  </entry>
-  
-  <entry>
-    <title>设计模式---策略模式</title>
-    <link href="https://highfish920.github.io/2020/09/06/%E7%AD%96%E7%95%A5%E6%A8%A1%E5%BC%8F/"/>
-    <id>https://highfish920.github.io/2020/09/06/%E7%AD%96%E7%95%A5%E6%A8%A1%E5%BC%8F/</id>
-    <published>2020-09-06T14:48:21.364Z</published>
-    <updated>2020-11-27T12:49:06.484Z</updated>
-    
-    
-    <summary type="html">&lt;h5 id=&quot;策略模式指的是定义一些列的算法把他们一个个封装起来目的就是将算法的使用与算法的实现分离开来避免多重判断条件更具有扩展性&quot;&gt;&lt;a class=&quot;markdownIt-Anchor&quot; href=&quot;#策略模式指的是定义一些列的算法把他们一个个封装起来目的就是将算法的使用与算法的实现分离开来避免多重判断条件更具有扩展性&quot;&gt;&lt;/a&gt; 策略模式指的是定义一些列的算法，把他们一个个封装起来，目的就是将算法的使用与算法的实现分离开来，避免多重判断条件，更具有扩展性。&lt;/h5&gt;</summary>
-    
-    
-    
-    <category term="设计模式" scheme="https://highfish920.github.io/categories/%E8%AE%BE%E8%AE%A1%E6%A8%A1%E5%BC%8F/"/>
-    
-    
-    <category term="策略模式" scheme="https://highfish920.github.io/tags/%E7%AD%96%E7%95%A5%E6%A8%A1%E5%BC%8F/"/>
     
   </entry>
   
