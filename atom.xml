@@ -6,7 +6,7 @@
   <link href="https://highfish920.github.io/atom.xml" rel="self"/>
   
   <link href="https://highfish920.github.io/"/>
-  <updated>2021-03-20T03:20:33.865Z</updated>
+  <updated>2021-03-21T13:45:34.462Z</updated>
   <id>https://highfish920.github.io/</id>
   
   <author>
@@ -15,6 +15,44 @@
   </author>
   
   <generator uri="https://hexo.io/">Hexo</generator>
+  
+  <entry>
+    <title>数据库连接池</title>
+    <link href="https://highfish920.github.io/2021/03/21/%E6%95%B0%E6%8D%AE%E5%BA%93%E8%BF%9E%E6%8E%A5%E6%B1%A0/"/>
+    <id>https://highfish920.github.io/2021/03/21/%E6%95%B0%E6%8D%AE%E5%BA%93%E8%BF%9E%E6%8E%A5%E6%B1%A0/</id>
+    <published>2021-03-21T13:54:21.622Z</published>
+    <updated>2021-03-21T13:45:34.462Z</updated>
+    
+    
+    <summary type="html">&lt;h1 id=&quot;连接池原理&quot;&gt;&lt;a class=&quot;markdownIt-Anchor&quot; href=&quot;#连接池原理&quot;&gt;&lt;/a&gt; 连接池原理&lt;/h1&gt;</summary>
+    
+    
+    
+    <category term="java" scheme="https://highfish920.github.io/categories/java/"/>
+    
+    
+    <category term="java" scheme="https://highfish920.github.io/tags/java/"/>
+    
+  </entry>
+  
+  <entry>
+    <title>浅尝JDBC</title>
+    <link href="https://highfish920.github.io/2021/03/21/%E6%B5%85%E5%B0%9DJDBC/"/>
+    <id>https://highfish920.github.io/2021/03/21/%E6%B5%85%E5%B0%9DJDBC/</id>
+    <published>2021-03-21T13:54:21.620Z</published>
+    <updated>2021-03-21T13:17:13.488Z</updated>
+    
+    
+    <summary type="html">&lt;h1 id=&quot;jdbc简介&quot;&gt;&lt;a class=&quot;markdownIt-Anchor&quot; href=&quot;#jdbc简介&quot;&gt;&lt;/a&gt; JDBC简介&lt;/h1&gt;</summary>
+    
+    
+    
+    <category term="java" scheme="https://highfish920.github.io/categories/java/"/>
+    
+    
+    <category term="java" scheme="https://highfish920.github.io/tags/java/"/>
+    
+  </entry>
   
   <entry>
     <title>hashMap 与 hashTable 的区别</title>
@@ -357,44 +395,6 @@
     
     
     <summary type="html">&lt;h5 id=&quot;linux配置java环境变量&quot;&gt;&lt;a class=&quot;markdownIt-Anchor&quot; href=&quot;#linux配置java环境变量&quot;&gt;&lt;/a&gt; linux配置java环境变量&lt;/h5&gt;</summary>
-    
-    
-    
-    <category term="linux" scheme="https://highfish920.github.io/categories/linux/"/>
-    
-    
-    <category term="linux" scheme="https://highfish920.github.io/tags/linux/"/>
-    
-  </entry>
-  
-  <entry>
-    <title>centos6.5安装步骤</title>
-    <link href="https://highfish920.github.io/2020/09/09/linux2/"/>
-    <id>https://highfish920.github.io/2020/09/09/linux2/</id>
-    <published>2020-09-09T15:14:02.812Z</published>
-    <updated>2020-09-09T15:23:29.106Z</updated>
-    
-    
-    <summary type="html">&lt;h5 id=&quot;centos65安装步骤&quot;&gt;&lt;a class=&quot;markdownIt-Anchor&quot; href=&quot;#centos65安装步骤&quot;&gt;&lt;/a&gt; centos6.5安装步骤&lt;/h5&gt;</summary>
-    
-    
-    
-    <category term="linux" scheme="https://highfish920.github.io/categories/linux/"/>
-    
-    
-    <category term="linux" scheme="https://highfish920.github.io/tags/linux/"/>
-    
-  </entry>
-  
-  <entry>
-    <title>linux-Centos6.5 配置地址</title>
-    <link href="https://highfish920.github.io/2020/09/09/linux1/"/>
-    <id>https://highfish920.github.io/2020/09/09/linux1/</id>
-    <published>2020-09-09T15:11:30.331Z</published>
-    <updated>2020-09-16T05:13:07.958Z</updated>
-    
-    
-    <summary type="html">&lt;h5 id=&quot;centos-65网络配置静态ip地址&quot;&gt;&lt;a class=&quot;markdownIt-Anchor&quot; href=&quot;#centos-65网络配置静态ip地址&quot;&gt;&lt;/a&gt; CentOS 6.5网络配置静态IP地址&lt;/h5&gt;</summary>
     
     
     
